@@ -2,7 +2,7 @@
 
     add some typescript type and re-export some build-in typescript type
 
-see [index.d.ts](index.d.ts)
+see [index.d.ts](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/index.d.ts)
 
 ## install
 
@@ -12,7 +12,7 @@ npm install ts-type
 
 ## demo
 
-- [demo.ts](test/demo.ts) ／ [demo.d.ts](test/demo.d.ts)
+- [demo.ts](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/test/demo.ts) ／ [demo.d.ts](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/test/demo.d.ts)
 - 
 
 ### ITSOverwrite
