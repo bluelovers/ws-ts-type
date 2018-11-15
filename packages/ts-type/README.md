@@ -42,6 +42,28 @@ declare let c: ITSOverwriteReturnType<typeof f, string>;
 // c(1).toUpperCase()
 ```
 
+### Promise / Bluebird / PromiseLike
+
+```nodemon
+npm install @types/bluebird ts-type
+```
+
+```ts
+export declare function p1(a: number): Promise<number>
+
+export declare let p1_v: ITSUnpackedReturnType<typeof p1>;
+
+p1_v.toFixed()
+
+export declare let p2: ITSWrapFunctionPromise<typeof p1>;
+export declare let p3: ITSWrapFunctionBluebird<typeof p2>;
+export declare let p4: ITSWrapFunctionBluebird<typeof p1>;
+
+p2(1).then(v => v.toFixed())
+p3(1).then(v => v.toFixed())
+p4(1).then(v => v.toFixed())
+```
+
 ## docs
 
 - http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-1.html

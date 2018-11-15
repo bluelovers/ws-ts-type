@@ -1,4 +1,5 @@
 import { ITSTypeBuildIn } from './build-in';
+import Bluebird = require('bluebird');
 export declare type ITSPickMember<T, K extends keyof T> = T[K];
 /**
  * @see https://stackoverflow.com/questions/49198713/override-the-properties-of-an-interface-in-typescript
@@ -30,6 +31,18 @@ export declare type ITSOverwrite<T, U> = Pick<T, ITSDiff<keyof T, keyof U>> & U;
  * // c = (a: number) => string
  */
 export declare type ITSOverwriteReturnType<T extends (...args: any[]) => any, R extends unknown> = (...args: Parameters<T>) => R;
+export declare type ITSWrapFunctionPromiseLike<T extends (...args: any[]) => any> = (...args: Parameters<T>) => PromiseLike<ITSUnpackedReturnType<T>>;
+export declare type ITSWrapFunctionPromise<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Promise<ITSUnpackedReturnType<T>>;
+export declare type ITSWrapFunctionBluebird<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Bluebird<ITSUnpackedReturnType<T>>;
+export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer R ? ITSUnpacked<R> : unknown;
+/**
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
+ */
+export declare type ITSUnpacked<T> = T extends (infer U)[] ? U : T extends (...args: any[]) => infer U ? U : T extends ITSResolvable<infer U> ? U : T;
+/**
+ * @see bluebird
+ */
+export declare type ITSResolvable<R> = R | PromiseLike<R>;
 import * as TSType from './index';
 export declare type ITSType = typeof TSType;
 export { ITSTypeBuildIn };
