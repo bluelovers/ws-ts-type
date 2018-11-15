@@ -64,6 +64,11 @@ p3(1).then(v => v.toFixed())
 p4(1).then(v => v.toFixed())
 ```
 
+## other
+
+- [callable-instance2](https://www.npmjs.com/package/callable-instance2) - create an ES6 class that is callable as a function
+- 
+
 ## docs
 
 - http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-1.html

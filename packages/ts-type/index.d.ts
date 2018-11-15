@@ -39,17 +39,39 @@ export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = T
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
 export declare type ITSUnpacked<T> = T extends (infer U)[] ? U : T extends (...args: any[]) => infer U ? U : T extends ITSResolvable<infer U> ? U : T;
+/**
+ * @see bluebird
+ */
+export declare type ITSResolvable<R> = R | PromiseLike<R>;
+/**
+ * Same property names, but make the value a promise instead of a concrete one
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
+ */
+export declare type ITSDeferred<T> = {
+    [P in keyof T]: Promise<T[P]>;
+};
+/**
+ * Wrap proxies around properties of T
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
+ */
+export declare type ITSProxify<T> = {
+    [P in keyof T]: {
+        get(): T[P];
+        set(v: T[P]): void;
+    };
+};
 export declare type ITSAnyFunction = (...args: any[]) => any;
+/**
+ * https://stackoverflow.com/questions/49285864/is-there-a-valueof-similar-to-keyof-in-typescript
+ */
+export declare type ITSValueOf<T> = T[keyof T];
+export declare type ITSKeyOf<T> = keyof T;
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
 export declare type ITSReadonlyPartial<T> = {
     readonly [P in keyof T]?: T[P];
 };
-/**
- * @see bluebird
- */
-export declare type ITSResolvable<R> = R | PromiseLike<R>;
 import * as TSType from './index';
 export declare type ITSType = typeof TSType;
 export { ITSTypeBuildIn };

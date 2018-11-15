@@ -55,17 +55,39 @@ export type ITSUnpacked<T> =
 				//T extends Promise<infer U> ? U :
 					T;
 
+/**
+ * @see bluebird
+ */
+export type ITSResolvable<R> = R | PromiseLike<R>;
+
+/**
+ * Same property names, but make the value a promise instead of a concrete one
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
+ */
+export type ITSDeferred<T> = {
+	[P in keyof T]: Promise<T[P]>;
+};
+
+/**
+ * Wrap proxies around properties of T
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
+ */
+export type ITSProxify<T> = {
+	[P in keyof T]: { get(): T[P]; set(v: T[P]): void }
+};
+
 export type ITSAnyFunction = (...args: any[]) => any;
+
+/**
+ * https://stackoverflow.com/questions/49285864/is-there-a-valueof-similar-to-keyof-in-typescript
+ */
+export type ITSValueOf<T> = T[keyof T];
+export type ITSKeyOf<T> = keyof T;
 
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
 export type ITSReadonlyPartial<T> = { readonly [P in keyof T]?: T[P] };  // Add readonly and ?
-
-/**
- * @see bluebird
- */
-export type ITSResolvable<R> = R | PromiseLike<R>;
 
 import * as TSType from './index'
 
