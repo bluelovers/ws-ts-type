@@ -1,8 +1,23 @@
 {
   "name": "ts-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "add some typescript type and re-export some build-in typescript type",
-  "homepage": "https://github.com/bluelovers/ws-ts-type#readme",
+  "keywords": [
+    "@types",
+    "dev",
+    "develop",
+    "development",
+    "environment",
+    "ide",
+    "interface",
+    "node",
+    "runtime",
+    "ts",
+    "type",
+    "types",
+    "typescript"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-ts-type/issues"
   },
