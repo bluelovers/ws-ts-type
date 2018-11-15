@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     "@types",
@@ -35,9 +35,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
+    "@types/node": "*",
     "@types/bluebird": "*"
   },
   "devDependencies": {
+    "@types/node": "*",
     "@types/bluebird": "*"
   }
 }
