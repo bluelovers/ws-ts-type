@@ -52,7 +52,15 @@ export type ITSUnpacked<T> =
 	T extends (infer U)[] ? U :
 		T extends (...args: any[]) => infer U ? U :
 			T extends ITSResolvable<infer U> ? U :
-				T;
+				//T extends Promise<infer U> ? U :
+					T;
+
+export type ITSAnyFunction = (...args: any[]) => any;
+
+/**
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
+ */
+export type ITSReadonlyPartial<T> = { readonly [P in keyof T]?: T[P] };  // Add readonly and ?
 
 /**
  * @see bluebird

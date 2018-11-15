@@ -39,6 +39,13 @@ export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = T
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
 export declare type ITSUnpacked<T> = T extends (infer U)[] ? U : T extends (...args: any[]) => infer U ? U : T extends ITSResolvable<infer U> ? U : T;
+export declare type ITSAnyFunction = (...args: any[]) => any;
+/**
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
+ */
+export declare type ITSReadonlyPartial<T> = {
+    readonly [P in keyof T]?: T[P];
+};
 /**
  * @see bluebird
  */
