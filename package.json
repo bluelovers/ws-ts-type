@@ -2,6 +2,18 @@
   "name": "ws-ts-type",
   "version": "1.0.0",
   "private": true,
+  "description": "",
+  "homepage": "https://github.com/bluelovers/ws-ts-type#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-ts-type/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
   "workspaces": [
     "packages/*"
   ],

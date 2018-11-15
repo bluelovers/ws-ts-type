@@ -1,11 +1,22 @@
 {
   "name": "ts-type",
   "version": "1.0.0",
-  "description": "",
+  "description": "add some typescript type and re-export some build-in typescript type",
+  "homepage": "https://github.com/bluelovers/ws-ts-type#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-ts-type/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+  },
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

@@ -7,6 +7,6 @@ export declare type ITSConstructorParameters<T extends new (...args: any[]) => a
 export declare type ITSPartial<T> = Partial<T>;
 export declare type ITSPick<T, K extends keyof T> = Pick<T, K>;
 export declare type ITSInstanceType<T extends new (...args: any[]) => any> = InstanceType<T>;
-import * as ITSTypeBuildIn from './index';
-export { ITSTypeBuildIn };
+import * as TSTypeBuildIn from './build-in';
+export declare type ITSTypeBuildIn = typeof TSTypeBuildIn;
 export default ITSTypeBuildIn;
