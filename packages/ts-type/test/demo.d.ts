@@ -29,4 +29,16 @@ export interface t4 extends Function2 {
 }
 export declare let t5: t4;
 export declare let t6: ITSOverwriteThisFunction<string[], t4>;
+export interface t7 extends Function {
+    (): string;
+}
+export declare let t8: t7;
+export declare let t9: any;
+export interface t10 {
+    (): string;
+}
+export declare let t11: t10;
+export declare let t12: any;
+export declare function t13(): any;
+export declare let t14: any;
 export {};

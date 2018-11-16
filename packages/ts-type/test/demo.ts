@@ -52,7 +52,7 @@ export declare let t3: ITSOverwriteThisFunction<number, typeof t2>;
 
 t3 = function ()
 {
-	this.toFixed()
+	this.toFixed() // => this is number
 
 	return 1
 }
@@ -73,8 +73,61 @@ export let t6 = t5.bind([] as string[])
 
 t6 = function ()
 {
-	this.includes('')
+	this.includes('') // => this is string[]
+
+	// ts will show error
+	this.padEnd(1, '0')
 
 	return ''
 }
 
+export interface t7 extends Function
+{
+	(): string
+}
+
+export declare let t8: t7
+
+export let t9 = t8.bind([] as string[])
+
+t9 = function ()
+{
+	this.includes('') // => this is string[]
+
+	// ts didn't show error
+	this.padEnd(1, '0')
+
+	return ''
+}
+
+export interface t10
+{
+	(): string
+}
+
+export declare let t11: t10
+
+export let t12 = t11.bind([] as string[])
+
+t12 = function ()
+{
+	this.includes('') // => this is string[]
+
+	// ts didn't show error
+	this.padEnd(1, '0')
+
+	return ''
+}
+
+export declare function t13()
+export let t14 = t13.bind([] as string[])
+
+t14 = function ()
+{
+	this.includes('') // => this is string[]
+
+	// ts didn't show error
+	this.padEnd(1, '0')
+
+	return ''
+}
