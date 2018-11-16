@@ -78,6 +78,14 @@ export type ITSProxify<T> = {
 
 export type ITSAnyFunction = (...args: any[]) => any;
 
+export type ITSOverwriteThisFunction<T extends any, F extends (...args: any[]) => any> =
+	(this: T, ...args: Parameters<F>) => ReturnType<F>
+
+export type ITSUnpackedThisFunction<T extends (...args: any[]) => any> =
+	T extends (this: infer R, ...args: any[]) => any
+		? R
+		: unknown;
+
 /**
  * https://stackoverflow.com/questions/49285864/is-there-a-valueof-similar-to-keyof-in-typescript
  */

@@ -64,6 +64,52 @@ p3(1).then(v => v.toFixed())
 p4(1).then(v => v.toFixed())
 ```
 
+### this
+
+```ts
+export declare function t1(this: string, a: number): Promise<number>
+
+export declare let t1_this: ITSUnpackedThisFunction<typeof t1>;
+
+// => t1_this is string
+```
+
+```ts
+export declare function t2(this: string, a: number): number
+
+export declare let t3: ITSOverwriteThisFunction<number, typeof t2>;
+
+t3 = function ()
+{
+	this.toFixed() // => this is number
+
+	return 1
+}
+```
+
+```ts
+interface Function2 extends Function
+{
+	bind<T extends any, F extends (...args: any[]) => any>(this: F, thisArg: T, ...argArray: any[]): ITSOverwriteThisFunction<T, F>;
+}
+
+export interface t4 extends Function2
+{
+	(): string
+}
+
+export declare let t5: t4
+
+export let t6 = t5.bind([] as string[])
+
+t6 = function ()
+{
+	this.includes('') // => this is string[]
+
+	return ''
+}
+```
+
 ## other
 
 - [callable-instance2](https://www.npmjs.com/package/callable-instance2) - create an ES6 class that is callable as a function
