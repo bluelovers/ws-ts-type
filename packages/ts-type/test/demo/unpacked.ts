@@ -18,3 +18,4 @@ export declare let u2: ITSUnpackedIteratorLike<i2>
 
 u2.toUpperCase() // u2 is string
 
+
