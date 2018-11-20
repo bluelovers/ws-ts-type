@@ -53,7 +53,18 @@ export type ITSUnpacked<T> =
 		T extends (...args: any[]) => infer U ? U :
 			T extends ITSResolvable<infer U> ? U :
 				//T extends Promise<infer U> ? U :
-					T;
+				T
+	;
+
+/**
+ * for Iterator IteratorResult
+ */
+export type ITSUnpackedIteratorLike<T> =
+
+	T extends Iterator<infer U> ? U :
+		T extends IteratorResult<infer U> ? U :
+			T
+	;
 
 /**
  * @see bluebird

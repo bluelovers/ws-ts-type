@@ -40,6 +40,10 @@ export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = T
  */
 export declare type ITSUnpacked<T> = T extends (infer U)[] ? U : T extends (...args: any[]) => infer U ? U : T extends ITSResolvable<infer U> ? U : T;
 /**
+ * for Iterator IteratorResult
+ */
+export declare type ITSUnpackedIteratorLike<T> = T extends Iterator<infer U> ? U : T extends IteratorResult<infer U> ? U : T;
+/**
  * @see bluebird
  */
 export declare type ITSResolvable<R> = R | PromiseLike<R>;

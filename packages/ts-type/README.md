@@ -12,7 +12,7 @@ npm install ts-type
 
 ## demo
 
-- [demo.ts](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/test/demo.ts) ／ [demo.d.ts](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/test/demo.d.ts)
+- [demo](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/test/demo)
 - 
 
 ### ITSOverwrite
