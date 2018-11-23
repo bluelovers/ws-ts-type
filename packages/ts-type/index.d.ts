@@ -72,6 +72,7 @@ export declare type ITSUnpackedThisFunction<T extends (...args: any[]) => any> =
  */
 export declare type ITSValueOf<T> = T[keyof T];
 export declare type ITSKeyOf<T> = keyof T;
+export declare type ITSPickValueOf<T, K extends keyof T> = ITSValueOf<Pick<T, K>>;
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
