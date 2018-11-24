@@ -3,19 +3,25 @@
  */
 
 import Bluebird = require('bluebird');
-import { ITSOverwrite, ITSOverwriteReturnType, ITSUnpackedReturnType } from '../../';
+import {
+	ITSOverwrite,
+	ITSOverwriteReturnType,
+	ITSUnpackedReturnType,
+	ITSWrapFunctionBluebird,
+	ITSWrapFunctionPromise,
+} from '../../';
 import {
 	ITSOverwriteThisFunction,
 	ITSUnpackedThisFunction,
-	ITSWrapFunctionBluebird,
-	ITSWrapFunctionPromise,
-} from '../../index';
+	} from '../../index';
 
 export declare function f(a: number): number
 
 export declare let c: ITSOverwriteReturnType<typeof f, string>;
 //c(1).toUpperCase()
 // c = (a: number) => string
+
+c(1).toUpperCase()
 
 export interface A1
 {
@@ -27,6 +33,8 @@ export type A2 = ITSOverwrite<A1, {
 }>
 export declare let a2: A2;
 // a2.s is number
+
+a2.s.toFixed()
 
 export declare function p1(a: number): Promise<number>
 

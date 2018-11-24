@@ -1,8 +1,7 @@
 /**
  * Created by user on 2018/11/15/015.
  */
-import { ITSOverwrite, ITSOverwriteReturnType, ITSUnpackedReturnType } from '../../';
-import { ITSWrapFunctionBluebird, ITSWrapFunctionPromise } from '../../index';
+import { ITSOverwrite, ITSOverwriteReturnType, ITSUnpackedReturnType, ITSWrapFunctionBluebird, ITSWrapFunctionPromise } from '../../';
 export declare function f(a: number): number;
 export declare let c: ITSOverwriteReturnType<typeof f, string>;
 export interface A1 {

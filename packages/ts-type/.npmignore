@@ -72,7 +72,7 @@ __tests__
 
 ### jsonly_bin template
 bin/*.ts
-bin/*.d.ts
+
 /dist/
 /benchmark.md
 /docs/
