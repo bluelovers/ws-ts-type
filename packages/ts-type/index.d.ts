@@ -8,6 +8,7 @@ export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = I
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
 export declare type ITSUnpacked<T> = T extends ITSMapLike<any, infer U> ? U : T extends (infer U)[] ? U : T extends ArrayLike<infer U> ? U : T extends Iterator<infer U> ? U : T extends IteratorResult<infer U> ? U : T extends ITSTypeFunction<infer U> ? U : T extends ITSResolvable<infer U> ? U : T;
+export declare type ITSUnpackedPromiseLike<T> = T extends ITSResolvable<infer U> ? U : T;
 /**
  * for Iterator IteratorResult
  */

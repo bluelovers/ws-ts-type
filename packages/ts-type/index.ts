@@ -27,6 +27,11 @@ export type ITSUnpacked<T> =
 								T
 	;
 
+export type ITSUnpackedPromiseLike<T> =
+	T extends ITSResolvable<infer U> ? U :
+		T
+;
+
 /**
  * for Iterator IteratorResult
  */
