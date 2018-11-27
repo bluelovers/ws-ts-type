@@ -20,6 +20,10 @@ export declare type ITSDiff<T extends keyof any, U extends keyof any> = ({
     [x: string]: never;
 })[T];
 /**
+ * exclude all key in K at T
+ */
+export declare type ITSPickNot<T, K extends keyof any> = Pick<T, ITSDiff<keyof T, K>>;
+/**
  * @see https://stackoverflow.com/questions/49198713/override-the-properties-of-an-interface-in-typescript
  *
  * @example

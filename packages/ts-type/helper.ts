@@ -15,8 +15,18 @@ export type ITSReadonlyPartial<T> = {
  */
 export type ITSPickMember<T, K extends keyof T> = T[K];
 
-export type ITSDiff<T extends keyof any, U extends keyof any> =
-	({ [P in T]: P } & { [P in U]: never } & { [x: string]: never })[T];
+export type ITSDiff<T extends keyof any, U extends keyof any> = (
+	{ [P in T]: P }
+	&
+	{ [P in U]: never }
+	&
+	{ [x: string]: never }
+	)[T];
+
+/**
+ * exclude all key in K at T
+ */
+export type ITSPickNot<T, K extends keyof any> = Pick<T, ITSDiff<keyof T, K>>;
 
 /**
  * @see https://stackoverflow.com/questions/49198713/override-the-properties-of-an-interface-in-typescript
