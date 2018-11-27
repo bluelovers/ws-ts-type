@@ -28,3 +28,17 @@ a2.a.padEnd(1)
 
 // @ts-ignore err when without @ts-ignore
 a2._c;
+
+export type OriginOnlyHasPrefix = {
+	_c: string,
+	_d: string,
+}
+
+export type Result3 = Pick<Origin, ITSDiff<keyof Origin, keyof OriginOnlyHasPrefix>>
+
+let a3: Result3;
+
+a3.a.padEnd(1)
+
+// @ts-ignore err when without @ts-ignore
+a3._c;

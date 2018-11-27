@@ -10,3 +10,8 @@ export declare type Origin = {
 };
 export declare type Result = Pick<Origin, ITSDiff<keyof Origin, '_c' | '_d'>>;
 export declare type Result2 = ITSPickNot<Origin, '_c' | '_d'>;
+export declare type OriginOnlyHasPrefix = {
+    _c: string;
+    _d: string;
+};
+export declare type Result3 = Pick<Origin, ITSDiff<keyof Origin, keyof OriginOnlyHasPrefix>>;
