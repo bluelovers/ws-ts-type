@@ -10,3 +10,7 @@ export interface ITSSetLike<V> {
  * @see bluebird
  */
 export declare type ITSResolvable<R> = R | PromiseLike<R>;
+export interface ITSArrayLikeWriteable<T> {
+    readonly length: number;
+    [n: number]: T;
+}
