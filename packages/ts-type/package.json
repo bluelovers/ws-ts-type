@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     "@types",
@@ -35,11 +35,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "@types/node": "*",
-    "@types/bluebird": "*"
+    "@types/bluebird": "*",
+    "@types/node": "*"
   },
   "devDependencies": {
-    "@types/node": "*",
-    "@types/bluebird": "*"
+    "@types/bluebird": "*",
+    "@types/node": "*"
+  },
+  "dependencies": {
+    "typedarray-dts": "^1.0.0"
   }
 }

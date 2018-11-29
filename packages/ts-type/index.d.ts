@@ -3,6 +3,7 @@ import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './generic';
 import ITSType = require('./index');
 export * from './helper';
 export * from './generic';
+export * from 'typedarray-dts';
 export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = ITSUnpacked<ReturnType<T>>;
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html

@@ -5,6 +5,8 @@ import ITSType = require('./index');
 export * from './helper'
 export * from './generic'
 
+export * from 'typedarray-dts'
+
 export type ITSUnpackedReturnType<T extends (...args: any[]) => any> =
 	ITSUnpacked<ReturnType<T>>
 //	T extends ITSTypeFunction<infer R>
