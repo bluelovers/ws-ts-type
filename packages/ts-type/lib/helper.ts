@@ -58,3 +58,4 @@ export type ITSWrapFunctionPromise<T extends (...args: any[]) => any> =
 export type ITSWrapFunctionBluebird<T extends (...args: any[]) => any> =
 	(...args: Parameters<T>) => Bluebird<ITSUnpackedReturnType<T>>;
 
+export type ITSExtendsOf<T, P> = T extends P ? T : never;

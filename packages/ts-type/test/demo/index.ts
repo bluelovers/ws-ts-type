@@ -49,4 +49,3 @@ export declare let p4: ITSWrapFunctionBluebird<typeof p1>;
 p2(1).then(v => v.toFixed())
 p3(1).then(v => v.toFixed())
 p4(1).then(v => v.toFixed())
-

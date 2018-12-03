@@ -46,3 +46,4 @@ export declare type ITSOverwriteReturnType<T extends (...args: any[]) => any, R 
 export declare type ITSWrapFunctionPromiseLike<T extends (...args: any[]) => any> = (...args: Parameters<T>) => PromiseLike<ITSUnpackedReturnType<T>>;
 export declare type ITSWrapFunctionPromise<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Promise<ITSUnpackedReturnType<T>>;
 export declare type ITSWrapFunctionBluebird<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Bluebird<ITSUnpackedReturnType<T>>;
+export declare type ITSExtendsOf<T, P> = T extends P ? T : never;
