@@ -8,7 +8,3 @@ export type ITSConstructorParameters<T extends new (...args: any[]) => any> = Co
 export type ITSPartial<T> = Partial<T>
 export type ITSPick<T, K extends keyof T> = Pick<T, K>
 export type ITSInstanceType<T extends new (...args: any[]) => any> = InstanceType<T>
-
-import * as TSTypeBuildIn from './build-in'
-export type ITSTypeBuildIn = typeof TSTypeBuildIn
-export default ITSTypeBuildIn

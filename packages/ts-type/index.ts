@@ -1,11 +1,9 @@
-import { ITSTypeBuildIn } from './lib/build-in'
-import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './lib/generic';
-import ITSType = require('./index');
-
-export * from './lib/helper'
-export * from './lib/generic'
-
+import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './lib';
+export * from './lib'
 export * from 'typedarray-dts'
+export type ITSType = typeof import('./index');
+export type ITSTypeBuildIn = typeof import('./lib/_build-in');
+export default ITSType
 
 export type ITSUnpackedReturnType<T extends (...args: any[]) => any> =
 	ITSUnpacked<ReturnType<T>>
@@ -82,11 +80,6 @@ export type ITSValueOf<T> = T[keyof T];
 export type ITSKeyOf<T> = keyof T;
 
 export type ITSPickValueOf<T, K extends keyof T> = ITSValueOf<Pick<T, K>>;
-
-export { ITSType }
-
-export { ITSTypeBuildIn }
-export default ITSType
 
 export type ITSValueOfIterator<T extends ITSIteratorLazy<any>> =
 	(T extends Iterator<infer U> ? U :

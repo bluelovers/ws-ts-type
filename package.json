@@ -21,5 +21,12 @@
     "sort-package-json": "oao run-script \"sort-package-json2\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "resolutions": {}
+  "resolutions": {},
+  "dependencies": {
+    "@types/fs-extra": "*",
+    "@types/node": "*",
+    "fast-glob": "^2.2.4",
+    "fs-extra": "^7.0.1",
+    "upath2": "^2.1.3"
+  }
 }

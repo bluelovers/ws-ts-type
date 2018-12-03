@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -39,6 +39,7 @@
     "test": "test"
   },
   "scripts": {
+    "build-lib-toc": "ts-node ./test/script/toc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

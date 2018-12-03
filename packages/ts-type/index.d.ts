@@ -1,9 +1,9 @@
-import { ITSTypeBuildIn } from './lib/build-in';
-import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './lib/generic';
-import ITSType = require('./index');
-export * from './lib/helper';
-export * from './lib/generic';
+import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './lib';
+export * from './lib';
 export * from 'typedarray-dts';
+export declare type ITSType = typeof import('./index');
+export declare type ITSTypeBuildIn = typeof import('./lib/_build-in');
+export default ITSType;
 export declare type ITSUnpackedReturnType<T extends (...args: any[]) => any> = ITSUnpacked<ReturnType<T>>;
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
@@ -41,9 +41,6 @@ export declare type ITSUnpackedThisFunction<T extends (...args: any[]) => any> =
 export declare type ITSValueOf<T> = T[keyof T];
 export declare type ITSKeyOf<T> = keyof T;
 export declare type ITSPickValueOf<T, K extends keyof T> = ITSValueOf<Pick<T, K>>;
-export { ITSType };
-export { ITSTypeBuildIn };
-export default ITSType;
 export declare type ITSValueOfIterator<T extends ITSIteratorLazy<any>> = (T extends Iterator<infer U> ? U : T extends IteratorResult<infer U> ? U : any)[];
 export declare type ITSValueOfMap<T extends ITSMapLike<any, any>> = T extends ITSMapLike<any, infer U> ? U[] : any[];
 export declare type ITSIteratorLazy<T extends Iterator<any> | IteratorResult<any>> = T extends IteratorResult<infer U> ? IteratorResult<U> : T extends Iterator<infer U> ? Iterator<U> : T;
