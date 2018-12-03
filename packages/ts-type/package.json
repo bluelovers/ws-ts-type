@@ -3,7 +3,9 @@
   "version": "1.1.3",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
+    ".d.ts",
     "@types",
+    "declaration",
     "dev",
     "develop",
     "development",
@@ -11,11 +13,16 @@
     "ide",
     "interface",
     "node",
+    "playground",
     "runtime",
     "ts",
     "type",
+    "type-level",
+    "typelevel",
     "types",
-    "typescript"
+    "typescript",
+    "typing",
+    "typings"
   ],
   "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type#readme",
   "bugs": {
@@ -34,15 +41,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "@types/bluebird": "*",
-    "@types/node": "*"
+  "dependencies": {
+    "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
     "@types/bluebird": "*",
     "@types/node": "*"
   },
-  "dependencies": {
-    "typedarray-dts": "^1.0.0"
+  "peerDependencies": {
+    "@types/bluebird": "*",
+    "@types/node": "*"
   }
 }
