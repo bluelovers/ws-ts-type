@@ -1,9 +1,9 @@
-import { ITSTypeBuildIn } from './build-in'
-import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './generic';
+import { ITSTypeBuildIn } from './lib/build-in'
+import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './lib/generic';
 import ITSType = require('./index');
 
-export * from './helper'
-export * from './generic'
+export * from './lib/helper'
+export * from './lib/generic'
 
 export * from 'typedarray-dts'
 

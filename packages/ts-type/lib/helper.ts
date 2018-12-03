@@ -1,5 +1,5 @@
 import Bluebird = require('bluebird');
-import { ITSUnpackedReturnType } from './index';
+import { ITSUnpackedReturnType } from '../index';
 
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
