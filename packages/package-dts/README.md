@@ -2,7 +2,7 @@
 
     A Typescript type definition for NPM package json
 
-![image](../../image.png)
+![image](readme/image.png)
 
 ## install
 
@@ -12,7 +12,7 @@ npm install @ts-type/package-dts
 
 ## use
 
-```
+```ts
 import IPackageJson from '../package-json';
 import pkg = require('../package.json');
 
