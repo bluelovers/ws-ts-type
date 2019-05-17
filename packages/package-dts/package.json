@@ -42,7 +42,7 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "package-json.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
