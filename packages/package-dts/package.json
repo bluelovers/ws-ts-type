@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/package-dts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "A Typescript type definition for NPM package json",
   "keywords": [
@@ -42,7 +42,7 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "package-json.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
