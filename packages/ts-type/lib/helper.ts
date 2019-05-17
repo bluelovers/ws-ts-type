@@ -1,5 +1,6 @@
 import Bluebird = require('bluebird');
-import { ITSUnpackedReturnType } from '../index';
+import { ITSArrayListMaybeReadonly } from './type/base';
+import { ITSUnpackedReturnType } from './helper/unpacked';
 
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
@@ -55,7 +56,9 @@ export type ITSWrapFunctionPromiseLike<T extends (...args: any[]) => any> =
 	(...args: Parameters<T>) => PromiseLike<ITSUnpackedReturnType<T>>;
 export type ITSWrapFunctionPromise<T extends (...args: any[]) => any> =
 	(...args: Parameters<T>) => Promise<ITSUnpackedReturnType<T>>;
-export type ITSWrapFunctionBluebird<T extends (...args: any[]) => any> =
-	(...args: Parameters<T>) => Bluebird<ITSUnpackedReturnType<T>>;
 
 export type ITSExtendsOf<T, P> = T extends P ? T : never;
+
+export type ITSKeyOfArray<T extends ITSArrayListMaybeReadonly<any>> = Exclude<keyof T, symbol | string>;
+
+export type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T[ITSKeyOfArray<T>];

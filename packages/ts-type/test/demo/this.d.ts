@@ -23,7 +23,7 @@ export interface t10 {
     (): string;
 }
 export declare let t11: t10;
-export declare let t12: any;
+export declare let t12: t10;
 export declare function t13(): any;
-export declare let t14: any;
+export declare let t14: typeof t13;
 export {};

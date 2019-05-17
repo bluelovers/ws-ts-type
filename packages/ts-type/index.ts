@@ -1,51 +1,10 @@
-import { ITSMapLike, ITSResolvable, ITSTypeFunction } from './lib';
+import { ITSMapLike, ITSTypeFunction } from './lib';
+
 export * from './lib'
 export * from 'typedarray-dts'
 export type ITSType = typeof import('./index');
 export type ITSTypeBuildIn = typeof import('./lib/_build-in');
 export default ITSType
-
-export type ITSUnpackedReturnType<T extends (...args: any[]) => any> =
-	ITSUnpacked<ReturnType<T>>
-//	T extends ITSTypeFunction<infer R>
-//		? ITSUnpacked<R>
-//		: T
-	;
-
-/**
- * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
- */
-export type ITSUnpacked<T> =
-	T extends ITSMapLike<any, infer U> ? U :
-		T extends (infer U)[] ? U :
-			T extends ArrayLike<infer U> ? U :
-				T extends Iterator<infer U> ? U :
-					T extends IteratorResult<infer U> ? U :
-						T extends ITSTypeFunction<infer U> ? U :
-							T extends ITSResolvable<infer U> ? U :
-								//T extends Promise<infer U> ? U :
-								T
-	;
-
-export type ITSUnpackedPromiseLike<T> =
-	T extends ITSResolvable<infer U> ? U :
-		T
-;
-
-/**
- * for Iterator IteratorResult
- */
-export type ITSUnpackedIteratorLike<T extends Iterator<any> | IteratorResult<any>> =
-	T extends Iterator<infer U> ? ITSUnpacked<U> :
-		T extends IteratorResult<infer U> ? ITSUnpacked<U> :
-			T
-	;
-
-export type ITSUnpackedArrayLike<T extends ArrayLike<any> | any[]> =
-	T extends (infer U)[] ? ITSUnpacked<U> :
-		T extends ArrayLike<infer U> ? ITSUnpacked<U> :
-			T
-	;
 
 /**
  * Same property names, but make the value a promise instead of a concrete one

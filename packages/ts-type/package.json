@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -36,18 +36,27 @@
   "author": "",
   "main": "index.js",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "build-lib-toc": "ts-node ./test/script/toc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build-lib-toc",
+    "build-lib-toc": "npx ts-node ./test/script/toc && tsc -p ./",
+    "coverage": "npx nyc npm run test",
+    "lint": "npx eslint ./index.ts",
+    "ncu": "npx npm-check-updates -u",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run build && npm run test",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "npm run lint"
   },
   "dependencies": {
+    "@types/bluebird": "*",
+    "@types/node": "*",
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
-    "@types/bluebird": "*",
-    "@types/node": "*"
+    "@bluelovers/tsconfig": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^1.9.0"
   },
   "peerDependencies": {
     "@types/bluebird": "*",

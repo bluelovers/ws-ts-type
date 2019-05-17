@@ -30,6 +30,8 @@ fg
 			})
 		;
 
+		ls.push('');
+
 		let out = ls.join('\n');
 
 		console.log(out);

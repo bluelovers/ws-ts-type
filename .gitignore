@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+/packages/packageJsonSchema.json/
+/packages/typepark/
+/test/temp/
+/yarn.lock

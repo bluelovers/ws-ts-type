@@ -1,5 +1,5 @@
-import Bluebird = require('bluebird');
-import { ITSUnpackedReturnType } from '../index';
+import { ITSArrayListMaybeReadonly } from './type/base';
+import { ITSUnpackedReturnType } from './helper/unpacked';
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  *
@@ -45,5 +45,6 @@ export declare type ITSOverwrite<T, U> = Pick<T, ITSDiff<keyof T, keyof U>> & U;
 export declare type ITSOverwriteReturnType<T extends (...args: any[]) => any, R extends unknown> = (...args: Parameters<T>) => R;
 export declare type ITSWrapFunctionPromiseLike<T extends (...args: any[]) => any> = (...args: Parameters<T>) => PromiseLike<ITSUnpackedReturnType<T>>;
 export declare type ITSWrapFunctionPromise<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Promise<ITSUnpackedReturnType<T>>;
-export declare type ITSWrapFunctionBluebird<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Bluebird<ITSUnpackedReturnType<T>>;
 export declare type ITSExtendsOf<T, P> = T extends P ? T : never;
+export declare type ITSKeyOfArray<T extends ITSArrayListMaybeReadonly<any>> = Exclude<keyof T, symbol | string>;
+export declare type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T[ITSKeyOfArray<T>];
