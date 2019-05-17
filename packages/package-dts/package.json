@@ -1,0 +1,68 @@
+{
+  "name": "@ts-type/package-dts",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A Typescript type definition for NPM package json",
+  "keywords": [
+    ".d.ts",
+    "@types",
+    "declaration",
+    "definition",
+    "dev",
+    "develop",
+    "development",
+    "dts",
+    "environment",
+    "ide",
+    "interface",
+    "json",
+    "node",
+    "package",
+    "package.json",
+    "playground",
+    "runtime",
+    "schema",
+    "ts",
+    "type",
+    "type-level",
+    "typeing",
+    "typelevel",
+    "types",
+    "typescript",
+    "typing",
+    "typings"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/package-dts#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-ts-type/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "package-json.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc npm run test",
+    "ncu": "npx npm-check-updates -u",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:schema": "npx ts-node ./script/index"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bluebird": "^3.5.26",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.4",
+    "fs-extra": "^8.0.1",
+    "json-schema-to-typescript": "^6.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
