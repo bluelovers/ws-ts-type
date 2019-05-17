@@ -2,7 +2,7 @@
 
     A Typescript type definition for NPM package json
 
-![image](readme/image.png)
+![image](https://github.com/bluelovers/ws-ts-type/raw/master/packages/package-dts/readme/image.png)
 
 ## install
 
