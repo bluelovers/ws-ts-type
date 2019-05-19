@@ -52,3 +52,5 @@ vue.config.js
 .git
 /script/
 !/types/
+!/schema/
+!/schema/**/*

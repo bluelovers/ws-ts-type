@@ -20,6 +20,14 @@ downloadJsonAndBuild({
 	href: 'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/eslintrc.json',
 });
 
+downloadJsonAndBuild({
+	href: 'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/travis.json',
+});
+
+downloadJsonAndBuild({
+	href: 'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/tsconfig.json',
+});
+
 /*
 Bluebird.resolve(axios.get('https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/package.json'))
 	.then(function (res)
