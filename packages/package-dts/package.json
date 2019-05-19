@@ -63,10 +63,10 @@
     "fs-extra": "^8.0.1",
     "json-schema-to-typescript": "^6.1.3"
   },
-  "sharedDependencies": {
-    "eslint-config-bluelovers": "latest"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "sharedDependencies": {
+    "eslint-config-bluelovers": "latest"
   }
 }
