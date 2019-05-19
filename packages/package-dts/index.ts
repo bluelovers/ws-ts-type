@@ -4,6 +4,7 @@
 
 import fs = require('fs');
 import IPackageJson from './package-json';
+export { IEslintrcJson } from './eslintrc-json';
 export { IPackageJson, ILibPackageJson } from './package-json';
 
 export function readPackageJson(file: string): IPackageJson

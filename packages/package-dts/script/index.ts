@@ -8,7 +8,19 @@ import path = require("path")
 import axios from "axios"
 import Bluebird = require("bluebird")
 import { compile, compileFromFile } from 'json-schema-to-typescript'
+import { downloadJsonAndBuild } from './util';
 
+
+
+downloadJsonAndBuild({
+	href: 'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/package.json',
+});
+
+downloadJsonAndBuild({
+	href: 'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/eslintrc.json',
+});
+
+/*
 Bluebird.resolve(axios.get('https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/package.json'))
 	.then(function (res)
 	{
@@ -51,5 +63,5 @@ Bluebird.resolve(axios.get('https://github.com/SchemaStore/schemastore/raw/maste
 		console.log(`.d.ts saved`);
 	})
 ;
+*/
 
-export default exports as typeof import('./index');
