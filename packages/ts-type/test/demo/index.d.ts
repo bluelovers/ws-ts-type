@@ -5,6 +5,7 @@ import { ITSOverwrite, ITSOverwriteReturnType, ITSUnpackedReturnType, ITSWrapFun
 export declare function f(a: number): number;
 export declare let c: ITSOverwriteReturnType<typeof f, string>;
 export interface A1 {
+    a1?: string;
     s: string;
 }
 export declare type A2 = ITSOverwrite<A1, {

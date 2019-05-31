@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -46,6 +46,7 @@
     "lint": "npx eslint ./index.ts",
     "ncu": "npx npm-check-updates -u",
     "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run build && npm run test",
+    "postpublish": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "npm run lint"
   },
@@ -55,7 +56,7 @@
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.3",
+    "@bluelovers/tsconfig": "^1.0.6",
     "@typescript-eslint/eslint-plugin": "^1.9.0"
   },
   "peerDependencies": {

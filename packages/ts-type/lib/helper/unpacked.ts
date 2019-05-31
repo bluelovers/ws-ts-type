@@ -1,4 +1,3 @@
-
 /**
  * for Iterator IteratorResult
  */
@@ -35,6 +34,7 @@ export type ITSUnpackedIteratorLike<T extends Iterator<any> | IteratorResult<any
 	;
 export type ITSUnpackedArrayLike<T extends ArrayLike<any> | any[]> =
 	T extends (infer U)[] ? ITSUnpacked<U> :
-		T extends ArrayLike<infer U> ? ITSUnpacked<U> :
-			T
+		T extends readonly (infer U)[] ? ITSUnpacked<U> :
+			T extends ArrayLike<infer U> ? ITSUnpacked<U> :
+				T
 	;

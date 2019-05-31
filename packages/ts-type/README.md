@@ -113,9 +113,12 @@ t6 = function ()
 ## other
 
 - [callable-instance2](https://www.npmjs.com/package/callable-instance2) - create an ES6 class that is callable as a function
+- https://github.com/piotrwitek/utility-types
 - 
 
 ## docs
 
 - http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-1.html
 - https://www.tslang.cn/docs/release-notes/typescript-3.1.html#toc-whats-new
+- https://www.logicbig.com/tutorials/misc/typescript.html
+- 

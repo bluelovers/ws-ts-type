@@ -11,7 +11,7 @@ export type Origin = {
 	_d: string,
 }
 
-export type Result = Pick<Origin, ITSDiff<keyof Origin, '_c' | '_d'>>
+export type Result = Omit<Origin, '_c' | '_d'>
 
 let a: Result;
 
@@ -34,7 +34,7 @@ export type OriginOnlyHasPrefix = {
 	_d: string,
 }
 
-export type Result3 = Pick<Origin, ITSDiff<keyof Origin, keyof OriginOnlyHasPrefix>>
+export type Result3 = Omit<Origin, keyof OriginOnlyHasPrefix>
 
 let a3: Result3;
 

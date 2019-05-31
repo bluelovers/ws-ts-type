@@ -3,3 +3,5 @@
 !/test/**/*.d.ts
 /test/script/*.d.ts
 /tsconfig.json.tpl
+/.browserslistrc
+/.nvmrc

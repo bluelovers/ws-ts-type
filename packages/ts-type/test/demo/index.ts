@@ -25,6 +25,7 @@ c(1).toUpperCase()
 
 export interface A1
 {
+	a1?: string,
 	s: string
 }
 

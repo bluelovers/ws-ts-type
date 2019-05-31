@@ -3,3 +3,5 @@
  */
 
 export type ITSArrayListMaybeReadonly<T> = T[] | readonly T[];
+
+export type ITSKeys = symbol | string | number;
