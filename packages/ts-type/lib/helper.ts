@@ -83,7 +83,9 @@ export type ITSPartialPick<T, K extends keyof T> = {
 /**
  * clone a type and mark all RK is Required, PK is Partial
  */
-export type ITSPickExtra<T, RK extends keyof T, PK extends Exclude<keyof T, RK> = Exclude<keyof T, RK>> = ITSRequiredPick<T, RK> & ITSPartialPick<T, PK>;
+export type ITSPickExtra<T, RK extends keyof T, PK extends Exclude<keyof T, RK> = Exclude<keyof T, RK>> =
+	ITSRequiredPick<T, RK>
+	& ITSPartialPick<T, PK>;
 
 export type ITSRequiredWith<T, K extends keyof T> = Omit<T, K> & ITSRequiredPick<T, K>;
 
@@ -97,7 +99,26 @@ export type ITSWriteablePick<T, K extends keyof T> = {
 
 export type ITSWriteableWith<T, K extends keyof T> = Omit<T, K> & ITSWriteablePick<T, K>;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSUnpackedArrayLike<T>[] & {
 	-readonly [P in number | 'length']: T[P]
 };
+
+/**
+ * https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
+ */
+export type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> =
+	Omit<T, Keys>
+	& {
+	[K in Keys]-?: ITSRequiredPick<T, K>
+	& ITSPartialPick<T, Exclude<Keys, K>>
+}[Keys];
+
+/**
+ * https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
+ */
+export type ITSRequireOnlyOne<T, Keys extends keyof T = keyof T> =
+	Omit<T, Keys>
+	& {
+	[K in Keys]-?: ITSRequiredPick<T, K>
+	& Partial<Record<Exclude<Keys, K>, never>>
+}[Keys];

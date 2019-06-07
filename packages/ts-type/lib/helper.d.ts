@@ -77,3 +77,15 @@ export declare type ITSWriteableWith<T, K extends keyof T> = Omit<T, K> & ITSWri
 export declare type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSUnpackedArrayLike<T>[] & {
     -readonly [P in number | 'length']: T[P];
 };
+/**
+ * https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
+ */
+export declare type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
+    [K in Keys]-?: ITSRequiredPick<T, K> & ITSPartialPick<T, Exclude<Keys, K>>;
+}[Keys];
+/**
+ * https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
+ */
+export declare type ITSRequireOnlyOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
+    [K in Keys]-?: ITSRequiredPick<T, K> & Partial<Record<Exclude<Keys, K>, never>>;
+}[Keys];
