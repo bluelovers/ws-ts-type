@@ -8,3 +8,9 @@ export type ITSConstructorParameters<T extends new (...args: any[]) => any> = Co
 export type ITSPartial<T> = Partial<T>
 export type ITSPick<T, K extends keyof T> = Pick<T, K>
 export type ITSInstanceType<T extends new (...args: any[]) => any> = InstanceType<T>
+
+
+export type ITSClassDecorator = <TFunction extends Function>(target: TFunction) => TFunction | void;
+export type ITSPropertyDecorator = (target: object, propertyKey: string | symbol) => void;
+export type ITSMethodDecorator = <T>(target: object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<T>) => TypedPropertyDescriptor<T> | void;
+export type ITSParameterDecorator = (target: object, propertyKey: string | symbol, parameterIndex: number) => void;

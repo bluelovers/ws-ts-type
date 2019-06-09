@@ -4,11 +4,11 @@
 import {
 	ITSPartialPick,
 	ITSPartialWith,
-	ITSPickExtra, ITSReadonlyToWriteableArray,
-	ITSRequiredPick,
+	ITSPickExtra, ITSRequiredPick,
 	ITSRequiredWith,
 
 } from '../../lib/helper';
+import { ITSReadonlyToWriteableArray } from '../../lib/helper/readonly';
 
 export interface I1
 {

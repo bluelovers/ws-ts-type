@@ -1,6 +1,10 @@
 {
   "extends": "@bluelovers/tsconfig",
   "compilerOptions": {
+    "skipLibCheck": true,
     "sourceMap": false
-  }
+  },
+  "exclude": [
+    "./test"
+  ]
 }

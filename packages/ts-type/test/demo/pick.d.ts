@@ -1,7 +1,8 @@
 /**
  * Created by user on 2019/5/30.
  */
-import { ITSPartialPick, ITSPartialWith, ITSPickExtra, ITSReadonlyToWriteableArray, ITSRequiredPick, ITSRequiredWith } from '../../lib/helper';
+import { ITSPartialPick, ITSPartialWith, ITSPickExtra, ITSRequiredPick, ITSRequiredWith } from '../../lib/helper';
+import { ITSReadonlyToWriteableArray } from '../../lib/helper/readonly';
 export interface I1 {
     a: string;
     b?: string;

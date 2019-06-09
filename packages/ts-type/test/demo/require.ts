@@ -5,14 +5,14 @@
 import {
 	ITSPartialPick,
 	ITSPartialWith,
-	ITSPickExtra, ITSReadonlyToWriteableArray,
-	ITSRequiredPick,
+	ITSPickExtra, ITSRequiredPick,
 	ITSRequiredWith,
 
 	ITSRequireAtLeastOne,
 	ITSRequireOnlyOne,
 
 } from '../../lib/helper';
+import { ITSReadonlyToWriteableArray } from '../../lib/helper/readonly';
 
 interface T1 {
 	a?: string;

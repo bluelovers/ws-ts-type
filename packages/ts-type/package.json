@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -41,7 +41,8 @@
   },
   "scripts": {
     "build": "npm run build-lib-toc",
-    "build-lib-toc": "npx ts-node ./test/script/toc && tsc -p ./",
+    "build-lib-toc": "npx ts-node ./test/script/toc && npm run build:toc",
+    "build:toc": "tsc -p ./",
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint ./index.ts",
     "ncu": "npx npm-check-updates -u",
