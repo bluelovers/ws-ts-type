@@ -4,12 +4,17 @@
 
 import IRequestHeaders from './lib/request';
 import IResponseHeaders from './lib/response';
+import { ITSPartialRecord } from 'ts-type';
 
-export { IRequestHeaders, IResponseHeaders }
+export { IRequestHeaders, IResponseHeaders };
+
+export type IHttpHeaderValues = string | number | boolean | string[];
 
 export interface IHeaders extends IRequestHeaders, IResponseHeaders
 {
 
 }
+
+export type ILazyHeaders<T extends string = string, V = IHttpHeaderValues> = ITSPartialRecord<T, V>;
 
 export default IHeaders;
