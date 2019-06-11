@@ -1,14 +1,8 @@
 /**
  * Created by user on 2019/5/30.
  */
-import {
-	ITSPartialPick,
-	ITSPartialWith,
-	ITSPickExtra, ITSRequiredPick,
-	ITSRequiredWith,
-
-} from '../../lib/helper';
 import { ITSReadonlyToWriteableArray } from '../../lib/helper/readonly';
+import { ITSPartialPick, ITSPartialWith, ITSPickExtra, ITSRequiredPick, ITSRequiredWith } from '../../lib';
 
 export interface I1
 {

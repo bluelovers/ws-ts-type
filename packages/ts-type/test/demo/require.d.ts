@@ -1,7 +1,7 @@
 /**
  * Created by user on 2019/6/7.
  */
-import { ITSRequireAtLeastOne, ITSRequireOnlyOne } from '../../lib/helper';
+import { ITSRequireAtLeastOne, ITSRequireOnlyOne } from '../../lib';
 interface T1 {
     a?: string;
     b?: number;

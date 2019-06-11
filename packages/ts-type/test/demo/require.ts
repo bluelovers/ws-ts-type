@@ -2,17 +2,15 @@
  * Created by user on 2019/6/7.
  */
 
+import { ITSReadonlyToWriteableArray } from '../../lib/helper/readonly';
 import {
 	ITSPartialPick,
 	ITSPartialWith,
-	ITSPickExtra, ITSRequiredPick,
+	ITSPickExtra,
+	ITSRequireAtLeastOne, ITSRequiredPick,
 	ITSRequiredWith,
-
-	ITSRequireAtLeastOne,
 	ITSRequireOnlyOne,
-
-} from '../../lib/helper';
-import { ITSReadonlyToWriteableArray } from '../../lib/helper/readonly';
+} from '../../lib';
 
 interface T1 {
 	a?: string;

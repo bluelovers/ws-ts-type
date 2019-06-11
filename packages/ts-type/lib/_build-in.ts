@@ -14,3 +14,8 @@ export type ITSClassDecorator = <TFunction extends Function>(target: TFunction) 
 export type ITSPropertyDecorator = (target: object, propertyKey: string | symbol) => void;
 export type ITSMethodDecorator = <T>(target: object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<T>) => TypedPropertyDescriptor<T> | void;
 export type ITSParameterDecorator = (target: object, propertyKey: string | symbol, parameterIndex: number) => void;
+
+/**
+ * Exclude null and undefined from T
+ */
+export type ITSNonNullable<T> = T extends null | undefined ? never : T;
