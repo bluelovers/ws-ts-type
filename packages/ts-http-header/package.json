@@ -21,5 +21,6 @@
     "postpublish": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "gitHead": "04ccd42aeaef7a56f55263ff79c024c181bacfb0"
 }
