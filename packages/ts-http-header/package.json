@@ -22,5 +22,5 @@
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "gitHead": "04ccd42aeaef7a56f55263ff79c024c181bacfb0"
+  "gitHead": "cfb094f3fd1e71f166bdc44d1d844ae8c8395f2e"
 }
