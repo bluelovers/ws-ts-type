@@ -18,6 +18,7 @@
     "packages/*"
   ],
   "scripts": {
+    "lerna": "lerna publish",
     "sort-package-json": "oao run-script \"sort-package-json2\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

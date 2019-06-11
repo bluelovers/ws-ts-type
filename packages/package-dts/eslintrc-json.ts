@@ -2,9 +2,18 @@
  * Created by user on 2019/5/19.
  */
 
-import { JSONSchemaForESLintConfigurationFiles } from './types/eslintrc.json';
+import { JSONSchemaForESLintConfigurationFiles, Rule } from './types/eslintrc.json';
 
 export type ILibEslint = typeof import('./types/eslintrc.json');
+
+export const enum EnumRule
+{
+	off = 'off',
+	warn = 'warn',
+	error = 'error',
+}
+
+export type IRule = Rule | EnumRule;
 
 export type IEslintrcJson = JSONSchemaForESLintConfigurationFiles & {
 

@@ -34,6 +34,8 @@ export type IPackageJson<T = any> = CoreProperties & {
 		[k: string]: any;
 	};
 
+	gitHead?: string,
+
 } & {
 	//[k in Exclude<string, keyof CoreProperties>]: T;
 	[k: string]: T;

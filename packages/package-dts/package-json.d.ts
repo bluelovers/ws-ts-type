@@ -26,6 +26,7 @@ export declare type IPackageJson<T = any> = CoreProperties & {
         tag?: string | "next";
         [k: string]: any;
     };
+    gitHead?: string;
 } & {
     [k: string]: T;
 };
