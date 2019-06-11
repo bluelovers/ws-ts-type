@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",

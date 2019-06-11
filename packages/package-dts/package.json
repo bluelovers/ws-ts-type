@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/package-dts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "A Typescript type definition for NPM package json",
   "keywords": [
@@ -55,7 +55,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:schema": "npx ts-node ./script/index"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
     "axios": "^0.18.0",
