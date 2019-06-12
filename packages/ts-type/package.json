@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -52,13 +52,12 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "@types/bluebird": "*",
-    "@types/node": "*",
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.7",
-    "@typescript-eslint/eslint-plugin": "^1.10.2"
+    "@bluelovers/tsconfig": "^1.0.8",
+    "@types/bluebird": "*",
+    "@types/node": "*"
   },
   "peerDependencies": {
     "@types/bluebird": "*",

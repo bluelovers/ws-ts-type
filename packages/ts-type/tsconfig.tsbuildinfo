@@ -1,0 +1,2275 @@
+{
+  "program": {
+    "fileInfos": {
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0",
+        "signature": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
+        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.d.ts": {
+        "version": "0fc0f68d3f4d94aa65fab955592e4a9f2066e6f8ee2f66fcc45adf4037fc167b",
+        "signature": "0fc0f68d3f4d94aa65fab955592e4a9f2066e6f8ee2f66fcc45adf4037fc167b"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.d.ts": {
+        "version": "1c05c805f62c1c06a60b7812cd8de2dff7a5bda2218ce5edda5d9d298b1c48e1",
+        "signature": "1c05c805f62c1c06a60b7812cd8de2dff7a5bda2218ce5edda5d9d298b1c48e1"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4",
+        "signature": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.iterable.d.ts": {
+        "version": "eb843da29336c7d5840bb439b24cf68a4a1652fd01c6e4e66ec74d8b136e944a",
+        "signature": "eb843da29336c7d5840bb439b24cf68a4a1652fd01c6e4e66ec74d8b136e944a"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
+        "signature": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts": {
+        "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
+        "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
+        "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21",
+        "signature": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
+        "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
+        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
+        "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
+        "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
+        "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.array.d.ts": {
+        "version": "fc7c02b980e7dda0ed14d57ee71705c09efc51ec6286a10b971a25a3bb29262b",
+        "signature": "fc7c02b980e7dda0ed14d57ee71705c09efc51ec6286a10b971a25a3bb29262b"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.object.d.ts": {
+        "version": "989b95205f1189943fab0ce12a39c80570edf8f200aca60e0fdc500afc4d5859",
+        "signature": "989b95205f1189943fab0ce12a39c80570edf8f200aca60e0fdc500afc4d5859"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.string.d.ts": {
+        "version": "9a13dd96b56e11eb3b170b9dbdb2e6b323b0023e9a0a275554f1116c1a0b2658",
+        "signature": "9a13dd96b56e11eb3b170b9dbdb2e6b323b0023e9a0a275554f1116c1a0b2658"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
+        "version": "7a842c21e0fe143eb3ad4d689a1470bab5ed9bc7fd7223fe8b56cbae27038d62",
+        "signature": "7a842c21e0fe143eb3ad4d689a1470bab5ed9bc7fd7223fe8b56cbae27038d62"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
+        "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+        "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
+        "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
+      },
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.full.d.ts": {
+        "version": "b209a815904a485328677714ef8c4ddd2dcf4040154fa204d25cbf31cd4ff0f3",
+        "signature": "b209a815904a485328677714ef8c4ddd2dcf4040154fa204d25cbf31cd4ff0f3"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts": {
+        "version": "f44c7e8edf452ef8eebea847c4a72f92f5a1afe341d45411ded867513d69011d",
+        "signature": "be286e579e42c0665af2a8d7bd091541cd37c19daaa4f5d1c109cc2497feff3a"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts": {
+        "version": "50b15ab26f5b7fac85ee59357fb51e787c63c95b31b78a16ed679798b48c663a",
+        "signature": "4ad99c18b6d308718e6487e3aa151e3aea2b847be8b20e7a161940ad3075c4f5"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts": {
+        "version": "bb0e4b340003613a761020eeaeb2b427d19e830dbacfe94321087fd829f6b78c",
+        "signature": "fb461264822f996f41183fba6820ec549016755e8ba714d02ba7d85c2b3c681e"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper.ts": {
+        "version": "f9f8b187e0bd7775e395e0c450c368917c5107ae92896e33267b47d1d9954e4f",
+        "signature": "a100f6570ef586ef63edc435997ce9da356356ec4440a994afdb0c91c04debb5"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts": {
+        "version": "fef9bc78574d52ae6407b3bd3abb8c41efc6e210c392387156028ead4541d171",
+        "signature": "f439851496f793d6f8bdee120aa5e36825406308fdef06d222e81e658ca6ea34"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/infer.ts": {
+        "version": "2bd1aeba3c6a7f6c873f5633a7f21a4f85b5c691cf40ab7d8a91de9b7255e109",
+        "signature": "2cb067d743b180bd92c9e479d2d48a8de884e9d272cb29b076eb25f14e4ba322"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts": {
+        "version": "30a0a331dc5ca5c3d34a3f3b6bbd2e7badc62c1effe393650af1d78afcf31c76",
+        "signature": "c67c45c88eb3422565dea86a280d6209ea8263e7abcd6b3130fad36e1eb022f3"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/key-value.ts": {
+        "version": "17dec98c15b12786d26552f0b4eed667d1850a9f169a6a955974a616f86c7839",
+        "signature": "c4bb57d40ab766b47264f2097288a2d9085eb966fefc3ed586f2718067990fd2"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/overwrite.ts": {
+        "version": "29e2fa65c45b57b8be7918cb4085ea14a11f50cab9f2d15f634616e19baaf5b1",
+        "signature": "761a28f5c9cdbc4b402bee1543ab8396d41e94700f1bd2189868ff874831016f"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/readonly.ts": {
+        "version": "25c271587b9a46cff5e15dada8a93616f91ee409f0354188be6ac902f9445031",
+        "signature": "b246a65d77458c8b72c594f8f486a20f9e5a2f2254089d79b08727b1785f8004"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/bluebird/index.d.ts": {
+        "version": "3b68d84083b030735621d09b37cf55914651770b9a0fadfbe856c97f3d925189",
+        "signature": "3b68d84083b030735621d09b37cf55914651770b9a0fadfbe856c97f3d925189"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/bluebird.ts": {
+        "version": "3a96fbee17fccb756b8d820fb7572a2542d4f02ec5dd8d0191ea5fe11cd5c9a7",
+        "signature": "48de333c69d835c1a3731caad76afce581275e061f7eede60ff200b2f964afa2"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/decorators.ts": {
+        "version": "0bc03e521b73792d4512976dbddd8a750ddce9b06b13cf2c38685c78b97fdcc0",
+        "signature": "88cbe8f8f5d43ab96d5f08a93df009be5a72c91a490e7814fa30e1075f62b6be"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/promise.ts": {
+        "version": "bc3d65850affa6dbad7ada50d650e5181fc2a35da779e9a719bf5c96c6616497",
+        "signature": "3bed5c37de0fae6d3a598259aa1b07ae4c4b323cd833659d2f25e507e0923597"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/proxy.ts": {
+        "version": "8f752c50cd5bb26347ce6e53d2ed502494fdfc734aab266cb739dbec6f516b42",
+        "signature": "c985fce9ff4a3d1758f909493acca817b7d7bab6bb63ffb6152afae9bcd2c2c8"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/record.ts": {
+        "version": "5d48ff2c55d7c3efbeedae9d20d4583999417f4397f9b5e2e9db097062baec3e",
+        "signature": "b237ea2012aa1ba959a19df4c175334a872e0e073555e6adf2805292291515bd"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts": {
+        "version": "5efc367a2782d5febd8cc75df1eaf3c3a10ba21cd4a68a8de3c134712c23d715",
+        "signature": "5efc367a2782d5febd8cc75df1eaf3c3a10ba21cd4a68a8de3c134712c23d715"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts": {
+        "version": "427aa4f679d92576e6dd9bafa5d32499860a376488e5f89ff307a583cde91544",
+        "signature": "427aa4f679d92576e6dd9bafa5d32499860a376488e5f89ff307a583cde91544"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts": {
+        "version": "9e23012a1449d07a7b6815183956ec86465514564937300ea2dd74d459c957fa",
+        "signature": "9e23012a1449d07a7b6815183956ec86465514564937300ea2dd74d459c957fa"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/typed-array.d.ts": {
+        "version": "4a6e0a7021d82e63674b86895c559efddcb5ff7a41131a8bb6495f312426106f",
+        "signature": "4a6e0a7021d82e63674b86895c559efddcb5ff7a41131a8bb6495f312426106f"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/index.d.ts": {
+        "version": "a0a44b44d4ce9cef5f286238d1cd72d484087526fa7c5dd5a16b4b801e341870",
+        "signature": "a0a44b44d4ce9cef5f286238d1cd72d484087526fa7c5dd5a16b4b801e341870"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/_build-in.ts": {
+        "version": "1b60380d3838ec34bef4cc2aa673168cb09deb71d57c1ae54403443b85dcea70",
+        "signature": "523d9233a3c46c1abc45a5ed04130e0b1b99520182ca76acdd1c2c51ac639e9a"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/index.ts": {
+        "version": "0d693fd20899001855351de104b9831c80a227661cf3d211ca4431053a74372b",
+        "signature": "081f763ebd04dca85c09aa8f64213c9d07826ce17943a78e0edc2d5986872a63"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/cli-color/index.d.ts": {
+        "version": "c33d1976c390b9be3c4f88ba953426bcb7ea5c672a77db5e7a858e6a12f007ac",
+        "signature": "c33d1976c390b9be3c4f88ba953426bcb7ea5c672a77db5e7a858e6a12f007ac"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts": {
+        "version": "3af134c0480536f901a30692d216bd29712a3869fe38a7be066ea1eef34a8561",
+        "signature": "3af134c0480536f901a30692d216bd29712a3869fe38a7be066ea1eef34a8561"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/assert.d.ts": {
+        "version": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f",
+        "signature": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a",
+        "signature": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/buffer.d.ts": {
+        "version": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d",
+        "signature": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts": {
+        "version": "c5a3c14cb11afb48d405562e6843145caa67c60be9738f408cd7977ce30a0b00",
+        "signature": "c5a3c14cb11afb48d405562e6843145caa67c60be9738f408cd7977ce30a0b00"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/cluster.d.ts": {
+        "version": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a",
+        "signature": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/constants.d.ts": {
+        "version": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598",
+        "signature": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts": {
+        "version": "a15466cfe77b4f8bcd936634d3d2828ee340819c3f136d31f87d6084e86994d0",
+        "signature": "a15466cfe77b4f8bcd936634d3d2828ee340819c3f136d31f87d6084e86994d0"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dgram.d.ts": {
+        "version": "b6c6861bccf209a98eeddb99bdb7bd987fb29fc52130d5d9fd2f79d3607a0a7a",
+        "signature": "b6c6861bccf209a98eeddb99bdb7bd987fb29fc52130d5d9fd2f79d3607a0a7a"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts": {
+        "version": "896cd7d58e9d832392a6e374a8f8b64f142089b4d2678a2c90fd8d1d49128677",
+        "signature": "896cd7d58e9d832392a6e374a8f8b64f142089b4d2678a2c90fd8d1d49128677"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/domain.d.ts": {
+        "version": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa",
+        "signature": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts": {
+        "version": "cff7f1ff41519a28adfedb85b9d91325e13d7993bebcfd0dd9ce30c3ed1240bb",
+        "signature": "cff7f1ff41519a28adfedb85b9d91325e13d7993bebcfd0dd9ce30c3ed1240bb"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts": {
+        "version": "10c5b29dccf29ea7f9aea324ab09b0e2237d6506bd8e28538963b28855819616",
+        "signature": "10c5b29dccf29ea7f9aea324ab09b0e2237d6506bd8e28538963b28855819616"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts": {
+        "version": "cc4cd9d8af7f5689b5df3c91d0fc287fafbd89e6e305183da28a6877a8aa08a8",
+        "signature": "cc4cd9d8af7f5689b5df3c91d0fc287fafbd89e6e305183da28a6877a8aa08a8"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http2.d.ts": {
+        "version": "28fdca6c7a3d5dd62c738461051ef345b50d167efab39dceb2fcc9a079db1b07",
+        "signature": "28fdca6c7a3d5dd62c738461051ef345b50d167efab39dceb2fcc9a079db1b07"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/https.d.ts": {
+        "version": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6",
+        "signature": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/inspector.d.ts": {
+        "version": "7f71142177d3c98370b31751e3d320c9743ed28eee215acb88d8e0d2a31e321e",
+        "signature": "7f71142177d3c98370b31751e3d320c9743ed28eee215acb88d8e0d2a31e321e"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts": {
+        "version": "cc5fac2b9e45a6670b96fd32cb42c97e0d4a7b2ee12c87963c6fe0f55fa84f50",
+        "signature": "cc5fac2b9e45a6670b96fd32cb42c97e0d4a7b2ee12c87963c6fe0f55fa84f50"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/os.d.ts": {
+        "version": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486",
+        "signature": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/path.d.ts": {
+        "version": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36",
+        "signature": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f",
+        "signature": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/process.d.ts": {
+        "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
+        "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/punycode.d.ts": {
+        "version": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1",
+        "signature": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts": {
+        "version": "b610b39b7d42b8e8359875ce77c3149d657bbaa6c9058beb655af805efb581b3",
+        "signature": "b610b39b7d42b8e8359875ce77c3149d657bbaa6c9058beb655af805efb581b3"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts": {
+        "version": "94cf93922adcc9cb4acf11d8d71641af728de919a50ae55d8e83159afea1a42c",
+        "signature": "94cf93922adcc9cb4acf11d8d71641af728de919a50ae55d8e83159afea1a42c"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/repl.d.ts": {
+        "version": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157",
+        "signature": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts": {
+        "version": "15087156b728a1bdf46de0e1299f904c6a658af37f80851f6fe76fb21bb99b65",
+        "signature": "15087156b728a1bdf46de0e1299f904c6a658af37f80851f6fe76fb21bb99b65"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948",
+        "signature": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts": {
+        "version": "8fd6756e8a6fac64089e19e4fbe822bcfafa62f79b237172288eaa1379e84083",
+        "signature": "8fd6756e8a6fac64089e19e4fbe822bcfafa62f79b237172288eaa1379e84083"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/trace_events.d.ts": {
+        "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
+        "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tty.d.ts": {
+        "version": "0fd8dac24f12d9fd1fcc275200dd1b6771072f20331a07b18f7dbcbe20f7d3f4",
+        "signature": "0fd8dac24f12d9fd1fcc275200dd1b6771072f20331a07b18f7dbcbe20f7d3f4"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts": {
+        "version": "1e3da92862604b1f7a32265169f9aa712c4567742d42597704e04ae3e07019e7",
+        "signature": "1e3da92862604b1f7a32265169f9aa712c4567742d42597704e04ae3e07019e7"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts": {
+        "version": "20e55abae3dd750a85fda7c4d140670ada679c3d5b640de5e4f3eaafcee18a0d",
+        "signature": "20e55abae3dd750a85fda7c4d140670ada679c3d5b640de5e4f3eaafcee18a0d"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/v8.d.ts": {
+        "version": "6ad2dd29dbf3aea031062298e9978d4b2a1fadd0997eb9d8caaf95aaa89e7033",
+        "signature": "6ad2dd29dbf3aea031062298e9978d4b2a1fadd0997eb9d8caaf95aaa89e7033"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts": {
+        "version": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9",
+        "signature": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "16de20ae20cd1d948409a56b55832f3d416c66c8cb44bb8475e1e9db14d8e402",
+        "signature": "16de20ae20cd1d948409a56b55832f3d416c66c8cb44bb8475e1e9db14d8e402"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts": {
+        "version": "f91189e04264b0e41ee96ff96661c3871e739b90156df2f2288da7a81019dcd9",
+        "signature": "f91189e04264b0e41ee96ff96661c3871e739b90156df2f2288da7a81019dcd9"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/base.d.ts": {
+        "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
+        "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45",
+        "signature": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
+        "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/fs-extra/index.d.ts": {
+        "version": "d5c03e5866400953db3ef99447cc29bc3bac083171e128fd87a25c09defd2503",
+        "signature": "d5c03e5866400953db3ef99447cc29bc3bac083171e128fd87a25c09defd2503"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/json-schema/index.d.ts": {
+        "version": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30",
+        "signature": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts": {
+        "version": "1ab36cdbb5af99fc06711bbd51d7bf09d5fedaba0223f15f45708d9882ffb853",
+        "signature": "1ab36cdbb5af99fc06711bbd51d7bf09d5fedaba0223f15f45708d9882ffb853"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts": {
+        "version": "b6d3763d7f9ce84118df4340505c24384267ccb48fa8772852260cb5ed4617c2",
+        "signature": "b6d3763d7f9ce84118df4340505c24384267ccb48fa8772852260cb5ed4617c2"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts": {
+        "version": "dfe341e9b1fbba9efd858aec6b2bce3ba27f1d572caf6a041b44eab94c88c864",
+        "signature": "dfe341e9b1fbba9efd858aec6b2bce3ba27f1d572caf6a041b44eab94c88c864"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts": {
+        "version": "187119ff4f9553676a884e296089e131e8cc01691c546273b1d0089c3533ce42",
+        "signature": "187119ff4f9553676a884e296089e131e8cc01691c546273b1d0089c3533ce42"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts": {
+        "version": "45bf6da7cede8211b7d0579deabfa227490dfe8b932a56a962599efc48356e68",
+        "signature": "45bf6da7cede8211b7d0579deabfa227490dfe8b932a56a962599efc48356e68"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts": {
+        "version": "c2d47e5668f89ed8768d306919c42bb88d50d4029d68f58343141360895cfcc0",
+        "signature": "c2d47e5668f89ed8768d306919c42bb88d50d4029d68f58343141360895cfcc0"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts": {
+        "version": "65648639567d214f62c1b21d200c852807e68bdb08311f95ab6f526ef5b98995",
+        "signature": "65648639567d214f62c1b21d200c852807e68bdb08311f95ab6f526ef5b98995"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts": {
+        "version": "00baffbe8a2f2e4875367479489b5d43b5fc1429ecb4a4cc98cfc3009095f52a",
+        "signature": "00baffbe8a2f2e4875367479489b5d43b5fc1429ecb4a4cc98cfc3009095f52a"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts": {
+        "version": "d04c462c622fc52b3b75c8b7eeb9e6ec2123414893a1cf3668c592e22f185ed2",
+        "signature": "d04c462c622fc52b3b75c8b7eeb9e6ec2123414893a1cf3668c592e22f185ed2"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts": {
+        "version": "3c92b6dfd43cc1c2485d9eba5ff0b74a19bb8725b692773ef1d66dac48cda4bd",
+        "signature": "3c92b6dfd43cc1c2485d9eba5ff0b74a19bb8725b692773ef1d66dac48cda4bd"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts": {
+        "version": "e34f3f6159b1e23de9bb5521382795aaa5aaed6f53b4702e70a2ec45bc76ddb5",
+        "signature": "e34f3f6159b1e23de9bb5521382795aaa5aaed6f53b4702e70a2ec45bc76ddb5"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts": {
+        "version": "c84107ce3522799b7a821463b1743ef230669093b2746afd1e817fcbb5885e67",
+        "signature": "c84107ce3522799b7a821463b1743ef230669093b2746afd1e817fcbb5885e67"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts": {
+        "version": "bbf144d4354e2aaa6439f32761f3ee798cc68d1600adab6e2a596f25269f106d",
+        "signature": "bbf144d4354e2aaa6439f32761f3ee798cc68d1600adab6e2a596f25269f106d"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/minimist/index.d.ts": {
+        "version": "3602dfff3072caea42f23a9b63fb34a7b0c95a62b93ce2add5fe6b159447845e",
+        "signature": "3602dfff3072caea42f23a9b63fb34a7b0c95a62b93ce2add5fe6b159447845e"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/child_process.d.ts": {
+        "version": "c4494ef0db9a14d77401bf1703c28b72c8423354b33749729be1cab9ce710ebc",
+        "signature": "c4494ef0db9a14d77401bf1703c28b72c8423354b33749729be1cab9ce710ebc"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/crypto.d.ts": {
+        "version": "1ef1ce00d53ea0e647b86c38980e774cf39d9893fab23d0c1efcf440c9988ed2",
+        "signature": "1ef1ce00d53ea0e647b86c38980e774cf39d9893fab23d0c1efcf440c9988ed2"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/dns.d.ts": {
+        "version": "2d4e59ab3a1fcdec40ad09ef2e5c6a40f67856b6c06919d3e1b4981fe61d9d01",
+        "signature": "2d4e59ab3a1fcdec40ad09ef2e5c6a40f67856b6c06919d3e1b4981fe61d9d01"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/fs.d.ts": {
+        "version": "08b5422b6fcc160d099df9d710cff2a1142175d4a4bf5dcc9808ddcea577043f",
+        "signature": "08b5422b6fcc160d099df9d710cff2a1142175d4a4bf5dcc9808ddcea577043f"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/readline.d.ts": {
+        "version": "4f80ee53bba81c3742f1dc5e6cb053d54a877aac74f7a620af4da73a4ba86828",
+        "signature": "4f80ee53bba81c3742f1dc5e6cb053d54a877aac74f7a620af4da73a4ba86828"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/zlib.d.ts": {
+        "version": "817c03c1b48aef1e718f84549e6dfd285ad10ee0bb6b8109f6920f6082db3d1d",
+        "signature": "817c03c1b48aef1e718f84549e6dfd285ad10ee0bb6b8109f6920f6082db3d1d"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/index.d.ts": {
+        "version": "ad1f3ffcde31019536358bab477c4dd6146e8a5ff10952b5b87051c22d10a839",
+        "signature": "ad1f3ffcde31019536358bab477c4dd6146e8a5ff10952b5b87051c22d10a839"
+      },
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/prettier/index.d.ts": {
+        "version": "658605991782bf54d834e0cd9d531a3a1a7421f95de8fcde911177d2723365d1",
+        "signature": "658605991782bf54d834e0cd9d531a3a1a7421f95de8fcde911177d2723365d1"
+      }
+    },
+    "options": {
+      "module": 1,
+      "target": 8,
+      "moduleResolution": 2,
+      "allowJs": false,
+      "allowUmdGlobalAccess": false,
+      "sourceMap": false,
+      "inlineSourceMap": true,
+      "inlineSources": true,
+      "declaration": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": false,
+      "resolveJsonModule": true,
+      "strictBindCallApply": true,
+      "noImplicitThis": true,
+      "strictNullChecks": false,
+      "preserveConstEnums": true,
+      "forceConsistentCasingInFileNames": true,
+      "showConfig": true,
+      "incremental": true,
+      "locale": "zh-TW",
+      "pretty": true,
+      "removeComments": false,
+      "traceResolution": false,
+      "newLine": 1,
+      "skipLibCheck": true,
+      "project": "./",
+      "configFilePath": "G:/Users/The Project/nodejs-yarn/ws-ts-type/packages/ts-type/tsconfig.json"
+    },
+    "referencedMap": {
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.object.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.string.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.full.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/infer.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/key-value.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/overwrite.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/readonly.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/bluebird/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/bluebird.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/bluebird/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/decorators.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/promise.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/proxy.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/record.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/infer.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/key-value.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/overwrite.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/readonly.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/bluebird.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/decorators.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/promise.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/proxy.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/record.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/typed-array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/_build-in.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/index.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/index.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/_build-in.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/cli-color/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/cli-color/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/assert.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/buffer.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/cluster.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/console.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/constants.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dgram.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/domain.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http2.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/https.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/inspector.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/module.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/os.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/path.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/perf_hooks.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/process.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/punycode.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/repl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/string_decoder.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/timers.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/trace_events.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tty.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/v8.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/worker_threads.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/base.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/assert.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/buffer.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/cluster.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/console.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/constants.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dgram.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/domain.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http2.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/https.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/inspector.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/module.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/os.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/path.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/perf_hooks.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/punycode.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/repl.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/string_decoder.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/timers.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/trace_events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tty.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/v8.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/worker_threads.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/base.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/globals.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/fs-extra/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/json-schema/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/minimist/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/child_process.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/crypto.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/dns.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/fs.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/readline.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/zlib.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/zlib.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/prettier/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.object.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.string.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.full.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/infer.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/key-value.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/overwrite.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/readonly.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/bluebird.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/decorators.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/promise.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/proxy.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/record.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/index.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/index.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/_build-in.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/bluebird.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/bluebird/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/record.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/key-value.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/readonly.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/bluebird/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/typed-array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/cli-color/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/cli-color/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/assert.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/base.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/assert.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/buffer.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/cluster.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/console.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/constants.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dgram.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/domain.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http2.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/https.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/inspector.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/module.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/os.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/path.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/perf_hooks.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/punycode.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/repl.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/string_decoder.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/timers.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/trace_events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tty.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/v8.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/worker_threads.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/base.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/globals.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/zlib.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/zlib.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/readline.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/fs.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/dns.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/crypto.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/child_process.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/fs-extra/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/perf_hooks.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/buffer.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/cluster.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/console.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/constants.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/https.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http2.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dgram.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tty.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/domain.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/worker_threads.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/v8.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/repl.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/inspector.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/module.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/os.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/path.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/process.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/punycode.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/string_decoder.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/timers.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/trace_events.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/prettier/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/minimist/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/json-schema/index.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts"
+      ],
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts": [
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+        "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/generic.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/base.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/unpacked.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/filter.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/infer.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/typeof.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/key-value.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/overwrite.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/helper/readonly.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/bluebird/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/bluebird.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/decorators.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/promise.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/proxy.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/type/record.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/index.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/signed-typed-array.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/unsigned-typed-array.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/typed-array.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/typedarray-dts/src/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/lib/_build-in.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/packages/ts-type/index.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/cli-color/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/globals.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/assert.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/async_hooks.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/buffer.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/child_process.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/cluster.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/console.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/constants.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/crypto.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dgram.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/dns.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/domain.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/events.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/fs.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/http2.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/https.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/inspector.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/module.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/net.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/os.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/path.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/perf_hooks.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/process.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/punycode.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/querystring.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/readline.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/repl.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/stream.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/string_decoder.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/timers.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tls.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/trace_events.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/tty.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/url.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/util.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/v8.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/vm.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/worker_threads.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/zlib.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/base.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/util.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/globals.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/node/ts3.2/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/fs-extra/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/json-schema/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/common.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/array.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/date.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/function.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/lang.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/math.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/number.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/object.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/lodash/ts3.1/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/minimist/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/child_process.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/crypto.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/dns.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/fs.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/readline.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/zlib.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/mz/index.d.ts",
+      "g:/users/the project/nodejs-yarn/ws-ts-type/node_modules/@types/prettier/index.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.full.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.d.ts",
+      "c:/users/user/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts"
+    ]
+  },
+  "version": "3.6.0-dev.20190611"
+}
