@@ -1,5 +1,5 @@
 {
-  "extends": "@bluelovers/tsconfig",
+  "extends": "@bluelovers/tsconfig/esm/esModuleInterop",
   "compilerOptions": {
     "skipLibCheck": true,
     "sourceMap": false

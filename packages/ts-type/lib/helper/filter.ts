@@ -4,6 +4,16 @@
 
 import { ITSPropertyKey } from '..';
 
+/**
+ * Exclude from T those types that are assignable to U, and replace to R
+ */
+export type ITSExclude2<T, U, R = T> = T extends U ? never : R;
+
+/**
+ * Extract from T those types that are assignable to U, and replace to R
+ */
+export type ITSExtract2<T, U, R = T> = T extends U ? R : never;
+
 export type ITSExtractRecord<M, T, K extends keyof M = keyof M> = {
 	[P in K]: Extract<M[P], T>;
 };
@@ -13,6 +23,16 @@ export type ITSExtractRecordNoNull<M, T, K extends keyof M = keyof M> = {
 };
 
 export type ITSExtractKeyofRecord<M, T> = keyof ITSExtractRecord<M, T>;
+
+export type ITSExcludeRecord<M, T, K extends keyof M = keyof M> = {
+	[P in K]: Exclude<M[P], T>;
+};
+
+export type ITSExcludeRecordNoNull<M, T, K extends keyof M = keyof M> = {
+	[P in K]: NonNullable<M[P]>;
+};
+
+export type ITSExcludeKeyofRecord<M, T> = keyof ITSExcludeRecord<M, T>;
 
 /**
  * filter all member is function and key type is string or symbol
@@ -49,3 +69,5 @@ export type ITSKeyofBothSame<T, U> = ITSKeyofSame<T, U> | ITSKeyofSame<U, T>;
  * 去除 T 與 U 當中同時存在的 key
  */
 export type ITSKeyofBothDiff<T, U> = ITSKeyofDiff<T, U> | ITSKeyofDiff<U, T>;
+
+

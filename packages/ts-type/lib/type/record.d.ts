@@ -57,6 +57,10 @@ export declare type ITSPartialPick<T, K extends keyof T> = {
  * clone a type and mark all RK is Required, PK is Partial
  */
 export declare type ITSPickExtra<T, RK extends keyof T, PK extends Exclude<keyof T, RK> = Exclude<keyof T, RK>> = ITSRequiredPick<T, RK> & ITSPartialPick<T, PK>;
+/**
+ * clone a type and mark all RK is Required, PK is Partial
+ */
+export declare type ITSPickExtra2<T, PK extends keyof T, RK extends Exclude<keyof T, PK> = Exclude<keyof T, PK>> = ITSRequiredPick<T, RK> & ITSPartialPick<T, PK>;
 export declare type ITSRequiredWith<T, K extends keyof T> = Omit<T, K> & ITSRequiredPick<T, K>;
 export declare type ITSPartialWith<T, K extends keyof T> = Omit<T, K> & ITSPartialPick<T, K>;
 /**

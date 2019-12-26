@@ -52,6 +52,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
+    "ts-toolbelt": "^1.1.13",
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {

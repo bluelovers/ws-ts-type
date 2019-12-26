@@ -6,3 +6,4 @@
 /.browserslistrc
 /.nvmrc
 /test/temp/
+tsconfig.tsbuildinfo

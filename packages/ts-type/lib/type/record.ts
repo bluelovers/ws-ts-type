@@ -3,6 +3,7 @@
  */
 
 import { ITSKeyofSame, ITSKeyofDiff, ITSKeyofBothSame, ITSKeyofBothDiff } from '../helper/filter';
+import { ITSKeyOfRecordExcludeToKey, ITSKeyOfRecordExtractToKey } from '..';
 
 /**
  * @deprecated
@@ -71,6 +72,13 @@ export type ITSPickExtra<T, RK extends keyof T, PK extends Exclude<keyof T, RK> 
 	ITSRequiredPick<T, RK>
 	& ITSPartialPick<T, PK>;
 
+/**
+ * clone a type and mark all RK is Required, PK is Partial
+ */
+export type ITSPickExtra2<T, PK extends keyof T, RK extends Exclude<keyof T, PK> = Exclude<keyof T, PK>> =
+	ITSRequiredPick<T, RK>
+	& ITSPartialPick<T, PK>;
+
 export type ITSRequiredWith<T, K extends keyof T> = Omit<T, K> & ITSRequiredPick<T, K>;
 export type ITSPartialWith<T, K extends keyof T> = Omit<T, K> & ITSPartialPick<T, K>;
 
@@ -101,3 +109,7 @@ export type ITSPartialRecord<K extends keyof any, T> = {
 export type ITSRequireRecord<K extends keyof any, T> = {
 	[P in K]-?: T;
 };
+
+export type ITSPickRecordType<Base, Type> = Pick<Base,  ITSKeyOfRecordExtractToKey<Base, Type>>;
+
+export type ITSOmitRecordType<Base, Type> = Pick<Base,  ITSKeyOfRecordExcludeToKey<Base, Type>>;
