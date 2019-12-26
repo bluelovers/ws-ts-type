@@ -2,6 +2,7 @@
  * Created by user on 2019/6/11.
  */
 import { ITSKeyofSame, ITSKeyofDiff, ITSKeyofBothSame, ITSKeyofBothDiff } from '../helper/filter';
+import { ITSKeyOfRecordExcludeToKey, ITSKeyOfRecordExtractToKey } from '..';
 /**
  * @deprecated
  */
@@ -81,3 +82,5 @@ export declare type ITSPartialRecord<K extends keyof any, T> = {
 export declare type ITSRequireRecord<K extends keyof any, T> = {
     [P in K]-?: T;
 };
+export declare type ITSPickRecordType<Base, Type> = Pick<Base, ITSKeyOfRecordExtractToKey<Base, Type>>;
+export declare type ITSOmitRecordType<Base, Type> = Pick<Base, ITSKeyOfRecordExcludeToKey<Base, Type>>;

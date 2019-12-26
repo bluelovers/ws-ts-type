@@ -52,11 +52,11 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "ts-toolbelt": "^1.1.13",
+    "ts-toolbelt": "^6.0.1",
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.8",
+    "@bluelovers/tsconfig": "^1.0.13",
     "@types/bluebird": "*",
     "@types/node": "*"
   },
@@ -64,5 +64,5 @@
     "@types/bluebird": "*",
     "@types/node": "*"
   },
-  "gitHead": "cfb094f3fd1e71f166bdc44d1d844ae8c8395f2e"
+  "gitHead": "591287db825f9b4f086b73d824c7987fd7a05c39"
 }
