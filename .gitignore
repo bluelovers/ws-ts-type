@@ -3,3 +3,5 @@
 /packages/typepark/
 /test/temp/
 /yarn.lock
+tsconfig.tsbuildinfo
+/packages/packageJsonSchema.json/

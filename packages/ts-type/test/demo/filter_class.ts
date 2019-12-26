@@ -12,6 +12,7 @@ import {
 	ITSKeyOfRecordExcludeToKey,
 
 	ITSOmitRecordType,
+	ITSPickRecordType,
 } from '../../lib';
 
 export let C1 = {
@@ -22,5 +23,8 @@ export let C1 = {
 
 export let t1: ITSOmitRecordType<typeof C1, Function> = {
 	a: 1,
-	b(){}
+}
+
+export let t2: ITSPickRecordType<typeof C1, Function> = {
+	b(){},
 }
