@@ -2,7 +2,7 @@
  * Created by user on 2018/11/27/027.
  */
 
-import { ITSUnpackedPromiseLike, ITSUnpacked } from 'ts-type';
+import { ITSUnpackedPromiseLike, ITSUnpacked, ITSBluebirdPromisifyAll } from 'ts-type';
 
 export type Example = Promise<boolean>;
 
@@ -28,3 +28,11 @@ a2 = 0;
 // @ts-ignore err when without @ts-ignore
 a2 = '';
 
+export interface I1
+{
+	a(): Promise<string>
+}
+
+export let pa: ITSBluebirdPromisifyAll<I1> = null;
+
+pa.a().tap(v => v)
