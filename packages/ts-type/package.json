@@ -47,7 +47,7 @@
     "lint": "npx eslint ./index.ts",
     "ncu": "npx npm-check-updates -u",
     "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run build && npm run test",
-    "postpublish": "git commit -m \"publish new version\" .",
+    "postpublish_": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "npm run lint"
   },
