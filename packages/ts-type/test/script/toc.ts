@@ -26,7 +26,7 @@ fg
 			})
 			.map(function (v)
 			{
-				return `export * from '${v}';`
+				return `export type * from '${v}';`
 			})
 		;
 
