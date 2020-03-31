@@ -49,9 +49,9 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "eslint **/*.ts",
-    "ncu": "npx npm-check-updates -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json",
-    "sort-package-json": "npx sort-package-json ./package.json",
+    "ncu": "npx yarn-tool ncu -u",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "sort-package-json": "npx yarn-tool sort",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:schema": "npx ts-node ./script/index"
   },
