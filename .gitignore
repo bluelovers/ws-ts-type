@@ -5,3 +5,5 @@
 /yarn.lock
 tsconfig.tsbuildinfo
 /packages/packageJsonSchema.json/
+*.log
+*.map

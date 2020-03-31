@@ -1,10 +1,6 @@
 {
-  "extends": "@bluelovers/tsconfig/esm/esModuleInterop",
+  "extends": "@bluelovers/tsconfig/esm/mapfile.json",
   "compilerOptions": {
-    "skipLibCheck": true,
-    "sourceMap": false
-  },
-  "exclude": [
-    "./test"
-  ]
+    "skipLibCheck": true
+  }
 }

@@ -40,23 +40,23 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm run build-lib-toc",
-    "build-lib-toc": "npx ts-node ./test/script/toc && npm run build:toc",
+    "build": "yarn run build-lib-toc",
+    "build-lib-toc": "npx ts-node ./test/script/toc && yarn run build:toc",
     "build:toc": "tsc -p ./",
-    "coverage": "npx nyc npm run test",
-    "lint": "npx eslint ./index.ts",
-    "ncu": "npx npm-check-updates -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run build && npm run test",
-    "postpublish_": "git commit -m \"publish new version\" .",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npm run lint"
+    "ncu": "npx yarn-tool ncu -u",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json & yarn run build",
+    "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "ts-toolbelt": "^6.0.1",
-    "typedarray-dts": "^1.0.0"
+    "fast-glob": "^3.2.2",
+    "fs-extra": "^9.0.0",
+    "ts-toolbelt": "^6.3.6",
+    "typedarray-dts": "^1.0.0",
+    "upath2": "^2.1.3"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.13",
+    "@bluelovers/fast-glob": "^3.0.4",
+    "@bluelovers/tsconfig": "^1.0.19",
     "@types/bluebird": "*",
     "@types/node": "*"
   },

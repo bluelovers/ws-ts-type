@@ -1,3 +1,3 @@
-export type * from 'ts-toolbelt';
-import type * as ITB from 'ts-toolbelt';
+export * from 'ts-toolbelt';
+export declare type ITB = typeof import('ts-toolbelt');
 export default ITB;

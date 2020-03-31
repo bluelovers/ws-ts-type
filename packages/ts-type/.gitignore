@@ -7,3 +7,4 @@
 /.nvmrc
 /test/temp/
 tsconfig.tsbuildinfo
+*.map

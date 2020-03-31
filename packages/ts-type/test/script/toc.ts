@@ -1,6 +1,6 @@
-import * as fg from 'fast-glob';
-import * as fs from 'fs-extra';
-import path = require('upath2');
+import fg from '@bluelovers/fast-glob';
+import fs from 'fs-extra';
+import path from 'upath2';
 
 let root_lib = path.join(__dirname, '../..', 'lib');
 
@@ -26,7 +26,7 @@ fg
 			})
 			.map(function (v)
 			{
-				return `export type * from '${v}';`
+				return `export * from '${v}';`
 			})
 		;
 
@@ -36,11 +36,11 @@ fg
 
 		console.log(out);
 
-		return fs.outputFile(path.join(root_lib, 'index.ts'), out)
+		return fs.outputFile(path.join(root_lib, 'index.d.ts'), out)
 	})
 	.then(function (v)
 	{
-		console.log(`saved index.ts`);
+		console.log(`saved index.d.ts`);
 
 		return v;
 	})
