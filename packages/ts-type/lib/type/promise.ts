@@ -9,3 +9,19 @@
 export type ITSDeferred<T> = {
 	[P in keyof T]: Promise<T[P]>;
 };
+
+export interface ITSPromiseFulfilledResult<T>
+{
+	status: "fulfilled";
+	value: T;
+	reason?: never;
+}
+
+export interface ITSPromiseRejectedResult<E = any>
+{
+	status: "rejected";
+	reason: E;
+	value?: never;
+}
+
+export type ITSPromiseSettledResult<T, E = any> = ITSPromiseFulfilledResult<T> | ITSPromiseRejectedResult<E>;
