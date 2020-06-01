@@ -2,11 +2,11 @@
  * Created by user on 2019/5/19.
  */
 
-import fs = require("fs-extra")
-import http = require("http")
-import path = require("path")
+import fs from "fs-extra"
+import http from "http"
+import path from "path"
 import axios from "axios"
-import Bluebird = require("bluebird")
+import Bluebird from "bluebird"
 import { compile, compileFromFile } from 'json-schema-to-typescript'
 
 export function downloadJsonAndBuild(options: {
