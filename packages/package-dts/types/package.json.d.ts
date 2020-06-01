@@ -258,9 +258,9 @@ export interface CoreProperties {
    */
   preferGlobal?: boolean;
   /**
-   * If set to true, then npm will refuse to publish it.
+   * If set to true/"true", then npm will refuse to publish it.
    */
-  private?: boolean;
+  private?: boolean | "true" | "false";
   publishConfig?: {
     [k: string]: any;
   };
