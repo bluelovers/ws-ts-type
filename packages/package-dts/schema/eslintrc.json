@@ -638,6 +638,10 @@
 					"$ref": "#/definitions/rule",
 					"description": "Enforce the consistent use of either function declarations or expressions"
 				},
+				"function-call-argument-newline": {
+					"$ref": "#/definitions/rule",
+					"description": "Enforce line breaks between arguments of a function call"
+				},
 				"function-paren-newline": {
 					"$ref": "#/definitions/rule",
 					"description": "Enforce consistent line breaks inside function parentheses"
@@ -1331,6 +1335,10 @@
 				]
 			}
 		},
+		"noInlineConfig": {
+			"description": "Prevent comments from changing config or rules",
+			"type": "boolean"
+		},
 		"parser": {
 			"type": "string"
 		},
@@ -1352,10 +1360,14 @@
 						8,
 						2017,
 						9,
-						2018
+						2018,
+						10,
+						2019,
+						11,
+						2020
 					],
 					"default": 5,
-					"description": "Set to 3, 5 (default), 6, 7, 8, or 9 to specify the version of ECMAScript you want to use. Alternatively, set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), or 2018 (same as 9) to use year-based naming."
+					"description": "Set to 3, 5 (default), 6, 7, 8, 9, 10 or 11 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10) or 2020 (same as 11) to use the year-based naming."
 				},
 				"sourceType": {
 					"enum": [
@@ -1377,6 +1389,13 @@
 		"root": {
 			"description": "By default, ESLint will look for configuration files in all parent folders up to the root directory. This can be useful if you want all of your projects to follow a certain convention, but can sometimes lead to unexpected results. To limit ESLint to a specific project, set this to `true` in a configuration in the root of your project.",
 			"type": "boolean"
+		},
+		"ignorePatterns": {
+			"description": "Tell ESLint to ignore specific files and directories. Each value uses the same pattern as the `.eslintignore` file.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		},
 		"rules": {
 			"description": "ESLint comes with a large number of rules. You can modify which rules your project uses either using configuration comments or configuration files.",
@@ -1433,6 +1452,16 @@
 							}
 						]
 					},
+					"extends": {
+						"description": "If you want to extend a specific configuration file, you can use the extends property and specify the path to the file. The path can be either relative or absolute.",
+						"type": [
+							"string",
+							"array"
+						],
+						"items": {
+							"type": "string"
+						}
+					},
 					"excludedFiles": {
 						"description": "If a file matches any of the 'excludedFiles' glob patterns, the 'overrides' configuration won’t apply",
 						"oneOf": [
@@ -1464,6 +1493,10 @@
 					},
 					"plugins": {
 						"$ref": "#/properties/plugins"
+					},
+					"processor": {
+						"description": "To specify a processor, specify the plugin name and processor name joined by a forward slash",
+						"type": "string"
 					},
 					"rules": {
 						"$ref": "#/properties/rules"

@@ -27,10 +27,19 @@
 		},
 		"bundledDependency": {
 			"description": "Array of package names that will be bundled when publishing the package.",
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
+			"oneOf": [
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				{
+					"enum": [
+						false
+					]
+				}
+			]
 		},
 		"dependency": {
 			"description": "Dependencies are specified with a simple hash of package name to version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.",
@@ -77,7 +86,8 @@
 				"^_": {
 					"description": "Any property starting with _ is valid.",
 					"additionalProperties": true,
-					"additionalItems": true
+					"additionalItems": true,
+					"tsType": "any"
 				}
 			},
 			"properties": {
@@ -86,7 +96,7 @@
 					"type": "string",
 					"maxLength": 214,
 					"minLength": 1,
-					"pattern": "^(?:@[a-z0-9-~][a-z0-9-._~]*/)?[a-z0-9-~][a-z0-9-._~]*$"
+					"pattern": "^(?:@[a-z0-9-*~][a-z0-9-*._~]*/)?[a-z0-9-~][a-z0-9-._~]*$"
 				},
 				"version": {
 					"description": "Version must be parseable by node-semver, which is bundled with npm as a dependency.",
@@ -105,17 +115,7 @@
 				},
 				"homepage": {
 					"description": "The url to the project homepage.",
-					"type": "string",
-					"oneOf": [
-						{
-							"format": "uri"
-						},
-						{
-							"enum": [
-								"."
-							]
-						}
-					]
+					"type": "string"
 				},
 				"bugs": {
 					"description": "The url to your project's issue tracker and / or the email address to which issues should be reported. These are helpful for people who encounter issues with your package.",
@@ -193,6 +193,10 @@
 						"type": "string"
 					}
 				},
+				"type": {
+					"description": "The type field defines how .js and extensionless files should be treated within a particular package.json file’s package scope. Supported values: \"commonjs\" (default) or \"module\".",
+					"type": "string"
+				},
 				"types": {
 					"description": "Set the types property to point to your bundled declaration file",
 					"type": "string"
@@ -250,6 +254,9 @@
 							"type": "string"
 						},
 						"url": {
+							"type": "string"
+						},
+						"directory": {
 							"type": "string"
 						}
 					}
@@ -352,7 +359,8 @@
 						}
 					},
 					"additionalProperties": {
-						"type": "string"
+						"type": "string",
+						"tsType": "string | undefined"
 					}
 				},
 				"config": {
@@ -377,6 +385,11 @@
 				},
 				"engines": {
 					"type": "object",
+					"properties": {
+						"node": {
+							"type": "string"
+						}
+					},
 					"additionalProperties": {
 						"type": "string"
 					}
@@ -408,6 +421,22 @@
 				},
 				"publishConfig": {
 					"type": "object",
+					"properties": {
+						"access": {
+							"type": "string",
+							"enum": [
+								"public",
+								"restricted"
+							]
+						},
+						"tag": {
+							"type": "string"
+						},
+						"registry": {
+							"type": "string",
+							"format": "uri"
+						}
+					},
 					"additionalProperties": true
 				},
 				"dist": {
@@ -445,6 +474,31 @@
 					"additionalProperties": {
 						"type": "string"
 					}
+				},
+				"workspaces": {
+					"description": "To configure your yarn workspaces, please note private should be set to true to use yarn workspaces",
+					"anyof": [
+						{
+							"type": "array",
+							"description": "your workspace folders also takes a glob",
+							"items": "string"
+						},
+						{
+							"type": "object",
+							"properties": {
+								"packages": {
+									"type": "array",
+									"description": "your workspace folder's also takes a glob",
+									"items": "string"
+								},
+								"nohoist": {
+									"type": "array",
+									"description": "nohoist your npm packages",
+									"items": "string"
+								}
+							}
+						}
+					]
 				}
 			}
 		},

@@ -8,44 +8,219 @@
 export type JSONSchemaForTravisCIConfigurationFiles = Job & {
   notifications?: {
     webhooks?:
-      | string[]
+      | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
+      | boolean
       | {
-          urls?: string | string[];
-          [k: string]: any;
-        };
+          disabled?: boolean;
+          enabled?: boolean;
+          urls?: string | SecretString | (string | SecretString)[];
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          urls?: string | SecretString | (string | SecretString)[];
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
     slack?:
       | SlackRoom
+      | boolean
       | {
+          disabled?: boolean;
+          enabled?: boolean;
           rooms?: SlackRoom[];
           on_pull_requests?: boolean;
-          template?: string[];
+          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
           on_success?: NotificationFrequency;
           on_failure?: NotificationFrequency;
-        };
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          rooms?: SlackRoom[];
+          on_pull_requests?: boolean;
+          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: NotificationFrequency;
+          on_failure?: NotificationFrequency;
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
     email?:
-      | string[]
-      | false
+      | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
+      | boolean
       | {
-          recipients?: string[];
+          disabled?: boolean;
+          enabled?: boolean;
+          recipients?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
           on_success?: "always" | "never" | "change";
           on_failure?: "always" | "never" | "change";
-          [k: string]: any;
-        };
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          recipients?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
     irc?:
-      | string
-      | string[]
+      | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
+      | boolean
       | {
-          channels?: string[];
-          channel_key?: string;
-          nick?: string;
-          password?: string;
-          template?: string[];
+          disabled?: boolean;
+          enabled?: boolean;
+          channels?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          channel_key?: PossiblySecretString;
+          nick?: NonEmptyString;
+          password?: PossiblySecretString;
+          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
           on_success?: "always" | "never" | "change";
           on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
           skip_join?: boolean;
           use_notice?: boolean;
-          [k: string]: any;
-        };
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          channels?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          channel_key?: PossiblySecretString;
+          nick?: NonEmptyString;
+          password?: PossiblySecretString;
+          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+          skip_join?: boolean;
+          use_notice?: boolean;
+        }[];
+    pushover?:
+      | NonEmptyStringOrArrayOfNonEmptyStrings
+      | boolean
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          api_key?: PossiblySecretString;
+          users?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          api_key?: PossiblySecretString;
+          users?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
+    campfire?:
+      | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
+      | boolean
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
+    flowdock?:
+      | PossiblySecretString
+      | boolean
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          api_token?: NonEmptyString;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          api_token?: NonEmptyString;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
+    hipchat?:
+      | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
+      | boolean
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          notify?: boolean;
+          on_pull_requests?: boolean;
+          rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          format?: "html" | "text";
+          template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }
+      | {
+          disabled?: boolean;
+          enabled?: boolean;
+          notify?: boolean;
+          on_pull_requests?: boolean;
+          rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+          format?: "html" | "text";
+          template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+          on_success?: "always" | "never" | "change";
+          on_failure?: "always" | "never" | "change";
+          on_start?: "always" | "never" | "change";
+          on_cancel?: "always" | "never" | "change";
+          on_error?: "always" | "never" | "change";
+        }[];
   };
   matrix?: {
     exclude?: Job[];
@@ -64,7 +239,18 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
       stage?: string;
       [k: string]: any;
     })[];
+    exclude?: (Job & {
+      /**
+       * The name of the build stage
+       */
+      stage?: string;
+      [k: string]: any;
+    })[];
     allow_failures?: Job[];
+    /**
+     * If some rows in the build matrix are allowed to fail, the build won’t be marked as finished until they have completed. To mark the build as finished as soon as possible, add fast_finish: true
+     */
+    fast_finish?: boolean;
   };
   /**
    * Specifies the order of build stages
@@ -78,6 +264,11 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
          */
         if?: string;
       })[];
+  version?: string;
+  /**
+   * Import YAML config snippets that can be shared across repositories.
+   */
+  import?: Import[] | Import;
   [k: string]: any;
 };
 export type StringOrStringArrayUnique = NonEmptyString | StringArrayUnique;
@@ -98,13 +289,18 @@ export type XcodeVersions =
   | "xcode9.4"
   | "xcode10"
   | "xcode10.1"
-  | "xcode10.2";
+  | "xcode10.2"
+  | "xcode10.3"
+  | "xcode11"
+  | "xcode11.1"
+  | "xcode11.2"
+  | "xcode11.3";
 export type PossiblySecretString =
   | string
   | {
       secure?: string;
     };
-export type Cache = "bundler" | "cargo" | "ccache" | "cocoapods" | "packages" | "pip" | "yarn" | "npm";
+export type Cache = "apt" | "bundler" | "cargo" | "ccache" | "cocoapods" | "packages" | "pip" | "yarn" | "npm";
 export type Service =
   | "cassandra"
   | "couchdb"
@@ -117,9 +313,10 @@ export type Service =
   | "neo4j"
   | "postgresql"
   | "rabbitmq"
-  | "redis-server"
+  | "redis"
   | "rethinkdb"
-  | "riak";
+  | "riak"
+  | "xvfb";
 export type EnvVars = EnvVar | EnvVar[];
 export type EnvVar =
   | string
@@ -154,10 +351,6 @@ export type Deployment = {
       [k: string]: any;
     }
   | {
-      provider: "npm";
-      email: PossiblySecretString;
-      api_key: PossiblySecretString;
-      tag?: string;
       [k: string]: any;
     }
   | {
@@ -235,11 +428,31 @@ export type Deployment = {
       provider: string;
       [k: string]: any;
     });
+export type PossiblySecretStringOrPossiblySecretStringTypeArrayUnique = PossiblySecretString | PossiblySecretString[];
 /**
  * Your account name, token and optional channel
  */
-export type SlackRoom = string;
+export type SlackRoom = string | SecretString;
+export type NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings = NonEmptyStringOrArrayOfNonEmptyStrings | null;
+export type NonEmptyStringOrArrayOfNonEmptyStrings = NonEmptyString | ArrayOfNonEmptyStrings;
+export type ArrayOfNonEmptyStrings = NonEmptyString[];
 export type NotificationFrequency = "always" | "never" | "change";
+export type Import =
+  | {
+      /**
+       * The source to import build config from
+       */
+      source: string;
+      /**
+       * How to merge the imported config into the target config (defaults to deep_merge_append)
+       */
+      mode?: "merge" | "deep_merge" | "deep_merge_append" | "deep_merge_prepend";
+      /**
+       * Specifies a condition for the import
+       */
+      if?: string;
+    }
+  | NonEmptyString;
 
 export interface Job {
   language?:
@@ -316,9 +529,9 @@ export interface Job {
     components?: string[];
     licenses?: string[];
   };
-  node_js?: string[] | string;
+  node_js?: StringOrNumberOrAcceptBothTypeAsArrayUnique;
   compiler?: ("clang" | "gcc")[] | ("clang" | "gcc");
-  php?: string[] | string;
+  php?: StringOrNumberOrAcceptBothTypeAsArrayUnique;
   go?: string[] | string;
   jdk?: string | string[];
   /**
@@ -334,11 +547,11 @@ export interface Job {
    * By default, Travis CI will assume that your Podfile is in the root of the repository. If this is not the case, you can specify where the Podfile is
    */
   podfile?: string;
-  python?: string[] | string | number;
+  python?: StringOrNumberOrAcceptBothTypeAsArrayUnique;
   elixir?: string[] | string;
   rust?: string[] | string | number;
   erlang?: string[] | string;
-  julia?: string[] | string;
+  julia?: StringOrNumberOrAcceptBothTypeAsArrayUnique;
   opt_release?: string[] | string;
   rvm?: StringOrNumberOrAcceptBothTypeAsArrayUnique;
   gemfile?: string | string[];
@@ -365,6 +578,10 @@ export interface Job {
     [k: string]: string;
   };
   /**
+   * The CPU Architecture to run the job on
+   */
+  arch?: ("amd64" | "arm64" | "ppc64le" | "s390x") | ("amd64" | "arm64" | "ppc64le" | "s390x")[];
+  /**
    * The operating system to run the job on
    */
   os?: ("osx" | "linux" | "windows") | ("osx" | "linux" | "windows")[];
@@ -372,7 +589,10 @@ export interface Job {
   /**
    * The Ubuntu distribution to use
    */
-  dist?: "precise" | "trusty" | "xenial";
+  dist?: "precise" | "trusty" | "xenial" | "bionic" | "focal";
+  /**
+   * sudo is deprecated
+   */
   sudo?: true | false | "" | "required" | "enabled";
   addons?: {
     /**
@@ -516,7 +736,11 @@ export interface Job {
           | {
               name: NonEmptyString;
               channel?: NonEmptyString;
+              /**
+               * 'classic:' is deprecated, use 'confinement:'
+               */
               classic?: boolean;
+              confinement?: "classic" | "devmode";
             })[];
     /**
      * BrowserStack addon
@@ -538,7 +762,7 @@ export interface Job {
     | false
     | Cache
     | (
-        | ("bundler" | "cargo" | "ccache" | "cocoapods" | "packages" | "pip" | "yarn" | "npm")
+        | ("apt" | "bundler" | "cargo" | "ccache" | "cocoapods" | "packages" | "pip" | "yarn" | "npm")
         | {
             directories?: string[];
           })[]
@@ -548,6 +772,7 @@ export interface Job {
          * Upload timeout in seconds
          */
         timeout?: number;
+        apt?: boolean;
         bundler?: boolean;
         cocoapods?: boolean;
         pip?: boolean;
@@ -572,6 +797,15 @@ export interface Job {
      * Skip fetching the git-lfs files during the initial git clone (equivalent to git lfs smudge --skip),
      */
     lfs_skip_smudge?: boolean;
+    /**
+     * In some work flows, like build stages, it might be beneficial to skip the automatic git clone step.
+     */
+    clone?: boolean;
+    /**
+     * Is a path to the existing file in the current repository with data you’d like to put into $GIT_DIR/info/sparse-checkout file of format described in Git documentation.
+     */
+    sparse_checkout?: string;
+    autocrlf?: boolean | "input";
   };
   /**
    * Specify which branches to build

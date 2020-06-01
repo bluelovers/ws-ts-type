@@ -6,6 +6,42 @@
 			"type": "string",
 			"minLength": 1
 		},
+		"notRequiredNonEmptyString": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/nonEmptyString"
+				},
+				{
+					"type": "null"
+				}
+			]
+		},
+		"arrayOfNonEmptyStrings": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/nonEmptyString"
+			}
+		},
+		"nonEmptyStringOrArrayOfNonEmptyStrings": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/nonEmptyString"
+				},
+				{
+					"$ref": "#/definitions/arrayOfNonEmptyStrings"
+				}
+			]
+		},
+		"notRequiredNonEmptyStringOrArrayOfNonEmptyStrings": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/nonEmptyStringOrArrayOfNonEmptyStrings"
+				},
+				{
+					"type": "null"
+				}
+			]
+		},
 		"stringArrayUnique": {
 			"type": "array",
 			"uniqueItems": true,
@@ -77,10 +113,32 @@
 				}
 			]
 		},
+		"possiblySecretStringOrPossiblySecretStringTypeArrayUnique": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/possiblySecretString"
+				},
+				{
+					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
+					"items": {
+						"$ref": "#/definitions/possiblySecretString"
+					}
+				}
+			]
+		},
 		"slackRoom": {
 			"description": "Your account name, token and optional channel",
-			"type": "string",
-			"pattern": ".+:.+(#.+)?"
+			"oneOf": [
+				{
+					"type": "string",
+					"pattern": ".+:.+(#.+)?"
+				},
+				{
+					"$ref": "#/definitions/secretString"
+				}
+			]
 		},
 		"notificationFrequency": {
 			"enum": [
@@ -124,13 +182,15 @@
 				"neo4j",
 				"postgresql",
 				"rabbitmq",
-				"redis-server",
+				"redis",
 				"rethinkdb",
-				"riak"
+				"riak",
+				"xvfb"
 			]
 		},
 		"cache": {
 			"enum": [
+				"apt",
 				"bundler",
 				"cargo",
 				"ccache",
@@ -154,7 +214,12 @@
 				"xcode9.4",
 				"xcode10",
 				"xcode10.1",
-				"xcode10.2"
+				"xcode10.2",
+				"xcode10.3",
+				"xcode11",
+				"xcode11.1",
+				"xcode11.2",
+				"xcode11.3"
 			]
 		},
 		"envVars": {
@@ -360,17 +425,7 @@
 					"additionalProperties": false
 				},
 				"node_js": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/stringOrNumberOrAcceptBothTypeAsArrayUnique"
 				},
 				"compiler": {
 					"oneOf": [
@@ -392,17 +447,7 @@
 					]
 				},
 				"php": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/stringOrNumberOrAcceptBothTypeAsArrayUnique"
 				},
 				"go": {
 					"oneOf": [
@@ -466,20 +511,7 @@
 					"description": "By default, Travis CI will assume that your Podfile is in the root of the repository. If this is not the case, you can specify where the Podfile is"
 				},
 				"python": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						{
-							"type": "string"
-						},
-						{
-							"type": "number"
-						}
-					]
+					"$ref": "#/definitions/stringOrNumberOrAcceptBothTypeAsArrayUnique"
 				},
 				"elixir": {
 					"oneOf": [
@@ -524,17 +556,7 @@
 					]
 				},
 				"julia": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/stringOrNumberOrAcceptBothTypeAsArrayUnique"
 				},
 				"opt_release": {
 					"oneOf": [
@@ -632,6 +654,32 @@
 					},
 					"description": "Dictionary of repositories to pass to options(repos)"
 				},
+				"arch": {
+					"description": "The CPU Architecture to run the job on",
+					"oneOf": [
+						{
+							"enum": [
+								"amd64",
+								"arm64",
+								"ppc64le",
+								"s390x"
+							]
+						},
+						{
+							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
+							"items": {
+								"enum": [
+									"amd64",
+									"arm64",
+									"ppc64le",
+									"s390x"
+								]
+							}
+						}
+					]
+				},
 				"os": {
 					"description": "The operating system to run the job on",
 					"oneOf": [
@@ -644,6 +692,8 @@
 						},
 						{
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"items": {
 								"enum": [
 									"osx",
@@ -661,6 +711,8 @@
 						},
 						{
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"items": {
 								"$ref": "#/definitions/xcodeVersions"
 							}
@@ -673,7 +725,9 @@
 					"enum": [
 						"precise",
 						"trusty",
-						"xenial"
+						"xenial",
+						"bionic",
+						"focal"
 					]
 				},
 				"sudo": {
@@ -683,7 +737,8 @@
 						"",
 						"required",
 						"enabled"
-					]
+					],
+					"description": "sudo is deprecated"
 				},
 				"addons": {
 					"type": "object",
@@ -962,7 +1017,13 @@
 													},
 													"classic": {
 														"type": "boolean",
-														"default": true
+														"description": "'classic:' is deprecated, use 'confinement:'"
+													},
+													"confinement": {
+														"enum": [
+															"classic",
+															"devmode"
+														]
 													}
 												}
 											}
@@ -1054,6 +1115,9 @@
 									"description": "Upload timeout in seconds",
 									"default": 1800
 								},
+								"apt": {
+									"type": "boolean"
+								},
 								"bundler": {
 									"type": "boolean"
 								},
@@ -1124,6 +1188,28 @@
 						"lfs_skip_smudge": {
 							"type": "boolean",
 							"description": "Skip fetching the git-lfs files during the initial git clone (equivalent to git lfs smudge --skip),"
+						},
+						"clone": {
+							"type": "boolean",
+							"description": "In some work flows, like build stages, it might be beneficial to skip the automatic git clone step."
+						},
+						"sparse_checkout": {
+							"$ref": "#/definitions/nonEmptyString",
+							"description": "Is a path to the existing file in the current repository with data you’d like to put into $GIT_DIR/info/sparse-checkout file of format described in Git documentation."
+						},
+						"autocrlf": {
+							"oneOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"type": "string",
+									"enum": [
+										"input"
+									]
+								}
+							],
+							"summary": "Specify handling of line endings when cloning repository"
 						}
 					},
 					"additionalProperties": false
@@ -1284,14 +1370,28 @@
 								"api_key": {
 									"$ref": "#/definitions/possiblySecretString"
 								},
+								"api_token": {
+									"$ref": "#/definitions/possiblySecretString"
+								},
 								"tag": {
 									"type": "string"
 								}
 							},
-							"required": [
-								"provider",
-								"email",
-								"api_key"
+							"oneOf": [
+								{
+									"required": [
+										"provider",
+										"email",
+										"api_key"
+									]
+								},
+								{
+									"required": [
+										"provider",
+										"email",
+										"api_token"
+									]
+								}
 							]
 						},
 						{
@@ -1512,6 +1612,397 @@
 					]
 				}
 			]
+		},
+		"notificationObject": {
+			"webhooks": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"urls": {
+						"oneOf": [
+							{
+								"type": "string",
+								"format": "uri"
+							},
+							{
+								"$ref": "#/definitions/secretString"
+							},
+							{
+								"type": "array",
+								"uniqueItems": true,
+								"minItems": 1,
+								"items": {
+									"oneOf": [
+										{
+											"type": "string",
+											"format": "uri"
+										},
+										{
+											"$ref": "#/definitions/secretString"
+										}
+									]
+								}
+							}
+						]
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			},
+			"slack": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"rooms": {
+						"type": "array",
+						"uniqueItems": true,
+						"minItems": 1,
+						"items": {
+							"$ref": "#/definitions/slackRoom"
+						}
+					},
+					"on_pull_requests": {
+						"type": "boolean"
+					},
+					"template": {
+						"$ref": "#/definitions/notRequiredNonEmptyStringOrArrayOfNonEmptyStrings"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			},
+			"email": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"recipients": {
+						"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "change"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			},
+			"irc": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"channels": {
+						"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+					},
+					"channel_key": {
+						"$ref": "#/definitions/possiblySecretString"
+					},
+					"nick": {
+						"$ref": "#/definitions/nonEmptyString"
+					},
+					"password": {
+						"$ref": "#/definitions/possiblySecretString"
+					},
+					"template": {
+						"$ref": "#/definitions/notRequiredNonEmptyStringOrArrayOfNonEmptyStrings"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"skip_join": {
+						"type": "boolean"
+					},
+					"use_notice": {
+						"type": "boolean"
+					}
+				}
+			},
+			"pushover": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"api_key": {
+						"$ref": "#/definitions/possiblySecretString"
+					},
+					"users": {
+						"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+					},
+					"template": {
+						"$ref": "#/definitions/notRequiredNonEmptyStringOrArrayOfNonEmptyStrings"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			},
+			"campfire": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"rooms": {
+						"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+					},
+					"template": {
+						"$ref": "#/definitions/nonEmptyStringOrArrayOfNonEmptyStrings"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			},
+			"flowdock": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"api_token": {
+						"$ref": "#/definitions/nonEmptyString"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			},
+			"hipchat": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"disabled": {
+						"type": "boolean"
+					},
+					"enabled": {
+						"type": "boolean"
+					},
+					"notify": {
+						"type": "boolean"
+					},
+					"on_pull_requests": {
+						"type": "boolean"
+					},
+					"rooms": {
+						"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+					},
+					"format": {
+						"enum": [
+							"html",
+							"text"
+						]
+					},
+					"template": {
+						"$ref": "#/definitions/nonEmptyStringOrArrayOfNonEmptyStrings"
+					},
+					"on_success": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_failure": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_start": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "never"
+					},
+					"on_cancel": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					},
+					"on_error": {
+						"$ref": "#/definitions/notificationFrequency",
+						"default": "always"
+					}
+				}
+			}
+		},
+		"import": {
+			"anyOf": [
+				{
+					"type": "object",
+					"additionalProperties": false,
+					"required": [
+						"source"
+					],
+					"properties": {
+						"source": {
+							"$ref": "#/definitions/nonEmptyString",
+							"description": "The source to import build config from"
+						},
+						"mode": {
+							"type": "string",
+							"enum": [
+								"merge",
+								"deep_merge",
+								"deep_merge_append",
+								"deep_merge_prepend"
+							],
+							"description": "How to merge the imported config into the target config (defaults to deep_merge_append)"
+						},
+						"if": {
+							"$ref": "#/definitions/nonEmptyString",
+							"description": "Specifies a condition for the import"
+						}
+					}
+				},
+				{
+					"$ref": "#/definitions/nonEmptyString"
+				}
+			]
 		}
 	},
 	"allOf": [
@@ -1527,45 +2018,20 @@
 						"webhooks": {
 							"oneOf": [
 								{
-									"type": "array",
-									"items": {
-										"type": "string",
-										"format": "uri"
-									}
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
 								},
 								{
-									"type": "object",
-									"properties": {
-										"urls": {
-											"oneOf": [
-												{
-													"type": "string",
-													"format": "uri"
-												},
-												{
-													"type": "array",
-													"items": {
-														"type": "string",
-														"format": "uri"
-													}
-												}
-											]
-										}
-									},
-									"on_success": {
-										"$ref": "#/definitions/notificationFrequency"
-									},
-									"on_failure": {
-										"$ref": "#/definitions/notificationFrequency"
-									},
-									"on_start": {
-										"$ref": "#/definitions/notificationFrequency"
-									},
-									"on_cancel": {
-										"$ref": "#/definitions/notificationFrequency"
-									},
-									"on_error": {
-										"$ref": "#/definitions/notificationFrequency"
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/webhooks"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/webhooks"
 									}
 								}
 							]
@@ -1576,64 +2042,38 @@
 									"$ref": "#/definitions/slackRoom"
 								},
 								{
-									"type": "object",
-									"properties": {
-										"rooms": {
-											"type": "array",
-											"items": {
-												"$ref": "#/definitions/slackRoom"
-											}
-										},
-										"on_pull_requests": {
-											"type": "boolean"
-										},
-										"template": {
-											"type": "array",
-											"items": {
-												"type": "string"
-											}
-										},
-										"on_success": {
-											"$ref": "#/definitions/notificationFrequency"
-										},
-										"on_failure": {
-											"$ref": "#/definitions/notificationFrequency"
-										}
-									},
-									"additionalProperties": false
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/slack"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/slack"
+									}
 								}
 							]
 						},
 						"email": {
 							"oneOf": [
 								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/email"
+								},
+								{
 									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
 									"items": {
-										"type": "string"
-									}
-								},
-								{
-									"enum": [
-										false
-									]
-								},
-								{
-									"type": "object",
-									"properties": {
-										"recipients": {
-											"type": "array",
-											"items": {
-												"type": "string"
-											}
-										},
-										"on_success": {
-											"$ref": "#/definitions/notificationFrequency",
-											"default": "change"
-										},
-										"on_failure": {
-											"$ref": "#/definitions/notificationFrequency",
-											"default": "always"
-										}
+										"$ref": "#/definitions/notificationObject/email"
 									}
 								}
 							]
@@ -1641,52 +2081,104 @@
 						"irc": {
 							"oneOf": [
 								{
-									"type": "string"
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/irc"
 								},
 								{
 									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
 									"items": {
-										"type": "string"
+										"$ref": "#/definitions/notificationObject/irc"
 									}
+								}
+							]
+						},
+						"pushover": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/nonEmptyStringOrArrayOfNonEmptyStrings"
 								},
 								{
-									"type": "object",
-									"properties": {
-										"channels": {
-											"type": "array",
-											"items": {
-												"type": "string"
-											}
-										},
-										"channel_key": {
-											"type": "string"
-										},
-										"nick": {
-											"type": "string"
-										},
-										"password": {
-											"type": "string"
-										},
-										"template": {
-											"type": "array",
-											"items": {
-												"type": "string"
-											}
-										},
-										"on_success": {
-											"$ref": "#/definitions/notificationFrequency",
-											"default": "always"
-										},
-										"on_failure": {
-											"$ref": "#/definitions/notificationFrequency",
-											"default": "always"
-										},
-										"skip_join": {
-											"type": "boolean"
-										},
-										"use_notice": {
-											"type": "boolean"
-										}
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/pushover"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/pushover"
+									}
+								}
+							]
+						},
+						"campfire": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/campfire"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/campfire"
+									}
+								}
+							]
+						},
+						"flowdock": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretString"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/flowdock"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/flowdock"
+									}
+								}
+							]
+						},
+						"hipchat": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/hipchat"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/hipchat"
 									}
 								}
 							]
@@ -1746,11 +2238,35 @@
 								]
 							}
 						},
+						"exclude": {
+							"type": "array",
+							"items": {
+								"allOf": [
+									{
+										"$ref": "#/definitions/job"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"stage": {
+												"type": "string",
+												"description": "The name of the build stage",
+												"default": "test"
+											}
+										}
+									}
+								]
+							}
+						},
 						"allow_failures": {
 							"type": "array",
 							"items": {
 								"$ref": "#/definitions/job"
 							}
+						},
+						"fast_finish": {
+							"type": "boolean",
+							"description": "If some rows in the build matrix are allowed to fail, the build won’t be marked as finished until they have completed. To mark the build as finished as soon as possible, add fast_finish: true"
 						}
 					}
 				},
@@ -1777,6 +2293,26 @@
 							}
 						]
 					}
+				},
+				"version": {
+					"type": "string",
+					"summary": "Build config specification version",
+					"pattern": "^(~>|>|>=|=|<=|<) (\\d+(?:\\.\\d+)?(?:\\.\\d+)?)$"
+				},
+				"import": {
+					"description": "Import YAML config snippets that can be shared across repositories.",
+					"oneOf": [
+						{
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"$ref": "#/definitions/import"
+							}
+						},
+						{
+							"$ref": "#/definitions/import"
+						}
+					]
 				}
 			}
 		}

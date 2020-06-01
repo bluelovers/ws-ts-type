@@ -59,7 +59,7 @@ export type ScriptsRestart = string;
 /**
  * Array of package names that will be bundled when publishing the package.
  */
-export type BundledDependency = string[];
+export type BundledDependency = string[] | false;
 
 export interface CoreProperties {
   /**
@@ -81,11 +81,7 @@ export interface CoreProperties {
   /**
    * The url to the project homepage.
    */
-  homepage?:
-    | {
-        [k: string]: any;
-      }
-    | ".";
+  homepage?: string;
   /**
    * The url to your project's issue tracker and / or the email address to which issues should be reported. These are helpful for people who encounter issues with your package.
    */
@@ -128,6 +124,10 @@ export interface CoreProperties {
     | {
         [k: string]: any;
       };
+  /**
+   * The type field defines how .js and extensionless files should be treated within a particular package.json file’s package scope. Supported values: "commonjs" (default) or "module".
+   */
+  type?: string;
   /**
    * Set the types property to point to your bundled declaration file
    */
@@ -228,7 +228,7 @@ export interface CoreProperties {
     prerestart?: ScriptsRestart;
     restart?: ScriptsRestart;
     postrestart?: ScriptsRestart;
-    [k: string]: string;
+    [k: string]: string | undefined;
   };
   /**
    * A 'config' hash can be used to set configuration parameters used in package scripts that persist across upgrades.
@@ -242,6 +242,7 @@ export interface CoreProperties {
   peerDependencies?: Dependency;
   resolutions?: Dependency;
   engines?: {
+    node?: string;
     [k: string]: string;
   };
   engineStrict?: boolean;
@@ -258,10 +259,13 @@ export interface CoreProperties {
    */
   preferGlobal?: boolean;
   /**
-   * If set to true/"true", then npm will refuse to publish it.
+   * If set to true, then npm will refuse to publish it.
    */
-  private?: boolean | "true" | "false";
+  private?: boolean;
   publishConfig?: {
+    access?: "public" | "restricted";
+    tag?: string;
+    registry?: string;
     [k: string]: any;
   };
   dist?: {
@@ -282,6 +286,19 @@ export interface CoreProperties {
     | {
         [k: string]: any;
       };
+  /**
+   * To configure your yarn workspaces, please note private should be set to true to use yarn workspaces
+   */
+  workspaces?: {
+    [k: string]: any;
+  };
+  /**
+   * Any property starting with _ is valid.
+   *
+   * This interface was referenced by `CoreProperties`'s JSON-Schema definition
+   * via the `patternProperty` "^_".
+   */
+  [k: string]: any;
 }
 /**
  * Dependencies are specified with a simple hash of package name to version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.

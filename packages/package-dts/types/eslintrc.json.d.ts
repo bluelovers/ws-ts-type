@@ -171,6 +171,10 @@ export interface JSONSchemaForESLintConfigurationFiles {
   globals?: {
     [k: string]: ("readonly" | "writable" | "off") | boolean;
   };
+  /**
+   * Prevent comments from changing config or rules
+   */
+  noInlineConfig?: boolean;
   parser?: string;
   /**
    * The JavaScript language options to be supported
@@ -220,9 +224,9 @@ export interface JSONSchemaForESLintConfigurationFiles {
       [k: string]: any;
     };
     /**
-     * Set to 3, 5 (default), 6, 7, 8, or 9 to specify the version of ECMAScript you want to use. Alternatively, set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), or 2018 (same as 9) to use year-based naming.
+     * Set to 3, 5 (default), 6, 7, 8, 9, 10 or 11 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10) or 2020 (same as 11) to use the year-based naming.
      */
-    ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018;
+    ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018 | 10 | 2019 | 11 | 2020;
     /**
      * set to "script" (default) or "module" if your code is in ECMAScript modules
      */
@@ -237,6 +241,10 @@ export interface JSONSchemaForESLintConfigurationFiles {
    * By default, ESLint will look for configuration files in all parent folders up to the root directory. This can be useful if you want all of your projects to follow a certain convention, but can sometimes lead to unexpected results. To limit ESLint to a specific project, set this to `true` in a configuration in the root of your project.
    */
   root?: boolean;
+  /**
+   * Tell ESLint to ignore specific files and directories. Each value uses the same pattern as the `.eslintignore` file.
+   */
+  ignorePatterns?: string[];
   /**
    * ESLint comes with a large number of rules. You can modify which rules your project uses either using configuration comments or configuration files.
    */
@@ -262,6 +270,10 @@ export interface JSONSchemaForESLintConfigurationFiles {
      * Glob pattern for files to apply 'overrides' configuration, relative to the directory of the config file
      */
     files: string | string[];
+    /**
+     * If you want to extend a specific configuration file, you can use the extends property and specify the path to the file. The path can be either relative or absolute.
+     */
+    extends?: string[];
     /**
      * If a file matches any of the 'excludedFiles' glob patterns, the 'overrides' configuration won’t apply
      */
@@ -470,9 +482,9 @@ export interface JSONSchemaForESLintConfigurationFiles {
         [k: string]: any;
       };
       /**
-       * Set to 3, 5 (default), 6, 7, 8, or 9 to specify the version of ECMAScript you want to use. Alternatively, set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), or 2018 (same as 9) to use year-based naming.
+       * Set to 3, 5 (default), 6, 7, 8, 9, 10 or 11 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10) or 2020 (same as 11) to use the year-based naming.
        */
-      ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018;
+      ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018 | 10 | 2019 | 11 | 2020;
       /**
        * set to "script" (default) or "module" if your code is in ECMAScript modules
        */
@@ -483,6 +495,10 @@ export interface JSONSchemaForESLintConfigurationFiles {
      * ESLint supports the use of third-party plugins. Before using the plugin, you have to install it using npm.
      */
     plugins?: string[];
+    /**
+     * To specify a processor, specify the plugin name and processor name joined by a forward slash
+     */
+    processor?: string;
     /**
      * ESLint comes with a large number of rules. You can modify which rules your project uses either using configuration comments or configuration files.
      */
@@ -1134,6 +1150,10 @@ export interface StylisticIssues {
    * Enforce the consistent use of either function declarations or expressions
    */
   "func-style"?: number | ("off" | "warn" | "error") | any[];
+  /**
+   * Enforce line breaks between arguments of a function call
+   */
+  "function-call-argument-newline"?: number | ("off" | "warn" | "error") | any[];
   /**
    * Enforce consistent line breaks inside function parentheses
    */
