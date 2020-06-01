@@ -49,18 +49,20 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
-    "sort-package-json": "npx yarn-tool sort",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn run update:schema",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "update:schema": "npx ts-node ./script/index"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@types/bluebird": "^3.5.30",
+    "@types/bluebird": "^3.5.32",
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "fs-extra": "^9.0.0",
-    "json-schema-to-typescript": "^8.2.0"
+    "json-schema-to-typescript": "^9.1.0"
   },
   "publishConfig": {
     "access": "public"
