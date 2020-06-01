@@ -20,16 +20,28 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          urls?: string | SecretString | (string | SecretString)[];
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            urls?: string | SecretString | (string | SecretString)[];
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            urls?: string | SecretString | (string | SecretString)[];
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
     slack?:
       | SlackRoom
       | boolean
@@ -45,18 +57,32 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          rooms?: SlackRoom[];
-          on_pull_requests?: boolean;
-          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
-          on_success?: NotificationFrequency;
-          on_failure?: NotificationFrequency;
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            rooms?: SlackRoom[];
+            on_pull_requests?: boolean;
+            template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: NotificationFrequency;
+            on_failure?: NotificationFrequency;
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            rooms?: SlackRoom[];
+            on_pull_requests?: boolean;
+            template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: NotificationFrequency;
+            on_failure?: NotificationFrequency;
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
     email?:
       | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
       | boolean
@@ -70,16 +96,28 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          recipients?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            recipients?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            recipients?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
     irc?:
       | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
       | boolean
@@ -99,22 +137,40 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           skip_join?: boolean;
           use_notice?: boolean;
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          channels?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
-          channel_key?: PossiblySecretString;
-          nick?: NonEmptyString;
-          password?: PossiblySecretString;
-          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-          skip_join?: boolean;
-          use_notice?: boolean;
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            channels?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            channel_key?: PossiblySecretString;
+            nick?: NonEmptyString;
+            password?: PossiblySecretString;
+            template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+            skip_join?: boolean;
+            use_notice?: boolean;
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            channels?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            channel_key?: PossiblySecretString;
+            nick?: NonEmptyString;
+            password?: PossiblySecretString;
+            template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+            skip_join?: boolean;
+            use_notice?: boolean;
+          }[]
+        ];
     pushover?:
       | NonEmptyStringOrArrayOfNonEmptyStrings
       | boolean
@@ -130,18 +186,32 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          api_key?: PossiblySecretString;
-          users?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
-          template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            api_key?: PossiblySecretString;
+            users?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            api_key?: PossiblySecretString;
+            users?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
     campfire?:
       | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
       | boolean
@@ -156,17 +226,30 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
-          template?: NonEmptyStringOrArrayOfNonEmptyStrings;
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
     flowdock?:
       | PossiblySecretString
       | boolean
@@ -180,16 +263,28 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          api_token?: NonEmptyString;
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            api_token?: NonEmptyString;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            api_token?: NonEmptyString;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
     hipchat?:
       | PossiblySecretStringOrPossiblySecretStringTypeArrayUnique
       | boolean
@@ -207,20 +302,36 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           on_cancel?: "always" | "never" | "change";
           on_error?: "always" | "never" | "change";
         }
-      | {
-          disabled?: boolean;
-          enabled?: boolean;
-          notify?: boolean;
-          on_pull_requests?: boolean;
-          rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
-          format?: "html" | "text";
-          template?: NonEmptyStringOrArrayOfNonEmptyStrings;
-          on_success?: "always" | "never" | "change";
-          on_failure?: "always" | "never" | "change";
-          on_start?: "always" | "never" | "change";
-          on_cancel?: "always" | "never" | "change";
-          on_error?: "always" | "never" | "change";
-        }[];
+      | [
+          {
+            disabled?: boolean;
+            enabled?: boolean;
+            notify?: boolean;
+            on_pull_requests?: boolean;
+            rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            format?: "html" | "text";
+            template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          },
+          ...{
+            disabled?: boolean;
+            enabled?: boolean;
+            notify?: boolean;
+            on_pull_requests?: boolean;
+            rooms?: PossiblySecretStringOrPossiblySecretStringTypeArrayUnique;
+            format?: "html" | "text";
+            template?: NonEmptyStringOrArrayOfNonEmptyStrings;
+            on_success?: "always" | "never" | "change";
+            on_failure?: "always" | "never" | "change";
+            on_start?: "always" | "never" | "change";
+            on_cancel?: "always" | "never" | "change";
+            on_error?: "always" | "never" | "change";
+          }[]
+        ];
   };
   matrix?: {
     exclude?: Job[];
@@ -237,14 +348,14 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
        * The name of the build stage
        */
       stage?: string;
-      [k: string]: any;
+      [k: string]: unknown;
     })[];
     exclude?: (Job & {
       /**
        * The name of the build stage
        */
       stage?: string;
-      [k: string]: any;
+      [k: string]: unknown;
     })[];
     allow_failures?: Job[];
     /**
@@ -263,20 +374,21 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
          * Specifies a condition for the stage
          */
         if?: string;
-      })[];
+      }
+  )[];
   version?: string;
   /**
    * Import YAML config snippets that can be shared across repositories.
    */
   import?: Import[] | Import;
-  [k: string]: any;
+  [k: string]: unknown;
 };
 export type StringOrStringArrayUnique = NonEmptyString | StringArrayUnique;
 export type NonEmptyString = string;
-export type StringArrayUnique = NonEmptyString[];
+export type StringArrayUnique = [NonEmptyString, ...NonEmptyString[]];
 export type StringOrNumberOrAcceptBothTypeAsArrayUnique = StringOrNumber | StringOrNumberAndBothAreTypeArrayUnique;
 export type StringOrNumber = NonEmptyString | number;
-export type StringOrNumberAndBothAreTypeArrayUnique = StringOrNumber[];
+export type StringOrNumberAndBothAreTypeArrayUnique = [StringOrNumber, ...StringOrNumber[]];
 export type XcodeVersions =
   | "xcode6.4"
   | "xcode7.3"
@@ -341,23 +453,23 @@ export type Deployment = {
      * if [[ <condition> ]]; then <deploy>; fi
      */
     condition?: string;
-    [k: string]: any;
+    [k: string]: unknown;
   };
-  [k: string]: any;
+  [k: string]: unknown;
 } & (
   | {
       provider: "script";
       script: string;
-      [k: string]: any;
+      [k: string]: unknown;
     }
   | {
-      [k: string]: any;
+      [k: string]: unknown;
     }
   | {
       provider: "surge";
       project?: string;
       domain?: string;
-      [k: string]: any;
+      [k: string]: unknown;
     }
   | {
       provider: "releases";
@@ -370,7 +482,7 @@ export type Deployment = {
        * If you need to overwrite existing files
        */
       overwrite?: boolean;
-      [k: string]: any;
+      [k: string]: unknown;
     }
   | {
       provider: "heroku";
@@ -399,7 +511,7 @@ export type Deployment = {
        * Travis CI supports different mechanisms for deploying to Heroku: api is default
        */
       strategy?: "api" | "git";
-      [k: string]: any;
+      [k: string]: unknown;
     }
   | {
       provider: "s3";
@@ -422,13 +534,16 @@ export type Deployment = {
       cache_control?: string;
       expires?: string;
       endpoint?: string;
-      [k: string]: any;
+      [k: string]: unknown;
     }
   | {
       provider: string;
-      [k: string]: any;
-    });
-export type PossiblySecretStringOrPossiblySecretStringTypeArrayUnique = PossiblySecretString | PossiblySecretString[];
+      [k: string]: unknown;
+    }
+);
+export type PossiblySecretStringOrPossiblySecretStringTypeArrayUnique =
+  | PossiblySecretString
+  | [PossiblySecretString, ...PossiblySecretString[]];
 /**
  * Your account name, token and optional channel
  */
@@ -521,7 +636,7 @@ export interface Job {
     xvfb?: boolean;
     dartanalyzer?: boolean;
     dartfmt?: boolean;
-    [k: string]: any;
+    [k: string]: unknown;
   }[];
   ghc?: string[];
   lein?: string;
@@ -580,12 +695,14 @@ export interface Job {
   /**
    * The CPU Architecture to run the job on
    */
-  arch?: ("amd64" | "arm64" | "ppc64le" | "s390x") | ("amd64" | "arm64" | "ppc64le" | "s390x")[];
+  arch?:
+    | ("amd64" | "arm64" | "ppc64le" | "s390x")
+    | ["amd64" | "arm64" | "ppc64le" | "s390x", ...("amd64" | "arm64" | "ppc64le" | "s390x")[]];
   /**
    * The operating system to run the job on
    */
-  os?: ("osx" | "linux" | "windows") | ("osx" | "linux" | "windows")[];
-  osx_image?: XcodeVersions | XcodeVersions[];
+  os?: ("osx" | "linux" | "windows") | ["osx" | "linux" | "windows", ...("osx" | "linux" | "windows")[]];
+  osx_image?: XcodeVersions | [XcodeVersions, ...XcodeVersions[]];
   /**
    * The Ubuntu distribution to use
    */
@@ -614,7 +731,8 @@ export interface Job {
              */
             key_url?: string;
           }
-        | string)[];
+        | string
+      )[];
       /**
        * To install packages from the package whitelist before your custom build steps
        */
@@ -637,7 +755,7 @@ export interface Job {
            * If you’d like to see more detail about what the artifacts addon is doing
            */
           debug?: boolean;
-          [k: string]: any;
+          [k: string]: unknown;
         };
     /**
      * Firefox addon
@@ -666,7 +784,7 @@ export interface Job {
       | {
           username?: string;
           access_key?: string;
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | boolean;
     /**
@@ -675,7 +793,7 @@ export interface Job {
     sonarcloud?: {
       organization?: string;
       token?: SecretString;
-      [k: string]: any;
+      [k: string]: unknown;
     };
     /**
      * Coverity Scan addon
@@ -688,7 +806,7 @@ export interface Job {
         name: string;
         version?: number;
         description?: string;
-        [k: string]: any;
+        [k: string]: unknown;
       };
       /**
        * Where email notification of build analysis results will be sent
@@ -706,7 +824,7 @@ export interface Job {
        * Pattern to match selecting branches that will run analysis. We recommend leaving this set to 'coverity_scan'
        */
       branch_pattern?: string;
-      [k: string]: any;
+      [k: string]: unknown;
     };
     /**
      * Homebrew addon
@@ -731,17 +849,32 @@ export interface Job {
      */
     snaps?:
       | NonEmptyString
-      | (
-          | NonEmptyString
-          | {
-              name: NonEmptyString;
-              channel?: NonEmptyString;
-              /**
-               * 'classic:' is deprecated, use 'confinement:'
-               */
-              classic?: boolean;
-              confinement?: "classic" | "devmode";
-            })[];
+      | [
+          (
+            | NonEmptyString
+            | {
+                name: NonEmptyString;
+                channel?: NonEmptyString;
+                /**
+                 * 'classic:' is deprecated, use 'confinement:'
+                 */
+                classic?: boolean;
+                confinement?: "classic" | "devmode";
+              }
+          ),
+          ...(
+            | NonEmptyString
+            | {
+                name: NonEmptyString;
+                channel?: NonEmptyString;
+                /**
+                 * 'classic:' is deprecated, use 'confinement:'
+                 */
+                classic?: boolean;
+                confinement?: "classic" | "devmode";
+              }
+          )[]
+        ];
     /**
      * BrowserStack addon
      */
@@ -755,7 +888,7 @@ export interface Job {
       proxyPass?: NonEmptyString;
       forcelocal?: boolean;
       only?: NonEmptyString;
-      [k: string]: any;
+      [k: string]: unknown;
     };
   };
   cache?:
@@ -765,7 +898,8 @@ export interface Job {
         | ("apt" | "bundler" | "cargo" | "ccache" | "cocoapods" | "packages" | "pip" | "yarn" | "npm")
         | {
             directories?: string[];
-          })[]
+          }
+      )[]
     | {
         directories?: string[];
         /**
@@ -831,7 +965,7 @@ export interface Job {
   deploy?: Deployment[] | Deployment;
   after_deploy?: Step;
   after_script?: Step;
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface SecretString {
   secure?: NonEmptyString;

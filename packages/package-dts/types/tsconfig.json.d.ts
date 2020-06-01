@@ -83,7 +83,7 @@ export interface CompilerOptionsDefinition {
     module?:
       | ("CommonJS" | "AMD" | "System" | "UMD" | "ES6" | "ES2015" | "ES2020" | "ESNext" | "None")
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         };
     /**
      * Specifies the end of line sequence to be used when emitting files: 'crlf' (Windows) or 'lf' (Unix).
@@ -91,7 +91,7 @@ export interface CompilerOptionsDefinition {
     newLine?:
       | ("crlf" | "lf")
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         };
     /**
      * Do not emit output.
@@ -200,7 +200,7 @@ export interface CompilerOptionsDefinition {
     target?:
       | ("ES3" | "ES5" | "ES6" | "ES2015" | "ES2016" | "ES2017" | "ES2018" | "ES2019" | "ES2020" | "ESNext")
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         };
     /**
      * Watch input files.
@@ -220,7 +220,7 @@ export interface CompilerOptionsDefinition {
     moduleResolution?:
       | ("Classic" | "Node")
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         };
     /**
      * Do not report errors on unused labels.
@@ -260,7 +260,7 @@ export interface CompilerOptionsDefinition {
        * Plugin name.
        */
       name?: string;
-      [k: string]: any;
+      [k: string]: unknown;
     }[];
     /**
      * Specify list of root directories to be used when resolving modules.
@@ -353,40 +353,42 @@ export interface CompilerOptionsDefinition {
           | "DOM.Iterable"
           | "ScriptHost"
           | "WebWorker"
-          | "WebWorker.ImportScripts")
+          | "WebWorker.ImportScripts"
+        )
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
+          [k: string]: unknown;
         }
       | {
-          [k: string]: any;
-        })[];
+          [k: string]: unknown;
+        }
+    )[];
     /**
      * Enable strict null checks. Requires TypeScript version 2.0 or later.
      */
@@ -463,16 +465,16 @@ export interface CompilerOptionsDefinition {
      * Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
      */
     assumeChangesOnlyAffectDirectDependencies?: boolean;
-    [k: string]: any;
+    [k: string]: unknown;
   };
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface CompileOnSaveDefinition {
   /**
    * Enable Compile-on-Save for this project.
    */
   compileOnSave?: boolean;
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface TypeAcquisitionDefinition {
   /**
@@ -491,16 +493,16 @@ export interface TypeAcquisitionDefinition {
      * Specifies a list of type declarations to be excluded from auto type acquisition. Ex. ["jquery", "lodash"]
      */
     exclude?: string[];
-    [k: string]: any;
+    [k: string]: unknown;
   };
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface ExtendsDefinition {
   /**
    * Path to base configuration file to inherit from. Requires TypeScript version 2.1 or later.
    */
   extends?: string;
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface TsNodeDefinition {
   /**
@@ -587,7 +589,7 @@ export interface TsNodeDefinition {
       module?:
         | ("CommonJS" | "AMD" | "System" | "UMD" | "ES6" | "ES2015" | "ES2020" | "ESNext" | "None")
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           };
       /**
        * Specifies the end of line sequence to be used when emitting files: 'crlf' (Windows) or 'lf' (Unix).
@@ -595,7 +597,7 @@ export interface TsNodeDefinition {
       newLine?:
         | ("crlf" | "lf")
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           };
       /**
        * Do not emit output.
@@ -704,7 +706,7 @@ export interface TsNodeDefinition {
       target?:
         | ("ES3" | "ES5" | "ES6" | "ES2015" | "ES2016" | "ES2017" | "ES2018" | "ES2019" | "ES2020" | "ESNext")
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           };
       /**
        * Watch input files.
@@ -724,7 +726,7 @@ export interface TsNodeDefinition {
       moduleResolution?:
         | ("Classic" | "Node")
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           };
       /**
        * Do not report errors on unused labels.
@@ -764,7 +766,7 @@ export interface TsNodeDefinition {
          * Plugin name.
          */
         name?: string;
-        [k: string]: any;
+        [k: string]: unknown;
       }[];
       /**
        * Specify list of root directories to be used when resolving modules.
@@ -857,40 +859,42 @@ export interface TsNodeDefinition {
             | "DOM.Iterable"
             | "ScriptHost"
             | "WebWorker"
-            | "WebWorker.ImportScripts")
+            | "WebWorker.ImportScripts"
+          )
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
+            [k: string]: unknown;
           }
         | {
-            [k: string]: any;
-          })[];
+            [k: string]: unknown;
+          }
+      )[];
       /**
        * Enable strict null checks. Requires TypeScript version 2.0 or later.
        */
@@ -967,7 +971,7 @@ export interface TsNodeDefinition {
        * Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
        */
       assumeChangesOnlyAffectDirectDependencies?: boolean;
-      [k: string]: any;
+      [k: string]: unknown;
     };
     /**
      * Emit output files into `.ts-node` directory.
@@ -1013,30 +1017,30 @@ export interface TsNodeDefinition {
      * **DEPRECATED** Specify type-check is enabled (e.g. `transpileOnly == false`).
      */
     typeCheck?: boolean;
-    [k: string]: any;
+    [k: string]: unknown;
   };
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface FilesDefinition {
   /**
    * If no 'files' or 'include' property is present in a tsconfig.json, the compiler defaults to including all files in the containing directory and subdirectories except those specified by 'exclude'. When a 'files' property is specified, only those files and those specified by 'include' are included.
    */
   files?: string[];
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface ExcludeDefinition {
   /**
    * Specifies a list of files to be excluded from compilation. The 'exclude' property only affects the files included via the 'include' property and not the 'files' property. Glob patterns require TypeScript version 2.0 or later.
    */
   exclude?: string[];
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface IncludeDefinition {
   /**
    * Specifies a list of glob patterns that match files to be included in compilation. If no 'files' or 'include' property is present in a tsconfig.json, the compiler defaults to including all files in the containing directory and subdirectories except those specified by 'exclude'. Requires TypeScript version 2.0 or later.
    */
   include?: string[];
-  [k: string]: any;
+  [k: string]: unknown;
 }
 export interface ReferencesDefinition {
   /**
@@ -1047,7 +1051,7 @@ export interface ReferencesDefinition {
      * Path to referenced tsconfig or to folder containing tsconfig.
      */
     path?: string;
-    [k: string]: any;
+    [k: string]: unknown;
   }[];
-  [k: string]: any;
+  [k: string]: unknown;
 }
