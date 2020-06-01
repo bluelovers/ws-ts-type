@@ -34,6 +34,11 @@ export type IPackageJson<T = any> = CoreProperties & {
 		[k: string]: any;
 	};
 
+	/**
+	 * https://github.com/bluelovers/ws-ts-type/pull/1
+	 */
+	private?: boolean | "true" | "false";
+
 	gitHead?: string,
 
 } & {
