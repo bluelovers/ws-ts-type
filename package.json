@@ -18,9 +18,10 @@
     "packages/*"
   ],
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lerna": "lerna publish --yes --cd-version patch",
-    "sort-package-json": "oao run-script \"sort-package-json2\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
   },
   "resolutions": {},
   "dependencies": {

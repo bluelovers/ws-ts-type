@@ -48,7 +48,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "ts-toolbelt": "^6.3.6",
+    "ts-toolbelt": "^6.9.4",
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
