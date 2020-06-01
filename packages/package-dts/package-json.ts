@@ -41,6 +41,20 @@ export type IPackageJson<T = any> = CoreProperties & {
 
 	gitHead?: string,
 
+	/**
+	 * https://segmentfault.com/a/1190000016365409
+	 */
+	flat?: boolean,
+	unpkg?: string,
+	browserslist?: string[],
+	browser?: string,
+	es2015?: string,
+	esm?: boolean,
+	'react-native'?: string,
+	sideEffects?: boolean,
+	source?: string,
+	'umd:main'?: string,
+
 } & {
 	//[k in Exclude<string, keyof CoreProperties>]: T;
 	[k: string]: T;

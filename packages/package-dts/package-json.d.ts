@@ -31,6 +31,19 @@ export declare type IPackageJson<T = any> = CoreProperties & {
      */
     private?: boolean | "true" | "false";
     gitHead?: string;
+    /**
+     * https://segmentfault.com/a/1190000016365409
+     */
+    flat?: boolean;
+    unpkg?: string;
+    browserslist?: string[];
+    browser?: string;
+    es2015?: string;
+    esm?: boolean;
+    'react-native'?: string;
+    sideEffects?: boolean;
+    source?: string;
+    'umd:main'?: string;
 } & {
     [k: string]: T;
 };
