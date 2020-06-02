@@ -10,7 +10,7 @@ export type ILibPackageJson = typeof import('./types/package.json');
 /**
  * @example IPackageJson<unknown>
  */
-export type IPackageJson<T = any> = CoreProperties & {
+export type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
 
 	/**
 	 * yarn workspaces
@@ -36,6 +36,8 @@ export type IPackageJson<T = any> = CoreProperties & {
 
 	/**
 	 * https://github.com/bluelovers/ws-ts-type/pull/1
+	 *
+	 * If set to true, then npm will refuse to publish it.
 	 */
 	private?: boolean | "true" | "false";
 
@@ -55,7 +57,7 @@ export type IPackageJson<T = any> = CoreProperties & {
 	source?: string,
 	'umd:main'?: string,
 
-} & {
+}> & {
 	//[k in Exclude<string, keyof CoreProperties>]: T;
 	[k: string]: T;
 };

@@ -2,11 +2,12 @@
  * Created by user on 2019/5/18.
  */
 import { CoreProperties } from './types/package.json';
+import { ITSOverwrite } from 'ts-type';
 export declare type ILibPackageJson = typeof import('./types/package.json');
 /**
  * @example IPackageJson<unknown>
  */
-export declare type IPackageJson<T = any> = CoreProperties & {
+export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
     /**
      * yarn workspaces
      */
@@ -28,6 +29,8 @@ export declare type IPackageJson<T = any> = CoreProperties & {
     };
     /**
      * https://github.com/bluelovers/ws-ts-type/pull/1
+     *
+     * If set to true, then npm will refuse to publish it.
      */
     private?: boolean | "true" | "false";
     gitHead?: string;
@@ -44,7 +47,7 @@ export declare type IPackageJson<T = any> = CoreProperties & {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
-} & {
+}> & {
     [k: string]: T;
 };
 export default IPackageJson;

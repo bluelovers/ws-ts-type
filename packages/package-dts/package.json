@@ -69,5 +69,8 @@
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
   "sharedDependencies": {
     "eslint-config-bluelovers": "latest"
+  },
+  "dependencies": {
+    "ts-type": "^1.2.17"
   }
 }
