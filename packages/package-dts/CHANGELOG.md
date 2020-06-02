@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.9...@ts-type/package-dts@1.0.10) (2020-06-02)
+
+
+### Bug Fixes
+
+* use ITSOverwrite for fix https://github.com/bluelovers/ws-ts-type/pull/1 ([e100dc9](https://github.com/bluelovers/ws-ts-type/commit/e100dc973392d035313f27214085b9ca913c03e5))
+
+
+
+
+
 ## [1.0.9](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.8...@ts-type/package-dts@1.0.9) (2020-06-01)
 
 
