@@ -56,8 +56,10 @@
     "sort-package-json": "npx yarn-tool sort",
     "update:schema": "npx ts-node ./script/index"
   },
+  "dependencies": {
+    "ts-type": "^1.2.17"
+  },
   "devDependencies": {
-    "@types/bluebird": "^3.5.32",
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "fs-extra": "^9.0.0",
@@ -69,8 +71,5 @@
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
   "sharedDependencies": {
     "eslint-config-bluelovers": "latest"
-  },
-  "dependencies": {
-    "ts-type": "^1.2.17"
   }
 }
