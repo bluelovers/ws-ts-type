@@ -11,20 +11,21 @@ export type ITSReadonlyPartial<T> = {
 
 export type ITSWriteable<T> = ITSWriteablePick<T, keyof T>;
 
-export type ITSWriteablePick<T, K extends keyof T> = {
+export type ITSWriteablePick<T, K extends keyof T = keyof T> = {
 	-readonly [P in K]: T[P];
 };
 
-export type ITSWriteableWith<T, K extends keyof T> = Omit<T, K> & ITSWriteablePick<T, K>;
+export type ITSWriteableWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSWriteablePick<T, K>;
 
 export type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSUnpackedArrayLike<T>[] & {
 	-readonly [P in number | 'length']: T[P]
 };
 
-export type ITSWriteableDeep<T, K extends keyof T = keyof T> = {
-	-readonly [P in K]: T[P] extends Record<any, any> ? ITSWriteableDeep<T[P], keyof T[P]> : T[P];
-};
+export type ITSWriteableDeep<T, K extends keyof T = keyof T> = T extends Record<any, any> ? {
+	-readonly [P in K]: ITSWriteableDeep<T[P]>;
+} : T;
 
-export type ITSReadonlyDeep<T, K extends keyof T = keyof T> = {
-	readonly [P in K]: T[P] extends Record<any, any> ? ITSReadonlyDeep<T[P], keyof T[P]> : T[P];
-};
+export type ITSReadonlyDeep<T, K extends keyof T = keyof T> =
+	T extends Record<any, any> ? {
+	readonly [P in K]: ITSReadonlyDeep<T[P]>;
+} : T;
