@@ -11,7 +11,11 @@ export declare type ITSWriteable<T> = ITSWriteablePick<T, keyof T>;
 export declare type ITSWriteablePick<T, K extends keyof T = keyof T> = {
     -readonly [P in K]: T[P];
 };
+export declare type ITSReadonlyPick<T, K extends keyof T = keyof T> = {
+    readonly [P in K]: T[P];
+};
 export declare type ITSWriteableWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSWriteablePick<T, K>;
+export declare type ITSReadonlyWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSReadonlyPick<T, K>;
 export declare type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSUnpackedArrayLike<T>[] & {
     -readonly [P in number | 'length']: T[P];
 };
