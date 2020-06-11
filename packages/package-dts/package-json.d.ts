@@ -4,8 +4,8 @@
 import { CoreProperties } from './types/package.json';
 import { ITSOverwrite } from 'ts-type';
 import { IPackageJsonDependenciesField, IDependency } from './lib/package-json/types';
-export * from './lib/package-json/types';
 export { EnumVersionValue2 } from './lib/package-json/types';
+export * from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
 /**
  * @example IPackageJson<unknown>
