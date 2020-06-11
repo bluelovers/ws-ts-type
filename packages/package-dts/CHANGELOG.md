@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.19...@ts-type/package-dts@1.0.20) (2020-06-11)
+
+
+### Bug Fixes
+
+* Cannot redefine property: EnumVersionValue2 ([eec5d7d](https://github.com/bluelovers/ws-ts-type/commit/eec5d7dc36249fc28d6b6066405fa0ed9c9e39ec))
+
+
+
+
+
 ## [1.0.19](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.18...@ts-type/package-dts@1.0.19) (2020-06-11)
 
 
