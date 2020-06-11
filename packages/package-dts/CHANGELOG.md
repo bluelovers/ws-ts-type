@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.19](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.18...@ts-type/package-dts@1.0.19) (2020-06-11)
+
+
+### Features
+
+* IPackageJsonDependenciesField ([d751059](https://github.com/bluelovers/ws-ts-type/commit/d7510594e31430b020349a5a42408a210a6e098c))
+
+
+
+
+
 ## [1.0.18](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.17...@ts-type/package-dts@1.0.18) (2020-06-11)
 
 
