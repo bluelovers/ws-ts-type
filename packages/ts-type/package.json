@@ -22,7 +22,8 @@
     "types",
     "typescript",
     "typing",
-    "typings"
+    "typings",
+    "type-helprt"
   ],
   "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type#readme",
   "bugs": {
