@@ -26,5 +26,5 @@ export type ITSWriteableDeep<T, K extends keyof T> = {
 };
 
 export type ITSReadonlyDeep<T, K extends keyof T> = {
-	-readonly [P in K]: T[P] extends Record<any, any> ? ITSReadonlyDeep<T[P], keyof T[P]> : T[P];
+	readonly [P in K]: T[P] extends Record<any, any> ? ITSReadonlyDeep<T[P], keyof T[P]> : T[P];
 };
