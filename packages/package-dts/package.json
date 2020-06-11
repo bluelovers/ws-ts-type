@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/package-dts",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "private": false,
   "description": "A Typescript type definition for NPM package json",
   "keywords": [
@@ -57,7 +57,7 @@
     "update:schema": "npx ts-node ./script/index"
   },
   "dependencies": {
-    "ts-type": "^1.2.21"
+    "ts-type": "^1.2.22"
   },
   "devDependencies": {
     "axios": "^0.19.2",
