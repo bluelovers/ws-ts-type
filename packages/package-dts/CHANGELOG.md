@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.10...@ts-type/package-dts@1.0.11) (2020-06-11)
+
+
+### Features
+
+* ITSWriteableDeep ([7f9eb37](https://github.com/bluelovers/ws-ts-type/commit/7f9eb3771e20c1949bb0dc54521ee4dc807a2cf3))
+
+
+
+
+
 ## [1.0.10](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.9...@ts-type/package-dts@1.0.10) (2020-06-02)
 
 

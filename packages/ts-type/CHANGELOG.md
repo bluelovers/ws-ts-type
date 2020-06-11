@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.18](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.17...ts-type@1.2.18) (2020-06-11)
+
+
+### Features
+
+* ITSWriteableDeep ([7f9eb37](https://github.com/bluelovers/ws-ts-type/commit/7f9eb3771e20c1949bb0dc54521ee4dc807a2cf3))
+* ITSWriteableDeep ([9f180ed](https://github.com/bluelovers/ws-ts-type/commit/9f180ed98bbba2a7df6564eee101bf4fc052f7cb))
+
+
+
+
+
 ## [1.2.17](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.16...ts-type@1.2.17) (2020-06-01)
 
 **Note:** Version bump only for package ts-type

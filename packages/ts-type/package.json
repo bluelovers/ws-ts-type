@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.17",
+  "version": "1.2.18",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -51,7 +51,6 @@
     "ts-toolbelt": "^6.9.4",
     "typedarray-dts": "^1.0.0"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@types/bluebird": "*"
   },
