@@ -15,3 +15,9 @@ export declare type ITSWriteableWith<T, K extends keyof T> = Omit<T, K> & ITSWri
 export declare type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSUnpackedArrayLike<T>[] & {
     -readonly [P in number | 'length']: T[P];
 };
+export declare type ITSWriteableDeep<T, K extends keyof T> = {
+    -readonly [P in K]: T[P] extends Record<any, any> ? ITSWriteableDeep<T[P], keyof T[P]> : T[P];
+};
+export declare type ITSReadonlyDeep<T, K extends keyof T> = {
+    -readonly [P in K]: T[P] extends Record<any, any> ? ITSReadonlyDeep<T[P], keyof T[P]> : T[P];
+};
