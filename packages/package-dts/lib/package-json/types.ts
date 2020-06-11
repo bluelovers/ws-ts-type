@@ -24,3 +24,10 @@ export const enum EnumVersionValue2
 {
 	any = '*'
 }
+
+export type IPackageJsonDependenciesField =
+	'dependencies'
+	| 'devDependencies'
+	| 'peerDependencies'
+	| 'optionalDependencies'
+;

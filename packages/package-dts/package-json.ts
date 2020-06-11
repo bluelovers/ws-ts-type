@@ -4,6 +4,7 @@
 
 import { CoreProperties, Dependency } from './types/package.json';
 import { ITSOverwrite } from 'ts-type';
+import { IPackageJsonDependenciesField, IDependency } from './lib/package-json/types';
 
 export * from './lib/package-json/types';
 export { EnumVersionValue2 } from './lib/package-json/types';
@@ -60,7 +61,7 @@ export type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
 	source?: string,
 	'umd:main'?: string,
 
-}> & {
+}> & Record<IPackageJsonDependenciesField, IDependency> & {
 	//[k in Exclude<string, keyof CoreProperties>]: T;
 	[k: string]: T;
 };

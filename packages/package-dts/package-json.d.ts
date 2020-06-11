@@ -3,6 +3,7 @@
  */
 import { CoreProperties } from './types/package.json';
 import { ITSOverwrite } from 'ts-type';
+import { IPackageJsonDependenciesField, IDependency } from './lib/package-json/types';
 export * from './lib/package-json/types';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
@@ -49,7 +50,7 @@ export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
-}> & {
+}> & Record<IPackageJsonDependenciesField, IDependency> & {
     [k: string]: T;
 };
 export default IPackageJson;
