@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.23](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.22...ts-type@1.2.23) (2020-06-11)
+
+**Note:** Version bump only for package ts-type
+
+
+
+
+
 ## [1.2.22](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.21...ts-type@1.2.22) (2020-06-11)
 
 
