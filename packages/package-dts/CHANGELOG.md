@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.18](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.17...@ts-type/package-dts@1.0.18) (2020-06-11)
+
+
+### Features
+
+* add shared type ([4256682](https://github.com/bluelovers/ws-ts-type/commit/42566829ddd7b6753377af30b6c9f2d21834db9d))
+
+
+
+
+
 ## [1.0.17](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.16...@ts-type/package-dts@1.0.17) (2020-06-11)
 
 **Note:** Version bump only for package @ts-type/package-dts
