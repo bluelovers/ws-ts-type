@@ -62,7 +62,7 @@
   "devDependencies": {
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
-    "fs-extra": "^9.0.0",
+    "fs-extra": "^9.0.1",
     "json-schema-to-typescript": "^9.1.0"
   },
   "publishConfig": {
