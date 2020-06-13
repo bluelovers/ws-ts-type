@@ -17,3 +17,4 @@ export declare const enum EnumVersionValue2 {
     any = "*"
 }
 export declare type IPackageJsonDependenciesField = 'dependencies' | 'devDependencies' | 'peerDependencies' | 'optionalDependencies';
+export declare const packageJsonDependenciesFields: ("dependencies" | "devDependencies" | "peerDependencies" | "optionalDependencies")[];

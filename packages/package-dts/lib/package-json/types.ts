@@ -31,3 +31,10 @@ export type IPackageJsonDependenciesField =
 	| 'peerDependencies'
 	| 'optionalDependencies'
 ;
+
+export const packageJsonDependenciesFields = [
+	'dependencies' as const,
+	'devDependencies' as const,
+	'peerDependencies' as const,
+	'optionalDependencies' as const,
+]
