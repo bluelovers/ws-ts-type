@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.1...ts-type-predicates@1.0.2) (2020-06-17)
+
+
+### ✨　Features
+
+* add expression check ([0df0f4d](https://github.com/bluelovers/ws-ts-type/commit/0df0f4d5669a89d342d6a8fe10309528d233a567))
+
+
+
+
+
 ## 1.0.1 (2020-06-17)
 
 
