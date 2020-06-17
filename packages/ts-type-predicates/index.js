@@ -10,16 +10,15 @@ const assert_1 = require("assert");
  */
 function typePredicates(actual, expression = true, message) {
     if (typeof expression === 'function') {
-        expression = expression(actual);
+        expression = !!expression(actual);
     }
-    if (!expression) {
+    if (expression !== true) {
         throw new assert_1.AssertionError({
             message: message !== null && message !== void 0 ? message : `actual ${actual} not as expected`,
             actual,
             expected: expression,
         });
     }
-    return expression;
 }
 exports.typePredicates = typePredicates;
 exports.default = typePredicates;

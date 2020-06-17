@@ -6,14 +6,14 @@ import { AssertionError } from 'assert';
  * @see https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions
  */
-export function typePredicates<T, P = any>(actual: T | P, expression : any | ((actual: T | P) => any) = true, message?: string): asserts actual is T
+export function typePredicates<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string): asserts actual is T
 {
 	if (typeof expression === 'function')
 	{
-		expression = expression(actual);
+		expression = !!expression(actual);
 	}
 
-	if (!expression)
+	if (expression !== true)
 	{
 		throw new AssertionError({
 			message: message ?? `actual ${actual} not as expected`,
@@ -21,8 +21,6 @@ export function typePredicates<T, P = any>(actual: T | P, expression : any | ((a
 			expected: expression,
 		})
 	}
-
-	return expression
 }
 
 export default typePredicates;
