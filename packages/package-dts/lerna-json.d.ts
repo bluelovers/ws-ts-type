@@ -3,14 +3,17 @@
  */
 import { AJSONSchemaForLernaJsonFiles } from './types/lerna.json';
 import { ITSPartialPick } from 'ts-type/lib/type/record';
+import type { ReleaseType as IReleaseType } from 'semver';
 export declare type INpmClient = string | 'npm' | 'yarn' | 'lerna';
+export type { IReleaseType };
 export interface ILernaJsonCommand extends ITSPartialPick<AJSONSchemaForLernaJsonFiles["command"], keyof AJSONSchemaForLernaJsonFiles["command"]> {
     publish?: {
-        "bump"?: string | "patch";
+        "bump"?: IReleaseType;
         "conventionalCommits"?: boolean;
         "conventionalGraduate"?: boolean;
     };
     "version"?: {
+        "bump"?: IReleaseType;
         "conventionalCommits"?: boolean;
         "changelogPreset"?: string | "@bluelovers/conventional-changelog-bluelovers";
     };
