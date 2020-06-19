@@ -3,29 +3,29 @@
  */
 import { AJSONSchemaForLernaJsonFiles } from './types/lerna.json';
 import { ITSPartialPick } from 'ts-type/lib/type/record';
-import type { ReleaseType as IReleaseType } from 'semver';
-import { IPackageJsonTag } from './lib/package-json/types';
-export declare type INpmClient = string | 'npm' | 'yarn' | 'lerna';
+import { IPackageJsonTag, IReleaseType } from './lib/package-json/types';
+export * from './lib/lerna-json/types';
+import { INpmClient } from './lib/lerna-json/types';
 export type { IReleaseType };
 export interface ILernaJsonCommand extends ITSPartialPick<AJSONSchemaForLernaJsonFiles["command"], keyof AJSONSchemaForLernaJsonFiles["command"]> {
-    publish?: {
+    publish?: AJSONSchemaForLernaJsonFiles["command"]["publish"] & {
         "bump"?: IReleaseType;
         "conventionalCommits"?: boolean;
         "conventionalGraduate"?: boolean;
         distTag?: IPackageJsonTag;
     };
-    "version"?: {
+    "version"?: AJSONSchemaForLernaJsonFiles["command"]["version"] & {
         "bump"?: IReleaseType;
         "conventionalCommits"?: boolean;
         "changelogPreset"?: string | "@bluelovers/conventional-changelog-bluelovers";
     };
-    run?: {
+    run?: AJSONSchemaForLernaJsonFiles["command"]["run"] & {
         "stream": boolean;
     };
-    exec?: {
+    exec?: AJSONSchemaForLernaJsonFiles["command"]["exec"] & {
         "stream": boolean;
     };
-    [k: string]: unknown;
+    [k: string]: Record<string, any>;
 }
 export interface ILernaJson extends AJSONSchemaForLernaJsonFiles {
     /**

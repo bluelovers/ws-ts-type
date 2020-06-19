@@ -1,6 +1,7 @@
 /**
  * Created by user on 2020/6/12.
  */
+import type { ReleaseType as IReleaseType } from 'semver';
 
 export interface IDependency
 {
@@ -57,4 +58,6 @@ export interface IPackageJsonPublishConfig
 	[k: string]: any;
 }
 
-export type IPackageJsonTag = string | "next" | "beta" | "canary";
+export type IPackageJsonTag = string | "next" | "beta" | "canary" | "stable" | "dev" | "latest";
+
+export type { IReleaseType }

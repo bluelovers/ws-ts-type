@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Created by user on 2020/6/12.
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.packageJsonDependenciesFields = exports.EnumVersionValue2 = exports.EnumVersionValue = void 0;
 var EnumVersionValue;
