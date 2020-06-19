@@ -219,7 +219,9 @@
 				"xcode11",
 				"xcode11.1",
 				"xcode11.2",
-				"xcode11.3"
+				"xcode11.3",
+				"xcode11.4",
+				"xcode11.5"
 			]
 		},
 		"envVars": {
@@ -802,6 +804,10 @@
 									"type": "string"
 								}
 							]
+						},
+						"ssh_known_hosts": {
+							"description": "Travis CI can add entries to ~/.ssh/known_hosts prior to cloning your git repository, which is necessary if there are git submodules from domains other than github.com, gist.github.com, or ssh.github.com.",
+							"$ref": "#/definitions/stringOrStringArrayUnique"
 						},
 						"artifacts": {
 							"oneOf": [

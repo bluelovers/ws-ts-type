@@ -1392,7 +1392,10 @@
 		},
 		"ignorePatterns": {
 			"description": "Tell ESLint to ignore specific files and directories. Each value uses the same pattern as the `.eslintignore` file.",
-			"type": "array",
+			"type": [
+				"string",
+				"array"
+			],
 			"items": {
 				"type": "string"
 			}

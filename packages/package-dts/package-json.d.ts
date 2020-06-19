@@ -3,7 +3,7 @@
  */
 import { CoreProperties } from './types/package.json';
 import { ITSOverwrite } from 'ts-type';
-import { IPackageJsonDependenciesField, IDependency } from './lib/package-json/types';
+import { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export * from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
@@ -24,12 +24,7 @@ export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
      * Any config values can be overridden,
      * but only “tag”, “registry” and “access” probably matter for the purposes of publishing.
      */
-    publishConfig?: {
-        registry?: string | "https://registry.npmjs.org/";
-        access?: string | "public";
-        tag?: string | "next";
-        [k: string]: any;
-    };
+    publishConfig?: IPackageJsonPublishConfig;
     /**
      * https://github.com/bluelovers/ws-ts-type/pull/1
      *

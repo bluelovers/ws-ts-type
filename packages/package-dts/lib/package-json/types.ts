@@ -38,3 +38,23 @@ export const packageJsonDependenciesFields = [
 	'peerDependencies' as const,
 	'optionalDependencies' as const,
 ]
+
+/**
+ * This is a set of config values that will be used at publish-time.
+ * It’s especially handy if you want to set the tag, registry or access,
+ * so that you can ensure that a given package is not tagged with “latest”,
+ * published to the global public registry or that a scoped module is private by default.
+ *
+ * Any config values can be overridden,
+ * but only “tag”, “registry” and “access” probably matter for the purposes of publishing.
+ */
+export interface IPackageJsonPublishConfig
+{
+	registry?: string | "https://registry.npmjs.org/";
+	access?: string | "public" | "restricted";
+	tag?: IPackageJsonTag;
+
+	[k: string]: any;
+}
+
+export type IPackageJsonTag = string | "next" | "beta" | "canary";

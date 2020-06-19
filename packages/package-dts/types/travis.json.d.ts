@@ -406,7 +406,9 @@ export type XcodeVersions =
   | "xcode11"
   | "xcode11.1"
   | "xcode11.2"
-  | "xcode11.3";
+  | "xcode11.3"
+  | "xcode11.4"
+  | "xcode11.5";
 export type PossiblySecretString =
   | string
   | {
@@ -742,6 +744,10 @@ export interface Job {
      * If your build requires setting up custom hostnames, you can specify a single host or a list of them. Travis CI will automatically setup the hostnames in /etc/hosts for both IPv4 and IPv6.
      */
     hosts?: string[] | string;
+    /**
+     * Travis CI can add entries to ~/.ssh/known_hosts prior to cloning your git repository, which is necessary if there are git submodules from domains other than github.com, gist.github.com, or ssh.github.com.
+     */
+    ssh_known_hosts?: NonEmptyString | StringArrayUnique;
     artifacts?:
       | true
       | {

@@ -27,6 +27,11 @@ downloadJsonAndBuild({
 	skipExists,
 });
 
+downloadJsonAndBuild({
+	href: 'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/lerna.json',
+	skipExists,
+});
+
 /*
 Bluebird.resolve(axios.get('https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/package.json'))
 	.then(function (res)
