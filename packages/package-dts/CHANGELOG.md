@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.24](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.23...@ts-type/package-dts@1.0.24) (2020-06-19)
+
+
+### ✨　Features
+
+* **type:** export type { ReleaseType as IReleaseType } from 'semver'; ([efd5678](https://github.com/bluelovers/ws-ts-type/commit/efd56786a0c4d0f44d1a29de33eed3e8f725e5a6))
+
+
+
+
+
 ## [1.0.23](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.22...@ts-type/package-dts@1.0.23) (2020-06-19)
 
 
