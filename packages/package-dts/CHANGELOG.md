@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.26](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.25...@ts-type/package-dts@1.0.26) (2020-06-19)
+
+
+### 🐛　Bug Fixes
+
+* **type:** update `ILernaJsonCommand` ([4d04fab](https://github.com/bluelovers/ws-ts-type/commit/4d04fab0c67f7a435365a076293a1601653db1ac))
+
+
+
+
+
 ## [1.0.25](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.24...@ts-type/package-dts@1.0.25) (2020-06-19)
 
 
