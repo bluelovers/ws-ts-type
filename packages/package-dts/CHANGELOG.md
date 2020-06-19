@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.25](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.24...@ts-type/package-dts@1.0.25) (2020-06-19)
+
+
+### ✨　Features
+
+* **type:** add distTag?: IPackageJsonTag, ([6fa9919](https://github.com/bluelovers/ws-ts-type/commit/6fa9919fe33a6eb72a4b650e2d463cb33a7d330e))
+
+
+
+
+
 ## [1.0.24](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.23...@ts-type/package-dts@1.0.24) (2020-06-19)
 
 
