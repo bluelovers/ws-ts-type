@@ -17,7 +17,7 @@ export declare const enum EnumVersionValue2 {
     any = "*"
 }
 export declare type IPackageJsonDependenciesField = 'dependencies' | 'devDependencies' | 'peerDependencies' | 'optionalDependencies';
-export declare const packageJsonDependenciesFields: IPackageJsonDependenciesField[];
+export declare const packageJsonDependenciesFields: ("dependencies" | "devDependencies" | "peerDependencies" | "optionalDependencies")[];
 /**
  * This is a set of config values that will be used at publish-time.
  * It’s especially handy if you want to set the tag, registry or access,

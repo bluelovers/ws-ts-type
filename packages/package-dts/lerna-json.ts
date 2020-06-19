@@ -5,6 +5,7 @@
 import { AJSONSchemaForLernaJsonFiles } from './types/lerna.json';
 import { ITSPartialPick } from 'ts-type/lib/type/record';
 import type { ReleaseType as IReleaseType } from 'semver';
+import { IPackageJsonTag } from './lib/package-json/types';
 
 export type INpmClient = string | 'npm' | 'yarn' | 'lerna';
 
@@ -16,6 +17,7 @@ export interface ILernaJsonCommand extends ITSPartialPick<AJSONSchemaForLernaJso
 		"bump"?: IReleaseType,
 		"conventionalCommits"?: boolean,
 		"conventionalGraduate"?: boolean
+		distTag?: IPackageJsonTag,
 	},
 
 	"version"?: {
