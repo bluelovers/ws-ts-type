@@ -1,9 +1,10 @@
 /**
  * Created by user on 2019/5/18.
  */
-import { CoreProperties } from './types/package.json';
-import { ITSOverwrite } from 'ts-type';
-import { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
+import type { CoreProperties } from './types/package.json';
+import type { ITSOverwrite } from 'ts-type';
+import type { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
+import type { ILernaJson } from './lerna-json';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export * from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
@@ -14,7 +15,7 @@ export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
     /**
      * yarn workspaces
      */
-    workspaces?: string[] | any;
+    workspaces?: string[] | unknown | ILernaJson["packages"];
     /**
      * This is a set of config values that will be used at publish-time.
      * It’s especially handy if you want to set the tag, registry or access,
