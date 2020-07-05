@@ -10,18 +10,22 @@ export type JSONSchemaForNPMPackageJsonFiles = CoreProperties &
   (
     | {
         bundleDependencies?: BundledDependency;
-        [k: string]: any;
+        [k: string]: unknown;
       }
     | {
         bundledDependencies?: BundledDependency;
-        [k: string]: any;
-      });
+        [k: string]: unknown;
+      }
+  );
 /**
  * A person who has been involved in creating or maintaining this package
  */
 export type Person =
   | {
-      [k: string]: any;
+      name: string;
+      url?: string;
+      email?: string;
+      [k: string]: unknown;
     }
   | string;
 /**
@@ -87,7 +91,15 @@ export interface CoreProperties {
    */
   bugs?:
     | {
-        [k: string]: any;
+        /**
+         * The url to your project's issue tracker.
+         */
+        url?: string;
+        /**
+         * The email address to which issues should be reported.
+         */
+        email?: string;
+        [k: string]: unknown;
       }
     | string;
   /**
@@ -100,7 +112,7 @@ export interface CoreProperties {
   licenses?: {
     type?: string;
     url?: string;
-    [k: string]: any;
+    [k: string]: unknown;
   }[];
   author?: Person;
   /**
@@ -122,7 +134,7 @@ export interface CoreProperties {
   bin?:
     | string
     | {
-        [k: string]: any;
+        [k: string]: string;
       };
   /**
    * The type field defines how .js and extensionless files should be treated within a particular package.json file’s package scope. Supported values: "commonjs" (default) or "module".
@@ -162,14 +174,17 @@ export interface CoreProperties {
      */
     man?: string;
     test?: string;
-    [k: string]: any;
+    [k: string]: unknown;
   };
   /**
    * Specify the place where your code lives. This is helpful for people who want to contribute.
    */
   repository?:
     | {
-        [k: string]: any;
+        type?: string;
+        url?: string;
+        directory?: string;
+        [k: string]: unknown;
       }
     | string;
   /**
@@ -234,7 +249,7 @@ export interface CoreProperties {
    * A 'config' hash can be used to set configuration parameters used in package scripts that persist across upgrades.
    */
   config?: {
-    [k: string]: any;
+    [k: string]: unknown;
   };
   dependencies?: Dependency;
   devDependencies?: Dependency;
@@ -261,17 +276,17 @@ export interface CoreProperties {
   /**
    * If set to true, then npm will refuse to publish it.
    */
-  private?: boolean;
+  private?: boolean | ("false" | "true");
   publishConfig?: {
     access?: "public" | "restricted";
     tag?: string;
     registry?: string;
-    [k: string]: any;
+    [k: string]: unknown;
   };
   dist?: {
     shasum?: string;
     tarball?: string;
-    [k: string]: any;
+    [k: string]: unknown;
   };
   readme?: string;
   /**
@@ -284,13 +299,15 @@ export interface CoreProperties {
   esnext?:
     | string
     | {
-        [k: string]: any;
+        main?: string;
+        browser?: string;
+        [k: string]: string;
       };
   /**
    * To configure your yarn workspaces, please note private should be set to true to use yarn workspaces
    */
   workspaces?: {
-    [k: string]: any;
+    [k: string]: unknown;
   };
   /**
    * Any property starting with _ is valid.
@@ -308,5 +325,5 @@ export interface Dependency {
 }
 export interface JspmDefinition {
   jspm?: CoreProperties;
-  [k: string]: any;
+  [k: string]: unknown;
 }
