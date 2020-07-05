@@ -13,6 +13,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnumVersionValue2 = void 0;
 var types_1 = require("./lib/package-json/types");
 Object.defineProperty(exports, "EnumVersionValue2", { enumerable: true, get: function () { return types_1.EnumVersionValue2; } });
 __exportStar(require("./lib/package-json/types"), exports);
