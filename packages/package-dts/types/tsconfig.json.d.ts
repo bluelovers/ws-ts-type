@@ -410,6 +410,10 @@ export interface CompilerOptionsDefinition {
      */
     jsxFactory?: string;
     /**
+     * Specify the JSX Fragment reference to use for fragements when targeting react JSX emit, e.g. 'React.Fragment' or 'Fragment'. Requires TypeScript version 4.0 or later.
+     */
+    jsxFragmentFactory?: string;
+    /**
      * Parse in strict mode and emit 'use strict' for each source file. Requires TypeScript version 2.1 or later.
      */
     alwaysStrict?: boolean;
@@ -915,6 +919,10 @@ export interface TsNodeDefinition {
        * Specify the JSX factory function to use when targeting react JSX emit, e.g. 'React.createElement' or 'h'. Requires TypeScript version 2.1 or later.
        */
       jsxFactory?: string;
+      /**
+       * Specify the JSX Fragment reference to use for fragements when targeting react JSX emit, e.g. 'React.Fragment' or 'Fragment'. Requires TypeScript version 4.0 or later.
+       */
+      jsxFragmentFactory?: string;
       /**
        * Parse in strict mode and emit 'use strict' for each source file. Requires TypeScript version 2.1 or later.
        */

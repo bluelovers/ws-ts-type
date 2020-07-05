@@ -408,7 +408,9 @@ export type XcodeVersions =
   | "xcode11.2"
   | "xcode11.3"
   | "xcode11.4"
-  | "xcode11.5";
+  | "xcode11.5"
+  | "xcode11.6"
+  | "xcode12";
 export type PossiblySecretString =
   | string
   | {
@@ -959,6 +961,7 @@ export interface Job {
     | {
         global?: EnvVars;
         matrix?: EnvVars;
+        jobs?: EnvVars;
       };
   before_install?: Step;
   install?: Step;
