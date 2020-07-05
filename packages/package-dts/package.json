@@ -51,7 +51,7 @@
     "lint": "eslint **/*.ts",
     "pretest": "yarn run build",
     "test": "echo \"Error: no test specified\"",
-    "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema",
+    "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
     "build": "yarn run update:schema",
     "preversion": "yarn run prepublishOnly",
     "prepublishOnly": "yarn run test",
