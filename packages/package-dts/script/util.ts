@@ -51,7 +51,9 @@ export function downloadJsonAndBuild(options: {
 	}
 
 	return Bluebird.resolve()
-		.then(() => axios.get(options.href))
+		.then(() => axios.get(options.href, {
+			timeout: 10 * 1000,
+		}))
 		.then(function (res)
 		{
 			console.log(label, `downloaded`);

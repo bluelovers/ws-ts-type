@@ -72,7 +72,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
+  "gitHead": "fb294a355d5f6db7cf61af6b5417c4a37d6990cd",
   "sharedDependencies": {
     "eslint-config-bluelovers": "latest"
   }
