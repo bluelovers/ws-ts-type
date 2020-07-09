@@ -2,9 +2,9 @@
  * Created by user on 2019/5/18.
  */
 import type { CoreProperties } from './types/package.json';
-import type { ITSOverwrite } from 'ts-type';
 import type { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
 import type { ILernaJson } from './lerna-json';
+import type { ITSPartialRecord, ITSOverwrite } from 'ts-type/lib/type/record';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export * from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
@@ -46,7 +46,7 @@ export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
-}> & Record<IPackageJsonDependenciesField, IDependency> & {
+}> & ITSPartialRecord<IPackageJsonDependenciesField, IDependency> & {
     [k: string]: T;
 };
 export default IPackageJson;
