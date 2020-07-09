@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.29](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.28...@ts-type/package-dts@1.0.29) (2020-07-09)
+
+
+### 🐛　Bug Fixes
+
+* add download timeout ([ba805b2](https://github.com/bluelovers/ws-ts-type/commit/ba805b2e801fda08a1fce60f048fd66bae715056))
+
+
+
+
+
 ## [1.0.28](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.27...@ts-type/package-dts@1.0.28) (2020-07-09)
 
 

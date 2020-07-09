@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.25](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.24...ts-type@1.2.25) (2020-07-09)
+
+
+### ♻️　Chores
+
+* add missed file to git ([7036d2b](https://github.com/bluelovers/ws-ts-type/commit/7036d2b62ad5e868efa66d15c1ae1f63df23c5fb))
+
+
+
+
+
 ## [1.2.24](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.23...ts-type@1.2.24) (2020-07-05)
 
 
