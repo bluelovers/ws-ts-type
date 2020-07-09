@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.27...@ts-type/package-dts@1.0.28) (2020-07-09)
+
+
+### 🐛　Bug Fixes
+
+* Dependencies field became required instead of optional https://github.com/bluelovers/ws-ts-type/issues/3 ([2524425](https://github.com/bluelovers/ws-ts-type/commit/2524425533ea210921634c0fd954a1b05ef91327))
+
+
+
+
+
 ## [1.0.27](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.26...@ts-type/package-dts@1.0.27) (2020-07-05)
 
 
