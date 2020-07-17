@@ -48,7 +48,7 @@ export type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
 	flat?: boolean,
 	unpkg?: string,
 	browserslist?: string[],
-	browser?: string,
+	browser?: string | Record<string, string>,
 	es2015?: string,
 	esm?: boolean,
 	'react-native'?: string,
