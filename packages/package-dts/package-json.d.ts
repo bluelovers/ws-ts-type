@@ -39,7 +39,7 @@ export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
     flat?: boolean;
     unpkg?: string;
     browserslist?: string[];
-    browser?: string | Record<string, string>;
+    browser?: string | Record<string, string> | Record<string, boolean>;
     es2015?: string;
     esm?: boolean;
     'react-native'?: string;
