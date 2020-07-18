@@ -54,7 +54,7 @@
     "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
     "build": "yarn run update:schema",
     "preversion": "yarn run prepublishOnly",
-    "prepublishOnly": "yarn run test",
+    "prepublishOnly": "echo prepublishOnly",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "update:schema": "npx ts-node ./script/index"
@@ -72,7 +72,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "fb294a355d5f6db7cf61af6b5417c4a37d6990cd",
+  "gitHead": "e23ff28802e9c58b217b630c178f3beffa828c88",
   "sharedDependencies": {
     "eslint-config-bluelovers": "latest"
   }
