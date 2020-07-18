@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.32](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.31...@ts-type/package-dts@1.0.32) (2020-07-18)
+
+
+### 🔖　Miscellaneous
+
+* . ([ca688eb](https://github.com/bluelovers/ws-ts-type/commit/ca688ebe2f5b59c3e11089b90bc446b59d95cfc5))
+
+
+
+
+
 ## [1.0.31](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.30...@ts-type/package-dts@1.0.31) (2020-07-18)
 
 
