@@ -8,18 +8,22 @@ import Bluebird from 'bluebird';
 let skipExists: boolean;
 skipExists = false;
 
-Bluebird.each([
-	'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/package.json',
-	'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/eslintrc.json',
-	'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/travis.json',
-	'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/tsconfig.json',
-	'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/lerna.json',
-], (href) => {
-	return downloadJsonAndBuild({
-		href,
-		skipExists,
-	});
-})
+Bluebird
+	.each([
+		'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/package.json',
+		'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/eslintrc.json',
+		'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/travis.json',
+		'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/tsconfig.json',
+		'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/lerna.json',
+	], (href) =>
+	{
+		return downloadJsonAndBuild({
+			href,
+			skipExists,
+		});
+	})
+	.tap(r => console.log(r.length))
+;
 
 /*
 downloadJsonAndBuild({

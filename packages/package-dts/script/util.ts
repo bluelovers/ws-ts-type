@@ -41,8 +41,6 @@ export function downloadJsonAndBuild(options: {
 
 	let { skipExists = true } = options;
 
-
-
 	if (skipExists && fs.existsSync(filePathCompile))
 	{
 		console.warn(label, `skip`);
@@ -95,7 +93,7 @@ export function downloadJsonAndBuild(options: {
 			console.log(label, `.d.ts saved`);
 		})
 		.thenReturn(true)
-	;
+		;
 }
 
 export function handleFileName(name: string)
