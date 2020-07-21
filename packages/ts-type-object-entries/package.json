@@ -1,6 +1,6 @@
 {
   "name": "ts-type-object-entries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type-object-entries#readme",
   "bugs": {
@@ -24,8 +24,5 @@
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }
