@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObjectEntries = void 0;
-function ObjectEntries(obj) {
+exports.tsObjectEntries = void 0;
+function tsObjectEntries(obj) {
     return Object.entries(obj);
 }
-exports.ObjectEntries = ObjectEntries;
-exports.default = ObjectEntries;
+exports.tsObjectEntries = tsObjectEntries;
+exports.default = tsObjectEntries;
 //# sourceMappingURL=index.js.map

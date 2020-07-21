@@ -38,7 +38,7 @@ export const packageJsonDependenciesFields = [
 	'devDependencies' as const,
 	'peerDependencies' as const,
 	'optionalDependencies' as const,
-]
+] as const
 
 /**
  * This is a set of config values that will be used at publish-time.
