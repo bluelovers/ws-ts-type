@@ -46,7 +46,8 @@
     "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
     "prepublishOnly": "yarn run ncu && yarn run sort-package-json & yarn run build",
     "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort"
+    "sort-package-json": "npx yarn-tool sort",
+    "ts:check": "tsc --noEmit -p tsconfig.check.json"
   },
   "dependencies": {
     "ts-toolbelt": "^6.9.9",

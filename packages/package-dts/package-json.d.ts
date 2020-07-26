@@ -11,11 +11,11 @@ export declare type ILibPackageJson = typeof import('./types/package.json');
 /**
  * @example IPackageJson<unknown>
  */
-export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
+export interface IPackageJson<T = any> extends ITSOverwrite<CoreProperties, {
     /**
      * yarn workspaces
      */
-    workspaces?: string[] | unknown | ILernaJson["packages"];
+    workspaces?: ILernaJson["packages"];
     /**
      * This is a set of config values that will be used at publish-time.
      * It’s especially handy if you want to set the tag, registry or access,
@@ -46,7 +46,6 @@ export declare type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
-}> & ITSPartialRecord<IPackageJsonDependenciesField, IDependency> & {
-    [k: string]: T;
-};
+}>, ITSPartialRecord<IPackageJsonDependenciesField, IDependency> {
+}
 export default IPackageJson;

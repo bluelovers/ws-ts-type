@@ -57,6 +57,7 @@
     "prepublishOnly": "echo prepublishOnly",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
+    "ts:check": "tsc --noEmit -p tsconfig.check.json",
     "update:schema": "npx ts-node ./script/index"
   },
   "dependencies": {

@@ -3,7 +3,7 @@
  */
 
 import { AJSONSchemaForLernaJsonFiles } from './types/lerna.json';
-import { ITSPartialPick } from 'ts-type/lib/type/record';
+import { ITSPartialPick, ITSMergeBoth, ITSOmitRecordType, ITSOverwrite } from 'ts-type/lib/type/record';
 
 import { IPackageJsonTag, IReleaseType } from './lib/package-json/types';
 
@@ -12,49 +12,69 @@ import { INpmClient } from './lib/lerna-json/types';
 
 export type { IReleaseType }
 
-export interface ILernaJsonCommand extends ITSPartialPick<AJSONSchemaForLernaJsonFiles["command"], keyof AJSONSchemaForLernaJsonFiles["command"]>
-{
-	publish?: AJSONSchemaForLernaJsonFiles["command"]["publish"] & {
+type _Command = AJSONSchemaForLernaJsonFiles["command"];
+
+type _MergeCommand<T extends Record<string, Record<string, any>>> = {
+	[P in keyof (T & _Command)]?:
+		(P extends keyof _Command ?
+			P extends keyof T ?
+				ITSMergeBoth<_Command[P], T[P]>
+				: _Command[P]
+			: T[P])
+}
+
+export interface ILernaJsonCommand extends _MergeCommand<{
+	publish?: {
+		concurrency?: number;
 		"bump"?: IReleaseType,
 		"conventionalCommits"?: boolean,
 		"conventionalGraduate"?: boolean
 		distTag?: IPackageJsonTag,
 	},
 
-	"version"?: AJSONSchemaForLernaJsonFiles["command"]["version"] & {
+	"version"?: {
+		concurrency?: number;
 		"bump"?: IReleaseType,
 		"conventionalCommits"?: boolean,
 		"changelogPreset"?: string | "@bluelovers/conventional-changelog-bluelovers"
 	},
 
-	run?: AJSONSchemaForLernaJsonFiles["command"]["run"] & {
+	run?: {
+		concurrency?: number;
 		"stream": boolean
+		[k: string]: unknown;
 	},
 
-	exec?: AJSONSchemaForLernaJsonFiles["command"]["exec"] & {
+	exec?: {
+		concurrency?: number;
 		"stream": boolean
+		[k: string]: unknown;
 	},
-
-	[k: string]: Record<string, any>;
+}>
+{
+	[k: string]: Record<string, unknown>;
 }
 
-export interface ILernaJson extends AJSONSchemaForLernaJsonFiles
+export interface ILernaJson extends ITSOverwrite<AJSONSchemaForLernaJsonFiles,
+	{
+
+		/**
+		 * The current version of the repository (or independent).
+		 */
+		version?: string | "independent";
+
+		/**
+		 * Specify which client to run commands with (change to "yarn" to run commands with yarn. Defaults to "npm".
+		 */
+		npmClient?: INpmClient;
+
+		workspaces?: (string | "packages/*")[];
+		packages?: (string | "packages/*")[];
+
+		command?: ILernaJsonCommand,
+	}>
 {
 
-	/**
-	 * The current version of the repository (or independent).
-	 */
-	version?: string | "independent";
-
-	/**
-	 * Specify which client to run commands with (change to "yarn" to run commands with yarn. Defaults to "npm".
-	 */
-	npmClient?: INpmClient;
-
-	workspaces?: (string | "packages/*")[];
-	packages?: (string | "packages/*")[];
-
-	command?: ILernaJsonCommand,
 }
 
 export default ILernaJson

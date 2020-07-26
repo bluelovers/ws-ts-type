@@ -70,3 +70,4 @@ coverage
 /script/*.d.ts
 /.browserslistrc
 /.nvmrc
+!test/spec/*.d.ts

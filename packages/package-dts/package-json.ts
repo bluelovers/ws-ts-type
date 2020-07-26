@@ -15,12 +15,12 @@ export type ILibPackageJson = typeof import('./types/package.json');
 /**
  * @example IPackageJson<unknown>
  */
-export type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
+export interface IPackageJson<T = any> extends  ITSOverwrite<CoreProperties, {
 
 	/**
 	 * yarn workspaces
 	 */
-	workspaces?: string[] | unknown | ILernaJson["packages"];
+	workspaces?: ILernaJson["packages"];
 
 	/**
 	 * This is a set of config values that will be used at publish-time.
@@ -56,9 +56,12 @@ export type IPackageJson<T = any> = ITSOverwrite<CoreProperties, {
 	source?: string,
 	'umd:main'?: string,
 
-}> & ITSPartialRecord<IPackageJsonDependenciesField, IDependency> & {
+}>, ITSPartialRecord<IPackageJsonDependenciesField, IDependency>
+{
+/*
 	//[k in Exclude<string, keyof CoreProperties>]: T;
-	[k: string]: T;
-};
+	[k: string]: unknown;
+ */
+}
 
 export default IPackageJson

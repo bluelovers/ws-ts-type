@@ -41,6 +41,20 @@ Bluebird
 				}
 
 				break;
+			case 'lerna.json':
+
+				// @ts-ignore
+				handleSchemaBeforeCompile = (schema: typeof import('../schema/lerna.json')) => {
+
+					// @ts-ignore
+					schema.properties.command.additionalProperties = false;
+					// @ts-ignore
+					schema.properties.command.additionalItems = false;
+
+					return schema
+				}
+
+				break;
 		}
 
 		return downloadJsonAndBuild({

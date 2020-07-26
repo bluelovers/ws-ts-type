@@ -104,7 +104,6 @@ export interface AJSONSchemaForLernaJsonFiles {
       message?: string;
       [k: string]: unknown;
     };
-    [k: string]: unknown;
   };
   [k: string]: unknown;
 }
