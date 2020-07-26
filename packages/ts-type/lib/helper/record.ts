@@ -16,3 +16,7 @@ export type ITSKeyOfRecordExcludeToKey<Base, Type> = ITSValueOf<ITSRecordExclude
 
 export type ITSKeyOfRecordExtractToKey<Base, Type> = ITSValueOf<ITSRecordExtractToKey<Base, Type>>;
 
+/**
+ * try check key is partial of record
+ */
+export type ITSKeyIsPartialOfRecord<T, K extends keyof T> = Omit<T, K> extends T ? K : never;
