@@ -59,9 +59,7 @@ export type ITSOverwrite<T, U> = Omit<T, keyof U> & U;
  * export const x: Test3 = { id: "bob", code: "bob" }
  * @see https://github.com/microsoft/TypeScript/issues/35627
  */
-export type ITSMergeBoth<T, U> = Omit<T, ITSKeyofSame<T, U>> & {
-	[P in ITSKeyofSame<T, U>]: T[P] | U[P];
-};
+export type ITSMergeBoth<T, U> = Omit<T, ITSKeyofBothSame<T, U>> & Omit<U, ITSKeyofBothSame<U, T>> & Pick<T | U, ITSKeyofBothSame<T, U>>;
 
 /**
  * pick K and mark as Required

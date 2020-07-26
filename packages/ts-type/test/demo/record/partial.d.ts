@@ -5,6 +5,7 @@ interface Test31 {
 }
 interface Test32 {
     id: string;
+    code?: string;
 }
 declare type Test33 = ITSMergeBoth<Test31, Test32>;
 export declare const x3: Test33;
