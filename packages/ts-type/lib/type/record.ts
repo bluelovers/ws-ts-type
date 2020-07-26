@@ -52,6 +52,18 @@ export type ITSPickNot<T, K extends keyof T> = Omit<T, K>;
 export type ITSOverwrite<T, U> = Omit<T, keyof U> & U;
 
 /**
+ * @example
+ * type Test1 = { id: number, code: string }
+ * type Test2 = { id: string, code: number }
+ * type Test3 = ITSMergeBoth<Test1, Test2>
+ * export const x: Test3 = { id: "bob", code: "bob" }
+ * @see https://github.com/microsoft/TypeScript/issues/35627
+ */
+export type ITSMergeBoth<T, U> = Omit<T, ITSKeyofSame<T, U>> & {
+	[P in ITSKeyofSame<T, U>]: T[P] | U[P];
+};
+
+/**
  * pick K and mark as Required
  */
 export type ITSRequiredPick<T, K extends keyof T> = {
