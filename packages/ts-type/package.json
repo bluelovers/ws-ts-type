@@ -41,10 +41,13 @@
     "test": "test"
   },
   "scripts": {
+    "pretest": "yarn run build",
+    "test": "yarn run ts:check",
     "build": "yarn run build-lib-toc",
     "build-lib-toc": "npx ts-node ./test/script/toc && yarn run build:toc",
     "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json & yarn run build",
+    "preversion": "yarn run test",
+    "prepublishOnly": "echo prepublishOnly",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "ts:check": "tsc --noEmit -p tsconfig.check.json"

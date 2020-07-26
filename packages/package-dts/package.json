@@ -50,7 +50,7 @@
     "coverage": "npx nyc npm run test",
     "lint": "eslint **/*.ts",
     "pretest": "yarn run build",
-    "test": "echo \"Error: no test specified\"",
+    "test": "yarn run ts:check",
     "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
     "build": "yarn run update:schema",
     "preversion": "yarn run test",
