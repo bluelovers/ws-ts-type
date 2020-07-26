@@ -309,13 +309,6 @@ export interface CoreProperties {
   workspaces?: {
     [k: string]: unknown;
   };
-  /**
-   * Any property starting with _ is valid.
-   *
-   * This interface was referenced by `CoreProperties`'s JSON-Schema definition
-   * via the `patternProperty` "^_".
-   */
-  [k: string]: any;
 }
 /**
  * Dependencies are specified with a simple hash of package name to version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.

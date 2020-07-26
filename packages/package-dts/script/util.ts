@@ -8,18 +8,25 @@ import path from "path"
 import axios from "axios"
 import Bluebird from "bluebird"
 import { compile, compileFromFile } from 'json-schema-to-typescript'
+import { JSONSchema4 } from 'json-schema';
 
-export function downloadJsonAndBuild(options: {
-	href: string,
-	saveName?: string,
-	savePath?: string,
-	compileName?: string,
+export interface IDownloadJsonAndBuildParams
+{
+	href: string;
+	saveName?: string;
+	savePath?: string;
+	compileName?: string;
 
-	savePathCompile?: string,
-	saveNameCompile?: string,
+	savePathCompile?: string;
+	saveNameCompile?: string;
 
 	skipExists?: boolean;
-})
+
+	handleSchemaBeforeCompile?<T extends JSONSchema4>(schema: T): T;
+
+}
+
+export function downloadJsonAndBuild(options: IDownloadJsonAndBuildParams)
 {
 	if (!options.saveName)
 	{
@@ -77,7 +84,7 @@ export function downloadJsonAndBuild(options: {
 		{
 			console.log(label, `start compile .d.ts`);
 
-			return compile(data, 'IMySchema', {
+			return compile(options.handleSchemaBeforeCompile?.(data) ?? data, 'IMySchema', {
 				enableConstEnums: true,
 				unreachableDefinitions: true,
 			})

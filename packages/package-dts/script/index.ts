@@ -2,8 +2,9 @@
  * Created by user on 2019/5/18.
  */
 
-import { downloadJsonAndBuild } from './util';
+import { downloadJsonAndBuild, IDownloadJsonAndBuildParams } from './util';
 import Bluebird from 'bluebird';
+import { basename } from 'path';
 
 let skipExists: boolean;
 skipExists = false;
@@ -17,9 +18,35 @@ Bluebird
 		'https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/lerna.json',
 	], (href) =>
 	{
+		let handleSchemaBeforeCompile: IDownloadJsonAndBuildParams["handleSchemaBeforeCompile"];
+
+
+		switch (basename(href))
+		{
+			case 'package.json':
+
+				// @ts-ignore
+				handleSchemaBeforeCompile = (schema: typeof import('../schema/package.json')) => {
+
+					delete schema.definitions.coreProperties.patternProperties;
+
+					// @ts-ignore
+					schema.definitions.coreProperties.additionalProperties = false;
+					// @ts-ignore
+					schema.definitions.coreProperties.additionalItems = false;
+
+					console.dir(schema.definitions.coreProperties);
+
+					return schema
+				}
+
+				break;
+		}
+
 		return downloadJsonAndBuild({
 			href,
 			skipExists,
+			handleSchemaBeforeCompile,
 		});
 	})
 	.tap(r => console.log(r.length))
