@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
-    "@bluelovers/tsconfig": "^1.0.19",
+    "@bluelovers/tsconfig": "^1.0.20",
     "@types/bluebird": "*",
     "@types/fs-extra": "*",
     "@types/node": "*"
