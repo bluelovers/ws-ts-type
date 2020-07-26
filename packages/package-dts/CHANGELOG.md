@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.37](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.36...@ts-type/package-dts@1.0.37) (2020-07-26)
+
+
+### ✨　Features
+
+* update type to interface, add simple test ([888fa10](https://github.com/bluelovers/ws-ts-type/commit/888fa10f2f492e1fe315cd42ffe7ec55d091eba7))
+* disable create `[k: string]` in `CoreProperties` ([18ba556](https://github.com/bluelovers/ws-ts-type/commit/18ba5566d6fc82d64fb4ebf53c6c3bc797e8de9e))
+
+
+### BREAKING CHANGES
+
+* omit `[k: string]`
+* omit `[k: string]` in `CoreProperties`
+
+
+
+
+
 ## [1.0.36](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.35...@ts-type/package-dts@1.0.36) (2020-07-26)
 
 **Note:** Version bump only for package @ts-type/package-dts

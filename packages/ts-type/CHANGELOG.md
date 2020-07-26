@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.27](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.26...ts-type@1.2.27) (2020-07-26)
+
+
+### ✨　Features
+
+* update type to interface, add simple test ([888fa10](https://github.com/bluelovers/ws-ts-type/commit/888fa10f2f492e1fe315cd42ffe7ec55d091eba7))
+
+
+### BREAKING CHANGES
+
+* omit `[k: string]`
+
+
+
+
+
 ## [1.2.26](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.25...ts-type@1.2.26) (2020-07-26)
 
 
