@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.26](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.25...ts-type@1.2.26) (2020-07-26)
+
+
+### 🐛　Bug Fixes
+
+* **record:** fix `ITSMergeBoth<T, U>` ([d74791b](https://github.com/bluelovers/ws-ts-type/commit/d74791b2bbfbfe0312b7a4089795c9108d428829))
+
+
+### ✨　Features
+
+* **record:** add `ITSKeyIsPartialOfRecord` ([4bc0f3d](https://github.com/bluelovers/ws-ts-type/commit/4bc0f3dcc5d7c918d120984774ea2e6a06ad03b7))
+* add `ITSMergeBoth<T, U>` for handle https://github.com/microsoft/TypeScript/issues/35627 ([f474976](https://github.com/bluelovers/ws-ts-type/commit/f474976fe1dd2314d071300505741934ff014200))
+
+
+### 🔖　Miscellaneous
+
+* . ([1bc7728](https://github.com/bluelovers/ws-ts-type/commit/1bc7728f433ee4126f17a44c4fe024bf4e6c1603))
+
+
+
+
+
 ## [1.2.25](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.24...ts-type@1.2.25) (2020-07-09)
 
 
