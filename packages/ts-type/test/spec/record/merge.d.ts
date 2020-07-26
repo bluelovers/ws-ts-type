@@ -46,10 +46,12 @@ interface Test41 {
 interface Test42 {
     id: string;
     code: number;
+    code2?: number;
 }
 declare type Test43 = ITSMergeBoth<Test41, Test42>;
 export declare const x4: Test43;
 export declare let y4: {
+    code2?: number;
     id: string | number;
     code?: string | number;
 };

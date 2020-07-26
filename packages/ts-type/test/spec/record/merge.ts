@@ -43,7 +43,7 @@ export function f<T, K extends keyof T>(o: T, k: ITSKeyIsPartialOfRecord<T, K>)
 f(x3, 'code')
 
 interface Test41 { id: number, code?: string }
-interface Test42 { id: string, code: number }
+interface Test42 { id: string, code: number, code2?: number }
 
 type Test43 = ITSMergeBoth<Test41, Test42>
 
