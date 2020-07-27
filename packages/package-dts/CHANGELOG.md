@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.40](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.39...@ts-type/package-dts@1.0.40) (2020-07-27)
+
+
+### 🐛　Bug Fixes
+
+* allow unknown key ([f9aeb02](https://github.com/bluelovers/ws-ts-type/commit/f9aeb02bf8cd590dcaaf140ba9a4407a01788fb3))
+
+
+
+
+
 ## [1.0.39](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.38...@ts-type/package-dts@1.0.39) (2020-07-26)
 
 
