@@ -18,6 +18,7 @@ fg
 	.then(function (ls)
 	{
 		ls = ls
+			.sort()
 			.map(function (v)
 			{
 				let data = path.parse(v);

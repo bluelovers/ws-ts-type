@@ -62,6 +62,7 @@ export interface IPackageJson<T = any> extends  ITSOverwrite<CoreProperties, {
 	//[k in Exclude<string, keyof CoreProperties>]: T;
 	[k: string]: unknown;
  */
+	[k: string]: any;
 }
 
 export default IPackageJson

@@ -47,5 +47,6 @@ export interface IPackageJson<T = any> extends ITSOverwrite<CoreProperties, {
     source?: string;
     'umd:main'?: string;
 }>, ITSPartialRecord<IPackageJsonDependenciesField, IDependency> {
+    [k: string]: any;
 }
 export default IPackageJson;

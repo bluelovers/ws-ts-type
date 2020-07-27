@@ -58,3 +58,9 @@ isPackageJsonLike({
 		test2: '',
 	}
 });
+
+let p: IPackageJson = {
+	typings: '',
+	// allow un-exists key
+	typings2: '',
+}
