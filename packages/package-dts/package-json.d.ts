@@ -5,6 +5,8 @@ import type { CoreProperties } from './types/package.json';
 import type { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
 import type { ILernaJson } from './lerna-json';
 import type { ITSPartialRecord, ITSOverwrite } from 'ts-type/lib/type/record';
+import { IPackageJsonExtendYarn } from './lib/package-json/yarn';
+import { IBooleanString } from './lib/types';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export * from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
@@ -31,12 +33,11 @@ export interface IPackageJson<T = any> extends ITSOverwrite<CoreProperties, {
      *
      * If set to true, then npm will refuse to publish it.
      */
-    private?: boolean | "true" | "false";
+    private?: boolean | IBooleanString;
     gitHead?: string;
     /**
      * https://segmentfault.com/a/1190000016365409
      */
-    flat?: boolean;
     unpkg?: string;
     browserslist?: string[];
     browser?: string | Record<string, string> | Record<string, boolean>;
@@ -46,7 +47,7 @@ export interface IPackageJson<T = any> extends ITSOverwrite<CoreProperties, {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
-}>, ITSPartialRecord<IPackageJsonDependenciesField, IDependency> {
+}>, ITSPartialRecord<IPackageJsonDependenciesField, IDependency>, IPackageJsonExtendYarn {
     [k: string]: any;
 }
 export default IPackageJson;

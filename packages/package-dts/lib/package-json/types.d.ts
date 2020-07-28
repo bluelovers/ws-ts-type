@@ -2,6 +2,7 @@
  * Created by user on 2020/6/12.
  */
 import type { ReleaseType as IReleaseType } from 'semver';
+import { EnumPublishConfigRegistry } from './publishConfig';
 export interface IDependency {
     [name: string]: IVersionValue;
 }
@@ -29,7 +30,7 @@ export declare const packageJsonDependenciesFields: readonly ["dependencies", "d
  * but only “tag”, “registry” and “access” probably matter for the purposes of publishing.
  */
 export interface IPackageJsonPublishConfig {
-    registry?: string | "https://registry.npmjs.org/";
+    registry?: string | EnumPublishConfigRegistry;
     access?: string | "public" | "restricted";
     tag?: IPackageJsonTag;
     [k: string]: any;

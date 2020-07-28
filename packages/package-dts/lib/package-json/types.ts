@@ -2,6 +2,7 @@
  * Created by user on 2020/6/12.
  */
 import type { ReleaseType as IReleaseType } from 'semver';
+import { EnumPublishConfigRegistry } from './publishConfig';
 
 export interface IDependency
 {
@@ -51,7 +52,7 @@ export const packageJsonDependenciesFields = [
  */
 export interface IPackageJsonPublishConfig
 {
-	registry?: string | "https://registry.npmjs.org/";
+	registry?: string | EnumPublishConfigRegistry;
 	access?: string | "public" | "restricted";
 	tag?: IPackageJsonTag;
 
