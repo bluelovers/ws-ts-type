@@ -109,7 +109,6 @@ export declare let exportedType: {
     publishConfig?: import("../../package-json").IPackageJsonPublishConfig;
     private?: boolean | "true" | "false";
     gitHead?: string;
-    flat?: boolean;
     unpkg?: string;
     browserslist?: string[];
     browser?: string | Record<string, string> | Record<string, boolean>;
@@ -119,4 +118,6 @@ export declare let exportedType: {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
+    flat?: boolean;
+    installConfig?: import("../../lib/package-json/yarn").IYarnV1PackageJsonInstallConfig;
 };
