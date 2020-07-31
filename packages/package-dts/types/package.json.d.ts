@@ -149,6 +149,20 @@ export interface CoreProperties {
    */
   typings?: string;
   /**
+   * The "typesVersions" field is used since TypeScript 3.1 to support features that were only made available in newer TypeScript versions.
+   */
+  typesVersions?: {
+    /**
+     * Contains overrides for the TypeScript version that matches the version range matching the property key.
+     */
+    [k: string]: {
+      /**
+       * Maps all file paths to the file paths specified in the array.
+       */
+      "*"?: string[];
+    };
+  };
+  /**
    * Specify either a single file or an array of filenames to put in place for the man program to find.
    */
   man?: string[];
