@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/package-dts",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "private": false,
   "description": "A Typescript type definition for NPM package json",
   "keywords": [
@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@types/semver": "^7.3.1",
-    "ts-type": "^1.2.31"
+    "ts-type": "^1.2.32"
   },
   "devDependencies": {
     "axios": "^0.19.2",

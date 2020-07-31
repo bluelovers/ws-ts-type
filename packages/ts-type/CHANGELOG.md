@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.32](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.31...ts-type@1.2.32) (2020-07-31)
+
+
+### ♻️　Chores
+
+* update deps ([110fb85](https://github.com/bluelovers/ws-ts-type/commit/110fb85d385de8ee94719ed9cd29790b92592133))
+
+
+
+
+
 ## [1.2.31](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.30...ts-type@1.2.31) (2020-07-28)
 
 
