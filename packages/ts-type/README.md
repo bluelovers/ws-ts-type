@@ -121,4 +121,9 @@ t6 = function ()
 - http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-1.html
 - https://www.tslang.cn/docs/release-notes/typescript-3.1.html#toc-whats-new
 - https://www.logicbig.com/tutorials/misc/typescript.html
+
+## links
+
+- https://github.com/krzkaczor/ts-essentials
+- https://github.com/millsp/ts-toolbelt
 - 
