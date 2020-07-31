@@ -3,9 +3,13 @@ export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extra
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
     [x: string]: any;
-    name?: string;
     version?: string;
     description?: string;
+    dependencies?: import("../../types/package.json").Dependency;
+    devDependencies?: import("../../types/package.json").Dependency;
+    peerDependencies?: import("../../types/package.json").Dependency;
+    optionalDependencies?: import("../../types/package.json").Dependency;
+    name?: string;
     keywords?: string[];
     homepage?: string;
     bugs?: string | {
@@ -30,6 +34,11 @@ export declare let exportedType: {
     type?: string;
     types?: string;
     typings?: string;
+    typesVersions?: {
+        [k: string]: {
+            "*"?: string[];
+        };
+    };
     man?: string[];
     directories?: {
         [k: string]: unknown;
@@ -80,10 +89,6 @@ export declare let exportedType: {
     config?: {
         [k: string]: unknown;
     };
-    dependencies?: import("../../types/package.json").Dependency;
-    devDependencies?: import("../../types/package.json").Dependency;
-    optionalDependencies?: import("../../types/package.json").Dependency;
-    peerDependencies?: import("../../types/package.json").Dependency;
     resolutions?: import("../../types/package.json").Dependency;
     engines?: {
         [k: string]: string;

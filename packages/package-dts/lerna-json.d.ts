@@ -20,13 +20,13 @@ export interface ILernaJsonCommand extends _MergeCommand<{
         "conventionalGraduate"?: boolean;
         distTag?: IPackageJsonTag;
         npmClient?: INpmClient;
-        allowBranch?: IBranch;
+        allowBranch?: IBranch[];
         noPrivate?: boolean;
     };
     "version"?: {
         concurrency?: number;
         "bump"?: IReleaseType;
-        allowBranch?: IBranch;
+        allowBranch?: IBranch[];
         "conventionalCommits"?: boolean;
         "changelogPreset"?: string | "@bluelovers/conventional-changelog-bluelovers";
         exact?: boolean;

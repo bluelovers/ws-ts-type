@@ -11,6 +11,9 @@ export declare let exportedType: {
             conventionalCommits?: boolean;
             conventionalGraduate?: boolean;
             distTag?: string;
+            npmClient?: string;
+            allowBranch?: string[];
+            noPrivate?: boolean;
         }>;
         version?: import("ts-type").ITSMergeBoth<{
             [k: string]: unknown;
@@ -19,8 +22,12 @@ export declare let exportedType: {
         }, {
             concurrency?: number;
             bump?: import("semver").ReleaseType;
+            allowBranch?: string[];
             conventionalCommits?: boolean;
             changelogPreset?: string;
+            exact?: boolean;
+            createRelease?: "gitlab" | "github";
+            noPrivate?: boolean;
         }>;
         run?: import("ts-type").ITSMergeBoth<{
             [k: string]: unknown;
@@ -28,12 +35,13 @@ export declare let exportedType: {
         }, {
             [k: string]: unknown;
             concurrency?: number;
-            stream: boolean;
+            stream?: boolean;
+            npmClient?: string;
         }>;
         exec?: {
             [k: string]: unknown;
             concurrency?: number;
-            stream: boolean;
+            stream?: boolean;
         };
         bootstrap?: {
             [k: string]: unknown;
