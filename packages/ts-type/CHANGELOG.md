@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.33](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.32...ts-type@1.2.33) (2020-09-04)
+
+
+### ✨　Features
+
+* add type `ITSTupleKeys<T extends any[]>` ([7671f09](https://github.com/bluelovers/ws-ts-type/commit/7671f09f084df6dbe32487ca4d80b203072e365a))
+* add type `ITSUnionToIntersection<U>` ([b15af47](https://github.com/bluelovers/ws-ts-type/commit/b15af473829d86d48dd57dd9d0b13765a214b683))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([4aadf65](https://github.com/bluelovers/ws-ts-type/commit/4aadf6591062a6b7574113f92e50fbb427ec4e37))
+
+
+
+
+
 ## [1.2.32](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.31...ts-type@1.2.32) (2020-07-31)
 
 
