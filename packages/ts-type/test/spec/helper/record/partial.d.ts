@@ -1,4 +1,4 @@
-import { ITSMergeBoth, ITSKeyIsPartialOfRecord } from '../../../lib';
+import { ITSMergeBoth, ITSKeyIsPartialOfRecord } from '../../../../lib/index';
 interface Test31 {
     id: number;
     code?: string;

@@ -1,7 +1,21 @@
-import { ITSMergeBoth, ITSKeyIsPartialOfRecord, ITSRecordExcludeToKey, ITSKeyOfRecordExcludeToKey } from '../../../lib';
+import {
+	ITSMergeBoth,
+	ITSKeyIsPartialOfRecord,
+	ITSRecordExcludeToKey,
+	ITSKeyOfRecordExcludeToKey,
+} from '../../../../lib/index';
 
-interface Test31 { id: number, code?: string }
-interface Test32 { id: string, code?: string }
+interface Test31
+{
+	id: number,
+	code?: string
+}
+
+interface Test32
+{
+	id: string,
+	code?: string
+}
 
 type Test33 = ITSMergeBoth<Test31, Test32>
 
@@ -17,6 +31,7 @@ export function f<T, K extends keyof T>(o: T, k: ITSKeyIsPartialOfRecord<T, K>)
 
 f(x3, 'code');
 
+// @ts-expect-error
 f(x3, 'id')// => should  error
 
 type IP<T> = ITSKeyOfRecordExcludeToKey<{
@@ -24,3 +39,4 @@ type IP<T> = ITSKeyOfRecordExcludeToKey<{
 }, never>
 
 let k: IP<Test33> = 'code'
+
