@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.34](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.33...ts-type@1.2.34) (2020-09-04)
+
+
+### ✨　Features
+
+* **deps:** move `ts-toolbelt` to peer deps ([3d4ef95](https://github.com/bluelovers/ws-ts-type/commit/3d4ef95424387ce68f3e45b35bb8921d5dfdecf5))
+* get readonly keys of an Object. ([41de826](https://github.com/bluelovers/ws-ts-type/commit/41de826116a5fa5c911ac32d56e71ee140622bd4))
+
+
+### 🚨　Tests
+
+* use `[@ts-expect-error](https://github.com/ts-expect-error)` ([c446116](https://github.com/bluelovers/ws-ts-type/commit/c446116adf132734fbacaf28ef8c47ca840f6ffb))
+
+
+### BREAKING CHANGE
+
+* **deps:** `ts-toolbelt` is peer deps now
+
+
+
+
+
 ## [1.2.33](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.32...ts-type@1.2.33) (2020-09-04)
 
 
