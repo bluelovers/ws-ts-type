@@ -7,6 +7,7 @@ export * from './helper/key-value';
 export * from './helper/overwrite';
 export * from './helper/readonly';
 export * from './helper/record';
+export * from './helper/tuple';
 export * from './helper/typeof';
 export * from './helper/unpacked';
 export * from './logic/any';
