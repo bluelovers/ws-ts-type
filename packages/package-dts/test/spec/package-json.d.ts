@@ -3,11 +3,11 @@ export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extra
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
     [x: string]: any;
+    description?: string;
     dependencies?: import("../../types/package.json").Dependency;
     devDependencies?: import("../../types/package.json").Dependency;
     peerDependencies?: import("../../types/package.json").Dependency;
     optionalDependencies?: import("../../types/package.json").Dependency;
-    description?: string;
     version?: string;
     name?: string;
     keywords?: string[];
