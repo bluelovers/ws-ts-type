@@ -1,14 +1,14 @@
 import fg from '@bluelovers/fast-glob';
-import fs from 'fs-extra';
-import path from 'upath2';
+import { outputFile } from 'fs-extra';
+import { join, parse } from 'upath2';
 
-let root_lib = path.join(__dirname, '../..', 'lib');
+const root_lib = join(__dirname, '../..', 'lib');
 
 fg
 	.async<string>([
 		'**/*.ts',
-		'!index.ts',
-		'!build-in.ts',
+		'!/index.ts',
+		'!/build-in.ts',
 		'!**/*.d.ts',
 		'!**/_*',
 		'!test',
@@ -21,9 +21,9 @@ fg
 			.sort()
 			.map(function (v)
 			{
-				let data = path.parse(v);
+				let data = parse(v);
 
-				return './' + path.join(data.dir, data.name)
+				return './' + join(data.dir, data.name)
 			})
 			.map(function (v)
 			{
@@ -33,11 +33,11 @@ fg
 
 		ls.push('');
 
-		let out = ls.join('\n');
+		const out = ls.join('\n');
 
 		console.log(out);
 
-		return fs.outputFile(path.join(root_lib, 'index.d.ts'), out)
+		return outputFile(join(root_lib, 'index.d.ts'), out)
 	})
 	.then(function (v)
 	{
