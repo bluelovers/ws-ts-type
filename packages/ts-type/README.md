@@ -126,4 +126,7 @@ t6 = function ()
 
 - https://github.com/krzkaczor/ts-essentials
 - https://github.com/millsp/ts-toolbelt
+- https://github.com/type-challenges/type-challenges
+- https://github.com/andnp/SimplyTyped
+- https://github.com/piotrwitek/utility-types
 - 
