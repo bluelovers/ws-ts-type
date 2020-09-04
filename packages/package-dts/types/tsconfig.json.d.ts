@@ -471,6 +471,22 @@ export interface CompilerOptionsDefinition {
      * Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
      */
     assumeChangesOnlyAffectDirectDependencies?: boolean;
+    /**
+     * Show verbose diagnostic information.
+     */
+    extendedDiagnostics?: boolean;
+    /**
+     * Print names of files that are part of the compilation and then stop processing.
+     */
+    listFilesOnly?: boolean;
+    /**
+     * Disable use of source files instead of declaration files from referenced projects.
+     */
+    disableSourceOfProjectReferenceRedirect?: boolean;
+    /**
+     * Disable solution searching for this project.
+     */
+    disableSolutionSearching?: boolean;
     [k: string]: unknown;
   };
   [k: string]: unknown;
@@ -983,6 +999,22 @@ export interface TsNodeDefinition {
        * Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
        */
       assumeChangesOnlyAffectDirectDependencies?: boolean;
+      /**
+       * Show verbose diagnostic information.
+       */
+      extendedDiagnostics?: boolean;
+      /**
+       * Print names of files that are part of the compilation and then stop processing.
+       */
+      listFilesOnly?: boolean;
+      /**
+       * Disable use of source files instead of declaration files from referenced projects.
+       */
+      disableSourceOfProjectReferenceRedirect?: boolean;
+      /**
+       * Disable solution searching for this project.
+       */
+      disableSolutionSearching?: boolean;
       [k: string]: unknown;
     };
     /**
@@ -1013,6 +1045,15 @@ export interface TsNodeDefinition {
      * Use pretty diagnostic formatter.
      */
     pretty?: boolean;
+    /**
+     * Modules to require, like node's `--require` flag.
+     *
+     * If specified in tsconfig.json, the modules will be resolved relative to the tsconfig.json file.
+     *
+     * If specified programmatically, each input string should be pre-resolved to an absolute path for
+     * best results.
+     */
+    require?: string[];
     /**
      * Scope compiler to files within `cwd`.
      */

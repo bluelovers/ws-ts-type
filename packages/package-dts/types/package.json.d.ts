@@ -28,6 +28,15 @@ export type Person =
       [k: string]: unknown;
     }
   | string;
+export type PackageExportsEntry = PackageExportsEntryPath | PackageExportsEntryObject;
+/**
+ * The module path that is resolved when this specifier is imported.
+ */
+export type PackageExportsEntryPath = string;
+/**
+ * Used to allow fallbacks in case this environment doesn't support the preceding entries.
+ */
+export type PackageExportsFallback = PackageExportsEntry[];
 /**
  * Run AFTER the package is published
  */
@@ -131,6 +140,57 @@ export interface CoreProperties {
    * The main field is a module ID that is the primary entry point to your program.
    */
   main?: string;
+  /**
+   * The "exports" field is used to restrict external access to non-exported module files, also enables a module to import itself using "name".
+   */
+  exports?:
+    | string
+    | {
+        /**
+         * The module path that is resolved when the module specifier matches "name", shadows the "main" field.
+         */
+        "."?: PackageExportsEntry | PackageExportsFallback;
+        /**
+         * The module path prefix that is resolved when the module specifier starts with "name/", set to "./" to allow external modules to import any subpath.
+         */
+        "./"?: PackageExportsEntry | PackageExportsFallback;
+        /**
+         * The module path that is resolved when the path component of the module specifier matches the property name.
+         *
+         * This interface was referenced by `undefined`'s JSON-Schema definition
+         * via the `patternProperty` "^\./".
+         */
+        [k: string]: PackageExportsEntry | PackageExportsFallback;
+      }
+    | {
+        /**
+         * The module path that is resolved when this specifier is imported as a CommonJS module using the `require(...)` function.
+         */
+        require?: string;
+        /**
+         * The module path that is resolved when this specifier is imported as an ECMAScript module using an `import` declaration or the dynamic `import(...)` function.
+         */
+        import?: string;
+        /**
+         * The module path that is resolved when this environment is Node.js.
+         */
+        node?: string;
+        /**
+         * The module path that is resolved when no other export type matches.
+         */
+        default?: string;
+        /**
+         * The module path that is resolved when this environment matches the property name.
+         *
+         * This interface was referenced by `PackageExportsEntryObject`'s JSON-Schema definition
+         * via the `patternProperty` "^(?!\.).".
+         *
+         * This interface was referenced by `undefined`'s JSON-Schema definition
+         * via the `patternProperty` "^(?!\.).".
+         */
+        [k: string]: string;
+      }
+    | PackageExportsEntry[];
   bin?:
     | string
     | {
@@ -323,6 +383,37 @@ export interface CoreProperties {
   workspaces?: {
     [k: string]: unknown;
   };
+}
+/**
+ * Used to specify conditional exports, note that Conditional exports are unsupported in older environments, so it's recommended to use the fallback array option if support for those environments is a concern.
+ */
+export interface PackageExportsEntryObject {
+  /**
+   * The module path that is resolved when this specifier is imported as a CommonJS module using the `require(...)` function.
+   */
+  require?: string;
+  /**
+   * The module path that is resolved when this specifier is imported as an ECMAScript module using an `import` declaration or the dynamic `import(...)` function.
+   */
+  import?: string;
+  /**
+   * The module path that is resolved when this environment is Node.js.
+   */
+  node?: string;
+  /**
+   * The module path that is resolved when no other export type matches.
+   */
+  default?: string;
+  /**
+   * The module path that is resolved when this environment matches the property name.
+   *
+   * This interface was referenced by `PackageExportsEntryObject`'s JSON-Schema definition
+   * via the `patternProperty` "^(?!\.).".
+   *
+   * This interface was referenced by `undefined`'s JSON-Schema definition
+   * via the `patternProperty` "^(?!\.).".
+   */
+  [k: string]: string;
 }
 /**
  * Dependencies are specified with a simple hash of package name to version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.

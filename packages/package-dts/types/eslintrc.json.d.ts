@@ -224,9 +224,9 @@ export interface JSONSchemaForESLintConfigurationFiles {
       [k: string]: unknown;
     };
     /**
-     * Set to 3, 5 (default), 6, 7, 8, 9, 10 or 11 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10) or 2020 (same as 11) to use the year-based naming.
+     * Set to 3, 5, 6, 7, 8, 9, 10, 11 (default) or 12 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10), 2020 (same as 11) or 2021 (same as 12) to use the year-based naming.
      */
-    ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018 | 10 | 2019 | 11 | 2020;
+    ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018 | 10 | 2019 | 11 | 2020 | 12 | 2021;
     /**
      * set to "script" (default) or "module" if your code is in ECMAScript modules
      */
@@ -482,9 +482,9 @@ export interface JSONSchemaForESLintConfigurationFiles {
         [k: string]: unknown;
       };
       /**
-       * Set to 3, 5 (default), 6, 7, 8, 9, 10 or 11 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10) or 2020 (same as 11) to use the year-based naming.
+       * Set to 3, 5, 6, 7, 8, 9, 10, 11 (default) or 12 to specify the version of ECMAScript syntax you want to use. You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10), 2020 (same as 11) or 2021 (same as 12) to use the year-based naming.
        */
-      ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018 | 10 | 2019 | 11 | 2020;
+      ecmaVersion?: 3 | 5 | 6 | 2015 | 7 | 2016 | 8 | 2017 | 9 | 2018 | 10 | 2019 | 11 | 2020 | 12 | 2021;
       /**
        * set to "script" (default) or "module" if your code is in ECMAScript modules
        */
