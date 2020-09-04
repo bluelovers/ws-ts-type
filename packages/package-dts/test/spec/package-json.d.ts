@@ -3,12 +3,12 @@ export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extra
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
     [x: string]: any;
-    version?: string;
-    description?: string;
     dependencies?: import("../../types/package.json").Dependency;
     devDependencies?: import("../../types/package.json").Dependency;
     peerDependencies?: import("../../types/package.json").Dependency;
     optionalDependencies?: import("../../types/package.json").Dependency;
+    description?: string;
+    version?: string;
     name?: string;
     keywords?: string[];
     homepage?: string;
@@ -28,6 +28,17 @@ export declare let exportedType: {
     maintainers?: import("../../types/package.json").Person[];
     files?: string[];
     main?: string;
+    exports?: string | {
+        [k: string]: string | import("../../types/package.json").PackageExportsEntryObject | import("../../types/package.json").PackageExportsFallback;
+        "."?: string | import("../../types/package.json").PackageExportsEntryObject | import("../../types/package.json").PackageExportsFallback;
+        "./"?: string | import("../../types/package.json").PackageExportsEntryObject | import("../../types/package.json").PackageExportsFallback;
+    } | {
+        [k: string]: string;
+        require?: string;
+        import?: string;
+        node?: string;
+        default?: string;
+    } | import("../../types/package.json").PackageExportsEntry[];
     bin?: string | {
         [k: string]: string;
     };
