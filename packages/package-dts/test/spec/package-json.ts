@@ -42,10 +42,12 @@ isPackageJsonLike({
 	private: 'true'
 });
 
+/*
 notPackageJsonLike({
 	name: '',
 	keywords: 1
 });
+ */
 
 isPackageJsonLike({
 	name: '',

@@ -3,127 +3,10 @@ export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extra
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
     [x: string]: any;
-    description?: string;
-    dependencies?: import("../../types/package.json").Dependency;
-    devDependencies?: import("../../types/package.json").Dependency;
-    peerDependencies?: import("../../types/package.json").Dependency;
-    optionalDependencies?: import("../../types/package.json").Dependency;
-    version?: string;
-    name?: string;
-    keywords?: string[];
-    homepage?: string;
-    bugs?: string | {
-        [k: string]: unknown;
-        url?: string;
-        email?: string;
-    };
-    license?: string;
-    licenses?: {
-        [k: string]: unknown;
-        type?: string;
-        url?: string;
-    }[];
-    author?: import("../../types/package.json").Person;
-    contributors?: import("../../types/package.json").Person[];
-    maintainers?: import("../../types/package.json").Person[];
-    files?: string[];
-    main?: string;
-    exports?: string | {
-        [k: string]: string | import("../../types/package.json").PackageExportsEntryObject | import("../../types/package.json").PackageExportsFallback;
-        "."?: string | import("../../types/package.json").PackageExportsEntryObject | import("../../types/package.json").PackageExportsFallback;
-        "./"?: string | import("../../types/package.json").PackageExportsEntryObject | import("../../types/package.json").PackageExportsFallback;
-    } | {
-        [k: string]: string;
-        require?: string;
-        import?: string;
-        node?: string;
-        default?: string;
-    } | import("../../types/package.json").PackageExportsEntry[];
-    bin?: string | {
-        [k: string]: string;
-    };
-    type?: string;
-    types?: string;
-    typings?: string;
-    typesVersions?: {
-        [k: string]: {
-            "*"?: string[];
-        };
-    };
-    man?: string[];
-    directories?: {
-        [k: string]: unknown;
-        bin?: string;
-        doc?: string;
-        example?: string;
-        lib?: string;
-        man?: string;
-        test?: string;
-    };
-    repository?: string | {
-        [k: string]: unknown;
-        type?: string;
-        url?: string;
-        directory?: string;
-    };
-    scripts?: {
-        [k: string]: string;
-        prepublish?: string;
-        prepare?: string;
-        prepublishOnly?: string;
-        prepack?: string;
-        postpack?: string;
-        publish?: string;
-        postpublish?: string;
-        preinstall?: string;
-        install?: string;
-        postinstall?: string;
-        preuninstall?: string;
-        uninstall?: string;
-        postuninstall?: string;
-        preversion?: string;
-        version?: string;
-        postversion?: string;
-        pretest?: string;
-        test?: string;
-        posttest?: string;
-        prestop?: string;
-        stop?: string;
-        poststop?: string;
-        prestart?: string;
-        start?: string;
-        poststart?: string;
-        prerestart?: string;
-        restart?: string;
-        postrestart?: string;
-    };
-    config?: {
-        [k: string]: unknown;
-    };
-    resolutions?: import("../../types/package.json").Dependency;
-    engines?: {
-        [k: string]: string;
-        node?: string;
-    };
-    engineStrict?: boolean;
-    os?: string[];
-    cpu?: string[];
-    preferGlobal?: boolean;
-    dist?: {
-        [k: string]: unknown;
-        shasum?: string;
-        tarball?: string;
-    };
-    readme?: string;
-    module?: string;
-    esnext?: string | {
-        [k: string]: string;
-        main?: string;
-        browser?: string;
-    };
+    [x: number]: any;
     workspaces?: string[];
     publishConfig?: import("../../package-json").IPackageJsonPublishConfig;
-    private?: boolean | "true" | "false";
+    private?: boolean | import("../../lib/types").IBooleanString;
     gitHead?: string;
     unpkg?: string;
     browserslist?: string[];
@@ -134,6 +17,11 @@ export declare let exportedType: {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
+    dependencies?: import("../../package-json").IDependency;
+    devDependencies?: import("../../package-json").IDependency;
+    peerDependencies?: import("../../package-json").IDependency;
+    optionalDependencies?: import("../../package-json").IDependency;
     flat?: boolean;
     installConfig?: import("../../lib/package-json/yarn").IYarnV1PackageJsonInstallConfig;
+    resolutions?: import("../../package-json").IDependency;
 };

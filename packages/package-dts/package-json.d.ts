@@ -1,7 +1,7 @@
 /**
  * Created by user on 2019/5/18.
  */
-import type { CoreProperties } from './types/package.json';
+import type { JSONSchemaForNPMPackageJsonFiles as CoreProperties } from './types/package.json';
 import type { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
 import type { ILernaJson } from './lerna-json';
 import type { ITSPartialRecord, ITSOverwrite } from 'ts-type/lib/type/record';

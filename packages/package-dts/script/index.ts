@@ -5,6 +5,7 @@
 import { downloadJsonAndBuild, IDownloadJsonAndBuildParams } from './util';
 import Bluebird from 'bluebird';
 import { basename } from 'path';
+import { unsetValue } from 'dot-values2';
 
 let skipExists: boolean;
 skipExists = false;
@@ -28,14 +29,23 @@ Bluebird
 				// @ts-ignore
 				handleSchemaBeforeCompile = (schema: typeof import('../schema/package.json')) => {
 
-					delete schema.definitions.coreProperties.patternProperties;
+					try
+					{
+						// @ts-ignore
+						delete schema.definitions.coreProperties.patternProperties;
 
-					// @ts-ignore
-					schema.definitions.coreProperties.additionalProperties = false;
-					// @ts-ignore
-					schema.definitions.coreProperties.additionalItems = false;
+						// @ts-ignore
+						schema.definitions.coreProperties.additionalProperties = false;
+						// @ts-ignore
+						schema.definitions.coreProperties.additionalItems = false;
 
-					console.dir(schema.definitions.coreProperties);
+						// @ts-ignore
+						console.dir(schema.definitions.coreProperties);
+					}
+					catch (e)
+					{
+
+					}
 
 					return schema
 				}
