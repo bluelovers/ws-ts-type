@@ -5,20 +5,15 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type JSONSchemaForNPMPackageJsonFiles = CoreProperties &
-  JspmDefinition &
-  (
-    | {
-        bundleDependencies?: BundledDependency;
-        [k: string]: unknown;
-      }
-    | {
-        bundledDependencies?: BundledDependency;
-        [k: string]: unknown;
-      }
-  );
+export type JSONSchemaForNPMPackageJsonFiles = JSONSchemaForNPMPackageJsonFiles1 & JSONSchemaForNPMPackageJsonFiles2;
+export type JSONSchemaForNPMPackageJsonFiles1 = {
+  [k: string]: unknown;
+};
 /**
- * A person who has been involved in creating or maintaining this package
+ * A person who has been involved in creating or maintaining this package.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "person".
  */
 export type Person =
   | {
@@ -28,53 +23,88 @@ export type Person =
       [k: string]: unknown;
     }
   | string;
+/**
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "packageExportsEntry".
+ */
 export type PackageExportsEntry = PackageExportsEntryPath | PackageExportsEntryObject;
 /**
- * The module path that is resolved when this specifier is imported.
+ * The module path that is resolved when this specifier is imported. Set to `null` to disallow importing this module.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "packageExportsEntryPath".
  */
-export type PackageExportsEntryPath = string;
+export type PackageExportsEntryPath = string | null;
 /**
  * Used to allow fallbacks in case this environment doesn't support the preceding entries.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "packageExportsFallback".
  */
 export type PackageExportsFallback = PackageExportsEntry[];
 /**
- * Run AFTER the package is published
+ * Run AFTER the package is published.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsPublishAfter".
  */
 export type ScriptsPublishAfter = string;
 /**
- * Run AFTER the package is installed
+ * Run AFTER the package is installed.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsInstallAfter".
  */
 export type ScriptsInstallAfter = string;
 /**
- * Run BEFORE the package is uninstalled
+ * Run BEFORE the package is uninstalled.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsUninstallBefore".
  */
 export type ScriptsUninstallBefore = string;
 /**
- * Run BEFORE bump the package version
+ * Run BEFORE bump the package version.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsVersionBefore".
  */
 export type ScriptsVersionBefore = string;
 /**
- * Run by the 'npm test' command
+ * Run by the 'npm test' command.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsTest".
  */
 export type ScriptsTest = string;
 /**
- * Run by the 'npm stop' command
+ * Run by the 'npm stop' command.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsStop".
  */
 export type ScriptsStop = string;
 /**
- * Run by the 'npm start' command
+ * Run by the 'npm start' command.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsStart".
  */
 export type ScriptsStart = string;
 /**
  * Run by the 'npm restart' command. Note: 'npm restart' will run the stop and start scripts if no restart script is provided.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "scriptsRestart".
  */
 export type ScriptsRestart = string;
 /**
- * Array of package names that will be bundled when publishing the package.
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "packageExportsEntryOrFallback".
  */
-export type BundledDependency = string[] | false;
+export type PackageExportsEntryOrFallback = PackageExportsEntry | PackageExportsFallback;
 
-export interface CoreProperties {
+export interface JSONSchemaForNPMPackageJsonFiles2 {
   /**
    * The name of the package.
    */
@@ -116,7 +146,7 @@ export interface CoreProperties {
    */
   license?: string;
   /**
-   * DEPRECATED: Instead, use SPDX expressions, like this: { "license": "ISC" } or { "license": "(MIT OR Apache-2.0)" } see: 'https://docs.npmjs.com/files/package.json#license'
+   * DEPRECATED: Instead, use SPDX expressions, like this: { "license": "ISC" } or { "license": "(MIT OR Apache-2.0)" } see: 'https://docs.npmjs.com/files/package.json#license'.
    */
   licenses?: {
     type?: string;
@@ -144,7 +174,7 @@ export interface CoreProperties {
    * The "exports" field is used to restrict external access to non-exported module files, also enables a module to import itself using "name".
    */
   exports?:
-    | string
+    | (string | null)
     | {
         /**
          * The module path that is resolved when the module specifier matches "name", shadows the "main" field.
@@ -166,29 +196,29 @@ export interface CoreProperties {
         /**
          * The module path that is resolved when this specifier is imported as a CommonJS module using the `require(...)` function.
          */
-        require?: string;
+        require?: PackageExportsEntry | PackageExportsFallback;
         /**
          * The module path that is resolved when this specifier is imported as an ECMAScript module using an `import` declaration or the dynamic `import(...)` function.
          */
-        import?: string;
+        import?: PackageExportsEntry | PackageExportsFallback;
         /**
          * The module path that is resolved when this environment is Node.js.
          */
-        node?: string;
+        node?: PackageExportsEntry | PackageExportsFallback;
         /**
          * The module path that is resolved when no other export type matches.
          */
-        default?: string;
+        default?: PackageExportsEntry | PackageExportsFallback;
         /**
          * The module path that is resolved when this environment matches the property name.
          *
          * This interface was referenced by `PackageExportsEntryObject`'s JSON-Schema definition
-         * via the `patternProperty` "^(?!\.).".
+         * via the `patternProperty` "^(?![\.0-9]).".
          *
          * This interface was referenced by `undefined`'s JSON-Schema definition
-         * via the `patternProperty` "^(?!\.).".
+         * via the `patternProperty` "^(?![\.0-9]).".
          */
-        [k: string]: string;
+        [k: string]: PackageExportsEntry | PackageExportsFallback;
       }
     | PackageExportsEntry[];
   bin?:
@@ -197,11 +227,11 @@ export interface CoreProperties {
         [k: string]: string;
       };
   /**
-   * The type field defines how .js and extensionless files should be treated within a particular package.json file’s package scope. Supported values: "commonjs" (default) or "module".
+   * When set to "module", the type field allows a package to specify all .js files within are ES modules. If the "type" field is omitted or set to "commonjs", all .js files are treated as CommonJS.
    */
-  type?: string;
+  type?: "commonjs" | "module";
   /**
-   * Set the types property to point to your bundled declaration file
+   * Set the types property to point to your bundled declaration file.
    */
   types?: string;
   /**
@@ -225,7 +255,7 @@ export interface CoreProperties {
   /**
    * Specify either a single file or an array of filenames to put in place for the man program to find.
    */
-  man?: string[];
+  man?: string[] | string;
   directories?: {
     /**
      * If you specify a 'bin' directory, then all the files in that folder will be used as the 'bin' hash.
@@ -266,19 +296,19 @@ export interface CoreProperties {
    */
   scripts?: {
     /**
-     * Run BEFORE the package is published (Also run on local npm install without any arguments)
+     * Run BEFORE the package is published (Also run on local npm install without any arguments).
      */
     prepublish?: string;
     /**
-     * Run both BEFORE the package is packed and published, and on local npm install without any arguments. This is run AFTER prepublish, but BEFORE prepublishOnly
+     * Run both BEFORE the package is packed and published, and on local npm install without any arguments. This is run AFTER prepublish, but BEFORE prepublishOnly.
      */
     prepare?: string;
     /**
-     * Run BEFORE the package is prepared and packed, ONLY on npm publish
+     * Run BEFORE the package is prepared and packed, ONLY on npm publish.
      */
     prepublishOnly?: string;
     /**
-     * run BEFORE a tarball is packed (on npm pack, npm publish, and when installing git dependencies)
+     * run BEFORE a tarball is packed (on npm pack, npm publish, and when installing git dependencies).
      */
     prepack?: string;
     /**
@@ -288,7 +318,7 @@ export interface CoreProperties {
     publish?: ScriptsPublishAfter;
     postpublish?: ScriptsPublishAfter;
     /**
-     * Run BEFORE the package is installed
+     * Run BEFORE the package is installed.
      */
     preinstall?: string;
     install?: ScriptsInstallAfter;
@@ -296,13 +326,13 @@ export interface CoreProperties {
     preuninstall?: ScriptsUninstallBefore;
     uninstall?: ScriptsUninstallBefore;
     /**
-     * Run AFTER the package is uninstalled
+     * Run AFTER the package is uninstalled.
      */
     postuninstall?: string;
     preversion?: ScriptsVersionBefore;
     version?: ScriptsVersionBefore;
     /**
-     * Run AFTER bump the package version
+     * Run AFTER bump the package version.
      */
     postversion?: string;
     pretest?: ScriptsTest;
@@ -329,18 +359,43 @@ export interface CoreProperties {
   devDependencies?: Dependency;
   optionalDependencies?: Dependency;
   peerDependencies?: Dependency;
-  resolutions?: Dependency;
+  /**
+   * When a user installs your package, warnings are emitted if packages specified in "peerDependencies" are not already installed. The "peerDependenciesMeta" field serves to provide more information on how your peer dependencies are utilized. Most commonly, it allows peer dependencies to be marked as optional. Metadata for this field is specified with a simple hash of the package name to a metadata object.
+   */
+  peerDependenciesMeta?: {
+    [k: string]: {
+      /**
+       * Specifies that this peer dependency is optional and should not be installed automatically.
+       */
+      optional?: boolean;
+      [k: string]: unknown;
+    };
+  };
+  /**
+   * Array of package names that will be bundled when publishing the package.
+   */
+  bundledDependencies?: string[] | boolean;
+  /**
+   * DEPRECATED: This field is honored, but "bundledDependencies" is the correct field name.
+   */
+  bundleDependencies?: string[] | boolean;
+  /**
+   * Resolutions is used to support selective version resolutions, which lets you define custom package versions or ranges inside your dependencies. See: https://classic.yarnpkg.com/en/docs/selective-version-resolutions
+   */
+  resolutions?: {
+    [k: string]: unknown;
+  };
   engines?: {
     node?: string;
     [k: string]: string;
   };
   engineStrict?: boolean;
   /**
-   * You can specify which operating systems your module will run on
+   * Specify which operating systems your module will run on.
    */
   os?: string[];
   /**
-   * If your code only runs on certain cpu architectures, you can specify which ones.
+   * Specify that your code only runs on certain cpu architectures.
    */
   cpu?: string[];
   /**
@@ -378,50 +433,70 @@ export interface CoreProperties {
         [k: string]: string;
       };
   /**
-   * To configure your yarn workspaces, please note private should be set to true to use yarn workspaces
+   * Allows packages within a directory to depend on one another using direct linking of local files. Additionally, dependencies within a workspace are hoisted to the workspace root when possible to reduce duplication. Note: It's also a good idea to set "private" to true when using this feature.
    */
-  workspaces?: {
-    [k: string]: unknown;
-  };
+  workspaces?:
+    | string[]
+    | {
+        /**
+         * Workspace package paths. Glob patterns are supported.
+         */
+        packages?: string[];
+        /**
+         * Packages to block from hoisting to the workspace root. Currently only supported in Yarn only.
+         */
+        nohoist?: string[];
+        [k: string]: unknown;
+      };
+  jspm?: JSONSchemaForNPMPackageJsonFiles1;
+  /**
+   * Any property starting with _ is valid.
+   *
+   * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema definition
+   * via the `patternProperty` "^_".
+   */
+  [k: string]: any;
 }
 /**
  * Used to specify conditional exports, note that Conditional exports are unsupported in older environments, so it's recommended to use the fallback array option if support for those environments is a concern.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "packageExportsEntryObject".
  */
 export interface PackageExportsEntryObject {
   /**
    * The module path that is resolved when this specifier is imported as a CommonJS module using the `require(...)` function.
    */
-  require?: string;
+  require?: PackageExportsEntry | PackageExportsFallback;
   /**
    * The module path that is resolved when this specifier is imported as an ECMAScript module using an `import` declaration or the dynamic `import(...)` function.
    */
-  import?: string;
+  import?: PackageExportsEntry | PackageExportsFallback;
   /**
    * The module path that is resolved when this environment is Node.js.
    */
-  node?: string;
+  node?: PackageExportsEntry | PackageExportsFallback;
   /**
    * The module path that is resolved when no other export type matches.
    */
-  default?: string;
+  default?: PackageExportsEntry | PackageExportsFallback;
   /**
    * The module path that is resolved when this environment matches the property name.
    *
    * This interface was referenced by `PackageExportsEntryObject`'s JSON-Schema definition
-   * via the `patternProperty` "^(?!\.).".
+   * via the `patternProperty` "^(?![\.0-9]).".
    *
    * This interface was referenced by `undefined`'s JSON-Schema definition
-   * via the `patternProperty` "^(?!\.).".
+   * via the `patternProperty` "^(?![\.0-9]).".
    */
-  [k: string]: string;
+  [k: string]: PackageExportsEntry | PackageExportsFallback;
 }
 /**
  * Dependencies are specified with a simple hash of package name to version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.
+ *
+ * This interface was referenced by `JSONSchemaForNPMPackageJsonFiles2`'s JSON-Schema
+ * via the `definition` "dependency".
  */
 export interface Dependency {
   [k: string]: string;
-}
-export interface JspmDefinition {
-  jspm?: CoreProperties;
-  [k: string]: unknown;
 }

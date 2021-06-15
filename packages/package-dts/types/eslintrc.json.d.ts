@@ -164,7 +164,7 @@ export interface JSONSchemaForESLintConfigurationFiles {
   /**
    * If you want to extend a specific configuration file, you can use the extends property and specify the path to the file. The path can be either relative or absolute.
    */
-  extends?: string[];
+  extends?: string | string[];
   /**
    * Set each global variable name equal to true to allow the variable to be overwritten or false to disallow overwriting.
    */
@@ -244,7 +244,7 @@ export interface JSONSchemaForESLintConfigurationFiles {
   /**
    * Tell ESLint to ignore specific files and directories. Each value uses the same pattern as the `.eslintignore` file.
    */
-  ignorePatterns?: string[];
+  ignorePatterns?: string | string[];
   /**
    * ESLint comes with a large number of rules. You can modify which rules your project uses either using configuration comments or configuration files.
    */
@@ -269,11 +269,11 @@ export interface JSONSchemaForESLintConfigurationFiles {
     /**
      * Glob pattern for files to apply 'overrides' configuration, relative to the directory of the config file
      */
-    files: string | string[];
+    files: string | [string, ...string[]];
     /**
      * If you want to extend a specific configuration file, you can use the extends property and specify the path to the file. The path can be either relative or absolute.
      */
-    extends?: string[] | string[];
+    extends?: string | string[];
     /**
      * If a file matches any of the 'excludedFiles' glob patterns, the 'overrides' configuration won’t apply
      */
@@ -651,9 +651,7 @@ export interface PossibleErrors {
   /**
    * Disallow control flow statements in finally blocks
    */
-  "no-unsafe-finally"?: {
-    [k: string]: unknown;
-  };
+  "no-unsafe-finally"?: number | ("off" | "warn" | "error") | unknown[];
   /**
    * Disallow negating the left operand of relational operators
    */

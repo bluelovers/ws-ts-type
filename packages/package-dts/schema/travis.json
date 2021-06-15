@@ -223,7 +223,13 @@
 				"xcode11.4",
 				"xcode11.5",
 				"xcode11.6",
-				"xcode12"
+				"xcode11.7",
+				"xcode12u",
+				"xcode12",
+				"xcode12.1",
+				"xcode12.2",
+				"xcode12.3",
+				"xcode12.4"
 			]
 		},
 		"envVars": {
@@ -286,6 +292,7 @@
 						"javascript",
 						"julia",
 						"jvm",
+						"matlab",
 						"minimal",
 						"nix",
 						"node",
@@ -308,6 +315,9 @@
 						"shell",
 						"smalltalk"
 					]
+				},
+				"matlab": {
+					"$ref": "#/definitions/stringOrStringArrayUnique"
 				},
 				"elm": {
 					"$ref": "#/definitions/stringOrStringArrayUnique"
@@ -666,7 +676,8 @@
 								"amd64",
 								"arm64",
 								"ppc64le",
-								"s390x"
+								"s390x",
+								"arm64-graviton2"
 							]
 						},
 						{
@@ -678,7 +689,8 @@
 									"amd64",
 									"arm64",
 									"ppc64le",
-									"s390x"
+									"s390x",
+									"arm64-graviton2"
 								]
 							}
 						}
@@ -844,14 +856,21 @@
 						},
 						"firefox": {
 							"description": "Firefox addon",
-							"type": "string",
-							"enum": [
-								"latest",
-								"latest-esr",
-								"latest-beta",
-								"latest-dev",
-								"latest-nightly",
-								"latest-unsigned"
+							"anyOf": [
+								{
+									"type": "string",
+									"enum": [
+										"latest",
+										"latest-esr",
+										"latest-beta",
+										"latest-dev",
+										"latest-nightly",
+										"latest-unsigned"
+									]
+								},
+								{
+									"$ref": "#/definitions/nonEmptyString"
+								}
 							]
 						},
 						"chrome": {
@@ -1091,7 +1110,6 @@
 							"items": {
 								"oneOf": [
 									{
-										"type": "string",
 										"$ref": "#/definitions/cache"
 									},
 									{
@@ -1217,7 +1235,7 @@
 									]
 								}
 							],
-							"summary": "Specify handling of line endings when cloning repository"
+							"description": "Specify handling of line endings when cloning repository"
 						}
 					},
 					"additionalProperties": false
@@ -2307,7 +2325,7 @@
 				},
 				"version": {
 					"type": "string",
-					"summary": "Build config specification version",
+					"description": "Build config specification version",
 					"pattern": "^(~>|>|>=|=|<=|<) (\\d+(?:\\.\\d+)?(?:\\.\\d+)?)$"
 				},
 				"import": {

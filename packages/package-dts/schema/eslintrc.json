@@ -152,7 +152,7 @@
 					"description": "Disallow unreachable code after return, throw, continue, and break statements"
 				},
 				"no-unsafe-finally": {
-					"ref": "#/definitions/rule",
+					"$ref": "#/definitions/rule",
 					"description": "Disallow control flow statements in finally blocks"
 				},
 				"no-unsafe-negation": {
@@ -1449,11 +1449,11 @@
 								"type": "string"
 							},
 							{
+								"minItems": 1,
 								"type": "array",
 								"items": {
 									"type": "string"
-								},
-								"minLength": 1
+								}
 							}
 						]
 					},

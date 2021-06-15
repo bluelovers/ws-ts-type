@@ -13,7 +13,7 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
       | {
           disabled?: boolean;
           enabled?: boolean;
-          urls?: string | SecretString | (string | SecretString)[];
+          urls?: string | SecretString | [string | SecretString, ...(string | SecretString)[]];
           on_success?: "always" | "never" | "change";
           on_failure?: "always" | "never" | "change";
           on_start?: "always" | "never" | "change";
@@ -24,7 +24,7 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           {
             disabled?: boolean;
             enabled?: boolean;
-            urls?: string | SecretString | (string | SecretString)[];
+            urls?: string | SecretString | [string | SecretString, ...(string | SecretString)[]];
             on_success?: "always" | "never" | "change";
             on_failure?: "always" | "never" | "change";
             on_start?: "always" | "never" | "change";
@@ -34,7 +34,7 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           ...{
             disabled?: boolean;
             enabled?: boolean;
-            urls?: string | SecretString | (string | SecretString)[];
+            urls?: string | SecretString | [string | SecretString, ...(string | SecretString)[]];
             on_success?: "always" | "never" | "change";
             on_failure?: "always" | "never" | "change";
             on_start?: "always" | "never" | "change";
@@ -48,7 +48,7 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
       | {
           disabled?: boolean;
           enabled?: boolean;
-          rooms?: SlackRoom[];
+          rooms?: [SlackRoom, ...SlackRoom[]];
           on_pull_requests?: boolean;
           template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
           on_success?: NotificationFrequency;
@@ -61,7 +61,7 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           {
             disabled?: boolean;
             enabled?: boolean;
-            rooms?: SlackRoom[];
+            rooms?: [SlackRoom, ...SlackRoom[]];
             on_pull_requests?: boolean;
             template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
             on_success?: NotificationFrequency;
@@ -73,7 +73,7 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
           ...{
             disabled?: boolean;
             enabled?: boolean;
-            rooms?: SlackRoom[];
+            rooms?: [SlackRoom, ...SlackRoom[]];
             on_pull_requests?: boolean;
             template?: NotRequiredNonEmptyStringOrArrayOfNonEmptyStrings;
             on_success?: NotificationFrequency;
@@ -376,6 +376,9 @@ export type JSONSchemaForTravisCIConfigurationFiles = Job & {
         if?: string;
       }
   )[];
+  /**
+   * Build config specification version
+   */
   version?: string;
   /**
    * Import YAML config snippets that can be shared across repositories.
@@ -410,7 +413,13 @@ export type XcodeVersions =
   | "xcode11.4"
   | "xcode11.5"
   | "xcode11.6"
-  | "xcode12";
+  | "xcode11.7"
+  | "xcode12u"
+  | "xcode12"
+  | "xcode12.1"
+  | "xcode12.2"
+  | "xcode12.3"
+  | "xcode12.4";
 export type PossiblySecretString =
   | string
   | {
@@ -599,6 +608,7 @@ export interface Job {
     | "javascript"
     | "julia"
     | "jvm"
+    | "matlab"
     | "minimal"
     | "nix"
     | "node"
@@ -620,6 +630,7 @@ export interface Job {
     | "sh"
     | "shell"
     | "smalltalk";
+  matlab?: StringOrStringArrayUnique;
   elm?: StringOrStringArrayUnique;
   "elm-test"?: NonEmptyString;
   "elm-format"?: NonEmptyString;
@@ -700,8 +711,11 @@ export interface Job {
    * The CPU Architecture to run the job on
    */
   arch?:
-    | ("amd64" | "arm64" | "ppc64le" | "s390x")
-    | ["amd64" | "arm64" | "ppc64le" | "s390x", ...("amd64" | "arm64" | "ppc64le" | "s390x")[]];
+    | ("amd64" | "arm64" | "ppc64le" | "s390x" | "arm64-graviton2")
+    | [
+        "amd64" | "arm64" | "ppc64le" | "s390x" | "arm64-graviton2",
+        ...("amd64" | "arm64" | "ppc64le" | "s390x" | "arm64-graviton2")[]
+      ];
   /**
    * The operating system to run the job on
    */
@@ -768,7 +782,9 @@ export interface Job {
     /**
      * Firefox addon
      */
-    firefox?: "latest" | "latest-esr" | "latest-beta" | "latest-dev" | "latest-nightly" | "latest-unsigned";
+    firefox?:
+      | ("latest" | "latest-esr" | "latest-beta" | "latest-dev" | "latest-nightly" | "latest-unsigned")
+      | NonEmptyString;
     /**
      * Chrome addon
      */
@@ -903,7 +919,7 @@ export interface Job {
     | false
     | Cache
     | (
-        | ("apt" | "bundler" | "cargo" | "ccache" | "cocoapods" | "packages" | "pip" | "yarn" | "npm")
+        | Cache
         | {
             directories?: string[];
           }
@@ -947,6 +963,9 @@ export interface Job {
      * Is a path to the existing file in the current repository with data you’d like to put into $GIT_DIR/info/sparse-checkout file of format described in Git documentation.
      */
     sparse_checkout?: string;
+    /**
+     * Specify handling of line endings when cloning repository
+     */
     autocrlf?: boolean | "input";
   };
   /**
