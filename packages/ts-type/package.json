@@ -59,7 +59,7 @@
   },
   "peerDependencies": {
     "@types/bluebird": "*",
-    "ts-toolbelt": "^8.0.4"
+    "ts-toolbelt": "^8.0.7"
   },
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01"
 }

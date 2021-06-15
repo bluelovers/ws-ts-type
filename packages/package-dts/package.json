@@ -61,14 +61,15 @@
     "update:schema": "npx ts-node ./script/index"
   },
   "dependencies": {
-    "@types/semver": "^7.3.3",
+    "@types/semver": "^7.3.4",
     "ts-type": "^1.2.34"
   },
   "devDependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "bluebird": "^3.7.2",
+    "dot-values2": "^2.0.3",
     "fs-extra": "^9.0.1",
-    "json-schema-to-typescript": "^9.1.1"
+    "json-schema-to-typescript": "^10.1.1"
   },
   "publishConfig": {
     "access": "public"
