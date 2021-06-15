@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.35](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.34...ts-type@1.2.35) (2021-06-15)
+
+
+### ✨　Features
+
+* ITSRequiredPick<T, K extends keyof T = keyof T> ([ef20549](https://github.com/bluelovers/ws-ts-type/commit/ef20549dbd3b6cf3b39ada8e28856393941fb72b))
+
+
+### 🔖　Miscellaneous
+
+* . ([113dbf0](https://github.com/bluelovers/ws-ts-type/commit/113dbf09f3eb9f62be3a1549b23477912e5a8cc4))
+
+
+
+
+
 ## [1.2.34](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.33...ts-type@1.2.34) (2020-09-04)
 
 
