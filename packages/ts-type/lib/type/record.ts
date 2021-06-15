@@ -64,14 +64,14 @@ export type ITSMergeBoth<T, U> = ITSPickBothDiff<T, U> & Pick<T | U, ITSKeyofBot
 /**
  * pick K and mark as Required
  */
-export type ITSRequiredPick<T, K extends keyof T> = {
+export type ITSRequiredPick<T, K extends keyof T = keyof T> = {
 	[P in K]-?: T[P];
 };
 
 /**
  * pick K and mark as Partial
  */
-export type ITSPartialPick<T, K extends keyof T> = {
+export type ITSPartialPick<T, K extends keyof T = keyof T> = {
 	[P in K]?: T[P];
 };
 
