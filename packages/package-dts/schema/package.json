@@ -389,6 +389,10 @@
 			"description": "The 'scripts' member is an object hash of script commands that are run at various times in the lifecycle of your package. The key is the lifecycle event, and the value is the command to run at that point.",
 			"type": "object",
 			"properties": {
+				"lint": {
+					"type": "string",
+					"description": "Run code quality tools, e.g. ESLint, TSLint, etc."
+				},
 				"prepublish": {
 					"type": "string",
 					"description": "Run BEFORE the package is published (Also run on local npm install without any arguments)."
@@ -480,6 +484,10 @@
 				},
 				"postrestart": {
 					"$ref": "#/definitions/scriptsRestart"
+				},
+				"serve": {
+					"type": "string",
+					"description": "Start dev server to serve application files"
 				}
 			},
 			"additionalProperties": {

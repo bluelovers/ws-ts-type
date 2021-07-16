@@ -296,6 +296,10 @@ export interface JSONSchemaForNPMPackageJsonFiles2 {
    */
   scripts?: {
     /**
+     * Run code quality tools, e.g. ESLint, TSLint, etc.
+     */
+    lint?: string;
+    /**
      * Run BEFORE the package is published (Also run on local npm install without any arguments).
      */
     prepublish?: string;
@@ -347,6 +351,10 @@ export interface JSONSchemaForNPMPackageJsonFiles2 {
     prerestart?: ScriptsRestart;
     restart?: ScriptsRestart;
     postrestart?: ScriptsRestart;
+    /**
+     * Start dev server to serve application files
+     */
+    serve?: string;
     [k: string]: string | undefined;
   };
   /**

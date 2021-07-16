@@ -9,6 +9,8 @@ export type JSONSchemaForTheTypeScriptCompilerSConfigurationFile = CompilerOptio
   CompileOnSaveDefinition &
   TypeAcquisitionDefinition &
   ExtendsDefinition &
+  WatchOptionsDefinition &
+  BuildOptionsDefinition &
   TsNodeDefinition &
   (FilesDefinition | ExcludeDefinition | IncludeDefinition | ReferencesDefinition);
 
@@ -54,7 +56,11 @@ export interface CompilerOptionsDefinition {
      */
     emitDeclarationOnly?: boolean;
     /**
-     * Save .tsbuildinfo files to allow for incremental compilation of projects.
+     * Differentiate between undefined and not present when type checking
+     */
+    exactOptionalPropertyTypes?: boolean;
+    /**
+     * Enable incremental compilation. Requires TypeScript version 3.4 or later.
      */
     incremental?: boolean;
     /**
@@ -143,10 +149,6 @@ export interface CompilerOptionsDefinition {
      * Enable error reporting for expressions and declarations with an implied `any` type..
      */
     noImplicitAny?: boolean;
-    /**
-     * Enable error reporting when overriding a method without using the 'override' keyword. Requires TypeScript version 4.3 or later.
-     */
-    noImplicitOverride?: boolean;
     /**
      * Enable error reporting when `this` is given the type `any`.
      */
@@ -246,26 +248,38 @@ export interface CompilerOptionsDefinition {
     ) &
       string;
     /**
+     * Default catch clause variables as `unknown` instead of `any`.
+     */
+    useUnknownInCatchVariables?: boolean;
+    /**
      * Watch input files.
      */
     watch?: boolean;
     /**
-     * Specify what approach the watcher should use if the system runs out of native file watchers.
+     * Specify the polling strategy to use when the system runs out of or doesn't support native file watchers. Requires TypeScript version 3.8 or later.
      */
-    fallbackPolling?: "fixedPollingInterval" | "priorityPollingInterval" | "dynamicPriorityPolling";
+    fallbackPolling?:
+      | "fixedPollingInterval"
+      | "priorityPollingInterval"
+      | "dynamicPriorityPolling"
+      | "fixedInterval"
+      | "priorityInterval"
+      | "dynamicPriority"
+      | "fixedChunkSize";
     /**
-     * Specify how directories are watched on systems that lack recursive file-watching functionality.
+     * Specify the strategy for watching directories under systems that lack recursive file-watching functionality. Requires TypeScript version 3.8 or later.
      */
-    watchDirectory?: "useFsEvents" | "fixedPollingInterval" | "dynamicPriorityPolling";
+    watchDirectory?: "useFsEvents" | "fixedPollingInterval" | "dynamicPriorityPolling" | "fixedChunkSizePolling";
     /**
-     * Specify how the TypeScript watch mode works.
+     * Specify the strategy for watching individual files. Requires TypeScript version 3.8 or later.
      */
     watchFile?:
       | "fixedPollingInterval"
       | "priorityPollingInterval"
       | "dynamicPriorityPolling"
       | "useFsEvents"
-      | "useFsEventsOnParentDirectory";
+      | "useFsEventsOnParentDirectory"
+      | "fixedChunkSizePolling";
     /**
      * Enable experimental support for TC39 stage 2 draft decorators.
      */
@@ -290,6 +304,10 @@ export interface CompilerOptionsDefinition {
      * Enable error reporting for fallthrough cases in switch statements.
      */
     noFallthroughCasesInSwitch?: boolean;
+    /**
+     * Ensure overriding members in derived classes are marked with an override modifier.
+     */
+    noImplicitOverride?: boolean;
     /**
      * Disable error reporting for unreachable code.
      */
@@ -335,7 +353,7 @@ export interface CompilerOptionsDefinition {
      */
     types?: string[];
     /**
-     * Log paths used during the `moduleResolution` process.
+     * Enable tracing of the name resolution process. Requires TypeScript version 2.0 or later.
      */
     traceResolution?: boolean;
     /**
@@ -416,6 +434,15 @@ export interface CompilerOptionsDefinition {
           | "ScriptHost"
           | "WebWorker"
           | "WebWorker.ImportScripts"
+          | "Webworker.Iterable"
+          | "ES7"
+          | "ES2021"
+          | "ES2020.SharedMemory"
+          | "ES2020.Intl"
+          | "ES2021.Promise"
+          | "ES2021.String"
+          | "ES2021.WeakRef"
+          | "ESNext.WeakRef"
         )
       | {
           [k: string]: unknown;
@@ -521,7 +548,7 @@ export interface CompilerOptionsDefinition {
      */
     resolveJsonModule?: boolean;
     /**
-     * Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.
+     * Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it. Requires TypeScript version 3.8 or later.
      */
     assumeChangesOnlyAffectDirectDependencies?: boolean;
     /**
@@ -579,9 +606,76 @@ export interface ExtendsDefinition {
   extends?: string;
   [k: string]: unknown;
 }
+export interface WatchOptionsDefinition {
+  /**
+   * Settings for the watch mode in TypeScript.
+   */
+  watchOptions?: {
+    /**
+     * ~
+     */
+    force?: string;
+    /**
+     * Specify how the TypeScript watch mode works.
+     */
+    watchFile?: string;
+    /**
+     * Specify how directories are watched on systems that lack recursive file-watching functionality.
+     */
+    watchDirectory?: string;
+    /**
+     * Specify what approach the watcher should use if the system runs out of native file watchers.
+     */
+    fallbackPolling?: string;
+    /**
+     * Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.
+     */
+    synchronousWatchDirectory?: string;
+    /**
+     * Remove a list of files from the watch mode's processing.
+     */
+    excludeFiles?: string[];
+    /**
+     * Remove a list of directories from the watch process.
+     */
+    excludeDirectories?: string[];
+    [k: string]: unknown;
+  };
+  [k: string]: unknown;
+}
+export interface BuildOptionsDefinition {
+  buildOptions?: {
+    /**
+     * ~
+     */
+    dry?: boolean;
+    /**
+     * Build all projects, including those that appear to be up to date
+     */
+    force?: boolean;
+    /**
+     * Enable verbose logging
+     */
+    verbose?: boolean;
+    /**
+     * Save .tsbuildinfo files to allow for incremental compilation of projects.
+     */
+    incremental?: boolean;
+    /**
+     * Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.
+     */
+    assumeChangesOnlyAffectDirectDependencies?: boolean;
+    /**
+     * Log paths used during the `moduleResolution` process.
+     */
+    traceResolution?: boolean;
+    [k: string]: unknown;
+  };
+  [k: string]: unknown;
+}
 export interface TsNodeDefinition {
   /**
-   * ts-node options.  See also: https://typestrong.org/ts-node/docs/configuration
+   * ts-node options.  See also: https://github.com/TypeStrong/ts-node#configuration-options
    *
    * ts-node offers TypeScript execution and REPL for node.js, with source map support.
    */
@@ -635,7 +729,11 @@ export interface TsNodeDefinition {
        */
       emitDeclarationOnly?: boolean;
       /**
-       * Save .tsbuildinfo files to allow for incremental compilation of projects.
+       * Differentiate between undefined and not present when type checking
+       */
+      exactOptionalPropertyTypes?: boolean;
+      /**
+       * Enable incremental compilation. Requires TypeScript version 3.4 or later.
        */
       incremental?: boolean;
       /**
@@ -724,10 +822,6 @@ export interface TsNodeDefinition {
        * Enable error reporting for expressions and declarations with an implied `any` type..
        */
       noImplicitAny?: boolean;
-      /**
-       * Enable error reporting when overriding a method without using the 'override' keyword. Requires TypeScript version 4.3 or later.
-       */
-      noImplicitOverride?: boolean;
       /**
        * Enable error reporting when `this` is given the type `any`.
        */
@@ -839,26 +933,38 @@ export interface TsNodeDefinition {
       ) &
         string;
       /**
+       * Default catch clause variables as `unknown` instead of `any`.
+       */
+      useUnknownInCatchVariables?: boolean;
+      /**
        * Watch input files.
        */
       watch?: boolean;
       /**
-       * Specify what approach the watcher should use if the system runs out of native file watchers.
+       * Specify the polling strategy to use when the system runs out of or doesn't support native file watchers. Requires TypeScript version 3.8 or later.
        */
-      fallbackPolling?: "fixedPollingInterval" | "priorityPollingInterval" | "dynamicPriorityPolling";
+      fallbackPolling?:
+        | "fixedPollingInterval"
+        | "priorityPollingInterval"
+        | "dynamicPriorityPolling"
+        | "fixedInterval"
+        | "priorityInterval"
+        | "dynamicPriority"
+        | "fixedChunkSize";
       /**
-       * Specify how directories are watched on systems that lack recursive file-watching functionality.
+       * Specify the strategy for watching directories under systems that lack recursive file-watching functionality. Requires TypeScript version 3.8 or later.
        */
-      watchDirectory?: "useFsEvents" | "fixedPollingInterval" | "dynamicPriorityPolling";
+      watchDirectory?: "useFsEvents" | "fixedPollingInterval" | "dynamicPriorityPolling" | "fixedChunkSizePolling";
       /**
-       * Specify how the TypeScript watch mode works.
+       * Specify the strategy for watching individual files. Requires TypeScript version 3.8 or later.
        */
       watchFile?:
         | "fixedPollingInterval"
         | "priorityPollingInterval"
         | "dynamicPriorityPolling"
         | "useFsEvents"
-        | "useFsEventsOnParentDirectory";
+        | "useFsEventsOnParentDirectory"
+        | "fixedChunkSizePolling";
       /**
        * Enable experimental support for TC39 stage 2 draft decorators.
        */
@@ -883,6 +989,10 @@ export interface TsNodeDefinition {
        * Enable error reporting for fallthrough cases in switch statements.
        */
       noFallthroughCasesInSwitch?: boolean;
+      /**
+       * Ensure overriding members in derived classes are marked with an override modifier.
+       */
+      noImplicitOverride?: boolean;
       /**
        * Disable error reporting for unreachable code.
        */
@@ -928,7 +1038,7 @@ export interface TsNodeDefinition {
        */
       types?: string[];
       /**
-       * Log paths used during the `moduleResolution` process.
+       * Enable tracing of the name resolution process. Requires TypeScript version 2.0 or later.
        */
       traceResolution?: boolean;
       /**
@@ -1009,6 +1119,15 @@ export interface TsNodeDefinition {
             | "ScriptHost"
             | "WebWorker"
             | "WebWorker.ImportScripts"
+            | "Webworker.Iterable"
+            | "ES7"
+            | "ES2021"
+            | "ES2020.SharedMemory"
+            | "ES2020.Intl"
+            | "ES2021.Promise"
+            | "ES2021.String"
+            | "ES2021.WeakRef"
+            | "ESNext.WeakRef"
           )
         | {
             [k: string]: unknown;
@@ -1114,7 +1233,7 @@ export interface TsNodeDefinition {
        */
       resolveJsonModule?: boolean;
       /**
-       * Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.
+       * Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it. Requires TypeScript version 3.8 or later.
        */
       assumeChangesOnlyAffectDirectDependencies?: boolean;
       /**
