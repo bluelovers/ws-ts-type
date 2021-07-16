@@ -18,4 +18,5 @@ export declare type ITSWrapFunctionPromise<T extends (...args: any[]) => any> = 
  */
 export declare type ITSExtendsOf<T, U> = Extract<T, U>;
 export declare type ITSKeyOfArray<T extends ITSArrayListMaybeReadonly<any>> = Exclude<keyof T, symbol | string>;
-export declare type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T[ITSKeyOfArray<T>];
+export declare type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T extends (infer U)[] ? U : never;
+export declare type ITSValueOfRecord<T extends Record<any, any>> = T[keyof T];

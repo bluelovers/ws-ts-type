@@ -26,5 +26,6 @@ export type ITSExtendsOf<T, U> = Extract<T, U>;
 
 export type ITSKeyOfArray<T extends ITSArrayListMaybeReadonly<any>> = Exclude<keyof T, symbol | string>;
 
-export type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T[ITSKeyOfArray<T>];
+export type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T extends (infer U)[] ? U : never;
 
+export type ITSValueOfRecord<T extends Record<any, any>> = T[keyof T];
