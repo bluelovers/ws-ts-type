@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.36](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.35...ts-type@1.2.36) (2021-07-16)
+
+
+### ✨　Features
+
+* update `ITSValueOfArray<T>` ([8b0138b](https://github.com/bluelovers/ws-ts-type/commit/8b0138b027b7ebe7ccd9df1d4989a1918b08a95f))
+
+
+
+
+
 ## [1.2.35](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.34...ts-type@1.2.35) (2021-06-15)
 
 
