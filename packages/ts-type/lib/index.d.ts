@@ -10,6 +10,7 @@ export * from './helper/record';
 export * from './helper/tuple';
 export * from './helper/typeof';
 export * from './helper/unpacked';
+export * from './internal/filter';
 export * from './logic/any';
 export * from './type/base';
 export * from './type/bluebird';
