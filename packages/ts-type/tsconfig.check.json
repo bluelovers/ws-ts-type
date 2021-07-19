@@ -1,7 +1,9 @@
 {
   "extends": "@bluelovers/tsconfig/esm/mapfile.json",
   "compilerOptions": {
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noEmit": true,
+    "declaration": false
   },
   "exclude": [
     "node_modules",

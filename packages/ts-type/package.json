@@ -55,10 +55,12 @@
     "ts:check": "tsc --noEmit -p tsconfig.check.json"
   },
   "dependencies": {
+    "tslib": "^2.3.0",
     "typedarray-dts": "^1.0.0"
   },
   "peerDependencies": {
     "@types/bluebird": "*",
+    "@types/node": "*",
     "ts-toolbelt": "^8.0.7"
   },
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01"
