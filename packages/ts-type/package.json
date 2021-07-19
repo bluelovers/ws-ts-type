@@ -48,14 +48,14 @@
     "build": "yarn run build-lib-toc",
     "build-lib-toc": "npx ts-node ./test/script/toc && yarn run build:toc",
     "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
-    "preversion": "yarn run test",
+    "preversion": "yarn run test && yarn run postpublish:git:commit",
+    "postpublish:git:commit": "git commit -m \"build(release): publish\" ./lib/index.d.ts & echo postpublish:git:commit",
     "prepublishOnly": "echo prepublishOnly",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "ts:check": "tsc --noEmit -p tsconfig.check.json"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
     "typedarray-dts": "^1.0.0"
   },
   "peerDependencies": {
