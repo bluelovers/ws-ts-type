@@ -477,6 +477,9 @@ export interface CompilerOptionsDefinition {
       | {
           [k: string]: unknown;
         }
+      | {
+          [k: string]: unknown;
+        }
     ) &
       string)[];
     /**
@@ -1129,6 +1132,9 @@ export interface TsNodeDefinition {
             | "ES2021.WeakRef"
             | "ESNext.WeakRef"
           )
+        | {
+            [k: string]: unknown;
+          }
         | {
             [k: string]: unknown;
           }
