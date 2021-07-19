@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.48](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.47...@ts-type/package-dts@1.0.48) (2021-07-19)
+
+
+### 🛠　Build System
+
+* **schema:** update schema ([95cb448](https://github.com/bluelovers/ws-ts-type/commit/95cb4480ffaddfbe77c5485f8ff92ab0c8947d67))
+
+
+
+
+
 ## [1.0.47](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.46...@ts-type/package-dts@1.0.47) (2021-07-16)
 
 
