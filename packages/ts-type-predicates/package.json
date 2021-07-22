@@ -1,6 +1,6 @@
 {
   "name": "ts-type-predicates",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "use asserts for make type predicates work",
   "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type-predicates#readme",
   "bugs": {

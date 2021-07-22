@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.3...ts-type-predicates@1.0.4) (2021-07-22)
+
+
+### ✨　Features
+
+* add typeNarrowed ([e780a69](https://github.com/bluelovers/ws-ts-type/commit/e780a6924756090f8f9f13e00c91e67afa7fc6c3))
+
+
+
+
+
 ## [1.0.3](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.2...ts-type-predicates@1.0.3) (2020-06-17)
 
 
