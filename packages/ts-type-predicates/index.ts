@@ -8,6 +8,8 @@ import { AssertionError } from 'assert';
  */
 export function typePredicates<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string): asserts actual is T
 {
+	expression ??= true;
+
 	if (typeof expression === 'function')
 	{
 		expression = !!expression(actual);
@@ -21,6 +23,23 @@ export function typePredicates<T, P = any>(actual: T | P, expression : boolean |
 			expected: expression,
 		})
 	}
+}
+
+export function typeNarrowed<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string): actual is T
+{
+	expression ??= true;
+
+	if (typeof expression === 'function')
+	{
+		expression = !!expression(actual);
+	}
+
+	if (expression !== true)
+	{
+		expression = false;
+	}
+
+	return expression
 }
 
 export default typePredicates;
