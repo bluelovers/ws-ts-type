@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.4...ts-type-predicates@1.0.5) (2021-07-27)
+
+
+### ✨　Features
+
+* add `ignoreExpression` ([47d3b6b](https://github.com/bluelovers/ws-ts-type/commit/47d3b6bda19a27c5c23cf7ea6f7674358bb8123c))
+
+
+
+
+
 ## [1.0.4](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.3...ts-type-predicates@1.0.4) (2021-07-22)
 
 
