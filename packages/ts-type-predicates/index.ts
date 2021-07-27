@@ -6,7 +6,7 @@ import { AssertionError } from 'assert';
  * @see https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions
  */
-export function typePredicates<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string): asserts actual is T
+export function typePredicates<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string, ignoreExpression?: boolean): asserts actual is T
 {
 	expression ??= true;
 
@@ -15,7 +15,7 @@ export function typePredicates<T, P = any>(actual: T | P, expression : boolean |
 		expression = !!expression(actual);
 	}
 
-	if (expression !== true)
+	if (expression !== true && ignoreExpression !== true)
 	{
 		throw new AssertionError({
 			message: message ?? `actual ${actual} not as expected`,
