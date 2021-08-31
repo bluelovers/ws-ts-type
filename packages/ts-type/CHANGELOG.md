@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.40](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.39...ts-type@1.2.40) (2021-08-31)
+
+
+### ✨　Features
+
+* add `ITSNumberValue` ([98d93ed](https://github.com/bluelovers/ws-ts-type/commit/98d93ed182c0cfbb1d968940b5ec6b3ca73ae32b))
+
+
+### 🛠　Build System
+
+* **release:** publish ([ecdfb1d](https://github.com/bluelovers/ws-ts-type/commit/ecdfb1d1bf45be7c42c684aa53013d5e42b43ff2))
+
+
+### 🔖　Miscellaneous
+
+* . ([c2bd5ed](https://github.com/bluelovers/ws-ts-type/commit/c2bd5ede16dddfb118ce7f819ad08b6db94ffeda))
+
+
+
+
+
 ## [1.2.39](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.38...ts-type@1.2.39) (2021-07-20)
 
 
