@@ -633,7 +633,7 @@ export interface WatchOptionsDefinition {
     /**
      * Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.
      */
-    synchronousWatchDirectory?: string;
+    synchronousWatchDirectory?: boolean;
     /**
      * Remove a list of files from the watch mode's processing.
      */
@@ -678,7 +678,7 @@ export interface BuildOptionsDefinition {
 }
 export interface TsNodeDefinition {
   /**
-   * ts-node options.  See also: https://github.com/TypeStrong/ts-node#configuration-options
+   * ts-node options.  See also: https://typestrong.org/ts-node/docs/configuration
    *
    * ts-node offers TypeScript execution and REPL for node.js, with source map support.
    */
@@ -1265,6 +1265,17 @@ export interface TsNodeDefinition {
      */
     emit?: boolean;
     /**
+     * Allows the usage of top level await in REPL.
+     *
+     * Uses node's implementation which accomplishes this with an AST syntax transformation.
+     *
+     * Enabled by default when tsconfig target is es2018 or above. Set to false to disable.
+     *
+     * **Note**: setting to `true` when tsconfig target is too low will throw an Error.  Leave as `undefined`
+     * to get default, automatic behavior.
+     */
+    experimentalReplAwait?: boolean;
+    /**
      * Load "files" and "include" from `tsconfig.json` on startup.
      *
      * Default is to override `tsconfig.json` "files" and "include" to only include the entrypoint script.
@@ -1289,6 +1300,23 @@ export interface TsNodeDefinition {
      */
     logError?: boolean;
     /**
+     * Override certain paths to be compiled and executed as CommonJS or ECMAScript modules.
+     * When overridden, the tsconfig "module" and package.json "type" fields are overridden.
+     * This is useful because TypeScript files cannot use the .cjs nor .mjs file extensions;
+     * it achieves the same effect.
+     *
+     * Each key is a glob pattern following the same rules as tsconfig's "include" array.
+     * When multiple patterns match the same file, the last pattern takes precedence.
+     *
+     * `cjs` overrides matches files to compile and execute as CommonJS.
+     * `esm` overrides matches files to compile and execute as native ECMAScript modules.
+     * `package` overrides either of the above to default behavior, which obeys package.json "type" and
+     * tsconfig.json "module" options.
+     */
+    moduleTypes?: {
+      [k: string]: unknown;
+    };
+    /**
      * Re-order file extensions so that TypeScript imports are preferred.
      *
      * For example, when both `index.js` and `index.ts` exist, enabling this option causes `require('./index')` to resolve to `index.ts` instead of `index.js`
@@ -1307,6 +1335,11 @@ export interface TsNodeDefinition {
      * best results.
      */
     require?: string[];
+    /**
+     * Scope compiler to files within `scopeDir`.
+     */
+    scope?: boolean;
+    scopeDir?: string;
     /**
      * Skip ignore check, so that compilation will be attempted for all files with matching extensions.
      */
