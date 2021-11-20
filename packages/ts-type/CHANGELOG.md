@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.40...ts-type@2.0.1) (2021-11-20)
+
+
+### 🐛　Bug Fixes
+
+* update `PromisifyAll` ([f7762f9](https://github.com/bluelovers/ws-ts-type/commit/f7762f9c140cad8b78c21617501e8d1de4241e17))
+
+
+### 📦　Code Refactoring
+
+* split and breaking changes ([c5b8a8c](https://github.com/bluelovers/ws-ts-type/commit/c5b8a8c5b61ef0fd193878ff56dec7dbf8a2f6f2))
+
+
+
+
+
 ## [1.2.40](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.39...ts-type@1.2.40) (2021-08-31)
 
 
