@@ -92,7 +92,7 @@ export interface CompilerOptionsDefinition {
      */
     jsxFragmentFactory?: string;
     /**
-     * Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.`
+     * Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx`.
      */
     jsxImportSource?: string;
     /**
@@ -107,7 +107,20 @@ export interface CompilerOptionsDefinition {
      * Specify what module code is generated.
      */
     module?: (
-      | ("CommonJS" | "AMD" | "System" | "UMD" | "ES6" | "ES2015" | "ES2020" | "ESNext" | "None")
+      | (
+          | "CommonJS"
+          | "AMD"
+          | "System"
+          | "UMD"
+          | "ES6"
+          | "ES2015"
+          | "ES2020"
+          | "ESNext"
+          | "None"
+          | "es2022"
+          | "node12"
+          | "nodenext"
+        )
       | {
           [k: string]: unknown;
         }
@@ -197,6 +210,10 @@ export interface CompilerOptionsDefinition {
      * Disable resolving symlinks to their realpath. This correlates to the same flag in node.
      */
     preserveSymlinks?: boolean;
+    /**
+     * Preserve unused imported values in the JavaScript output that would otherwise be removed
+     */
+    preserveValueImports?: boolean;
     /**
      * Disable wiping the console in watch mode
      */
@@ -443,6 +460,7 @@ export interface CompilerOptionsDefinition {
           | "ES2021.String"
           | "ES2021.WeakRef"
           | "ESNext.WeakRef"
+          | "es2021.intl"
         )
       | {
           [k: string]: unknown;
@@ -768,7 +786,7 @@ export interface TsNodeDefinition {
        */
       jsxFragmentFactory?: string;
       /**
-       * Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.`
+       * Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx`.
        */
       jsxImportSource?: string;
       /**
@@ -783,7 +801,20 @@ export interface TsNodeDefinition {
        * Specify what module code is generated.
        */
       module?: (
-        | ("CommonJS" | "AMD" | "System" | "UMD" | "ES6" | "ES2015" | "ES2020" | "ESNext" | "None")
+        | (
+            | "CommonJS"
+            | "AMD"
+            | "System"
+            | "UMD"
+            | "ES6"
+            | "ES2015"
+            | "ES2020"
+            | "ESNext"
+            | "None"
+            | "es2022"
+            | "node12"
+            | "nodenext"
+          )
         | {
             [k: string]: unknown;
           }
@@ -873,6 +904,10 @@ export interface TsNodeDefinition {
        * Disable resolving symlinks to their realpath. This correlates to the same flag in node.
        */
       preserveSymlinks?: boolean;
+      /**
+       * Preserve unused imported values in the JavaScript output that would otherwise be removed
+       */
+      preserveValueImports?: boolean;
       /**
        * Disable wiping the console in watch mode
        */
@@ -1131,6 +1166,7 @@ export interface TsNodeDefinition {
             | "ES2021.String"
             | "ES2021.WeakRef"
             | "ESNext.WeakRef"
+            | "es2021.intl"
           )
         | {
             [k: string]: unknown;

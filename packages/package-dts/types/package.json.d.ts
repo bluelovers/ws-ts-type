@@ -393,6 +393,10 @@ export interface JSONSchemaForNPMPackageJsonFiles2 {
   resolutions?: {
     [k: string]: unknown;
   };
+  /**
+   * Defines which package manager is expected to be used when working on the current project. This field is currently experimental and needs to be opted-in; see https://nodejs.org/api/corepack.html
+   */
+  packageManager?: string;
   engines?: {
     node?: string;
     [k: string]: string;
