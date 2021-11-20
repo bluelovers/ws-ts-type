@@ -54,14 +54,14 @@
   },
   "resolutions": {},
   "dependencies": {
-    "fast-glob": "^3.2.4",
-    "fs-extra": "^9.0.1",
-    "tsd": "^0.14.0",
-    "upath2": "^3.1.6"
+    "fast-glob": "^3.2.7",
+    "fs-extra": "^10.0.0",
+    "tsd": "^0.19.0",
+    "upath2": "^3.1.10"
   },
   "devDependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
-    "@bluelovers/tsconfig": "^1.0.20",
+    "@bluelovers/tsconfig": "^1.0.26",
     "@types/bluebird": "*",
     "@types/fs-extra": "*",
     "@types/node": "*"

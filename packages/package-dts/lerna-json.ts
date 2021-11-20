@@ -3,13 +3,14 @@
  */
 
 import { AJSONSchemaForLernaJsonFiles } from './types/lerna.json';
-import { ITSPartialPick, ITSMergeBoth, ITSOmitRecordType, ITSOverwrite } from 'ts-type/lib/type/record';
+import { ITSPartialPick, ITSMergeBoth, ITSOverwrite } from 'ts-type/lib/type/record';
 
 import { IPackageJsonTag, IReleaseType } from './lib/package-json/types';
 
 export * from './lib/lerna-json/types';
 import { INpmClient } from './lib/lerna-json/types';
 import { IBranch } from './lib/types';
+import { ITSOmitRecordType } from 'ts-type/lib/helper/record/pick-type';
 
 export type { IReleaseType }
 

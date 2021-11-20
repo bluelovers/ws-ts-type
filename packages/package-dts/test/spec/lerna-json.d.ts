@@ -1,7 +1,7 @@
 export declare let exportedType: {
     command: {
         [x: string]: Record<string, unknown>;
-        publish?: import("ts-type").ITSMergeBoth<{
+        publish?: import("ts-type/lib").ITSMergeBoth<{
             [k: string]: unknown;
             ignoreChanges?: string | string[];
             message?: string;
@@ -15,7 +15,7 @@ export declare let exportedType: {
             allowBranch?: string[];
             noPrivate?: boolean;
         }>;
-        version?: import("ts-type").ITSMergeBoth<{
+        version?: import("ts-type/lib").ITSMergeBoth<{
             [k: string]: unknown;
             allowBranch?: string | string[];
             message?: string;
@@ -29,7 +29,7 @@ export declare let exportedType: {
             createRelease?: "gitlab" | "github";
             noPrivate?: boolean;
         }>;
-        run?: import("ts-type").ITSMergeBoth<{
+        run?: import("ts-type/lib").ITSMergeBoth<{
             [k: string]: unknown;
             npmClient?: string;
         }, {

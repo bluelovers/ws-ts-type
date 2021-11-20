@@ -4,9 +4,10 @@
 import type { JSONSchemaForNPMPackageJsonFiles as CoreProperties } from './types/package.json';
 import type { IPackageJsonDependenciesField, IDependency, IPackageJsonPublishConfig } from './lib/package-json/types';
 import type { ILernaJson } from './lerna-json';
-import type { ITSPartialRecord, ITSOverwrite } from 'ts-type/lib/type/record';
+import type { ITSOverwrite } from 'ts-type/lib/type/record';
 import { IPackageJsonExtendYarn } from './lib/package-json/yarn';
 import { IBooleanString } from './lib/types';
+import { ITSPartialRecord } from 'ts-type/lib/type/record/partial';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export * from './lib/package-json/types';
 export declare type ILibPackageJson = typeof import('./types/package.json');
