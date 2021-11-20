@@ -3,7 +3,7 @@
  */
 
 import Bluebird from 'bluebird';
-import { ITSUnpackedReturnType, ITSKeyOfRecordExtractToKey, ITSUnpackedPromiseLike } from '..';
+import { ITSUnpackedReturnType, ITSKeyOfRecordExtractToKey, ITSUnpackedPromiseLike, ITSAnyFunction } from '..';
 
 export type IBluebird<T> = Bluebird<T>;
 export type ITSBluebird<T> = Bluebird<T>;
@@ -11,11 +11,15 @@ export type ITSBluebird<T> = Bluebird<T>;
 export type ITSWrapFunctionBluebird<T extends (...args: any[]) => any> =
 	(...args: Parameters<T>) => IBluebird<ITSUnpackedReturnType<T>>;
 
-export type ITSBluebirdPromisifyAll<T, K extends ITSKeyOfRecordExtractToKey<T, Function> = ITSKeyOfRecordExtractToKey<T, Function>> = Omit<T, K> & {
+export type ITSBluebirdPromisifyAll<T extends {
+	[p: string | symbol]: ITSAnyFunction
+}, K extends ITSKeyOfRecordExtractToKey<T, Function> = ITSKeyOfRecordExtractToKey<T, Function>> = Omit<T, K> & {
 	[P in K]: (...argv: Parameters<T[P]>) => IBluebird<ITSUnpackedPromiseLike<ReturnType<T[P]>>>
 }
 
-export type ITSPromisifyAll<T, K extends ITSKeyOfRecordExtractToKey<T, Function> = ITSKeyOfRecordExtractToKey<T, Function>> = Omit<T, K> & {
+export type ITSPromisifyAll<T extends {
+	[p: string | symbol]: ITSAnyFunction
+}, K extends ITSKeyOfRecordExtractToKey<T, Function> = ITSKeyOfRecordExtractToKey<T, Function>> = Omit<T, K> & {
 	[P in K]: (...argv: Parameters<T[P]>) => Promise<ITSUnpackedPromiseLike<ReturnType<T[P]>>>
 }
 
