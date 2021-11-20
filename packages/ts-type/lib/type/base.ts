@@ -16,3 +16,7 @@ export type ITSPropertyKey = string | symbol;
 
 export type ITSAnyFunction = ITSTypeFunction<any>;
 
+export type ITSBasicPrimitive = number | string | boolean;
+
+export type ITSNullPrimitive = null | undefined;
+

@@ -1,8 +1,8 @@
 /**
  * Created by user on 2019/6/11.
  */
-import { ITSKeyofSame, ITSKeyofDiff, ITSKeyofBothSame, ITSKeyofBothDiff } from '../helper/filter';
-import { ITSKeyOfRecordExcludeToKey, ITSKeyOfRecordExtractToKey } from '..';
+import { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
+export { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
 /**
  * @deprecated
  */
@@ -85,11 +85,3 @@ export declare type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Om
 export declare type ITSRequireOnlyOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
     [K in Keys]-?: ITSRequiredPick<T, K> & Partial<Record<Exclude<Keys, K>, never>>;
 }[Keys];
-export declare type ITSPartialRecord<K extends keyof any, T> = {
-    [P in K]?: T;
-};
-export declare type ITSRequireRecord<K extends keyof any, T> = {
-    [P in K]-?: T;
-};
-export declare type ITSPickRecordType<Base, Type> = Pick<Base, ITSKeyOfRecordExtractToKey<Base, Type>>;
-export declare type ITSOmitRecordType<Base, Type> = Pick<Base, ITSKeyOfRecordExcludeToKey<Base, Type>>;

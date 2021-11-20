@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "1.2.40",
+  "version": "2.0.0",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -46,7 +46,7 @@
     "pretest": "yarn run build",
     "test": "yarn run ts:check",
     "build": "yarn run build-lib-toc",
-    "build-lib-toc": "npx ts-node ./test/script/toc && yarn run build:toc",
+    "build-lib-toc": "ynpx ts-node ./test/script/toc && yarn run build:toc",
     "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
     "preversion": "yarn run test && yarn run postpublish:git:commit",
     "prepublishOnly": "echo prepublishOnly",
@@ -56,13 +56,13 @@
     "ts:check": "tsc --noEmit -p tsconfig.check.json"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "typedarray-dts": "^1.0.0"
   },
   "peerDependencies": {
     "@types/bluebird": "*",
     "@types/node": "*",
-    "ts-toolbelt": "^8.0.7"
+    "ts-toolbelt": "^9.6.0"
   },
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01"
 }

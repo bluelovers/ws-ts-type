@@ -8,3 +8,5 @@ export declare type ITSConstructorLike<T extends any = any> = new (...args: any)
 export declare type ITSValueOrArray<T> = T | T[];
 export declare type ITSPropertyKey = string | symbol;
 export declare type ITSAnyFunction = ITSTypeFunction<any>;
+export declare type ITSBasicPrimitive = number | string | boolean;
+export declare type ITSNullPrimitive = null | undefined;

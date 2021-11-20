@@ -1,7 +1,6 @@
 /**
  * Created by user on 2019/6/8.
  */
-import { ITSPropertyKey } from '..';
 /**
  * Exclude from T those types that are assignable to U, and replace to R
  */
@@ -10,25 +9,6 @@ export declare type ITSExclude2<T, U, R = T> = T extends U ? never : R;
  * Extract from T those types that are assignable to U, and replace to R
  */
 export declare type ITSExtract2<T, U, R = T> = T extends U ? R : never;
-export declare type ITSExtractRecord<M, T, K extends keyof M = keyof M> = {
-    [P in K]: Extract<M[P], T>;
-};
-export declare type ITSExtractRecordNoNull<M, T, K extends keyof M = keyof M> = {
-    [P in K]: NonNullable<M[P]>;
-};
-export declare type ITSExtractKeyofRecord<M, T> = keyof ITSExtractRecord<M, T>;
-export declare type ITSExcludeRecord<M, T, K extends keyof M = keyof M> = {
-    [P in K]: Exclude<M[P], T>;
-};
-export declare type ITSExcludeRecordNoNull<M, T, K extends keyof M = keyof M> = {
-    [P in K]: NonNullable<M[P]>;
-};
-export declare type ITSExcludeKeyofRecord<M, T> = keyof ITSExcludeRecord<M, T>;
-/**
- * filter all member is function and key type is string or symbol
- */
-export declare type ITSMemberMethods<T> = ITSExtractRecord<T, Function, Extract<keyof T, ITSPropertyKey>>;
-export declare type ITSKeyofMemberMethods<T> = ITSExtractKeyof<ITSMemberMethods<T>, ITSPropertyKey>;
 export declare type ITSExtractKeyof<T, U> = Extract<keyof T, U>;
 export declare type ITSExtractArrayLike<A, K extends Extract<keyof A, number> = Extract<keyof A, number>> = {
     [Index in K]: A[Index];
