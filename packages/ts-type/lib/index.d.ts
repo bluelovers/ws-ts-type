@@ -9,6 +9,7 @@ export * from './helper/overwrite';
 export * from './helper/readonly';
 export * from './helper/record';
 export * from './helper/record/member';
+export * from './helper/record/omit-index';
 export * from './helper/record/partial';
 export * from './helper/record/pick-type';
 export * from './helper/string';
