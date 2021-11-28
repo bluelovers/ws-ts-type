@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.0.1...ts-type@2.0.2) (2021-11-28)
+
+
+### ✨　Features
+
+* add `ITSOmitIndexSignatures` ([cd93c7c](https://github.com/bluelovers/ws-ts-type/commit/cd93c7c17b4511d04feb02b4515b43a4f6f20942))
+
+
+
+
+
 ## [2.0.1](https://github.com/bluelovers/ws-ts-type/compare/ts-type@1.2.40...ts-type@2.0.1) (2021-11-20)
 
 

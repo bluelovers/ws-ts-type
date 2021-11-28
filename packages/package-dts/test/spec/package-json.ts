@@ -62,7 +62,7 @@ isPackageJsonLike({
 });
 
 let p: IPackageJson = {
-	typings: '',
+	typings: '1',
 	// allow un-exists key
 	typings2: '',
 }

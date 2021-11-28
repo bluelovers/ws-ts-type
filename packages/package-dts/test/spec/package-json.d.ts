@@ -2,6 +2,7 @@ import IPackageJson from '../../package-json';
 export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extract<T, IPackageJson>): Extract<T, IPackageJson<any>>;
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
+    [x: string]: any;
     name?: string;
     version?: string;
     description?: string;
@@ -97,10 +98,6 @@ export declare let exportedType: {
     config?: {
         [k: string]: unknown;
     };
-    dependencies?: import("../../types/package.json").Dependency;
-    devDependencies?: import("../../types/package.json").Dependency;
-    optionalDependencies?: import("../../types/package.json").Dependency;
-    peerDependencies?: import("../../types/package.json").Dependency;
     peerDependenciesMeta?: {
         [k: string]: {
             [k: string]: unknown;
@@ -109,9 +106,6 @@ export declare let exportedType: {
     };
     bundledDependencies?: boolean | string[];
     bundleDependencies?: boolean | string[];
-    resolutions?: {
-        [k: string]: unknown;
-    };
     packageManager?: string;
     engines?: {
         [k: string]: string;
@@ -147,6 +141,11 @@ export declare let exportedType: {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
+    dependencies?: import("../../package-json").IDependency;
+    devDependencies?: import("../../package-json").IDependency;
+    peerDependencies?: import("../../package-json").IDependency;
+    optionalDependencies?: import("../../package-json").IDependency;
     flat?: boolean;
     installConfig?: import("../../lib/package-json/yarn").IYarnV1PackageJsonInstallConfig;
+    resolutions?: import("../../package-json").IDependency;
 };

@@ -26,7 +26,8 @@ export interface IPackageJson<T = any> extends  ITSOverwrite<ITSOmitIndexSignatu
 	//[k in Exclude<string, keyof CoreProperties>]: T;
 	[k: string]: unknown;
  */
-	//[k: string]: any;
+	// @ts-ignore
+	[k: string]: T;
 }
 
 export default IPackageJson
