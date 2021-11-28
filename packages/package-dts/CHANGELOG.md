@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.54](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.53...@ts-type/package-dts@1.0.54) (2021-11-28)
+
+
+### 📦　Code Refactoring
+
+* update `IPackageJson` ([81ce0f4](https://github.com/bluelovers/ws-ts-type/commit/81ce0f4330e1092b85c79f160c320bd529117ed8))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([2f1b096](https://github.com/bluelovers/ws-ts-type/commit/2f1b096db42909fb34c141b8abaa7c6bae237f53))
+
+
+### 🔖　Miscellaneous
+
+* . ([df353d4](https://github.com/bluelovers/ws-ts-type/commit/df353d4df2d51ee07f6ec7d626ddf92aba19fff4))
+
+
+
+
+
 ## [1.0.53](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.51...@ts-type/package-dts@1.0.53) (2021-11-20)
 
 
