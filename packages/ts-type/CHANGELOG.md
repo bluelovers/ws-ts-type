@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.1...ts-type@2.1.2) (2021-12-04)
+
+
+### ✨　Features
+
+* type ITSValueOrArrayMaybeReadonly<T> = T | ITSArrayListMaybeReadonly<T>; ([0ae2f20](https://github.com/bluelovers/ws-ts-type/commit/0ae2f208a33a3bdccbb5e4fc13a1135d365af6cc))
+
+
+
+
+
 ## [2.1.1](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.0.3...ts-type@2.1.1) (2021-12-04)
 
 
