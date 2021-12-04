@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.0.3...ts-type@2.1.1) (2021-12-04)
+
+
+### 🐛　Bug Fixes
+
+* wrong typo ([2575d61](https://github.com/bluelovers/ws-ts-type/commit/2575d61db1b3606c5d3f3867d3a3b786af56e6aa))
+
+
+### BREAKING CHANGE
+
+* - { ITAndStringLiteral => ITSAndStringLiteral }
+- { ITAndTypeAndStringLiteral => ITSAndTypeAndStringLiteral }
+
+
+
+
+
 ## [2.0.3](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.0.1...ts-type@2.0.3) (2021-11-28)
 
 
