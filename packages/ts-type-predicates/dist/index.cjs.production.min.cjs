@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("assert");function t(t,r=!0,o,n){var s;if(null!==(s=r)&&void 0!==s||(r=!0),"function"==typeof r&&(r=!!r(t)),!0!==r&&!0!==n)throw new e.AssertionError({message:null!=o?o:`actual ${t} not as expected`,actual:t,expected:r})}exports.default=t,exports.typeNarrowed=function(e,t=!0,r){var o;return null!==(o=t)&&void 0!==o||(t=!0),"function"==typeof t&&(t=!!t(e)),!0!==t&&(t=!1),t},exports.typePredicates=t;
+//# sourceMappingURL=index.cjs.production.min.cjs.map
