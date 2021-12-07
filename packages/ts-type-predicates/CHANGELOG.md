@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.5...ts-type-predicates@1.0.6) (2021-12-07)
+
+
+### 🛠　Build System
+
+* use tsdx ([9af901a](https://github.com/bluelovers/ws-ts-type/commit/9af901a02046daf2dbb8a59086fa890757633458))
+
+
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.4...ts-type-predicates@1.0.5) (2021-07-27)
 
 
