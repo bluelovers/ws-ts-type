@@ -2,6 +2,33 @@
   "name": "ts-type-object-entries",
   "version": "1.0.2",
   "description": "",
+  "keywords": [
+    ".d.ts",
+    "@types",
+    "declaration",
+    "dev",
+    "develop",
+    "development",
+    "environment",
+    "ide",
+    "interface",
+    "node",
+    "playground",
+    "runtime",
+    "ts",
+    "type",
+    "type-level",
+    "typelevel",
+    "types",
+    "typescript",
+    "typing",
+    "typings",
+    "type-helprt",
+    "toolbox",
+    "toolbelt",
+    "create-by-yarn-tool",
+    "create-by-tsdx"
+  ],
   "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type-object-entries#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-ts-type/issues"
@@ -12,17 +39,42 @@
   },
   "license": "ISC",
   "author": "bluelovers",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.mjs",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "lint": "ynpx --quiet eslint -- **/*.ts",
     "test": "echo \"Error: no test specified\"",
     "test:jest": "ynpx --quiet jest -- --coverage",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "posttest": "yarn run build",
+    "build": "yarn run build:tsdx && yarn run build:dts",
+    "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner & echo build:dts",
+    "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "preversion": "yarn run prepublishOnly",
+    "version": "echo version",
+    "postversion": "echo postversion",
+    "prepublish": "echo prepublish",
     "prepublishOnly": "yarn run prepublishOnly:check-bin && yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "publish": "echo publish",
+    "postpublish": "echo postpublish",
+    "postpublishOnly": "echo postpublishOnly",
     "ncu": "yarn-tool ncu -u",
-    "sort-package-json": "yarn-tool sort"
-  }
+    "sort-package-json": "yarn-tool sort",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
+  },
+  "packageManager": "yarn@^1.22.11"
 }
