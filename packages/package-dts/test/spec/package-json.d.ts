@@ -27,7 +27,6 @@ export declare let exportedType: {
     exports?: string | {
         [k: string]: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
         "."?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-        "./"?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
     } | {
         [k: string]: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
         require?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
