@@ -71,6 +71,11 @@
     "fs-extra": "^10.0.0",
     "json-schema-to-typescript": "^10.1.5"
   },
+  "peerDependencies": {
+    "@types/bluebird": "*",
+    "@types/node": "*",
+    "ts-toolbelt": "*"
+  },
   "publishConfig": {
     "access": "public"
   },
