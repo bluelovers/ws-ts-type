@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.57](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.56...@ts-type/package-dts@1.0.57) (2022-01-12)
+
+
+### 🛠　Build System
+
+* **schema:** update schema ([aaddf19](https://github.com/bluelovers/ws-ts-type/commit/aaddf199d7b9a93b11524cc99ce90c4a702876e1))
+
+
+### 🔖　Miscellaneous
+
+* adds `peerDependencies` to `package-dts` ([092677b](https://github.com/bluelovers/ws-ts-type/commit/092677bdbc895b48f71e9ec97c1eda205e478816))
+
+
+
+
+
 ## [1.0.56](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@1.0.55...@ts-type/package-dts@1.0.56) (2021-12-04)
 
 
