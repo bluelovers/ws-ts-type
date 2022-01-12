@@ -393,7 +393,6 @@ export type StringOrNumberOrAcceptBothTypeAsArrayUnique = StringOrNumber | Strin
 export type StringOrNumber = NonEmptyString | number;
 export type StringOrNumberAndBothAreTypeArrayUnique = [StringOrNumber, ...StringOrNumber[]];
 export type XcodeVersions =
-  | "xcode6.4"
   | "xcode7.3"
   | "xcode8"
   | "xcode8.3"
@@ -413,15 +412,14 @@ export type XcodeVersions =
   | "xcode11.4"
   | "xcode11.5"
   | "xcode11.6"
-  | "xcode11.7"
   | "xcode12u"
   | "xcode12"
-  | "xcode12.1"
   | "xcode12.2"
   | "xcode12.3"
   | "xcode12.4"
   | "xcode12.5"
-  | "xcode13.1";
+  | "xcode13.1"
+  | "xcode13.2";
 export type PossiblySecretString =
   | string
   | {

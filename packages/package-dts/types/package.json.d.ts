@@ -181,14 +181,10 @@ export interface JSONSchemaForNPMPackageJsonFiles2 {
          */
         "."?: PackageExportsEntry | PackageExportsFallback;
         /**
-         * The module path prefix that is resolved when the module specifier starts with "name/", set to "./" to allow external modules to import any subpath.
-         */
-        "./"?: PackageExportsEntry | PackageExportsFallback;
-        /**
-         * The module path that is resolved when the path component of the module specifier matches the property name.
+         * The module path prefix that is resolved when the module specifier starts with "name/", set to "./*" to allow external modules to import any subpath.
          *
          * This interface was referenced by `undefined`'s JSON-Schema definition
-         * via the `patternProperty` "^\./".
+         * via the `patternProperty` "^\./.+".
          */
         [k: string]: PackageExportsEntry | PackageExportsFallback;
       }
@@ -319,7 +315,10 @@ export interface JSONSchemaForNPMPackageJsonFiles2 {
      * Run AFTER the tarball has been generated and moved to its final destination.
      */
     postpack?: string;
-    publish?: ScriptsPublishAfter;
+    /**
+     * Publishes a package to the registry so that it can be installed by name. See https://docs.npmjs.com/cli/v8/commands/npm-publish
+     */
+    publish?: string;
     postpublish?: ScriptsPublishAfter;
     /**
      * Run BEFORE the package is installed.
