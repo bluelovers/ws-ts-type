@@ -1326,6 +1326,14 @@ export interface TsNodeDefinition {
      */
     experimentalReplAwait?: boolean;
     /**
+     * Enable experimental features that re-map imports and require calls to support:
+     * `baseUrl`, `paths`, `rootDirs`, `.js` to `.ts` file extension mappings,
+     * `outDir` to `rootDir` mappings for composite projects and monorepos.
+     *
+     * For details, see https://github.com/TypeStrong/ts-node/issues/1514
+     */
+    experimentalResolverFeatures?: boolean;
+    /**
      * Load "files" and "include" from `tsconfig.json` on startup.
      *
      * Default is to override `tsconfig.json` "files" and "include" to only include the entrypoint script.
@@ -1395,6 +1403,14 @@ export interface TsNodeDefinition {
      */
     skipIgnore?: boolean;
     /**
+     * Transpile with swc instead of the TypeScript compiler, and skip typechecking.
+     *
+     * Equivalent to setting both `transpileOnly: true` and `transpiler: 'ts-node/transpilers/swc'`
+     *
+     * For complete instructions: https://typestrong.org/ts-node/docs/transpilers
+     */
+    swc?: boolean;
+    /**
      * Use TypeScript's faster `transpileModule`.
      */
     transpileOnly?: boolean;
@@ -1406,13 +1422,7 @@ export interface TsNodeDefinition {
           string,
           {
             [k: string]: unknown;
-          },
-          ...(
-            | string
-            | {
-                [k: string]: unknown;
-              }
-          )[]
+          }
         ]
       | string;
     /**
