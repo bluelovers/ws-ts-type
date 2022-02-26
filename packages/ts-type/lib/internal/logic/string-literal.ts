@@ -1,10 +1,13 @@
-
-// detect if T is a union
+/**
+ * detect if T is a union
+ */
 export type IsAUnion<T, Y = true, N = false, U = T> = U extends any
 	? ([T] extends [U] ? N : Y)
 	: never;
 
-// detect if T is a single string literal
+/**
+ * detect if T is a single string literal
+ */
 export type IsASingleStringLiteral<
 	T extends string,
 	Y = true,

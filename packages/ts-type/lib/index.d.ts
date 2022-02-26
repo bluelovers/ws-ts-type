@@ -1,5 +1,6 @@
 export * from './generic';
 export * from './helper';
+export * from './helper/array/readonly';
 export * from './helper/filter';
 export * from './helper/infer';
 export * from './helper/intersection';
