@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.5](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.4...ts-type@2.1.5) (2022-02-26)
+
+
+### ✨　Features
+
+* add `ITSToReadonlyArray` , `ITSToArray` ([f968c89](https://github.com/bluelovers/ws-ts-type/commit/f968c8945a2629095a1ffaa8fb3aad716c7ef374))
+
+
+
+
+
 ## [2.1.4](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.2...ts-type@2.1.4) (2022-01-12)
 
 
