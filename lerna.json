@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/@ts-type/*"
   ],
   "command": {
     "publish": {

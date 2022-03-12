@@ -40,7 +40,8 @@
   "author": "",
   "main": "index.js",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/@ts-type/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
