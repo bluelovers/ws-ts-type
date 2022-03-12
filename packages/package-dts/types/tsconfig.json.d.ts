@@ -130,7 +130,7 @@ export interface CompilerOptionsDefinition {
      * Specify how TypeScript looks up a file from a given module specifier.
      */
     moduleResolution?: (
-      | ("Classic" | "Node")
+      | ("Classic" | "Node" | "Node12" | "NodeNext")
       | {
           [k: string]: unknown;
         }
@@ -837,7 +837,7 @@ export interface TsNodeDefinition {
        * Specify how TypeScript looks up a file from a given module specifier.
        */
       moduleResolution?: (
-        | ("Classic" | "Node")
+        | ("Classic" | "Node" | "Node12" | "NodeNext")
         | {
             [k: string]: unknown;
           }
