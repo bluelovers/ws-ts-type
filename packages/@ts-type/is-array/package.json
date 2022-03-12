@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/is-array",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     ".d.ts",
@@ -91,9 +91,6 @@
     "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {},
   "publishConfig": {
     "access": "public"
   },
