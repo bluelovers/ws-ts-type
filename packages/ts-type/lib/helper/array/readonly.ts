@@ -5,7 +5,7 @@ export type ITSToReadonlyArray<T extends ITSArrayListMaybeReadonly<any>> = T ext
 	: never
 	;
 
-export type ITSToArray<T extends ITSArrayListMaybeReadonly<any>> = T extends [...infer R] | readonly [...infer R]
+export type ITSToWriteableAArray<T extends ITSArrayListMaybeReadonly<any>> = T extends [...infer R] | readonly [...infer R]
 	? [...R]
 	: never
 	;
