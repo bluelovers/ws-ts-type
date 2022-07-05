@@ -3,9 +3,9 @@ export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extra
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
     [x: string]: any;
-    description?: string;
-    version?: string;
     name?: string;
+    version?: string;
+    description?: string;
     keywords?: string[];
     homepage?: string;
     bugs?: string | {
@@ -20,20 +20,14 @@ export declare let exportedType: {
         url?: string;
     }[];
     author?: import("../../types/package.json").Person;
-    contributors?: import("../../types/package.json").Person[];
-    maintainers?: import("../../types/package.json").Person[];
+    contributors?: import("../../types/package.json").Person1[];
+    maintainers?: import("../../types/package.json").Person1[];
     files?: string[];
     main?: string;
     exports?: string | {
         [k: string]: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
         "."?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-    } | {
-        [k: string]: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-        require?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-        import?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-        node?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-        default?: import("../../types/package.json").PackageExportsEntry | import("../../types/package.json").PackageExportsFallback;
-    } | import("../../types/package.json").PackageExportsEntry[];
+    } | import("../../types/package.json").PackageExportsEntryObject1 | import("../../types/package.json").PackageExportsFallback1;
     bin?: string | {
         [k: string]: string;
     };
@@ -61,6 +55,7 @@ export declare let exportedType: {
         url?: string;
         directory?: string;
     };
+    funding?: string | import("../../types/package.json").FundingWay | [string | import("../../types/package.json").FundingWay, ...(string | import("../../types/package.json").FundingWay)[]];
     scripts?: {
         [k: string]: string;
         lint?: string;
@@ -127,6 +122,12 @@ export declare let exportedType: {
         browser?: string;
     };
     jspm?: import("../../types/package.json").JSONSchemaForNPMPackageJsonFiles1;
+    eslintConfig?: import("../../types/package.json").JSONSchemaForESLintConfigurationFiles;
+    prettier?: import("../../types/package.json").SchemaForPrettierrc;
+    stylelint?: import("../../types/package.json").JSONSchemaForTheStylelintConfigurationFiles;
+    ava?: import("../../types/package.json").AVAConfigSchema;
+    release?: import("../../types/package.json").SemanticReleaseSchema;
+    jscpd?: import("../../types/package.json").HttpsJsonSchemastoreOrgJscpdJson;
     workspaces?: string[];
     publishConfig?: import("../../package-json").IPackageJsonPublishConfig;
     private?: boolean | import("../../lib/types").IBooleanString;
