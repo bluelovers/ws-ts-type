@@ -1,6 +1,317 @@
 {
-	"title": "JSON schema for Travis CI configuration files",
 	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "#/definitions/job"
+		},
+		{
+			"type": "object",
+			"properties": {
+				"notifications": {
+					"type": "object",
+					"properties": {
+						"webhooks": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/webhooks"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/webhooks"
+									}
+								}
+							]
+						},
+						"slack": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/slackRoom"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/slack"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/slack"
+									}
+								}
+							]
+						},
+						"email": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/email"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/email"
+									}
+								}
+							]
+						},
+						"irc": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/irc"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/irc"
+									}
+								}
+							]
+						},
+						"pushover": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/nonEmptyStringOrArrayOfNonEmptyStrings"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/pushover"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/pushover"
+									}
+								}
+							]
+						},
+						"campfire": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/campfire"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/campfire"
+									}
+								}
+							]
+						},
+						"flowdock": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretString"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/flowdock"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/flowdock"
+									}
+								}
+							]
+						},
+						"hipchat": {
+							"oneOf": [
+								{
+									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"$ref": "#/definitions/notificationObject/hipchat"
+								},
+								{
+									"type": "array",
+									"uniqueItems": true,
+									"minItems": 1,
+									"items": {
+										"$ref": "#/definitions/notificationObject/hipchat"
+									}
+								}
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"matrix": {
+					"type": "object",
+					"properties": {
+						"exclude": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/job"
+							}
+						},
+						"include": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/job"
+							}
+						},
+						"allow_failures": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/job"
+							}
+						},
+						"fast_finish": {
+							"type": "boolean",
+							"description": "If some rows in the build matrix are allowed to fail, the build won’t be marked as finished until they have completed. To mark the build as finished as soon as possible, add fast_finish: true"
+						}
+					},
+					"additionalProperties": false
+				},
+				"jobs": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"include": {
+							"type": "array",
+							"items": {
+								"allOf": [
+									{
+										"$ref": "#/definitions/job"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"stage": {
+												"type": "string",
+												"description": "The name of the build stage",
+												"default": "test"
+											}
+										}
+									}
+								]
+							}
+						},
+						"exclude": {
+							"type": "array",
+							"items": {
+								"allOf": [
+									{
+										"$ref": "#/definitions/job"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"stage": {
+												"type": "string",
+												"description": "The name of the build stage",
+												"default": "test"
+											}
+										}
+									}
+								]
+							}
+						},
+						"allow_failures": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/job"
+							}
+						},
+						"fast_finish": {
+							"type": "boolean",
+							"description": "If some rows in the build matrix are allowed to fail, the build won’t be marked as finished until they have completed. To mark the build as finished as soon as possible, add fast_finish: true"
+						}
+					}
+				},
+				"stages": {
+					"type": "array",
+					"description": "Specifies the order of build stages",
+					"items": {
+						"oneOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "object",
+								"additionalProperties": false,
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"if": {
+										"description": "Specifies a condition for the stage",
+										"type": "string"
+									}
+								}
+							}
+						]
+					}
+				},
+				"version": {
+					"type": "string",
+					"description": "Build config specification version",
+					"pattern": "^(~>|>|>=|=|<=|<) (\\d+(?:\\.\\d+)?(?:\\.\\d+)?)$"
+				},
+				"import": {
+					"description": "Import YAML config snippets that can be shared across repositories.",
+					"oneOf": [
+						{
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"$ref": "#/definitions/import"
+							}
+						},
+						{
+							"$ref": "#/definitions/import"
+						}
+					]
+				}
+			}
+		}
+	],
 	"definitions": {
 		"nonEmptyString": {
 			"type": "string",
@@ -203,6 +514,7 @@
 		},
 		"xcodeVersions": {
 			"enum": [
+				"xcode6.4",
 				"xcode7.3",
 				"xcode8",
 				"xcode8.3",
@@ -220,6 +532,7 @@
 				"xcode11.2",
 				"xcode11.3",
 				"xcode11.4",
+				"xcode11.4.1",
 				"xcode11.5",
 				"xcode11.6",
 				"xcode12u",
@@ -229,7 +542,9 @@
 				"xcode12.4",
 				"xcode12.5",
 				"xcode13.1",
-				"xcode13.2"
+				"xcode13.2",
+				"xcode13.3",
+				"xcode13.4"
 			]
 		},
 		"envVars": {
@@ -674,6 +989,7 @@
 						{
 							"enum": [
 								"amd64",
+								"x86_64",
 								"arm64",
 								"ppc64le",
 								"s390x",
@@ -743,7 +1059,8 @@
 						"trusty",
 						"xenial",
 						"bionic",
-						"focal"
+						"focal",
+						"jammy"
 					]
 				},
 				"sudo": {
@@ -2034,316 +2351,5 @@
 			]
 		}
 	},
-	"allOf": [
-		{
-			"$ref": "#/definitions/job"
-		},
-		{
-			"type": "object",
-			"properties": {
-				"notifications": {
-					"type": "object",
-					"properties": {
-						"webhooks": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/webhooks"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/webhooks"
-									}
-								}
-							]
-						},
-						"slack": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/slackRoom"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/slack"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/slack"
-									}
-								}
-							]
-						},
-						"email": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/email"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/email"
-									}
-								}
-							]
-						},
-						"irc": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/irc"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/irc"
-									}
-								}
-							]
-						},
-						"pushover": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/nonEmptyStringOrArrayOfNonEmptyStrings"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/pushover"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/pushover"
-									}
-								}
-							]
-						},
-						"campfire": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/campfire"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/campfire"
-									}
-								}
-							]
-						},
-						"flowdock": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/possiblySecretString"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/flowdock"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/flowdock"
-									}
-								}
-							]
-						},
-						"hipchat": {
-							"oneOf": [
-								{
-									"$ref": "#/definitions/possiblySecretStringOrPossiblySecretStringTypeArrayUnique"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"$ref": "#/definitions/notificationObject/hipchat"
-								},
-								{
-									"type": "array",
-									"uniqueItems": true,
-									"minItems": 1,
-									"items": {
-										"$ref": "#/definitions/notificationObject/hipchat"
-									}
-								}
-							]
-						}
-					},
-					"additionalProperties": false
-				},
-				"matrix": {
-					"type": "object",
-					"properties": {
-						"exclude": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/job"
-							}
-						},
-						"include": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/job"
-							}
-						},
-						"allow_failures": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/job"
-							}
-						},
-						"fast_finish": {
-							"type": "boolean",
-							"description": "If some rows in the build matrix are allowed to fail, the build won’t be marked as finished until they have completed. To mark the build as finished as soon as possible, add fast_finish: true"
-						}
-					},
-					"additionalProperties": false
-				},
-				"jobs": {
-					"type": "object",
-					"additionalProperties": false,
-					"properties": {
-						"include": {
-							"type": "array",
-							"items": {
-								"allOf": [
-									{
-										"$ref": "#/definitions/job"
-									},
-									{
-										"type": "object",
-										"properties": {
-											"stage": {
-												"type": "string",
-												"description": "The name of the build stage",
-												"default": "test"
-											}
-										}
-									}
-								]
-							}
-						},
-						"exclude": {
-							"type": "array",
-							"items": {
-								"allOf": [
-									{
-										"$ref": "#/definitions/job"
-									},
-									{
-										"type": "object",
-										"properties": {
-											"stage": {
-												"type": "string",
-												"description": "The name of the build stage",
-												"default": "test"
-											}
-										}
-									}
-								]
-							}
-						},
-						"allow_failures": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/job"
-							}
-						},
-						"fast_finish": {
-							"type": "boolean",
-							"description": "If some rows in the build matrix are allowed to fail, the build won’t be marked as finished until they have completed. To mark the build as finished as soon as possible, add fast_finish: true"
-						}
-					}
-				},
-				"stages": {
-					"type": "array",
-					"description": "Specifies the order of build stages",
-					"items": {
-						"oneOf": [
-							{
-								"type": "string"
-							},
-							{
-								"type": "object",
-								"additionalProperties": false,
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"if": {
-										"description": "Specifies a condition for the stage",
-										"type": "string"
-									}
-								}
-							}
-						]
-					}
-				},
-				"version": {
-					"type": "string",
-					"description": "Build config specification version",
-					"pattern": "^(~>|>|>=|=|<=|<) (\\d+(?:\\.\\d+)?(?:\\.\\d+)?)$"
-				},
-				"import": {
-					"description": "Import YAML config snippets that can be shared across repositories.",
-					"oneOf": [
-						{
-							"type": "array",
-							"uniqueItems": true,
-							"items": {
-								"$ref": "#/definitions/import"
-							}
-						},
-						{
-							"$ref": "#/definitions/import"
-						}
-					]
-				}
-			}
-		}
-	]
+	"title": "JSON schema for Travis CI configuration files"
 }
