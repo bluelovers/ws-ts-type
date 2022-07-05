@@ -1,5 +1,5 @@
-function tsObjectEntries(obj) {
-  return Object.entries(obj);
+function tsObjectEntries(t) {
+  return Object.entries(t);
 }
 
 export { tsObjectEntries as default, tsObjectEntries };

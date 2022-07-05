@@ -65,7 +65,7 @@
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:tsdx": "ynpx @bluelovers/tsdx test --passWithNoTests",
     "posttest": "yarn run build",
-    "build": "yarn run build:tsdx && yarn run build:dts:bundle",
+    "build": "yarn run build:tsdx && yarn run build:dts:tsc",
     "build:dts:bundle": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --inline-declare-global --inline-declare-externals & echo build:dts",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "yarn run build:dts:tsc:emit && yarn run build:dts:copy",
@@ -94,5 +94,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "yarn@^1.22.11"
+  "packageManager": "yarn@^1.22.11",
+  "dependencies": {
+    "ts-type": "^2.1.6"
+  }
 }

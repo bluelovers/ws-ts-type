@@ -1,21 +1,21 @@
-import { AssertionError } from 'assert';
+import { AssertionError as r } from "assert";
 
-function isArray(arg) {
-  return Array.isArray(arg);
+function isArray(r) {
+  return Array.isArray(r);
 }
-function typePredicatesAsWriteableArray(value) {}
-function typePredicatesAsReadonlyArray(value) {}
-function isArrayPredicates(actual, message) {
-  const expression = Array.isArray(actual);
 
-  if (!expression) {
-    throw new AssertionError({
-      message: message !== null && message !== void 0 ? message : `actual ${actual} not as expected`,
-      actual,
-      expected: expression,
-      operator: 'fail'
-    });
-  }
+function typePredicatesAsWriteableArray(r) {}
+
+function typePredicatesAsReadonlyArray(r) {}
+
+function isArrayPredicates(a, e) {
+  const t = Array.isArray(a);
+  if (!t) throw new r({
+    message: null != e ? e : `actual ${a} not as expected`,
+    actual: a,
+    expected: t,
+    operator: "fail"
+  });
 }
 
 export { isArray as default, isArray, isArray as isArrayNarrowed, isArrayPredicates, typePredicatesAsReadonlyArray, typePredicatesAsWriteableArray };

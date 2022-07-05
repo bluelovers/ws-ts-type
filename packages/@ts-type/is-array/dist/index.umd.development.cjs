@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('assert')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'assert'], factory) :
-	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.index = {}, global.assert));
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TsTypeIsArray = {}, global.assert));
 })(this, (function (exports, assert) { 'use strict';
 
 	function isArray(arg) {

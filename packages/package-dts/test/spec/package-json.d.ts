@@ -3,9 +3,9 @@ export declare function isPackageJsonLike<T extends Record<any, any>>(pkg: Extra
 export declare function notPackageJsonLike<T extends Record<any, any>>(pkg: Exclude<T, IPackageJson>): any;
 export declare let exportedType: {
     [x: string]: any;
-    name?: string;
-    version?: string;
     description?: string;
+    version?: string;
+    name?: string;
     keywords?: string[];
     homepage?: string;
     bugs?: string | {
