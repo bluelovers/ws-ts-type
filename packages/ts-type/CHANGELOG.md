@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.8](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.7...ts-type@2.1.8) (2022-07-06)
+
+
+### ✨　Features
+
+* add `ITSEmptyTuple` ([03de83c](https://github.com/bluelovers/ws-ts-type/commit/03de83cdf15dec826bd5ddf5073ad7263c51f5c3))
+
+
+### 🛠　Build System
+
+* **release:** publish ([27e9f85](https://github.com/bluelovers/ws-ts-type/commit/27e9f854ebc6d23ff91d208b7bd9cd500bc096f8))
+
+
+
+
+
 ## [2.1.7](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.6...ts-type@2.1.7) (2022-07-05)
 
 

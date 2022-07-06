@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/bluelovers/ws-ts-type/compare/ts-type-object-entries@1.0.4...ts-type-object-entries@1.0.5) (2022-07-06)
+
+
+### 📚　Documentation
+
+* update description ([2bc11ca](https://github.com/bluelovers/ws-ts-type/commit/2bc11cab69582e465b7e6e4e04163964aacf7904))
+
+
+
+
+
 ## [1.0.4](https://github.com/bluelovers/ws-ts-type/compare/ts-type-object-entries@1.0.3...ts-type-object-entries@1.0.4) (2022-07-05)
 
 

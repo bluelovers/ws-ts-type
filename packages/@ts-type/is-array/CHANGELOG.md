@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.2...@ts-type/is-array@1.0.3) (2022-07-06)
+
+
+### 📚　Documentation
+
+* update description ([ef44982](https://github.com/bluelovers/ws-ts-type/commit/ef4498286a43b0a07315eca093d60c4792379f29))
+
+
+
+
+
 ## [1.0.2](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.1...@ts-type/is-array@1.0.2) (2022-07-05)
 
 
