@@ -1,7 +1,7 @@
 {
   "name": "ts-type-object-entries",
   "version": "1.0.4",
-  "description": "",
+  "description": "better typescript type for Object.entries",
   "keywords": [
     ".d.ts",
     "@types",
