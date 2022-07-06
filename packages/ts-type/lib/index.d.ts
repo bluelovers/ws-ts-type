@@ -30,3 +30,4 @@ export * from './type/proxy';
 export * from './type/record';
 export * from './type/record/empty';
 export * from './type/record/partial';
+export * from './type/tuple/empty';
