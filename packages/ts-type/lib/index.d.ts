@@ -14,6 +14,7 @@ export * from './helper/record/omit-index';
 export * from './helper/record/partial';
 export * from './helper/record/pick-type';
 export * from './helper/string';
+export * from './helper/string/literal-string';
 export * from './helper/tuple';
 export * from './helper/typeof';
 export * from './helper/unpacked';
