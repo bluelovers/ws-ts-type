@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.9](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.8...ts-type@2.1.9) (2022-08-10)
+
+
+### ✨　Features
+
+* add ITSPascalCase , ITSCamelCase ([7d0f686](https://github.com/bluelovers/ws-ts-type/commit/7d0f686cfe85a99bac912d18c95f0fc71a7e6dc0))
+* update type ([77b4883](https://github.com/bluelovers/ws-ts-type/commit/77b48836b48b2a12bf50470f07d4f8ae0bd8e582))
+
+
+### 🛠　Build System
+
+* **release:** publish ([d132c4e](https://github.com/bluelovers/ws-ts-type/commit/d132c4eba98951fb51ea592189619fbd1b9ae855))
+
+
+
+
+
 ## [2.1.8](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.7...ts-type@2.1.8) (2022-07-06)
 
 

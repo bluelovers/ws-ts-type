@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/is-array",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "better typescript type for Array.isArray",
   "keywords": [
     ".d.ts",
@@ -92,7 +92,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^2.1.8"
+    "ts-type": "^2.1.9"
   },
   "packageManager": "yarn@^1.22.11",
   "publishConfig": {

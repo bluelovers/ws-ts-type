@@ -1,6 +1,6 @@
 {
   "name": "ts-type-predicates",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "use asserts for make type predicates work",
   "keywords": [
     ".d.ts",

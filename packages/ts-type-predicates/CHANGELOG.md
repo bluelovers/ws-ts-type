@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.7...ts-type-predicates@1.0.8) (2022-08-10)
+
+
+### 📌　Dependencies
+
+* update deps ([50b4a8d](https://github.com/bluelovers/ws-ts-type/commit/50b4a8dab38d41ccf29b194be76f9fb5673f8162))
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.6...ts-type-predicates@1.0.7) (2022-07-05)
 
 
