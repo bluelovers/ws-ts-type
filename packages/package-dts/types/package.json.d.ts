@@ -5124,6 +5124,54 @@ export type BooleanRule19 = (
         unknown[])
   );
 /**
+ * Require or disallow Unicode BOM
+ */
+export type AlwaysNeverRule8 = (
+  | null
+  | ("always" | "never" | [])
+  | [
+      (("always" | "never" | unknown) | CoreRule) &
+        (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule)),
+      (("always" | "never" | unknown) | CoreRule) &
+        (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule))
+    ]
+) &
+  (
+    | (null &
+        (
+          | null
+          | ("always" | "never" | [])
+          | [
+              (("always" | "never" | unknown) | CoreRule) &
+                (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule)),
+              (("always" | "never" | unknown) | CoreRule) &
+                (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule))
+            ]
+        ))
+    | ((
+        | null
+        | ("always" | "never" | [])
+        | [
+            (("always" | "never" | unknown) | CoreRule) &
+              (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule)),
+            (("always" | "never" | unknown) | CoreRule) &
+              (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule))
+          ]
+      ) &
+        string)
+    | ((
+        | null
+        | ("always" | "never" | [])
+        | [
+            (("always" | "never" | unknown) | CoreRule) &
+              (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule)),
+            (("always" | "never" | unknown) | CoreRule) &
+              (((("always" | "never" | unknown) | CoreRule) & string) | (("always" | "never" | unknown) | CoreRule))
+          ]
+      ) &
+        unknown[])
+  );
+/**
  * Disallow !important within keyframe declarations
  */
 export type BooleanRule20 = (
@@ -5214,7 +5262,7 @@ export type BooleanRule21 = (
 /**
  * Require a single space or disallow whitespace after the colon in media features
  */
-export type AlwaysNeverRule8 = (
+export type AlwaysNeverRule9 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -5262,7 +5310,7 @@ export type AlwaysNeverRule8 = (
 /**
  * Require a single space or disallow whitespace before the colon in media features
  */
-export type AlwaysNeverRule9 = (
+export type AlwaysNeverRule10 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -5446,7 +5494,7 @@ export type BooleanRule23 = (
 /**
  * Require a single space or disallow whitespace on the inside of the parentheses within media features
  */
-export type AlwaysNeverRule10 = (
+export type AlwaysNeverRule11 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -5494,7 +5542,7 @@ export type AlwaysNeverRule10 = (
 /**
  * Require a single space or disallow whitespace after the range operator in media features
  */
-export type AlwaysNeverRule11 = (
+export type AlwaysNeverRule12 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -5542,7 +5590,7 @@ export type AlwaysNeverRule11 = (
 /**
  * Require a single space or disallow whitespace before the range operator in media features
  */
-export type AlwaysNeverRule12 = (
+export type AlwaysNeverRule13 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -5878,7 +5926,7 @@ export type SpaceRule6 = (
 /**
  * Require or disallow a leading zero for fractional numbers less than 1
  */
-export type AlwaysNeverRule13 = (
+export type AlwaysNeverRule14 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -6294,7 +6342,7 @@ export type BooleanRule26 = (
 /**
  * Require a single space or disallow whitespace on the inside of the brackets within attribute selector
  */
-export type AlwaysNeverRule14 = (
+export type AlwaysNeverRule15 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -6418,7 +6466,7 @@ export type ArrayStringRule8 = (
 /**
  * Require a single space or disallow whitespace after operators within attribute selectors
  */
-export type AlwaysNeverRule15 = (
+export type AlwaysNeverRule16 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -6466,7 +6514,7 @@ export type AlwaysNeverRule15 = (
 /**
  * Require a single space or disallow whitespace before operators within attribute selectors
  */
-export type AlwaysNeverRule16 = (
+export type AlwaysNeverRule17 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -6590,7 +6638,7 @@ export type ArrayStringRule9 = (
 /**
  * Require or disallow quotes for attribute values
  */
-export type AlwaysNeverRule17 = (
+export type AlwaysNeverRule18 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -6638,7 +6686,7 @@ export type AlwaysNeverRule17 = (
 /**
  * Require a single space or disallow whitespace after the combinators of selectors
  */
-export type AlwaysNeverRule18 = (
+export type AlwaysNeverRule19 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -6686,7 +6734,7 @@ export type AlwaysNeverRule18 = (
 /**
  * Require a single space or disallow whitespace before the combinators of selectors
  */
-export type AlwaysNeverRule19 = (
+export type AlwaysNeverRule20 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -7190,7 +7238,7 @@ export type LowerUpperRule4 = (
 /**
  * Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors
  */
-export type AlwaysNeverRule20 = (
+export type AlwaysNeverRule21 = (
   | null
   | ("always" | "never" | [])
   | [
@@ -17181,6 +17229,10 @@ export interface OptionsDefinition {
    */
   cursorOffset?: number;
   /**
+   * Whether parse the .editorconfig file in your project and convert its properties to the corresponding Prettier configuration. This configuration will be overridden by .prettierrc, etc.
+   */
+  editorconfig?: boolean;
+  /**
    * Control how Prettier formats quoted code embedded in the file.
    */
   embeddedLanguageFormatting?: "auto" | "off";
@@ -17339,6 +17391,10 @@ export interface OptionsDefinition1 {
    * This option cannot be used with --range-start and --range-end.
    */
   cursorOffset?: number;
+  /**
+   * Whether parse the .editorconfig file in your project and convert its properties to the corresponding Prettier configuration. This configuration will be overridden by .prettierrc, etc.
+   */
+  editorconfig?: boolean;
   /**
    * Control how Prettier formats quoted code embedded in the file.
    */
@@ -19328,6 +19384,7 @@ export interface GeneralSheet {
   "no-invalid-double-slash-comments"?: BooleanRule17;
   "no-missing-end-of-source-newline"?: BooleanRule18;
   "no-unknown-animations"?: BooleanRule19;
+  "unicode-bom"?: AlwaysNeverRule8;
   /**
    * Disallow features that are unsupported by the browsers that you are targeting
    */
@@ -19397,8 +19454,8 @@ export interface Length {
  * via the `definition` "mediaFeature".
  */
 export interface MediaFeature {
-  "media-feature-colon-space-after"?: AlwaysNeverRule8;
-  "media-feature-colon-space-before"?: AlwaysNeverRule9;
+  "media-feature-colon-space-after"?: AlwaysNeverRule9;
+  "media-feature-colon-space-before"?: AlwaysNeverRule10;
   "media-feature-name-case"?: LowerUpperRule2;
   /**
    * Disallow unknown media feature names
@@ -19448,9 +19505,9 @@ export interface MediaFeature {
     );
   "media-feature-name-no-vendor-prefix"?: BooleanRule22;
   "media-feature-no-missing-punctuation"?: BooleanRule23;
-  "media-feature-parentheses-space-inside"?: AlwaysNeverRule10;
-  "media-feature-range-operator-space-after"?: AlwaysNeverRule11;
-  "media-feature-range-operator-space-before"?: AlwaysNeverRule12;
+  "media-feature-parentheses-space-inside"?: AlwaysNeverRule11;
+  "media-feature-range-operator-space-after"?: AlwaysNeverRule12;
+  "media-feature-range-operator-space-before"?: AlwaysNeverRule13;
   [k: string]: unknown;
 }
 /**
@@ -19469,7 +19526,7 @@ export interface MediaQueryList {
  * via the `definition` "number".
  */
 export interface Number {
-  "number-leading-zero"?: AlwaysNeverRule13;
+  "number-leading-zero"?: AlwaysNeverRule14;
   "number-max-precision"?: IntegerRule3;
   "number-no-trailing-zeros"?: BooleanRule24;
   [k: string]: unknown;
@@ -19695,12 +19752,12 @@ export interface Rule {
  * via the `definition` "selector".
  */
 export interface Selector {
-  "selector-attribute-brackets-space-inside"?: AlwaysNeverRule14;
+  "selector-attribute-brackets-space-inside"?: AlwaysNeverRule15;
   "selector-attribute-operator-blacklist"?: ArrayStringRule8;
-  "selector-attribute-operator-space-after"?: AlwaysNeverRule15;
-  "selector-attribute-operator-space-before"?: AlwaysNeverRule16;
+  "selector-attribute-operator-space-after"?: AlwaysNeverRule16;
+  "selector-attribute-operator-space-before"?: AlwaysNeverRule17;
   "selector-attribute-operator-whitelist"?: ArrayStringRule9;
-  "selector-attribute-quotes"?: AlwaysNeverRule17;
+  "selector-attribute-quotes"?: AlwaysNeverRule18;
   /**
    * Specify a pattern for class selectors
    */
@@ -19737,8 +19794,8 @@ export interface Selector {
         ) &
           unknown[])
     );
-  "selector-combinator-space-after"?: AlwaysNeverRule18;
-  "selector-combinator-space-before"?: AlwaysNeverRule19;
+  "selector-combinator-space-after"?: AlwaysNeverRule19;
+  "selector-combinator-space-before"?: AlwaysNeverRule20;
   "selector-descendant-combinator-no-non-space"?: BooleanRule27;
   "selector-id-pattern"?: StringRule2;
   "selector-max-compound-selectors"?: IntegerRule4;
@@ -19888,7 +19945,7 @@ export interface Selector {
         ) &
           unknown[])
     );
-  "selector-pseudo-class-parentheses-space-inside"?: AlwaysNeverRule20;
+  "selector-pseudo-class-parentheses-space-inside"?: AlwaysNeverRule21;
   "selector-pseudo-class-whitelist"?: ArrayStringRule10;
   "selector-pseudo-element-case"?: LowerUpperRule5;
   "selector-pseudo-element-colon-notation"?: SingleDoubleRule;
@@ -20342,6 +20399,7 @@ export interface SemanticReleaseSchema {
    * Set to false to skip Continuous Integration environment verifications. This allows for making releases from a local machine
    */
   ci?: boolean;
+  [k: string]: unknown;
 }
 /**
  * This interface was referenced by `SemanticReleaseSchema`'s JSON-Schema
