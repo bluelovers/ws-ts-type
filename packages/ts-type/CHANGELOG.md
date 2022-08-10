@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.10](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.9...ts-type@2.1.10) (2022-08-10)
+
+
+### 🐛　Bug Fixes
+
+* fix typo { ITSToWriteableAArray => ITSToWriteableArray } ([4d2853e](https://github.com/bluelovers/ws-ts-type/commit/4d2853e71e8ce60c658d29c874f2d29e73fbaff4))
+
+
+### ✨　Features
+
+* add enum type ([cac5289](https://github.com/bluelovers/ws-ts-type/commit/cac528950fd93b631c741ebe0f73bc779e79308e))
+
+
+### 🛠　Build System
+
+* **release:** publish ([1da2b0d](https://github.com/bluelovers/ws-ts-type/commit/1da2b0d1c61f27c5a2ecce342e7bfa7fc6b20763))
+
+
+
+
+
 ## [2.1.9](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.8...ts-type@2.1.9) (2022-08-10)
 
 
