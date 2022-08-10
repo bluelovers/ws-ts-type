@@ -1,4 +1,4 @@
-import { ITSToWriteableAArray, ITSToReadonlyArray } from '../../../../lib/helper/array/readonly';
+import { ITSToWriteableArray, ITSToReadonlyArray } from '../../../../lib/helper/array/readonly';
 
 export let result = (() =>
 {
@@ -6,10 +6,10 @@ export let result = (() =>
 	type A2 = [1, 2, 3]
 
 	let a11: ITSToReadonlyArray<A1>
-	let a12: ITSToWriteableAArray<A1>
+	let a12: ITSToWriteableArray<A1>
 
 	let a21: ITSToReadonlyArray<A2>
-	let a22: ITSToWriteableAArray<A2>
+	let a22: ITSToWriteableArray<A2>
 
 	return {
 		a11,

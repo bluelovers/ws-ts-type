@@ -1,6 +1,6 @@
 import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
 import { AssertionError } from 'assert';
-import { ITSToReadonlyArray, ITSToWriteableAArray } from 'ts-type/lib/helper/array/readonly';
+import { ITSToReadonlyArray, ITSToWriteableArray } from 'ts-type/lib/helper/array/readonly';
 
 declare global
 {
@@ -16,7 +16,7 @@ export function isArray<T extends ITSArrayListMaybeReadonly<any>>(arg: T | unkno
 }
 
 // @ts-ignore
-export function typePredicatesAsWriteableArray<T extends ITSArrayListMaybeReadonly<any>>(value: T): asserts value is ITSToWriteableAArray<T>
+export function typePredicatesAsWriteableArray<T extends ITSArrayListMaybeReadonly<any>>(value: T): asserts value is ITSToWriteableArray<T>
 {
 
 }
