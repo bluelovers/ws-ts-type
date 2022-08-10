@@ -141,11 +141,11 @@ export declare let exportedType: {
     sideEffects?: boolean;
     source?: string;
     'umd:main'?: string;
-    dependencies?: import("../../package-json").IDependency;
-    devDependencies?: import("../../package-json").IDependency;
-    peerDependencies?: import("../../package-json").IDependency;
-    optionalDependencies?: import("../../package-json").IDependency;
+    dependencies?: import("../../package-json").IDependency<string[]>;
+    devDependencies?: import("../../package-json").IDependency<string[]>;
+    peerDependencies?: import("../../package-json").IDependency<string[]>;
+    optionalDependencies?: import("../../package-json").IDependency<string[]>;
     flat?: boolean;
     installConfig?: import("../../lib/package-json/yarn").IYarnV1PackageJsonInstallConfig;
-    resolutions?: import("../../package-json").IDependency;
+    resolutions?: import("../../package-json").IDependency<string[]>;
 };

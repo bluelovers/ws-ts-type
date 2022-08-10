@@ -8,6 +8,7 @@ import { ITSValueOfArray, ITSValueOfRecord } from 'ts-type/lib/helper';
 import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 export declare type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
 export type { IDependency as IPackageMap };
+export type { IDependency as IDependencies };
 export declare type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
 export declare enum EnumVersionValue {
     'major' = "major",

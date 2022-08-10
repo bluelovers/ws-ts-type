@@ -10,6 +10,7 @@ import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 export type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
 
 export type { IDependency as IPackageMap }
+export type { IDependency as IDependencies }
 
 export type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
 
