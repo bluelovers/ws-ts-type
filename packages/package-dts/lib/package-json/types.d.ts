@@ -3,11 +3,12 @@
  */
 import type { ReleaseType as IReleaseType } from 'semver';
 import { EnumPublishConfigRegistry } from './publishConfig';
-export interface IDependency {
-    [name: string]: IVersionValue;
-}
+import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
+import { ITSValueOfArray, ITSValueOfRecord } from 'ts-type/lib/helper';
+import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
+export declare type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
 export type { IDependency as IPackageMap };
-export declare type IVersionValue = 'latest' | 'next' | '*' | string | EnumVersionValue | EnumVersionValue2;
+export declare type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
 export declare enum EnumVersionValue {
     'major' = "major",
     'minor' = "minor",
@@ -16,10 +17,17 @@ export declare enum EnumVersionValue {
     'newest' = "newest"
 }
 export declare const enum EnumVersionValue2 {
-    any = "*"
+    any = "*",
+    latest = "latest",
+    next = "next",
+    beta = "beta",
+    canary = "canary",
+    stable = "stable",
+    dev = "dev"
 }
 export declare type IPackageJsonDependenciesField = 'dependencies' | 'devDependencies' | 'peerDependencies' | 'optionalDependencies';
-export declare const packageJsonDependenciesFields: readonly ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"];
+declare const packageJsonDependenciesFields: readonly ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"];
+export { packageJsonDependenciesFields };
 /**
  * This is a set of config values that will be used at publish-time.
  * It’s especially handy if you want to set the tag, registry or access,
@@ -35,5 +43,5 @@ export interface IPackageJsonPublishConfig {
     tag?: IPackageJsonTag;
     [k: string]: any;
 }
-export declare type IPackageJsonTag = string | "next" | "beta" | "canary" | "stable" | "dev" | "latest";
+export declare type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOfRecord<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
 export type { IReleaseType };

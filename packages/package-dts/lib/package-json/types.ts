@@ -3,15 +3,15 @@
  */
 import type { ReleaseType as IReleaseType } from 'semver';
 import { EnumPublishConfigRegistry } from './publishConfig';
+import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
+import { ITSValueOfArray, ITSValueOfRecord } from 'ts-type/lib/helper';
+import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 
-export interface IDependency
-{
-	[name: string]: IVersionValue
-}
+export type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
 
 export type { IDependency as IPackageMap }
 
-export type IVersionValue = 'latest' | 'next' | '*' | string | EnumVersionValue | EnumVersionValue2;
+export type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
 
 export enum EnumVersionValue
 {
@@ -24,7 +24,14 @@ export enum EnumVersionValue
 
 export const enum EnumVersionValue2
 {
-	any = '*'
+	any = '*',
+
+	latest = 'latest',
+	next = 'next',
+	beta = 'beta',
+	canary = 'canary',
+	stable = 'stable',
+	dev = 'dev',
 }
 
 export type IPackageJsonDependenciesField =
@@ -34,12 +41,14 @@ export type IPackageJsonDependenciesField =
 	| 'optionalDependencies'
 ;
 
-export const packageJsonDependenciesFields = [
+const packageJsonDependenciesFields = [
 	'dependencies' as const,
 	'devDependencies' as const,
 	'peerDependencies' as const,
 	'optionalDependencies' as const,
 ] as const
+
+export { packageJsonDependenciesFields }
 
 /**
  * This is a set of config values that will be used at publish-time.
@@ -59,6 +68,6 @@ export interface IPackageJsonPublishConfig
 	[k: string]: any;
 }
 
-export type IPackageJsonTag = string | "next" | "beta" | "canary" | "stable" | "dev" | "latest";
+export type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOfRecord<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
 
 export type { IReleaseType }
