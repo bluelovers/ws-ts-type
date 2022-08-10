@@ -91,11 +91,11 @@
     "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "packageManager": "yarn@^1.22.11",
   "dependencies": {
     "ts-type": "^2.1.8"
+  },
+  "packageManager": "yarn@^1.22.11",
+  "publishConfig": {
+    "access": "public"
   }
 }

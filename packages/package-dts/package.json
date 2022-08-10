@@ -61,7 +61,7 @@
     "update:schema": "ts-node ./script/index"
   },
   "dependencies": {
-    "@types/semver": "^7.3.10",
+    "@types/semver": "^7.3.11",
     "ts-type": "^2.1.8"
   },
   "devDependencies": {
@@ -69,7 +69,7 @@
     "bluebird": "^3.7.2",
     "dot-values2": "^2.0.6",
     "fs-extra": "^10.1.0",
-    "json-schema-to-typescript": "^11.0.1"
+    "json-schema-to-typescript": "^11.0.2"
   },
   "publishConfig": {
     "access": "public"
