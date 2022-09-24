@@ -51,6 +51,9 @@
     "lint": "eslint **/*.ts",
     "pretest": "yarn run build",
     "test": "yarn run ts:check",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
     "build": "yarn run update:schema",
     "preversion": "yarn run test",
@@ -61,16 +64,10 @@
     "update:schema": "ts-node ./script/index"
   },
   "dependencies": {
-    "@types/semver": "^7.3.11",
+    "@types/semver": "^7.3.12",
     "ts-type": "^2.1.10"
   },
-  "devDependencies": {
-    "axios": "^0.27.2",
-    "bluebird": "^3.7.2",
-    "dot-values2": "^2.0.6",
-    "fs-extra": "^10.1.0",
-    "json-schema-to-typescript": "^11.0.2"
-  },
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },

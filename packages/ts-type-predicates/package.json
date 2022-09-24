@@ -58,7 +58,9 @@
     "lint": "ynpx --quiet eslint -- **/*.ts",
     "test": "echo \"Error: no test specified\"",
     "test:jest": "ynpx --quiet jest -- --coverage",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "posttest": "yarn run build",
     "build": "yarn run build:tsdx && yarn run build:dts",
     "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner & echo build:dts",
@@ -78,9 +80,6 @@
     "sort-package-json": "ynpx --quiet yarn-tool -- sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "devDependencies": {
-    "@bluelovers/tsconfig": "*",
-    "@types/node": "*"
-  },
+  "devDependencies": {},
   "packageManager": "yarn@^1.22.11"
 }

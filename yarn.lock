@@ -41,7 +41,7 @@
     bluebird "^3"
     fast-glob "^3"
 
-"@bluelovers/tsconfig@*", "@bluelovers/tsconfig@^1.0.30":
+"@bluelovers/tsconfig@^1.0.30":
   version "1.0.30"
   resolved "https://registry.npmjs.org/@bluelovers/tsconfig/-/tsconfig-1.0.30.tgz#a1ec24a2fc885656270a5d1060caf473d4b4aaa8"
   integrity sha512-q+CdA9WcRIfWSwfnyULeTWvAwG7velfOq1pklfo5sL3j/tCjAvJitmo7SG06t8l1/Z8j3S+s4ant8R3WF9GLZA==
@@ -74,10 +74,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@tsd/typescript@~4.7.4":
-  version "4.7.4"
-  resolved "https://registry.npmjs.org/@tsd/typescript/-/typescript-4.7.4.tgz#f1e4e6c3099a174a0cb7aa51cf53f34f6494e528"
-  integrity sha512-jbtC+RgKZ9Kk65zuRZbKLTACf+tvFW4Rfq0JEMXrlmV3P3yme+Hm+pnb5fJRyt61SjIitcrC810wj7+1tgsEmg==
+"@tsd/typescript@~4.8.3":
+  version "4.8.3"
+  resolved "https://registry.npmjs.org/@tsd/typescript/-/typescript-4.8.3.tgz#10f04aef9217e0a516947ddc4c457687d6482d6c"
+  integrity sha512-ytRZWmXF0i4VFSG8NQ67NUDQ3NGe3E4oByFrxH8eJyW5uBOM5juIdXCg81OY/IcK81qHCzrvGEo8tujlIQbexw==
 
 "@types/bluebird@*":
   version "3.5.36"
@@ -147,10 +147,10 @@
   resolved "https://registry.npmjs.org/@types/prettier/-/prettier-2.7.0.tgz#ea03e9f0376a4446f44797ca19d9c46c36e352dc"
   integrity sha512-RI1L7N4JnW5gQw2spvL7Sllfuf1SaHdrZpCHiBlCXjIlufi1SMNnbu2teze3/QE67Fg2tBlH7W+mi4hVNk4p0A==
 
-"@types/semver@^7.3.11":
-  version "7.3.11"
-  resolved "https://registry.npmjs.org/@types/semver/-/semver-7.3.11.tgz#7a84d3228f34e68d14955fc406f8e66fdbe9e65e"
-  integrity sha512-R9HhjC4aKx3jL0FLwU7x6qMTysTvLh7jesRslXmxgCOXZwyh5dsnmrPQQToMyess8D4U+8G9x9mBFZoC/1o/Tw==
+"@types/semver@^7.3.12":
+  version "7.3.12"
+  resolved "https://registry.npmjs.org/@types/semver/-/semver-7.3.12.tgz#920447fdd78d76b19de0438b7f60df3c4a80bf1c"
+  integrity sha512-WwA1MW0++RfXmCr12xeYOOC5baSC9mSb0ZqCquFzKhcoF4TvHu5MKOuXsncgZcpVFhB1pXd5hZmM0ryAoCp12A==
 
 ansi-escapes@^4.2.1:
   version "4.3.2"
@@ -458,10 +458,10 @@ ext@^1.1.2:
   dependencies:
     type "^2.5.0"
 
-fast-glob@^3, fast-glob@^3.2.11, fast-glob@^3.2.9:
-  version "3.2.11"
-  resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
-  integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
+fast-glob@^3, fast-glob@^3.2.12, fast-glob@^3.2.9:
+  version "3.2.12"
+  resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
+  integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
@@ -1000,10 +1000,10 @@ path-is-absolute@^1.0.0:
   resolved "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
   integrity sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==
 
-path-is-network-drive@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.npmjs.org/path-is-network-drive/-/path-is-network-drive-1.0.15.tgz#305630eebb2c1324c2a94f098a99213bbe7eb4a3"
-  integrity sha512-bJGs1SxUne+q29P1xCLMkNBhMetku+vPN+yVQu8FGL/7diHesCSSIKoF4Wq42tcbwm7rK72XrGfK8FUXN00LLQ==
+path-is-network-drive@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.npmjs.org/path-is-network-drive/-/path-is-network-drive-1.0.16.tgz#b65a42de1ac3b79590876a1a683bbd59346dfe8d"
+  integrity sha512-nnU+ssj5jUxQ5lTxNXHkPJeQ2ZVpsoGLEyM+eSCe9Q7v2NhiJhxlCECuUvhICOIgJd3OVFTWlrmCoAE64X6qsQ==
   dependencies:
     tslib "^2"
 
@@ -1012,10 +1012,10 @@ path-parse@^1.0.7:
   resolved "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
   integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
-path-strip-sep@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.npmjs.org/path-strip-sep/-/path-strip-sep-1.0.12.tgz#e395568764c3a21eb7e879d7573a6eb4619e8bcf"
-  integrity sha512-EJZSC5WBjVlA9XHLCiluiyisYg6yzeMJ4nY3BQVCuedyEHA/I2crcHWdwuQ74h3V599U9nEbEZUTvvSxOK3vbQ==
+path-strip-sep@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.npmjs.org/path-strip-sep/-/path-strip-sep-1.0.13.tgz#c692da0ab2fca42e76b7f985be2129eb4b648bb1"
+  integrity sha512-lxc+Mv83LrhLolN1E7lhIb2XLT3epL6QT/rrLySo6MEK08E5dTKxGFGSiqr71H9W9xe7uOgzlpN8hFqpavF0Gg==
   dependencies:
     tslib "^2"
 
@@ -1244,12 +1244,12 @@ ts-toolbelt@*:
   resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-9.6.0.tgz#50a25426cfed500d4a09bd1b3afb6f28879edfd5"
   integrity sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==
 
-tsd@^0.22.0:
-  version "0.22.0"
-  resolved "https://registry.npmjs.org/tsd/-/tsd-0.22.0.tgz#2ff75cf3adff5136896abee1f2c5540497bf3b54"
-  integrity sha512-NH+tfEDQ0Ze8gH7TorB6IxYybD+M68EYawe45YNVrbQcydNBfdQHP9IiD0QbnqmwNXrv+l9GAiULT68mo4q/xA==
+tsd@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.npmjs.org/tsd/-/tsd-0.24.1.tgz#10c596acf7278182d3ca142b902ca9a62b1f13ef"
+  integrity sha512-sD+s81/2aM4RRhimCDttd4xpBNbUFWnoMSHk/o8kC8Ek23jljeRNWjsxFJmOmYLuLTN9swRt1b6iXfUXTcTiIA==
   dependencies:
-    "@tsd/typescript" "~4.7.4"
+    "@tsd/typescript" "~4.8.3"
     eslint-formatter-pretty "^4.1.0"
     globby "^11.0.1"
     meow "^9.0.0"
@@ -1301,14 +1301,14 @@ universalify@^2.0.0:
   resolved "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
-upath2@^3.1.13:
-  version "3.1.13"
-  resolved "https://registry.npmjs.org/upath2/-/upath2-3.1.13.tgz#18dd1b99789e51d76a0124490e9020e66e0c3aa4"
-  integrity sha512-M88uBoqgzrkXvXrF/+oSIPsTmL21uRwGhPVJKODrl+3lXkQ5NPKrTYuSBZVa+lgPGFoI6qYyHlSKACFHO0AoNw==
+upath2@^3.1.15:
+  version "3.1.15"
+  resolved "https://registry.npmjs.org/upath2/-/upath2-3.1.15.tgz#5c9e053421084533c5d0f0397ecb860c51c04257"
+  integrity sha512-b2QxNkfs6w+LZcgYZaBrS0Eo0OXsg5BbFtbVQleSpr8l8Iz+N2baP6eUvOJG0s+6M/qeCf8JI9BQXBXDwB5yOA==
   dependencies:
     "@types/node" "*"
-    path-is-network-drive "^1.0.15"
-    path-strip-sep "^1.0.12"
+    path-is-network-drive "^1.0.16"
+    path-strip-sep "^1.0.13"
     tslib "^2"
 
 validate-npm-package-license@^3.0.1:

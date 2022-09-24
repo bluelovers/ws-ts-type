@@ -45,6 +45,9 @@
   "scripts": {
     "pretest": "yarn run build",
     "test": "yarn run ts:check",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "build": "yarn run build-lib-toc",
     "build-lib-toc": "ynpx ts-node ./test/script/toc && yarn run build:toc",
     "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
