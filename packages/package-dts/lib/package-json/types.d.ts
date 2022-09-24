@@ -6,10 +6,10 @@ import { EnumPublishConfigRegistry } from './publishConfig';
 import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
 import { ITSValueOfArray, ITSValueOfRecord } from 'ts-type/lib/helper';
 import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
-export declare type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
+export type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
 export type { IDependency as IPackageMap };
 export type { IDependency as IDependencies };
-export declare type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
+export type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
 export declare enum EnumVersionValue {
     'major' = "major",
     'minor' = "minor",
@@ -26,7 +26,7 @@ export declare const enum EnumVersionValue2 {
     stable = "stable",
     dev = "dev"
 }
-export declare type IPackageJsonDependenciesField = 'dependencies' | 'devDependencies' | 'peerDependencies' | 'optionalDependencies';
+export type IPackageJsonDependenciesField = 'dependencies' | 'devDependencies' | 'peerDependencies' | 'optionalDependencies';
 declare const packageJsonDependenciesFields: readonly ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"];
 export { packageJsonDependenciesFields };
 /**
@@ -44,5 +44,5 @@ export interface IPackageJsonPublishConfig {
     tag?: IPackageJsonTag;
     [k: string]: any;
 }
-export declare type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOfRecord<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
+export type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOfRecord<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
 export type { IReleaseType };

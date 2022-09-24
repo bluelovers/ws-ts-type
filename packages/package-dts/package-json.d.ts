@@ -10,7 +10,7 @@ import { ITSOmitIndexSignatures } from 'ts-type/lib/helper/record/omit-index';
 import { _IPackageJsonCore } from './lib/package-json/extend';
 export { EnumVersionValue2 } from './lib/package-json/types';
 export * from './lib/package-json/types';
-export declare type ILibPackageJson = typeof import('./types/package.json');
+export type ILibPackageJson = typeof import('./types/package.json');
 /**
  * @example IPackageJson<unknown>
  */

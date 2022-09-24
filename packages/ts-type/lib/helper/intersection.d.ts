@@ -6,4 +6,4 @@
  * type SynthesizedFunctionIntersection = ITSUnionToIntersection<FunctionUnion>
  * // type SynthesizedFunctionIntersection = (() => void) & ((p: string) => void)
  */
-export declare type ITSUnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never;
+export type ITSUnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never;

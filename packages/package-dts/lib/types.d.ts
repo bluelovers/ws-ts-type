@@ -1,2 +1,2 @@
-export declare type IBooleanString = "true" | "false";
-export declare type IBranch = string | "master" | "canary";
+export type IBooleanString = "true" | "false";
+export type IBranch = string | "master" | "canary";

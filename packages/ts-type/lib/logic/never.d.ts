@@ -1,1 +1,1 @@
-export declare type ITSLogicIsNever<T, Y = true, N = false> = [T] extends [never] ? Y : N;
+export type ITSLogicIsNever<T, Y = true, N = false> = [T] extends [never] ? Y : N;

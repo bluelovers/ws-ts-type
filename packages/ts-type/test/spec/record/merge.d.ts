@@ -1,13 +1,13 @@
 import { ITSMergeBoth, ITSKeyIsPartialOfRecord } from '../../../lib';
-declare type Test1 = {
+type Test1 = {
     id: number;
     code: string;
 };
-declare type Test2 = {
+type Test2 = {
     id: string;
     code: number;
 };
-declare type Test3 = ITSMergeBoth<Test1, Test2>;
+type Test3 = ITSMergeBoth<Test1, Test2>;
 export declare const x: Test3;
 interface Test21 {
     id: number;
@@ -17,7 +17,7 @@ interface Test22 {
     id: string;
     code: number;
 }
-declare type Test23 = ITSMergeBoth<Test21, Test22>;
+type Test23 = ITSMergeBoth<Test21, Test22>;
 export declare const x2: Test23;
 export declare let y2: {
     id: string | number;
@@ -31,7 +31,7 @@ interface Test32 {
     id: string;
     code2?: number;
 }
-declare type Test33 = ITSMergeBoth<Test31, Test32>;
+type Test33 = ITSMergeBoth<Test31, Test32>;
 export declare const x3: Test33;
 export declare let y3: {
     code?: string;
@@ -48,7 +48,7 @@ interface Test42 {
     code: number;
     code2?: number;
 }
-declare type Test43 = ITSMergeBoth<Test41, Test42>;
+type Test43 = ITSMergeBoth<Test41, Test42>;
 export declare const x4: Test43;
 export declare let y4: {
     code2?: number;

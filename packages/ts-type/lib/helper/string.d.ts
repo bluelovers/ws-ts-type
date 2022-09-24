@@ -1,17 +1,17 @@
-export declare type ITSToStringLiteralAllowedType = string | number | boolean | bigint;
+export type ITSToStringLiteralAllowedType = string | number | boolean | bigint;
 /**
  * `${T}`
  */
-export declare type ITSToStringLiteral<T extends ITSToStringLiteralAllowedType> = `${T}`;
+export type ITSToStringLiteral<T extends ITSToStringLiteralAllowedType> = `${T}`;
 /**
  * T & `${T}`
  */
-export declare type ITSTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType> = T | ITSToStringLiteral<T>;
+export type ITSTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType> = T | ITSToStringLiteral<T>;
 /**
  * S & `${T}`
  */
-export declare type ITSAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = string> = S | ITSToStringLiteral<T>;
+export type ITSAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = string> = S | ITSToStringLiteral<T>;
 /**
  * S & T & `${T}`
  */
-export declare type ITSAndTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = string> = S | ITSTypeAndStringLiteral<T>;
+export type ITSAndTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = string> = S | ITSTypeAndStringLiteral<T>;

@@ -5,7 +5,7 @@
  * Wrap proxies around properties of T
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
  */
-export declare type ITSProxify<T> = {
+export type ITSProxify<T> = {
     [P in keyof T]: {
         get(): T[P];
         set(v: T[P]): void;

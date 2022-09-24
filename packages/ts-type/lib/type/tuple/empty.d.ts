@@ -1,2 +1,2 @@
 import { ITSArrayListMaybeReadonly } from '../base';
-export declare type ITSEmptyTuple = ITSArrayListMaybeReadonly<never>;
+export type ITSEmptyTuple = ITSArrayListMaybeReadonly<never>;

@@ -8,7 +8,7 @@ export interface A1 {
     a1?: string;
     s: string;
 }
-export declare type A2 = ITSOverwrite<A1, {
+export type A2 = ITSOverwrite<A1, {
     s: number;
 }>;
 export declare let a2: A2;

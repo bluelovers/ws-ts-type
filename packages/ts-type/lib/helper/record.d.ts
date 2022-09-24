@@ -19,7 +19,7 @@ export { ITSKeyIsPartialOfRecord } from './record/partial';
  * type Keys = ITSKeyOfRecordExtractReadonly<Todo>
  * // expected to be "title" | "description"
  */
-export declare type ITSKeyOfRecordExtractReadonly<T> = {
+export type ITSKeyOfRecordExtractReadonly<T> = {
     [K in keyof T]-?: (<U>() => U extends {
         -readonly [P in K]: T[K];
     } ? 1 : 2) extends (<U>() => U extends {
@@ -27,6 +27,6 @@ export declare type ITSKeyOfRecordExtractReadonly<T> = {
     } ? 1 : 2) ? never : K;
 }[keyof T];
 export type { ITSKeyOfRecordExtractReadonly as ITSGetReadonlyKeys };
-export declare type ITSKeyOfRecordExcludeReadonly<T> = Exclude<keyof T, ITSKeyOfRecordExtractReadonly<T>>;
-export declare type ITSKeyIsReadonlyOfRecord<T, K extends ITSKeyOfRecordExtractReadonly<T>> = Extract<K, ITSKeyOfRecordExtractReadonly<T>>;
-export declare type ITSKeyIsNotReadonlyOfRecord<T, K extends ITSKeyOfRecordExcludeReadonly<T>> = Extract<K, ITSKeyOfRecordExcludeReadonly<T>>;
+export type ITSKeyOfRecordExcludeReadonly<T> = Exclude<keyof T, ITSKeyOfRecordExtractReadonly<T>>;
+export type ITSKeyIsReadonlyOfRecord<T, K extends ITSKeyOfRecordExtractReadonly<T>> = Extract<K, ITSKeyOfRecordExtractReadonly<T>>;
+export type ITSKeyIsNotReadonlyOfRecord<T, K extends ITSKeyOfRecordExcludeReadonly<T>> = Extract<K, ITSKeyOfRecordExcludeReadonly<T>>;

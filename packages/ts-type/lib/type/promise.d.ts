@@ -5,7 +5,7 @@
  * Same property names, but make the value a promise instead of a concrete one
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
  */
-export declare type ITSDeferred<T> = {
+export type ITSDeferred<T> = {
     [P in keyof T]: Promise<T[P]>;
 };
 export interface ITSPromiseFulfilledResult<T> {
@@ -18,4 +18,4 @@ export interface ITSPromiseRejectedResult<E = any> {
     reason: E;
     value?: never;
 }
-export declare type ITSPromiseSettledResult<T, E = any> = ITSPromiseFulfilledResult<T> | ITSPromiseRejectedResult<E>;
+export type ITSPromiseSettledResult<T, E = any> = ITSPromiseFulfilledResult<T> | ITSPromiseRejectedResult<E>;

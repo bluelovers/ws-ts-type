@@ -8,8 +8,8 @@ export * from './lib/lerna-json/types';
 import { INpmClient } from './lib/lerna-json/types';
 import { IBranch } from './lib/types';
 export type { IReleaseType };
-declare type _Command = AJSONSchemaForLernaJsonFiles["command"];
-declare type _MergeCommand<T extends Record<string, Record<string, any>>> = {
+type _Command = AJSONSchemaForLernaJsonFiles["command"];
+type _MergeCommand<T extends Record<string, Record<string, any>>> = {
     [P in keyof (T & _Command)]?: (P extends keyof _Command ? P extends keyof T ? ITSMergeBoth<_Command[P], T[P]> : _Command[P] : T[P]);
 };
 export interface ILernaJsonCommand extends _MergeCommand<{
