@@ -4,10 +4,10 @@
 
 import {
 	ITSOverwriteThisFunction,
-	ITSUnpackedThisFunction,
-	ITSWrapFunctionBluebird,
 	ITSWrapFunctionPromise,
 } from '../../';
+import { ITSWrapFunctionBluebird } from '@ts-type/bluebird';
+import { ITSUnpackedThisFunction } from '@ts-type/unpacked';
 
 export declare function t1(this: string, a: number): Promise<number>
 

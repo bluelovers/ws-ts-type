@@ -1,15 +1,18 @@
 import fg from '@bluelovers/fast-glob';
 import { outputFile } from 'fs-extra';
 import { join, parse } from 'upath2';
+import { array_unique } from 'array-hyper-unique';
+import { __ROOT } from '../__root';
 
-const root_lib = join(__dirname, '../..', 'lib');
+const root_lib = join(__ROOT, 'lib');
 
 fg
 	.async<string>([
 		'**/*.ts',
-		'!/index.ts',
-		'!/build-in.ts',
-		'!**/*.d.ts',
+		'!./index.ts',
+		'!./index.d.ts',
+		'!/build-in.*',
+//		'!**/*.d.ts',
 		'!**/_*',
 		'!test',
 	], {
@@ -17,14 +20,14 @@ fg
 	})
 	.then(function (ls)
 	{
-		ls = ls
+		ls = array_unique(ls
 			.sort()
 			.map(function (v)
 			{
 				let data = parse(v);
 
-				return './' + join(data.dir, data.name)
-			})
+				return './' + join(data.dir, data.name.replace(/\.d$/, ''))
+			}))
 			.map(function (v)
 			{
 				return `export * from '${v}';`

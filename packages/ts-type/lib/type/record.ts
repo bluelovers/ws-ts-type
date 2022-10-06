@@ -2,9 +2,9 @@
  * Created by user on 2019/6/11.
  */
 
-import { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
+import type { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
 
-export { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
+export type { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
 
 /**
  * @deprecated
@@ -112,4 +112,3 @@ export type ITSRequireOnlyOne<T, Keys extends keyof T = keyof T> =
 	[K in Keys]-?: ITSRequiredPick<T, K>
 	& Partial<Record<Exclude<Keys, K>, never>>
 }[Keys];
-

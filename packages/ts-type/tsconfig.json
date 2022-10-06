@@ -1,0 +1,12 @@
+{
+  "extends": "@bluelovers/tsconfig/esm/mapfile.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "exclude": [
+    "node_modules",
+    "test",
+  ]
+}

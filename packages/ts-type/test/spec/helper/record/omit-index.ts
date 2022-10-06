@@ -1,6 +1,7 @@
 import { ITSKnownKeys, ITSOmitIndexSignatures } from '../../../../lib/helper/record/omit-index';
 import { JSONSchemaForNPMPackageJsonFiles as CoreProperties } from '@ts-type/package-dts/types/package.json';
 import { ITSOverwrite } from 'ts-type/lib/type/record';
+import { expectAssignable, expectType, printType, expectNotAssignable } from 'tsd';
 
 interface FancyIndices {
   [x: symbol]: number;

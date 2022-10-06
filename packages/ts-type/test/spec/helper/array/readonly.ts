@@ -1,4 +1,5 @@
 import { ITSToWriteableArray, ITSToReadonlyArray } from '../../../../lib/helper/array/readonly';
+import { expectType, printType } from 'tsd';
 
 export let result = (() =>
 {
@@ -10,6 +11,12 @@ export let result = (() =>
 
 	let a21: ITSToReadonlyArray<A2>
 	let a22: ITSToWriteableArray<A2>
+
+	expectType<A1>(a11);
+	expectType<A2>(a12);
+
+	expectType<A1>(a21);
+	expectType<A2>(a22);
 
 	return {
 		a11,

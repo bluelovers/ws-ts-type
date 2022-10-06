@@ -1,8 +1,8 @@
 /**
  * Created by user on 2019/6/11.
  */
-import { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
-export { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
+import type { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
+export type { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
 /**
  * @deprecated
  */

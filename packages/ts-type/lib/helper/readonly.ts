@@ -1,10 +1,11 @@
+
+import { ITSValueOfArray } from './key-value';
+
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  *
  * Add readonly and ?
  */
-import { ITSUnpackedArrayLike } from './unpacked';
-
 export type ITSReadonlyPartial<T> = {
 	readonly [P in keyof T]?: T[P]
 };
@@ -23,7 +24,7 @@ export type ITSWriteableWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSW
 
 export type ITSReadonlyWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSReadonlyPick<T, K>;
 
-export type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSUnpackedArrayLike<T>[] & {
+export type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyof any[]> & ITSValueOfArray<T>[] & {
 	-readonly [P in number | 'length']: T[P]
 };
 

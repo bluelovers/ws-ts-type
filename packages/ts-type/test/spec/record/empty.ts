@@ -1,16 +1,16 @@
-import { expectType } from 'tsd';
+import { expectAssignable, expectType } from 'tsd';
 import { ITSEmptyTuple } from '../../../lib/type/tuple/empty';
-import { freezeArray } from '@ts-type/object-freeze/src/index';
+import { freezeArray } from '@ts-type/object-freeze';
 
 const a = Object.freeze([])
 
-expectType<ITSEmptyTuple>([]);
-expectType<ITSEmptyTuple>(freezeArray([]));
-expectType<ITSEmptyTuple>([undefined]);
-expectType<ITSEmptyTuple>(freezeArray([undefined]));
+expectAssignable<ITSEmptyTuple>([]);
+expectAssignable<ITSEmptyTuple>(freezeArray([]));
+expectAssignable<ITSEmptyTuple>([undefined]);
+expectAssignable<ITSEmptyTuple>(freezeArray([undefined]));
 
 // @ts-expect-error
-expectType<ITSEmptyTuple>([1]);
+expectAssignable<ITSEmptyTuple>([1]);
 
 // @ts-expect-error
-expectType<ITSEmptyTuple>([void 0, 2]);
+expectAssignable<ITSEmptyTuple>([void 0, 2]);

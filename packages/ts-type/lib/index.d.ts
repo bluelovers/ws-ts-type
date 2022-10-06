@@ -7,6 +7,7 @@ export * from './helper/intersection';
 export * from './helper/key-value';
 export * from './helper/number';
 export * from './helper/overwrite';
+export * from './helper/promise';
 export * from './helper/readonly';
 export * from './helper/record';
 export * from './helper/record/enum';

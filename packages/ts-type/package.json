@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "2.1.10",
+  "version": "3.0.0",
   "description": "add some typescript type and re-export some build-in typescript type",
   "keywords": [
     ".d.ts",
@@ -33,7 +33,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git",
+    "directory": "packages/ts-type"
   },
   "license": "ISC",
   "author": "",
@@ -44,21 +45,24 @@
   },
   "scripts": {
     "pretest": "yarn run build",
-    "test": "yarn run ts:check",
+    "test": "yarn run ts:check && yarn run test:tsd",
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "tsd",
     "build": "yarn run build-lib-toc",
     "build-lib-toc": "ynpx ts-node ./test/script/toc && yarn run build:toc",
-    "build:toc": "tsc -p ./ --isolatedModules --noStrictGenericChecks --skipLibCheck & echo build:toc",
+    "build:toc": "tsc --noStrictGenericChecks --skipLibCheck & echo build:toc",
     "preversion": "yarn run test && yarn run postpublish:git:commit",
     "prepublishOnly": "echo prepublishOnly",
     "postpublish:git:commit": "git commit -m \"build(release): publish\" ./lib/index.d.ts & echo postpublish:git:commit",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
-    "ts:check": "tsc --noEmit -p tsconfig.check.json"
+    "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck"
   },
   "dependencies": {
+    "@ts-type/bluebird": "^1.0.0",
+    "@ts-type/unpacked": "^1.0.0",
     "tslib": "^2",
     "typedarray-dts": "^1.0.0"
   },
@@ -67,5 +71,11 @@
     "@types/node": "*",
     "ts-toolbelt": "^9.6.0"
   },
-  "gitHead": "8733c903bb32e26825606684e3f2e29726775f01"
+  "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
+  "tsd": {
+    "directory": "test/spec",
+    "testFiles": [
+      "test/spec/**/*.ts"
+    ]
+  }
 }

@@ -6,14 +6,15 @@ import Bluebird = require('bluebird');
 import {
 	ITSOverwrite,
 	ITSOverwriteReturnType,
-	ITSUnpackedReturnType,
-	ITSWrapFunctionBluebird,
 	ITSWrapFunctionPromise,
 } from '../../';
 import {
 	ITSOverwriteThisFunction,
-	ITSUnpackedThisFunction,
+
 	} from '../../index';
+import { ITSWrapFunctionBluebird } from '@ts-type/bluebird';
+import { ITSUnpackedReturnType, ITSUnpackedThisFunction } from '@ts-type/unpacked';
+import { ITSAwaitedReturnType } from '../../lib/helper/promise';
 
 export declare function f(a: number): number
 
@@ -42,6 +43,10 @@ export declare function p1(a: number): Promise<number>
 export declare let p1_v: ITSUnpackedReturnType<typeof p1>;
 
 p1_v.toFixed()
+
+export declare let p1_v2: ITSAwaitedReturnType<typeof p1>;
+
+p1_v2.toFixed()
 
 export declare let p2: ITSWrapFunctionPromise<typeof p1>;
 export declare let p3: ITSWrapFunctionBluebird<typeof p2>;

@@ -1,5 +1,5 @@
 import { ITSArrayListMaybeReadonly } from './type/base';
-import { ITSUnpackedReturnType } from './helper/unpacked';
+import { ITSAwaitedReturnType } from './helper/promise';
 /**
  * copy current function with Parameters and return to new value
  *
@@ -11,12 +11,10 @@ import { ITSUnpackedReturnType } from './helper/unpacked';
  * // c = (a: number) => string
  */
 export type ITSOverwriteReturnType<T extends (...args: any[]) => any, R extends unknown> = (...args: Parameters<T>) => R;
-export type ITSWrapFunctionPromiseLike<T extends (...args: any[]) => any> = (...args: Parameters<T>) => PromiseLike<ITSUnpackedReturnType<T>>;
-export type ITSWrapFunctionPromise<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Promise<ITSUnpackedReturnType<T>>;
+export type ITSWrapFunctionPromiseLike<T extends (...args: any[]) => any> = (...args: Parameters<T>) => PromiseLike<ITSAwaitedReturnType<T>>;
+export type ITSWrapFunctionPromise<T extends (...args: any[]) => any> = (...args: Parameters<T>) => Promise<ITSAwaitedReturnType<T>>;
 /**
  * @deprecated
  */
 export type ITSExtendsOf<T, U> = Extract<T, U>;
 export type ITSKeyOfArray<T extends ITSArrayListMaybeReadonly<any>> = Exclude<keyof T, symbol | string>;
-export type ITSValueOfArray<T extends ITSArrayListMaybeReadonly<any>> = T extends (infer U)[] ? U : never;
-export type ITSValueOfRecord<T extends Record<any, any>> = T[keyof T];

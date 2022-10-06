@@ -2,7 +2,7 @@
  * https://stackoverflow.com/a/55479659/4563339
  */
 
-export { ITSKeyIsPartialOfRecord } from './record/partial';
+export type { ITSKeyIsPartialOfRecord } from './record/partial';
 
 /**
  * returns a union of the readonly keys of an Object.

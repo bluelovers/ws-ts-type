@@ -2,7 +2,8 @@
  * Created by user on 2018/11/27/027.
  */
 
-import { ITSUnpackedPromiseLike, ITSUnpacked, ITSBluebirdPromisifyAll } from 'ts-type';
+import { ITSBluebirdPromisifyAll } from '@ts-type/bluebird';
+import { ITSUnpacked, ITSUnpackedPromiseLike } from '@ts-type/unpacked';
 
 export type Example = Promise<boolean>;
 

@@ -4,12 +4,12 @@
 import {
 	ITSIteratorLazy,
 	ITSTypeOfIterator,
-	ITSUnpacked, ITSUnpackedArrayLike,
-	ITSUnpackedReturnType, ITSValueOf, ITSValueOfIterator,
+	ITSValueOf, ITSValueOfIterator,
 	ITSValueOfMap,
 } from '../../index';
 
 import ITSType from '../../index';
+import { ITSUnpacked, ITSUnpackedArrayLike, ITSUnpackedReturnType } from '@ts-type/unpacked';
 
 let m1 = new Map<any, number>();
 
@@ -48,4 +48,3 @@ let v10: ITSIteratorLazy<any>
 
 v8.next().value.toFixed()
 v9.value.toFixed()
-

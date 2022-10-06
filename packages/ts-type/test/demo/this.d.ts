@@ -1,7 +1,8 @@
 /**
  * Created by user on 2018/11/20/020.
  */
-import { ITSOverwriteThisFunction, ITSUnpackedThisFunction } from '../../';
+import { ITSOverwriteThisFunction } from '../../';
+import { ITSUnpackedThisFunction } from '@ts-type/unpacked';
 export declare function t1(this: string, a: number): Promise<number>;
 export declare let t1_this: ITSUnpackedThisFunction<typeof t1>;
 export declare function t2(this: string, a: number): number;
