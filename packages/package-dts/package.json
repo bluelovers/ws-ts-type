@@ -38,7 +38,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git",
+    "directory": "packages/package-dts"
   },
   "license": "ISC",
   "author": "",
@@ -54,6 +55,7 @@
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
     "build": "yarn run update:schema",
     "preversion": "yarn run test",

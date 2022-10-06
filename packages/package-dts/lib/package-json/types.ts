@@ -4,10 +4,10 @@
 import type { ReleaseType as IReleaseType } from 'semver';
 import { EnumPublishConfigRegistry } from './publishConfig';
 import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
-import { ITSValueOfArray, ITSValueOfRecord } from 'ts-type/lib/helper';
+import { ITSValueOf, ITSValueOfArray } from 'ts-type/lib/helper/key-value';
 import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 
-export type IDependency<T extends ITSArrayListMaybeReadonly<string> = string[]> = Record<ITSValueOfArray<T>, IVersionValue>;
+export type IDependency<T extends ITSArrayListMaybeReadonly<string> | string = string[]> = Record<T extends string ? T : T extends ITSArrayListMaybeReadonly<string> ? ITSValueOfArray<T> : never, IVersionValue>;
 
 export type { IDependency as IPackageMap }
 export type { IDependency as IDependencies }
@@ -69,6 +69,6 @@ export interface IPackageJsonPublishConfig
 	[k: string]: any;
 }
 
-export type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOfRecord<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
+export type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOf<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
 
 export type { IReleaseType }

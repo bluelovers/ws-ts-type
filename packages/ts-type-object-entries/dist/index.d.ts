@@ -4,6 +4,9 @@ export declare function tsObjectEntries<T, K extends string = string>(obj: {
 	K,
 	T
 ][];
-export default tsObjectEntries;
+
+export {
+	tsObjectEntries as default,
+};
 
 export {};

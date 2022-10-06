@@ -2,13 +2,14 @@
   "name": "typed-http-headers",
   "version": "1.0.7",
   "description": "typed http headers",
-  "homepage": "https://github.com/bluelovers/ws-ts-type#readme",
+  "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-http-header#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-ts-type/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-ts-type.git"
+    "url": "git+https://github.com/bluelovers/ws-ts-type.git",
+    "directory": "packages/ts-http-header"
   },
   "license": "ISC",
   "author": "",
@@ -16,10 +17,11 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "preversion": "yarn run test",
     "prepublishOnly": "npm run ncu && npm run sort-package-json",
     "postpublish_": "git commit -m \"publish new version\" .",

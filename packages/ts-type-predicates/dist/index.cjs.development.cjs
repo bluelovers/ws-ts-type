@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var assert = require('assert');
 
-function typePredicates(actual, expression = true, message, ignoreExpression) {
+function _handleExpression(actual, expression = true) {
   var _expression;
 
   (_expression = expression) !== null && _expression !== void 0 ? _expression : expression = true;
@@ -13,22 +13,22 @@ function typePredicates(actual, expression = true, message, ignoreExpression) {
     expression = !!expression(actual);
   }
 
+  return expression;
+}
+function typePredicates(actual, expression = true, message, ignoreExpression) {
+  expression = _handleExpression(actual, expression);
+
   if (expression !== true && ignoreExpression !== true) {
     throw new assert.AssertionError({
       message: message !== null && message !== void 0 ? message : `actual ${actual} not as expected`,
       actual,
-      expected: expression
+      expected: expression,
+      operator: 'typePredicates'
     });
   }
 }
 function typeNarrowed(actual, expression = true, message) {
-  var _expression2;
-
-  (_expression2 = expression) !== null && _expression2 !== void 0 ? _expression2 : expression = true;
-
-  if (typeof expression === 'function') {
-    expression = !!expression(actual);
-  }
+  expression = _handleExpression(actual, expression);
 
   if (expression !== true) {
     expression = false;
@@ -37,6 +37,7 @@ function typeNarrowed(actual, expression = true, message) {
   return expression;
 }
 
+exports._handleExpression = _handleExpression;
 exports["default"] = typePredicates;
 exports.typeNarrowed = typeNarrowed;
 exports.typePredicates = typePredicates;

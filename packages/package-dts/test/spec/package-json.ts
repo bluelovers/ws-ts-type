@@ -1,5 +1,7 @@
 
-import IPackageJson from '../../package-json';
+import type { IPackageJson } from '../../package-json';
+import { ITSKnownKeys } from 'ts-type/lib/index';
+import { JSONSchemaForNPMPackageJsonFiles as CoreProperties } from '../../types/package.json';
 
 export function isPackageJsonLike<T extends Record<any, any>>(pkg: Extract<T, IPackageJson>)
 {
@@ -35,11 +37,11 @@ isPackageJsonLike({
 });
 
 isPackageJsonLike({
-	private: 'false'
+	private: 'false' as const
 });
 
 isPackageJsonLike({
-	private: 'true'
+	private: 'true' as const
 });
 
 /*
@@ -66,3 +68,5 @@ let p: IPackageJson = {
 	// allow un-exists key
 	typings2: '',
 }
+
+let k: ITSKnownKeys<CoreProperties>;

@@ -1,20 +1,23 @@
 import { AssertionError as e } from "assert";
 
-function typePredicates(t, a = !0, r, o) {
-  var n;
-  if (null !== (n = a) && void 0 !== n || (a = !0), "function" == typeof a && (a = !!a(t)), 
-  !0 !== a && !0 !== o) throw new e({
-    message: null != r ? r : `actual ${t} not as expected`,
+function _handleExpression(e, t = !0) {
+  var r;
+  return null !== (r = t) && void 0 !== r || (t = !0), "function" == typeof t && (t = !!t(e)), 
+  t;
+}
+
+function typePredicates(t, r = !0, n, a) {
+  if (!0 !== (r = _handleExpression(t, r)) && !0 !== a) throw new e({
+    message: null != n ? n : `actual ${t} not as expected`,
     actual: t,
-    expected: a
+    expected: r,
+    operator: "typePredicates"
   });
 }
 
-function typeNarrowed(e, t = !0, a) {
-  var r;
-  return null !== (r = t) && void 0 !== r || (t = !0), "function" == typeof t && (t = !!t(e)), 
-  !0 !== t && (t = !1), t;
+function typeNarrowed(e, t = !0, r) {
+  return !0 !== (t = _handleExpression(e, t)) && (t = !1), t;
 }
 
-export { typePredicates as default, typeNarrowed, typePredicates };
+export { _handleExpression, typePredicates as default, typeNarrowed, typePredicates };
 //# sourceMappingURL=index.esm.mjs.map

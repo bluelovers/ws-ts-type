@@ -1,3 +1,4 @@
+export declare function _handleExpression<T, P = any>(actual: T | P, expression?: boolean | ((actual: T | P) => any)): boolean;
 /**
  * use asserts for make type predicates work
  *
@@ -6,6 +7,9 @@
  */
 export declare function typePredicates<T, P = any>(actual: T | P, expression?: boolean | ((actual: T | P) => any), message?: string, ignoreExpression?: boolean): asserts actual is T;
 export declare function typeNarrowed<T, P = any>(actual: T | P, expression?: boolean | ((actual: T | P) => any), message?: string): actual is T;
-export default typePredicates;
+
+export {
+	typePredicates as default,
+};
 
 export {};

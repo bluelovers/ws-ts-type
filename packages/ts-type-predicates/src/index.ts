@@ -1,5 +1,17 @@
 import { AssertionError } from 'assert';
 
+export function _handleExpression<T, P = any>(actual: T | P, expression: boolean | ((actual: T | P) => any) = true)
+{
+	expression ??= true;
+
+	if (typeof expression === 'function')
+	{
+		expression = !!expression(actual);
+	}
+
+	return expression
+}
+
 /**
  * use asserts for make type predicates work
  *
@@ -8,12 +20,7 @@ import { AssertionError } from 'assert';
  */
 export function typePredicates<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string, ignoreExpression?: boolean): asserts actual is T
 {
-	expression ??= true;
-
-	if (typeof expression === 'function')
-	{
-		expression = !!expression(actual);
-	}
+	expression = _handleExpression(actual, expression);
 
 	if (expression !== true && ignoreExpression !== true)
 	{
@@ -21,18 +28,14 @@ export function typePredicates<T, P = any>(actual: T | P, expression : boolean |
 			message: message ?? `actual ${actual} not as expected`,
 			actual,
 			expected: expression,
+			operator: 'typePredicates',
 		})
 	}
 }
 
 export function typeNarrowed<T, P = any>(actual: T | P, expression : boolean | ((actual: T | P) => any) = true, message?: string): actual is T
 {
-	expression ??= true;
-
-	if (typeof expression === 'function')
-	{
-		expression = !!expression(actual);
-	}
+	expression = _handleExpression(actual, expression);
 
 	if (expression !== true)
 	{
