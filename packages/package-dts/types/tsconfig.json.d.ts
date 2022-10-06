@@ -446,6 +446,7 @@ export interface CompilerOptions {
         | "ES2018.Regexp"
         | "ES2019"
         | "ES2019.Array"
+        | "ES2019.Intl"
         | "ES2019.Object"
         | "ES2019.String"
         | "ES2019.Symbol"
@@ -525,6 +526,10 @@ export interface CompilerOptions {
       }
   ) &
     string)[];
+  /**
+   * Specify how TypeScript determine a file as module.
+   */
+  moduleDetection?: "auto" | "legacy" | "force";
   /**
    * When type checking, take into account `null` and `undefined`.
    */

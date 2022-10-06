@@ -140,6 +140,7 @@ export type Service =
   | "postgresql"
   | "rabbitmq"
   | "redis"
+  | "redis-server"
   | "rethinkdb"
   | "riak"
   | "xvfb";
