@@ -82,7 +82,8 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^2.1.10"
+    "@types/bluebird": "*",
+    "ts-type": "^3.0.0"
   },
   "devDependencies": {},
   "peerDependencies": {},

@@ -96,7 +96,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^2.1.10"
+    "ts-type": "^3.0.0"
   },
   "packageManager": "yarn@^1.22.11",
   "publishConfig": {

@@ -102,6 +102,7 @@
     "axios": "^1.1.0",
     "bluebird": "^3.7.2",
     "dot-values2": "^2.0.6",
+    "error-stack2": "^2.0.4",
     "fast-glob": "^3.2.12",
     "fs-extra": "^10.1.0",
     "jest-tsd-transform": "^1.0.1",
@@ -115,6 +116,7 @@
     "@bluelovers/tsconfig": "^1.0.31",
     "@types/bluebird": "*",
     "@types/fs-extra": "*",
+    "@types/jest": "^29.1.2",
     "@types/node": "*",
     "@yarn-tool/ws-find-up-paths": "*"
   }

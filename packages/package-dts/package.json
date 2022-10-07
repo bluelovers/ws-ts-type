@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "@types/semver": "^7.3.12",
-    "ts-type": "^2.1.10"
+    "ts-type": "^3.0.0"
   },
   "devDependencies": {},
   "publishConfig": {
