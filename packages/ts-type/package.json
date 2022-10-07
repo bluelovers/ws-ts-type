@@ -56,8 +56,8 @@
     "preversion": "yarn run test && yarn run postpublish:git:commit",
     "prepublishOnly": "echo prepublishOnly",
     "postpublish:git:commit": "git commit -m \"build(release): publish\" ./lib/index.d.ts & echo postpublish:git:commit",
-    "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
     "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck"
   },
   "dependencies": {
@@ -71,6 +71,14 @@
   },
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
   "tsd": {
+    "compilerOptions": {
+      "skipLibCheck": true,
+      "emitDeclarationOnly": true,
+      "noUnusedParameters": false,
+      "allowUnusedLabels": true,
+      "noUnusedLocals": false,
+      "noPropertyAccessFromIndexSignature": false
+    },
     "directory": "test/spec",
     "testFiles": [
       "test/spec/**/*.ts"
