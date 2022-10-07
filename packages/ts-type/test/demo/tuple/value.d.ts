@@ -14,11 +14,11 @@ export declare let v041: ITSValueOfArrayLike<typeof a04>;
 export declare let _: 1;
 declare const _default: {
     v01: number;
-    v02: 1 | 2;
+    v02: 2 | 1;
     v03: never;
     v04: 5 | 6;
     v011: number;
-    v021: 1 | 2;
+    v021: 2 | 1;
     v031: 3 | 4;
     v041: 5 | 6;
 };

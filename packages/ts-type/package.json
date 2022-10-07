@@ -61,13 +61,11 @@
     "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck"
   },
   "dependencies": {
-    "@ts-type/bluebird": "^1.0.0",
     "@ts-type/unpacked": "^1.0.0",
     "tslib": "^2",
     "typedarray-dts": "^1.0.0"
   },
   "peerDependencies": {
-    "@types/bluebird": "*",
     "@types/node": "*",
     "ts-toolbelt": "^9.6.0"
   },
