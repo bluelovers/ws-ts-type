@@ -30,7 +30,6 @@ export type ITSUnpackedPromiseLike<T> =
 export type ITSUnpackedIteratorLike<T extends Iterator<any> | IteratorResult<any>> =
 	T extends Iterator<infer U> ? U :
 		T extends IteratorYieldResult<infer U> ? U :
-			T extends IteratorResult<infer U> ? U :
 				never
 	;
 

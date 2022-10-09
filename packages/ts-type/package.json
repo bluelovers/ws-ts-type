@@ -61,12 +61,11 @@
     "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck"
   },
   "dependencies": {
-    "@ts-type/unpacked": "^1.0.0",
-    "tslib": "^2",
+    "@types/node": "*",
+    "tslib": ">=2",
     "typedarray-dts": "^1.0.0"
   },
   "peerDependencies": {
-    "@types/node": "*",
     "ts-toolbelt": "^9.6.0"
   },
   "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
