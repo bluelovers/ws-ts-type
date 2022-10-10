@@ -5,6 +5,7 @@ import {
 	JSONSchemaForNPMPackageJsonFiles as CoreProperties,
 	PackageExportsEntryObject,
 } from '../../types/package.json';
+import { IPackageJsonExportsEntryObjectRoot } from '../../lib/package-json/exports';
 
 export function isPackageJsonLike<T extends Record<any, any>>(pkg: Extract<T, IPackageJson>)
 {
@@ -76,6 +77,7 @@ let k: ITSKnownKeys<CoreProperties>;
 
 if (typeof p.exports !== 'string' && !Array.isArray(p.exports))
 {
+	let k: keyof IPackageJsonExportsEntryObjectRoot;
 	(p.exports['.'] as PackageExportsEntryObject).default
 }
 
