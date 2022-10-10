@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.10...ts-type@3.0.1) (2022-10-10)
+
+
+### BREAKING CHANGES
+
+* remove `unpacked` , `bluebird`
+* .
+
+
+
+### ✨　Features
+
+* `ITSStringInferToType` ([cbc1788](https://github.com/bluelovers/ws-ts-type/commit/cbc1788d087a320d2dd837c42cd353d3a43a34f3))
+* ITSPickOne ([4f056cd](https://github.com/bluelovers/ws-ts-type/commit/4f056cdf4078ac06adea3c82bd000229714039d2))
+* remove `unpacked` , `bluebird` ([52247d9](https://github.com/bluelovers/ws-ts-type/commit/52247d98ca482f5d0dfe879d3c6d69936dcfa195))
+
+
+### 📦　Code Refactoring
+
+* . ([b656466](https://github.com/bluelovers/ws-ts-type/commit/b656466b216e331293acb9c77b36054cb0bd0c2b))
+
+
+### 🛠　Build System
+
+* update typescript ([eb59d89](https://github.com/bluelovers/ws-ts-type/commit/eb59d897c2888c7a45406ffcad4b9033608b0b66))
+
+
+### 📌　Dependencies
+
+* update deps ([ab5f3e4](https://github.com/bluelovers/ws-ts-type/commit/ab5f3e48da1f10ddd4445ba6dda9a0a68c5f656f))
+
+
+### 🔖　Miscellaneous
+
+* . ([6588a93](https://github.com/bluelovers/ws-ts-type/commit/6588a932156f6e44e746b3ae2452336a04833153))
+* . ([4eddd02](https://github.com/bluelovers/ws-ts-type/commit/4eddd023316693edd41fda4e2c6338bc507775a6))
+
+
+
 ## [2.1.10](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.9...ts-type@2.1.10) (2022-08-10)
 
 

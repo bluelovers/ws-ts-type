@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/bluelovers/ws-ts-type/compare/ts-global-type-extra@1.0.2...ts-global-type-extra@1.0.3) (2022-10-10)
+
+
+
+### 📌　Dependencies
+
+* update deps ([ab5f3e4](https://github.com/bluelovers/ws-ts-type/commit/ab5f3e48da1f10ddd4445ba6dda9a0a68c5f656f))
+
+
+### 🔖　Miscellaneous
+
+* . ([9219017](https://github.com/bluelovers/ws-ts-type/commit/92190178fcf30f881c1d0d36fb141a3394ab3b38))
+
+
+
 ## [1.0.2](https://github.com/bluelovers/ws-ts-type/compare/ts-global-type-extra@1.0.1...ts-global-type-extra@1.0.2) (2021-07-23)
 
 

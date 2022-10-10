@@ -1,6 +1,6 @@
 {
   "name": "ts-type-predicates",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "use asserts for make type predicates work",
   "keywords": [
     ".d.ts",
@@ -82,6 +82,5 @@
     "sort-package-json": "ynpx --quiet yarn-tool -- sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "devDependencies": {},
   "packageManager": "yarn@^1.22.11"
 }

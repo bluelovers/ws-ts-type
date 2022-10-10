@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/bluebird",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     ".d.ts",
@@ -83,10 +83,8 @@
   },
   "dependencies": {
     "@types/bluebird": "*",
-    "ts-type": "^3.0.0"
+    "ts-type": "^3.0.1"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
   "packageManager": "yarn@1.22.19",
   "publishConfig": {
     "access": "public"

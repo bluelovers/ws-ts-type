@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/object-freeze",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "better typescript type for Object.freeze",
   "keywords": [
     ".d.ts",
@@ -98,7 +98,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^3.0.0"
+    "ts-type": "^3.0.1"
   },
   "packageManager": "yarn@^1.22.11",
   "publishConfig": {
