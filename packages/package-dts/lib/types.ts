@@ -1,4 +1,4 @@
 
 export type IBooleanString = "true" | "false"
 
-export type IBranch = string | "master" | "canary"
+export type IBranch = string | "master" | "canary" | "main"

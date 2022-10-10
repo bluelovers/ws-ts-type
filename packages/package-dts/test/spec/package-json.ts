@@ -1,7 +1,10 @@
 
 import type { IPackageJson } from '../../package-json';
 import { ITSKnownKeys } from 'ts-type/lib/index';
-import { JSONSchemaForNPMPackageJsonFiles as CoreProperties } from '../../types/package.json';
+import {
+	JSONSchemaForNPMPackageJsonFiles as CoreProperties,
+	PackageExportsEntryObject,
+} from '../../types/package.json';
 
 export function isPackageJsonLike<T extends Record<any, any>>(pkg: Extract<T, IPackageJson>)
 {
@@ -70,3 +73,10 @@ let p: IPackageJson = {
 }
 
 let k: ITSKnownKeys<CoreProperties>;
+
+if (typeof p.exports !== 'string' && !Array.isArray(p.exports))
+{
+	(p.exports['.'] as PackageExportsEntryObject).default
+}
+
+export let e = p.exports
