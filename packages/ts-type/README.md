@@ -1,16 +1,27 @@
-# README
+# ts-type
 
-    add some typescript type and re-export some build-in typescript type
+**TypeScript 類型工具庫** / **TypeScript Type Utility Library**
+
+提供豐富的 TypeScript 類型操作工具和重新導出的內建類型，支援雙語註解（繁體中文 + 英文）。
+
+Provides rich TypeScript type manipulation utilities and re-exported built-in types with bilingual comments (Traditional Chinese + English).
 
 see [index.d.ts](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/index.d.ts)
 
-## install
+## 安裝 / Installation
 
-```nodemon
+```bash
+# npm
 npm install ts-type
+
+# yarn
+yarn add ts-type
+
+# pnpm
+pnpm add ts-type
 ```
 
-## demo
+## 範例 / Examples
 
 - [demo](https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-type/test/demo)
 - 
@@ -32,6 +43,8 @@ export declare let a2: A2;
 
 ### ITSOverwriteReturnType
 
+覆寫函數返回值類型 / Overwrite function return type
+
 ```ts
 import { ITSOverwriteReturnType } from '..';
 
@@ -43,6 +56,8 @@ declare let c: ITSOverwriteReturnType<typeof f, string>;
 ```
 
 ### Promise / Bluebird / PromiseLike
+
+Promise 相關類型操作 / Promise related type operations
 
 ```nodemon
 npm install @types/bluebird ts-type
@@ -64,7 +79,9 @@ p3(1).then(v => v.toFixed())
 p4(1).then(v => v.toFixed())
 ```
 
-### this
+### this 類型操作 / this Type Operations
+
+操作函數的 this 類型 / Manipulate function's this type
 
 ```ts
 export declare function t1(this: string, a: number): Promise<number>
@@ -110,19 +127,19 @@ t6 = function ()
 }
 ```
 
-## other
+## 其他相關專案 / Related Projects
 
 - [callable-instance2](https://www.npmjs.com/package/callable-instance2) - create an ES6 class that is callable as a function
 - https://github.com/piotrwitek/utility-types
 - 
 
-## docs
+## 文件與教學 / Documentation & Tutorials
 
 - http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-1.html
 - https://www.tslang.cn/docs/release-notes/typescript-3.1.html#toc-whats-new
 - https://www.logicbig.com/tutorials/misc/typescript.html
 
-## links
+## 相關連結 / Related Links
 
 - https://github.com/krzkaczor/ts-essentials
 - https://github.com/millsp/ts-toolbelt
