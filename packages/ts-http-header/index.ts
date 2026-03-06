@@ -37,8 +37,8 @@ export interface IHeaders extends IRequestHeaders, IResponseHeaders
 }
 
 /**
- * 延遲載入的標頭類型（可選鍵值）
- * Lazy loaded headers type (optional key-value)
+ * 載入的標頭類型（可選鍵值）
+ * Loaded headers type (optional key-value)
  *
  * @typeParam T - 標頭鍵名類型 / Header key type
  * @typeParam V - 標頭值類型 / Header value type
