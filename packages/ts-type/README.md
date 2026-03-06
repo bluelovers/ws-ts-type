@@ -127,6 +127,23 @@ t6 = function ()
 }
 ```
 
+## 文檔 / Documentation
+
+詳細的類型工具說明文件請參閱 [docs/](docs/) 目錄。
+
+For detailed type utility documentation, see the [docs/](docs/) directory.
+
+### 分類指南 / Category Guide
+
+- [基礎類型](docs/01-base-types.md) - 基礎類型別名與工具 / Base type aliases and utilities
+- [內建類型](docs/02-built-in-types.md) - 重新導出的內建類型 / Re-exported built-in types
+- [函數類型工具](docs/03-function-types.md) - 函數類型操作 / Function type operations
+- [Promise 類型工具](docs/04-promise-types.md) - Promise 相關類型 / Promise related types
+- [陣列與元組類型](docs/05-array-tuple-types.md) - 陣列與元組操作 / Array and tuple operations
+- [物件與記錄類型](docs/06-object-record-types.md) - 物件類型操作 / Object type operations
+- [字串與數字類型](docs/07-string-number-types.md) - 字串與數字類型操作 / String and number operations
+- [邏輯類型工具](docs/08-logic-types.md) - 類型層級邏輯判斷 / Type-level logic
+
 ## 其他相關專案 / Related Projects
 
 - [callable-instance2](https://www.npmjs.com/package/callable-instance2) - create an ES6 class that is callable as a function
