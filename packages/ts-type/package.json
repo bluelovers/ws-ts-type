@@ -44,9 +44,11 @@
     "test": "test"
   },
   "scripts": {
+    "coverage": "yarn run test -- --coverage",
     "pretest": "yarn run build",
     "test": "yarn run ts:check && yarn run test:tsd",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
     "test:tsd": "tsd",
@@ -58,17 +60,9 @@
     "postpublish:git:commit": "git commit -m \"build(release): publish\" ./lib/index.d.ts & echo postpublish:git:commit",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort",
-    "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck"
+    "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "dependencies": {
-    "@types/node": "*",
-    "tslib": ">=2",
-    "typedarray-dts": "^1.0.0"
-  },
-  "peerDependencies": {
-    "ts-toolbelt": "^9.6.0"
-  },
-  "gitHead": "8733c903bb32e26825606684e3f2e29726775f01",
   "tsd": {
     "compilerOptions": {
       "skipLibCheck": true,
@@ -82,5 +76,14 @@
     "testFiles": [
       "test/spec/**/*.ts"
     ]
-  }
+  },
+  "dependencies": {
+    "@types/node": "*",
+    "tslib": ">=2",
+    "typedarray-dts": "^1.0.0"
+  },
+  "peerDependencies": {
+    "ts-toolbelt": "^9.6.0"
+  },
+  "gitHead": "8733c903bb32e26825606684e3f2e29726775f01"
 }
