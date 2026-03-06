@@ -1,4 +1,7 @@
 /**
+ * 將聯集類型轉換為交集類型
+ * Convert union type to intersection type
+ *
  * @see https://stackoverflow.com/questions/50374908/transform-union-type-to-intersection-type
  * @example
  * type FunctionUnion = (() => void) | ((p: string) => void);

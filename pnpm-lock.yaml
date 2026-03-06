@@ -112,7 +112,11 @@ importers:
         specifier: '*'
         version: 25.3.5
 
-  packages/ts-http-header: {}
+  packages/ts-http-header:
+    dependencies:
+      ts-type:
+        specifier: ^3.0.1
+        version: link:../ts-type
 
   packages/ts-type:
     dependencies:
