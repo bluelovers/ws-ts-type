@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/package-dts",
-  "version": "2.0.8",
+  "version": "3.0.0",
   "private": false,
   "description": "A Typescript type definition for NPM package json",
   "keywords": [
@@ -71,15 +71,15 @@
     "@types/semver": "^7.7.1",
     "ts-type": "^3.0.1"
   },
+  "devDependencies": {
+    "@types/json-schema": "^7.0.15",
+    "json-schema": "^0.4.0"
+  },
   "publishConfig": {
     "access": "public"
   },
   "gitHead": "e23ff28802e9c58b217b630c178f3beffa828c88",
   "sharedDependencies": {
     "eslint-config-bluelovers": "latest"
-  },
-  "devDependencies": {
-    "@types/json-schema": "^7.0.15",
-    "json-schema": "^0.4.0"
   }
 }
