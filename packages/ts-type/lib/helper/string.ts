@@ -29,9 +29,29 @@ export type ITSToStringLiteral<T extends ITSToStringLiteralAllowedType> = `${T}`
  * 
  * T & `${T}`
  * 
+ * 適合用在 enum 或 string literal union，可以接受 enum 的字面量或基底類型
+ * Suitable for enum or string literal union, can accept enum literal or base type
+ * 
  * @example
- * type Str = ITSTypeAndStringLiteral<'hello'>;
- * // type Str = "hello" | string
+ * // 應用於 string literal union
+ * type Status = 'active' | 'inactive' | 'pending';
+ * type IStatus = ITSTypeAndStringLiteral<Status>;
+ * // type IStatus = "active" | "inactive" | "pending" | string
+ * 
+ * @example
+ * // 應用於 enum
+ * enum EnumPackageManager {
+ *   'yarn' = 'yarn',
+ *   'npm' = 'npm',
+ *   'pnpm' = 'pnpm',
+ * }
+ * type IPackageManager = ITSTypeAndStringLiteral<EnumPackageManager>;
+ * // type IPackageManager = EnumPackageManager | string
+ * 
+ * @example
+ * // 應用於 number，可接受數字或數字字串
+ * type INumber = ITSTypeAndStringLiteral<number>;
+ * // type INumber = number | `${number}`
  */
 export type ITSTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType> = T | ITSToStringLiteral<T>
 
@@ -42,8 +62,8 @@ export type ITSTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType> = T
  * S & `${T}`
  * 
  * @example
- * type Str = ITSAndStringLiteral<'hello', string>;
- * // type Str = string | "hello"
+ * type Result = ITSAndStringLiteral<1 | 2 | 3, number>;
+ * // type Result = number | "1" | "2" | "3"
  */
 export type ITSAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = string> = S | ITSToStringLiteral<T>
 
@@ -54,7 +74,7 @@ export type ITSAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = str
  * S & T & `${T}`
  * 
  * @example
- * type Str = ITSAndTypeAndStringLiteral<'hello', string>;
- * // type Str = string | "hello"
+ * type Result = ITSAndTypeAndStringLiteral<1 | 2 | 3, number>;
+ * // type Result = number | "1" | "2" | "3"
  */
 export type ITSAndTypeAndStringLiteral<T extends ITSToStringLiteralAllowedType, S = string> = S | ITSTypeAndStringLiteral<T>
