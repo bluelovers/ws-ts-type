@@ -1,7 +1,7 @@
 {
   "name": "typed-http-headers",
   "version": "1.0.8",
-  "description": "typed http headers",
+  "description": "標準 HTTP 請求與回應標頭的 TypeScript 類型定義 | TypeScript type definitions for standard HTTP request and response headers",
   "homepage": "https://github.com/bluelovers/ws-ts-type/tree/master/packages/ts-http-header#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-ts-type/issues"
@@ -29,6 +29,9 @@
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
+  },
+  "dependencies": {
+    "ts-type": "^3.0.1"
   },
   "gitHead": "3e316335e55b83ce4a7bb55bee75036e489ab6e1"
 }

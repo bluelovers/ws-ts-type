@@ -1,7 +1,7 @@
 {
   "name": "@ts-type/object-freeze",
   "version": "1.0.4",
-  "description": "better typescript type for Object.freeze",
+  "description": "Object.freeze 的類型安全包裝，提供精確的唯讀類型 | Type-safe wrapper for Object.freeze with precise readonly types",
   "keywords": [
     ".d.ts",
     "@types",

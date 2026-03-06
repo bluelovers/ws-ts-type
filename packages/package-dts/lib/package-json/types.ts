@@ -1,4 +1,7 @@
 /**
+ * 套件類型定義
+ * Package type definitions
+ *
  * Created by user on 2020/6/12.
  */
 import type { ReleaseType as IReleaseType } from 'semver';
@@ -7,13 +10,30 @@ import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
 import { ITSValueOf, ITSValueOfArray } from 'ts-type/lib/helper/key-value';
 import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 
+/**
+ * 依賴項類型定義
+ * Dependency type definition
+ *
+ * @typeParam T - 依賴項名稱陣列或字串 / Dependency name array or string
+ */
 export type IDependency<T extends ITSArrayListMaybeReadonly<string> | string = string[]> = Record<T extends string ? T : T extends ITSArrayListMaybeReadonly<string> ? ITSValueOfArray<T> : never, IVersionValue>;
 
 export type { IDependency as IPackageMap }
 export type { IDependency as IDependencies }
 
+/**
+ * 版本號值類型
+ * Version value type
+ *
+ * 支援 semver 版本字串或預定義的特殊值
+ * Supports semver version string or predefined special values
+ */
 export type IVersionValue = ITSTypeAndStringLiteral<EnumVersionValue.latest> | ITSTypeAndStringLiteral<EnumVersionValue2> | string;
 
+/**
+ * Semver 版本發布類型列舉
+ * Semver version release type enumeration
+ */
 export enum EnumVersionValue
 {
 	'major' = 'major',
@@ -23,6 +43,10 @@ export enum EnumVersionValue
 	'newest' = 'newest'
 }
 
+/**
+ * 預發布版本類型常數列舉
+ * Prerelease version type constant enumeration
+ */
 export const enum EnumVersionValue2
 {
 	any = '*',
@@ -42,6 +66,10 @@ export type IPackageJsonDependenciesField =
 	| 'optionalDependencies'
 ;
 
+/**
+ * package.json 依賴欄位名稱陣列常量
+ * package.json dependency field name array constant
+ */
 const packageJsonDependenciesFields = [
 	'dependencies' as const,
 	'devDependencies' as const,
