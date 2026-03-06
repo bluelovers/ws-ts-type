@@ -7,5 +7,5 @@ var EnumPublishConfigRegistry;
     EnumPublishConfigRegistry["npm"] = "https://registry.npmjs.org/";
     EnumPublishConfigRegistry["yarn"] = "https://registry.yarnpkg.com";
     EnumPublishConfigRegistry["taobao"] = "http://registry.npm.taobao.org/";
-})(EnumPublishConfigRegistry = exports.EnumPublishConfigRegistry || (exports.EnumPublishConfigRegistry = {}));
+})(EnumPublishConfigRegistry || (exports.EnumPublishConfigRegistry = EnumPublishConfigRegistry = {}));
 //# sourceMappingURL=publishConfig.js.map

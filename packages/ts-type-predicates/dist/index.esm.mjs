@@ -1,9 +1,7 @@
 import { AssertionError as e } from "assert";
 
 function _handleExpression(e, t = !0) {
-  var r;
-  return null !== (r = t) && void 0 !== r || (t = !0), "function" == typeof t && (t = !!t(e)), 
-  t;
+  return null != t || (t = !0), "function" == typeof t && (t = !!t(e)), t;
 }
 
 function typePredicates(t, r = !0, n, a) {

@@ -2,7 +2,7 @@
  * Created by user on 2019/5/18.
  */
 
-import type { JSONSchemaForNPMPackageJsonFiles2 as CoreProperties } from './types/package.json';
+import type { JSONSchemaForNPMPackageJsonFiles as CoreProperties } from './types/package.json';
 import type { IDependency, IPackageJsonDependenciesField } from './lib/package-json/types';
 import type { ITSOverwrite } from 'ts-type/lib/type/record';
 import { IPackageJsonExtendYarn } from './lib/package-json/yarn';

@@ -58,7 +58,7 @@
   "scripts": {
     "coverage": "yarn run test -- --coverage",
     "lint": "ynpx --quiet eslint -- **/*.ts",
-    "test": "echo \"Error: no test specified\"",
+    "test": "jest --passWithNoTests",
     "test:jest": "ynpx --quiet jest -- --coverage",
     "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
@@ -68,7 +68,7 @@
     "posttest": "yarn run build",
     "build": "yarn run build:tsdx && yarn run build:dts",
     "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner & echo build:dts",
-    "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
+    "build:tsdx": "tsdx build --target node --name index",
     "preversion": "echo preversion && yarn run test",
     "version": "echo version",
     "postversion": "echo postversion",

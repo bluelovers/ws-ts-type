@@ -16,6 +16,8 @@ publicHoistPattern:
   - "ts-node"
   - "tsx"
   - "tslib"
+  - "@ts-type/package-dts"
+  - "@ts-type/object-freeze"
 
 linkWorkspacePackages: true
 saveWorkspaceProtocol: false

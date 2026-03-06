@@ -1,6 +1,6 @@
 import {
-	PackageExportsEntry, PackageExportsEntryObject, PackageExportsFallback,
-	JSONSchemaForNPMPackageJsonFiles2 as CoreProperties, PackageExportsEntryPath,
+	PackageExportsEntryObject, PackageExportsFallback,
+	PackageExportsEntryPath,
 } from '../../types/package.json';
 import { ITSPartialRecord } from 'ts-type/lib/type/record/partial';
 

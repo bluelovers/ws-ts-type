@@ -17,7 +17,7 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
-    "test": "echo \"Error: no test specified\"",
+    "test": "jest --passWithNoTests",
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",

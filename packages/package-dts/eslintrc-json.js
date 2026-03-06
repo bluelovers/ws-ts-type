@@ -9,5 +9,5 @@ var EnumRule;
     EnumRule["off"] = "off";
     EnumRule["warn"] = "warn";
     EnumRule["error"] = "error";
-})(EnumRule = exports.EnumRule || (exports.EnumRule = {}));
+})(EnumRule || (exports.EnumRule = EnumRule = {}));
 //# sourceMappingURL=eslintrc-json.js.map
