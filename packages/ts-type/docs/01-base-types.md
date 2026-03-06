@@ -173,3 +173,46 @@ interface MyArrayLike extends ITSArrayLikeWriteable<string> {
   [n: number]: string;
 }
 ```
+
+---
+
+## 迭代器類型 / Iterator Types
+
+### ITSIterator
+
+**Iterator 類型**
+
+```typescript
+const iterator: ITSIterator<string> = {
+  next() { return { done: false, value: 'test' }; }
+};
+```
+
+---
+
+### ITSIteratorResult
+
+**IteratorResult 類型**
+
+```typescript
+const result: ITSIteratorResult<string> = { done: false, value: 'test' };
+```
+
+---
+
+## Proxy 類型 / Proxy Types
+
+### ITSProxify
+
+**將物件的屬性包裝為 Proxy**
+
+將每個屬性轉換為具有 getter 和 setter 的物件。
+
+```typescript
+interface User { name: string; age: number; }
+type ProxifiedUser = ITSProxify<User>;
+// type ProxifiedUser = {
+//   name: { get(): string; set(v: string): void };
+//   age: { get(): number; set(v: number): void };
+// }
+```

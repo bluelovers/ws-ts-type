@@ -50,6 +50,8 @@ type Test2 = ITSLogicNotAny<string>;
 
 **檢測類型是否為 never**
 
+利用 never 是所有類型的子類型特性來檢測。
+
 ```typescript
 type Test1 = ITSLogicIsNever<never>;
 // type Test1 = true

@@ -22,6 +22,8 @@ ts-type is a TypeScript type utility library that provides rich type manipulatio
 - `ITSBasicPrimitive` - 基本原始類型
 - `ITSTypeFunction` - 類型函數
 - `ITSMapLike` / `ITSSetLike` - 類似 Map/Set 的介面
+- `ITSIterator` / `ITSIteratorResult` - 迭代器類型
+- `ITSProxify` - Proxy 類型
 
 ---
 
@@ -90,6 +92,7 @@ ts-type is a TypeScript type utility library that provides rich type manipulatio
 提供字串和數字類型的操作工具。
 
 - `ITSToStringLiteral` - 轉為字面量類型
+- `ITSTypeAndStringLiteral` - 原始類型與字面量聯合
 - `ITSPascalCase` / `ITSCamelCase` - 大小寫轉換
 - `ITSStringInferToNumber` / `ITSStringInferToBoolean` - 字串推斷類型
 - `ITSNumberString` - 數字轉字串
@@ -104,6 +107,7 @@ ts-type is a TypeScript type utility library that provides rich type manipulatio
 - `ITSLogicNotAny` - 檢測非 any 類型
 - `ITSLogicIsNever` - 檢測 never 類型
 - `ITSLogicIsUnion` - 檢測聯合類型
+- `ITSLogicIsSingleNonUnion` - 檢測單一非聯合類型
 
 ---
 
