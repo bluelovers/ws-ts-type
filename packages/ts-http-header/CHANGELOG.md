@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-ts-type/compare/typed-http-headers@1.0.11...typed-http-headers@1.0.13) (2026-03-07)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([6328603](https://github.com/bluelovers/ws-ts-type/commit/6328603d30d4af3cf84aefa466f566a127adb2cb))
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-ts-type/compare/typed-http-headers@1.0.11...typed-http-headers@1.0.12) (2026-03-07)
 
 **Note:** Version bump only for package typed-http-headers
