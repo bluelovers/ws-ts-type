@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.5...ts-type@3.0.6) (2026-03-07)
+
+
+
+### ✨　Features
+
+* **ts-type:** 添加 ITSGenerator 和 ITSAsyncGenerator 類型定義 ([efea1fc](https://github.com/bluelovers/ws-ts-type/commit/efea1fc54b48baa44231d7076f2d994da8c43701))
+
+
+
 ## [3.0.5](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.3...ts-type@3.0.5) (2026-03-07)
 
 
