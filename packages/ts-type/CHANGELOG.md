@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.1...ts-type@3.0.2) (2026-03-07)
+
+
+
+### 📦　Code Refactoring
+
+* **ts-type:** 移除不必要的建置工具配置與未使用的引入 ([dc65314](https://github.com/bluelovers/ws-ts-type/commit/dc65314333a9a04dfb3dd857d1617ab253dfeadc))
+
+
+### 📚　Documentation
+
+* **ts-type:** 為類型定義檔案新增雙語 JSDoc 註解 ([6969bbc](https://github.com/bluelovers/ws-ts-type/commit/6969bbcaf991b973d7e4687bfac2d8ae9ecc09ab))
+* **ts-type:** add iterator and proxy type documentation ([6d93ce4](https://github.com/bluelovers/ws-ts-type/commit/6d93ce49526c0081108a639c88c7e2c119fe10f4))
+* **ts-type:** add category guide to README ([26f5860](https://github.com/bluelovers/ws-ts-type/commit/26f586006064c55ef9f1fcf543e7f4c4208b39f8))
+* **ts-type:** 為類型定義檔案新增雙語 JSDoc 註解 ([93836f5](https://github.com/bluelovers/ws-ts-type/commit/93836f5e3b7e3efa949a91a52702d454a62b60ab))
+* **ts-type:** 更新 README 与 package.json 文档，增加双语说明 ([81d926d](https://github.com/bluelovers/ws-ts-type/commit/81d926da85ca492b6810fa20a0b574db75f4ece9))
+* **ts-type:** 新增 ts-type 類型工具庫的完整文檔 ([cba3d50](https://github.com/bluelovers/ws-ts-type/commit/cba3d50752dabbb106444bf060f7d00c176014cf))
+* **ts-type:** add bilingual JSDoc comments to helper and type definition files ([e96a0fd](https://github.com/bluelovers/ws-ts-type/commit/e96a0fd66457639e13d61d9a8926a64ca13b7548))
+* **ts-type:** add bilingual JSDoc comments to helper types and test files ([5893036](https://github.com/bluelovers/ws-ts-type/commit/58930369f50f454595241e5573bdcc03dea4654b))
+* **ts-type:** add bilingual JSDoc comments to type definitions ([8b34984](https://github.com/bluelovers/ws-ts-type/commit/8b349843c65ebf4bd3bb428119243129a07a07c8))
+
+
+### 🛠　Build System
+
+* 更新多個套件的 test 指令為 jest ([61ea53b](https://github.com/bluelovers/ws-ts-type/commit/61ea53bf15fc3ed0e216793200604ae5a52079c9))
+
+
+### ♻️　Chores
+
+* migrate from yarn to pnpm and enhance test infrastructure ([8a5daa2](https://github.com/bluelovers/ws-ts-type/commit/8a5daa2f2022eaf025c3349d4fe5dc8971f8c077))
+
+
+
 ## [3.0.1](https://github.com/bluelovers/ws-ts-type/compare/ts-type@2.1.10...ts-type@3.0.1) (2022-10-10)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "ts-type-predicates",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "使用斷言（assert）讓類型斷言（type predicates）運作的實用工具函式 | Use asserts to make type predicates work with better runtime validation",
   "keywords": [
     ".d.ts",

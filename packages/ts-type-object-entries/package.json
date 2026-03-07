@@ -1,6 +1,6 @@
 {
   "name": "ts-type-object-entries",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "為 Object.entries 提供更好的 TypeScript 類型推論 | Better TypeScript types for Object.entries",
   "keywords": [
     ".d.ts",

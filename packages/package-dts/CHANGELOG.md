@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@2.0.8...@ts-type/package-dts@3.0.1) (2026-03-07)
+
+
+### BREAKING CHANGES
+
+* **package-dts:** 版本升級至 3.0.0 並調整 devDependencies 順序
+
+
+
+### 📚　Documentation
+
+* enhance documentation and JSDoc comments across multiple packages ([88ee99b](https://github.com/bluelovers/ws-ts-type/commit/88ee99b3a489645ca53093357cc3523dbe7996e0))
+
+
+### 🛠　Build System
+
+* 更新多個套件的 test 指令為 jest ([61ea53b](https://github.com/bluelovers/ws-ts-type/commit/61ea53bf15fc3ed0e216793200604ae5a52079c9))
+* **package-dts:** 版本升級至 3.0.0 並調整 devDependencies 順序 ([31a51b3](https://github.com/bluelovers/ws-ts-type/commit/31a51b30face1374d039fcb638e79029af0b1ae7))
+* **schema:** update schema ([cce7147](https://github.com/bluelovers/ws-ts-type/commit/cce7147b2d79af2b76063d49e748d74ee8330b93))
+
+
+### ♻️　Chores
+
+* migrate from yarn to pnpm and enhance test infrastructure ([8a5daa2](https://github.com/bluelovers/ws-ts-type/commit/8a5daa2f2022eaf025c3349d4fe5dc8971f8c077))
+
+
+
 ## [2.0.8](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@2.0.7...@ts-type/package-dts@2.0.8) (2022-10-10)
 
 
