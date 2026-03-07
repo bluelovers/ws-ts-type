@@ -32,6 +32,7 @@ export * from './logic/record/empty';
 export * from './logic/union/index';
 export * from './type/base';
 export * from './type/decorators';
+export * from './type/generator';
 export * from './type/iterator';
 export * from './type/promise';
 export * from './type/proxy';
