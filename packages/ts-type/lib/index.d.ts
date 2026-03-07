@@ -1,6 +1,8 @@
 export * from './generic';
 export * from './helper';
 export * from './helper/array/readonly';
+export * from './helper/conditional';
+export * from './helper/deep-map';
 export * from './helper/filter';
 export * from './helper/infer';
 export * from './helper/intersection';
@@ -19,6 +21,7 @@ export * from './helper/record/pick-type';
 export * from './helper/string';
 export * from './helper/string/infer';
 export * from './helper/string/literal-string';
+export * from './helper/string/operations';
 export * from './helper/tuple';
 export * from './helper/typeof';
 export * from './internal/filter';
