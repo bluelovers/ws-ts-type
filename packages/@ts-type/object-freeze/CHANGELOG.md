@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/object-freeze@1.0.9...@ts-type/object-freeze@1.0.10) (2026-03-07)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([9761de3](https://github.com/bluelovers/ws-ts-type/commit/9761de3806528e767efcfa3abd48a4ff1bac54c2))
+
+
+
 ## [1.0.9](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/object-freeze@1.0.7...@ts-type/object-freeze@1.0.9) (2026-03-07)
 
 
