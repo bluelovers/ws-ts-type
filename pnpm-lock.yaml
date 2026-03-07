@@ -76,25 +76,25 @@ importers:
         specifier: '*'
         version: 3.5.42
       ts-type:
-        specifier: ^3.0.3
+        specifier: ^3.0.5
         version: link:../../ts-type
 
   packages/@ts-type/is-array:
     dependencies:
       ts-type:
-        specifier: ^3.0.3
+        specifier: ^3.0.5
         version: link:../../ts-type
 
   packages/@ts-type/object-freeze:
     dependencies:
       ts-type:
-        specifier: ^3.0.3
+        specifier: ^3.0.5
         version: link:../../ts-type
 
   packages/@ts-type/unpacked:
     dependencies:
       ts-type:
-        specifier: ^3.0.3
+        specifier: ^3.0.5
         version: link:../../ts-type
 
   packages/package-dts:
@@ -103,7 +103,7 @@ importers:
         specifier: ^7.7.1
         version: 7.7.1
       ts-type:
-        specifier: ^3.0.3
+        specifier: ^3.0.5
         version: link:../ts-type
     devDependencies:
       '@types/json-schema':
@@ -122,7 +122,7 @@ importers:
   packages/ts-http-header:
     dependencies:
       ts-type:
-        specifier: ^3.0.3
+        specifier: ^3.0.5
         version: link:../ts-type
 
   packages/ts-type:
