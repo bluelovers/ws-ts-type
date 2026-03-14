@@ -5,6 +5,11 @@
   "keywords": [
     ".d.ts",
     "@types",
+    "array",
+    "array-isarray",
+    "assert",
+    "asserts",
+    "assertion-function",
     "declaration",
     "dev",
     "develop",
@@ -12,18 +17,24 @@
     "environment",
     "ide",
     "interface",
+    "is-array",
     "node",
     "playground",
+    "readonly-array",
     "runtime",
     "ts",
     "type",
+    "type-assertion",
     "type-level",
+    "type-narrowing",
+    "type-predicates",
     "typelevel",
     "types",
     "typescript",
     "typing",
     "typings",
     "type-helprt",
+    "writable-array",
     "toolbox",
     "toolbelt",
     "create-by-yarn-tool",
@@ -102,5 +113,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "fa1d461d70669aad17f322801a5fde844b2e0c73"
+  "gitHead": "fa1d461d70669aad17f322801a5fde844b2e0c73",
+  "devDependencies": {
+    "@types/node": "^25.5.0"
+  }
 }

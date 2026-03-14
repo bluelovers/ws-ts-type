@@ -1,6 +1,6 @@
 # `asserts` 斷言函式 (Assertion Functions)
 
-> **版本：** TypeScript 3.7  
+> **版本：** TypeScript 3.7
 > **官方文件：** [Assertion Functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions)
 
 `asserts` 是 TypeScript 3.7 引入的關鍵字，用於定義「斷言函式」（Assertion Functions）。這種函式可以明確告訴 TypeScript 執行某個檢查後，類型將被縮小到特定範圍。
@@ -191,7 +191,7 @@ function process(data: Mixed) {
         console.log(data.value.toUpperCase()); // 錯誤
     }
 
-    // ✅ 使用 typePredicates 強制收窄 - 更精簡的寫法
+    // ✅ 使用 typePredicates 強制收窄 - 更精簡的寫法 (需要配合使用 @ts-ignore 註釋)
     if (typePredicates<string>(data.value, data.type === 'a')) {
         // data.value 現在正確收窄為 string
         console.log(data.value.toUpperCase()); // 正確

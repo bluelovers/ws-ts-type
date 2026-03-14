@@ -81,7 +81,7 @@ function process(data: Mixed) {
         console.log(data.value.toUpperCase()); // 錯誤
     }
 
-    // ✅ 使用 typePredicates 強制收窄 - 更精簡的寫法
+    // ✅ 使用 typePredicates 強制收窄 - 更精簡的寫法 (需要配合使用 @ts-ignore 註釋)
     if (typePredicates<string>(data.value, data.type === 'a')) {
         // data.value 現在正確收窄為 string
         console.log(data.value.toUpperCase()); // 正確

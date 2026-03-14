@@ -33,7 +33,7 @@ export function _handleExpression<T, P = any>(actual: T | P, expression: boolean
  * @param message - 自訂錯誤訊息（可選）/ Custom error message (optional)
  * @param ignoreExpression - 是否忽略表達式結果，設為 true 時只做類型收窄不拋出錯誤（可選）/ Whether to ignore expression result (optional)
  * @throws 當表達式結果為 false 時拋出 AssertionError / Throws AssertionError when expression is false
- * 
+ *
  * @see https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions
  *
@@ -46,7 +46,7 @@ export function _handleExpression<T, P = any>(actual: T | P, expression: boolean
  * typePredicates<string>(value);
  *
  * @example
- * // 使用於 if 條件中 - 強制類型收窄
+ * // 使用於 if 條件中 - 強制類型收窄 (需要配合使用 @ts-ignore 註釋)
  * if (typePredicates<string>(data.value, data.type === 'a')) {
  *     // data.value 現在正確收窄為 string
  *     console.log(data.value.toUpperCase());
@@ -69,6 +69,9 @@ export function typePredicates<T, P = any>(actual: T | P, expression : boolean |
 			operator: 'typePredicates',
 		})
 	}
+
+	// @ts-ignore
+	return expression
 }
 
 /**
