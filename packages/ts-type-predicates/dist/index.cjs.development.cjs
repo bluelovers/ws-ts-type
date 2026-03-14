@@ -5,11 +5,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var assert = require('assert');
 
 /**
- * 處理錶達式，回傳布林值結果
+ * 處理表達式，回傳布林值結果
  * Handle expression and return boolean result
  *
  * @param actual - 實際值 / Actual value
- * @param expression - 錶達式，可為布林值或函式 / Expression, can be boolean or function
+ * @param expression - 表達式，可為布林值或函式 / Expression, can be boolean or function
  * @returns 布林值結果 / Boolean result
  */
 function _handleExpression(actual, expression = true) {
@@ -29,8 +29,8 @@ function _handleExpression(actual, expression = true) {
  * @param actual - 實際值 / Actual value
  * @param expression - 斷言條件，可為布林值或函式 / Assertion condition, can be boolean or function
  * @param message - 自訂錯誤訊息（可選）/ Custom error message (optional)
- * @param ignoreExpression - 是否忽略錶達式結果（可選）/ Whether to ignore expression result (optional)
- * @throws 當錶達式結果為 false 時拋出 AssertionError / Throws AssertionError when expression is false
+ * @param ignoreExpression - 是否忽略表達式結果（可選）/ Whether to ignore expression result (optional)
+ * @throws 當表達式結果為 false 時拋出 AssertionError / Throws AssertionError when expression is false
  * @see https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions
  */

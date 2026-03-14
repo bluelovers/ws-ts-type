@@ -12,9 +12,17 @@
 在 `asserts` 出現之前，類型斷言（Type Predicates）只能回傳 `boolean`：
 
 ```typescript
-// ❌ 問題：只能回傳 boolean，無法在失敗時拋出錯誤
+// 回傳 boolean 的類型斷言
 function isString(value: unknown): boolean {
     return typeof value === "string";
+}
+
+// 也可以選擇拋出錯誤
+function isStringStrict(value: unknown): boolean {
+    if (typeof value !== "string") {
+        throw new Error("Not a string"); // 類型斷言也可以拋出錯誤
+    }
+    return true;
 }
 
 function process(value: unknown) {
@@ -22,7 +30,7 @@ function process(value: unknown) {
         // TypeScript 知道 value 是 string
         console.log(value.toUpperCase());
     }
-    // 但如果檢查失敗，沒有明確的錯誤處理
+    // 需要手動處理檢查失敗的情況
 }
 ```
 
@@ -135,25 +143,67 @@ function processData(data: unknown) {
 
 ### B. 條件斷言（使用第三方庫）
 
-[`ts-type-predicates`](packages/ts-type-predicates/src/index.ts) 提供了更實用的斷言函式：
+[`ts-type-predicates`](packages/ts-type-predicates/src/index.ts) 提供了更靈活的斷言函式，這是一種「非標準」的 `asserts` 用法：
 
 ```typescript
 import { typePredicates, typeNarrowed } from 'ts-type-predicates';
 
-// 使用斷言函式 - 失敗時拋出錯誤
+// 方式一：使用斷言函式 - 失敗時拋出錯誤
 function processValue(value: string | number) {
     typePredicates<string>(value, typeof value === 'string');
     // 現在 TypeScript 知道 value 是 string
     console.log(value.toUpperCase());
 }
 
-// 使用類型收窄 - 失敗時回傳 false
+// 方式二：單純用於類型收窄 - 不拋出錯誤，只做類型 narrowing
+function narrowValue(value: unknown) {
+    // 這個用法只用來強制 TypeScript 收窄類型，不會拋出錯誤
+    typePredicates<string>(value, typeof value === 'string', undefined, true);
+    // value 現在被收窄為 string（但運行時不驗證）
+    console.log(value.toUpperCase());
+}
+
+// 方式三：使用 typeNarrowed - 回傳布林值
 function checkValue(value: unknown) {
     if (typeNarrowed<string>(value, typeof value === 'string')) {
         console.log(value.length);
     }
 }
 ```
+
+### C. 使用 typePredicates 強化替代 Narrowing
+
+在某些情況下，標準的 Narrowing 無法將類型正確收窄。這時可以使用 `typePredicates` 來強制類型收窄：
+
+```typescript
+import { typePredicates } from 'ts-type-predicates';
+
+// 參數除了第一個以外都能省略
+typePredicates<string>(value);
+
+// 範例： Narrowing 無法處理的情況
+type Mixed = { type: 'a'; value: string } | { type: 'b'; value: number };
+
+function process(data: Mixed) {
+    // ❌ Narrowing 無法正確收窄 value 的類型
+    if (data.type === 'a') {
+        // data.value 仍然是 string | number，無法確定是 string
+        console.log(data.value.toUpperCase()); // 錯誤
+    }
+
+    // ✅ 使用 typePredicates 強制收窄 - 更精簡的寫法
+    if (typePredicates<string>(data.value, data.type === 'a')) {
+        // data.value 現在正確收窄為 string
+        console.log(data.value.toUpperCase()); // 正確
+    }
+}
+```
+
+**非標準用法的特點：**
+- `typePredicates` 除了第一個參數（要驗證的值）以外，其他參數都能省略
+- `typePredicates` 的第四個參數 `ignoreExpression` 設為 `true` 時，只做類型收窄，不會拋出錯誤
+- 這種用法適合「確定運行時資料正確，但需要幫助 TypeScript 理解類型」的場景
+- 當 Narrowing 無法正確收窄類型時，可以用 `typePredicates` 強制收窄
 
 ### C. 驗證函式參數
 
