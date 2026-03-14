@@ -65,6 +65,8 @@
     "build:all": "yarn-tool ws run build --concurrency 1",
     "build:since": "yarn run build:all -- --since",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
+    "ci:install:pnpm": "pnpm install --frozen-lockfile && pnpm add --workspace yarn-tool lerna ynpx pnpm typescript ts-node tsx ts-jest jest @bluelovers/jest-config @bluelovers/tsconfig @yarn-tool/require-resolve",
+    "ci:install:yarn": "yarn install --frozen-lockfile && yarn add -W yarn-tool lerna ynpx pnpm typescript ts-node tsx ts-jest jest @bluelovers/jest-config @bluelovers/tsconfig @yarn-tool/require-resolve",
     "ci:build": "echo ci:build",
     "lerna:publish": "node --run prepublishOnly:root && lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "node --run prepublishOnly:root && lerna publish --yes --bump patch && yarn run postpublishOnly",
@@ -122,7 +124,7 @@
     "@types/fs-extra": "*",
     "@types/jest": "^30.0.0",
     "@types/node": "*",
-    "@yarn-tool/require-resolve": "^4.0.2",
+    "@yarn-tool/require-resolve": "^4.0.6",
     "@yarn-tool/ws-find-up-paths": "*"
   }
 }

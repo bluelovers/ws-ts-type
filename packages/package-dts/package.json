@@ -55,7 +55,7 @@
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
-    "test:snapshot": "yarn run test -- -u",
+    "test:snapshot": "yarn run test",
     "test:tsd": "ynpx tsd",
     "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
     "build": "yarn run update:schema",

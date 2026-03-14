@@ -16,6 +16,7 @@ function isArrayPredicates(a, e) {
     expected: t,
     operator: "fail"
   });
+  return t;
 }
 
 export { isArray as default, isArray, isArray as isArrayNarrowed, isArrayPredicates, typePredicatesAsReadonlyArray, typePredicatesAsWriteableArray };

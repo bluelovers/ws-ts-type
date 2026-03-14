@@ -13,6 +13,7 @@
       expected: a,
       operator: "fail"
     });
+    return a;
   }, e.typePredicatesAsReadonlyArray = function typePredicatesAsReadonlyArray(e) {}, 
   e.typePredicatesAsWriteableArray = function typePredicatesAsWriteableArray(e) {}, 
   Object.defineProperty(e, "__esModule", {

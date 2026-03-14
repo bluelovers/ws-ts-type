@@ -11,14 +11,15 @@ function isArray(r) {
 }
 
 exports.default = isArray, exports.isArray = isArray, exports.isArrayNarrowed = isArray, 
-exports.isArrayPredicates = function isArrayPredicates(e, a) {
-  const t = Array.isArray(e);
-  if (!t) throw new r.AssertionError({
-    message: null != a ? a : `actual ${e} not as expected`,
+exports.isArrayPredicates = function isArrayPredicates(e, t) {
+  const a = Array.isArray(e);
+  if (!a) throw new r.AssertionError({
+    message: null != t ? t : `actual ${e} not as expected`,
     actual: e,
-    expected: t,
+    expected: a,
     operator: "fail"
   });
+  return a;
 }, exports.typePredicatesAsReadonlyArray = function typePredicatesAsReadonlyArray(r) {}, 
 exports.typePredicatesAsWriteableArray = function typePredicatesAsWriteableArray(r) {};
 //# sourceMappingURL=index.cjs.production.min.cjs.map

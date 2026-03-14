@@ -11,6 +11,7 @@ function typePredicates(t, r = !0, n, a) {
     expected: r,
     operator: "typePredicates"
   });
+  return r;
 }
 
 function typeNarrowed(e, t = !0, r) {

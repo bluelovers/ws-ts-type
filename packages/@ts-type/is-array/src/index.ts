@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
 import { AssertionError } from 'assert';
 import { ITSToReadonlyArray, ITSToWriteableArray } from 'ts-type/lib/helper/array/readonly';
