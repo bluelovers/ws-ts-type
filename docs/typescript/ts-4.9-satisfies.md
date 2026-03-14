@@ -111,6 +111,39 @@ config.server.port;      // 類型為 8080
 config.database.enabled; // 類型為 true
 ```
 
+### E. 結合 `as const` 與 `satisfies`
+
+`as const` 可以與 `satisfies` 結合使用，以獲得更精確的類型推論。這種組合特別適合定義需要同時保留字面量類型和驗證介面相容性的常數。
+
+**範例：**
+
+```typescript
+type ActionType = "increment" | "decrement" | "reset";
+type Action = {
+    type: ActionType;
+    payload?: number;
+};
+
+const actions = {
+    increment: { type: "increment" },
+    decrement: { type: "decrement", payload: 1 },
+    reset: { type: "reset" },
+} as const satisfies Record<string, Action>;
+
+// ✅ actions 的類型保持完整的字面量精確性
+// 而非被寬化為 Record<string, Action>
+const incrementAction = actions.increment;
+// incrementAction 的類型為 { readonly type: "increment" }
+
+// ✅ 同時確保符合 Action 介面
+// 如果有錯誤的屬性會被捕捉到
+const invalidActions = {
+    badAction: { type: "invalid", payload: "not a number" } // ❌ 編譯錯誤
+} as const satisfies Record<string, Action>;
+```
+
+* **幫助了什麼：** 結合了 `as const` 的字面量保留與 `satisfies` 的介面驗證，提供了最精確的類型推論同時確保類型安全。
+
 ---
 
 ## 3. satisfies vs 其他方式的比較
