@@ -30,8 +30,8 @@ export declare let b1: {
 export declare let a2: AA2;
 export declare let b2: {
     a: number;
-    c: number;
     d: number;
+    c: number;
     f: number;
 };
 export declare let a3: AA3;

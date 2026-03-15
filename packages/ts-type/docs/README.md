@@ -111,6 +111,17 @@ ts-type is a TypeScript type utility library that provides rich type manipulatio
 
 ---
 
+### 9. [相同邏輯的不同實現 / Different Implementations of Same Logic](10-same-logic-diff-impl.md)
+
+記錄功能相似但實現方式不同的類型，幫助選擇適合的類型。
+
+- 互斥鍵: `ITSPickOne` vs `ITSRequireOnlyOne`
+- 唯讀操作: 類型級別 vs 記錄級別
+- 空類型: 記錄 vs 元組
+- 列舉操作: 類型定義 vs 操作工具
+
+---
+
 ## 快速開始 / Quick Start
 
 ### 安裝 / Installation

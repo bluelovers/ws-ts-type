@@ -1,6 +1,14 @@
 /**
  * 類型函數：返回指定類型的函數
  * Type function: a function that returns the specified type
+ *
+ * @example
+ * type StringFunc = ITSTypeFunction<string>;
+ * // type StringFunc = (...args: any[]) => string
+ *
+ * @example
+ * type NumberFunc = ITSTypeFunction<number>;
+ * // type NumberFunc = (...args: any[]) => number
  */
 export type ITSTypeFunction<T> = (...args: any[]) => T;
 /**

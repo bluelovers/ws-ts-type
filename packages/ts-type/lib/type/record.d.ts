@@ -198,10 +198,13 @@ export type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Ke
  * Ensure the object can only have exactly one of the specified key sets (mutually exclusive)
  *
  * @see https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
+ * @see {@link ITSPickOne} 另一種實現方式，使用 `void` 作為其餘鍵的類型
  *
  * @example
  * interface User { name?: string; age?: number; }
- * type OnlyOne = ITSRequireOnlyOne<User, 'name' | 'age'>;
+ * type OnlyOne1 = ITSRequireOnlyOne<User, 'name' | 'age'>;
+ * // 輸出結果：
+ * // type OnlyOne1 = { name: string; age?: never; } | { age: number; name?: never; }
  * // 只能提供 name 或 age 其中一個，不能同時提供
  */
 export type ITSRequireOnlyOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
