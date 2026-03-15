@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.7](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.6...@ts-type/package-dts@3.0.7) (2026-03-15)
+
+
+
+### 🛠　Build System
+
+* 優化類型定義輸出流程並移除 snapshot 更新標誌 ([5b9aeca](https://github.com/bluelovers/ws-ts-type/commit/5b9aeca2434e581f818d8872ffde43236f203e57))
+
+
+
 ## [3.0.6](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.5...@ts-type/package-dts@3.0.6) (2026-03-07)
 
 

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.12...@ts-type/is-array@1.0.13) (2026-03-15)
+
+
+
+### ✨　Features
+
+* **is-array:** 新增唯讀陣列類型斷言支援及完善文檔說明 ([4f0d97d](https://github.com/bluelovers/ws-ts-type/commit/4f0d97d86c93c5a82a66712695fa69cd5a78344a))
+
+
+### 🛠　Build System
+
+* 優化類型定義輸出流程並移除 snapshot 更新標誌 ([5b9aeca](https://github.com/bluelovers/ws-ts-type/commit/5b9aeca2434e581f818d8872ffde43236f203e57))
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.11...@ts-type/is-array@1.0.12) (2026-03-07)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/is-array",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "增強的陣列類型斷言與驗證工具 | Enhanced array type predicates and validation utilities",
   "keywords": [
     ".d.ts",
@@ -108,7 +108,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^3.0.8"
+    "ts-type": "^3.0.10"
   },
   "devDependencies": {
     "@types/node": "^25.5.0"

@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/unpacked",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "類型解包裝工具，從複雜類型中提取內部類型 | Type unpacking utilities to extract inner types from complex types",
   "keywords": [
     ".d.ts",
@@ -83,7 +83,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^3.0.8"
+    "ts-type": "^3.0.10"
   },
   "publishConfig": {
     "access": "public"

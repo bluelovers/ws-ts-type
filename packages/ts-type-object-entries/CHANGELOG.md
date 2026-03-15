@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/bluelovers/ws-ts-type/compare/ts-type-object-entries@1.0.8...ts-type-object-entries@1.0.10) (2026-03-15)
+
+
+
+### 📚　Documentation
+
+* **typescript:** add TypeScript feature documentation and type issue guides ([a394147](https://github.com/bluelovers/ws-ts-type/commit/a394147dcb4bdf23041e40e81c4c70c2c1fccd50))
+
+
+### 🔖　Miscellaneous
+
+* . ([43bb6af](https://github.com/bluelovers/ws-ts-type/commit/43bb6afdf390a090c87bdb872e5b6f9fd9932669))
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-ts-type/compare/ts-type-object-entries@1.0.7...ts-type-object-entries@1.0.8) (2026-03-07)
 
 
