@@ -260,8 +260,3 @@
 
 - [WebStorm CLI 文檔](./webstorm-cli.md)
 - [WebStorm MCP 文檔](./webstorm-mcp.md)
-
----
-
-*本文檔由 AI 助手自動生成*
-*生成日期: 2026-03-28*

@@ -405,7 +405,7 @@ webstorm_open_file_in_editor
 ### 狀態說明
 
 - **`webstorm` (SSE)**: 正常運作，建議使用
-- **`webstorm-stream` (Stream)**: 存在 session 問題，無法正常使用
+- **`webstorm-stream` (Stream)**: 存在 session 問題，有時無法正常使用
 
 ---
 
