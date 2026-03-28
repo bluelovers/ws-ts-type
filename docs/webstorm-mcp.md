@@ -1,6 +1,6 @@
 # WebStorm MCP (Model Context Protocol) 文檔
 
-## 1. 協議概述
+## 協議概述
 
 | 項目 | 說明 |
 |------|------|
@@ -10,39 +10,45 @@
 
 ---
 
-## 2. 協議類型與網址
+## 協議配置與 MCP 設定
 
-### 協議類型
-- **MCP (Model Context Protocol)**: 一個用於 AI 助手與 IDE 之間溝通的標準協議
+### 設定檔位置
 
-### 協議配置
+| 檔案類型 | 優先順序 | 檔案路徑 |
+|----------|----------|----------|
+| **jsonc** | ⭐ 最高（推薦）| `~\.config\opencode\opencode.jsonc` |
+| json | 第二 | `~\.config\opencode\opencode.json` |
 
-#### webstorm (SSE 協議)
-| 項目 | 值 |
-|------|-----|
-| 類型 (type) | `remote` |
-| URL | `http://127.0.0.1:64342/sse` |
-| Headers | `Accept: application/json, text/event-stream` |
-| 啟用狀態 | ✅ enabled |
+> **⚠️ 警告**：如果 `opencode.jsonc` 和 `opencode.json` 同時存在，OpenCode 將只讀取 `opencode.jsonc`，並**忽略** `opencode.json`。這可能導致預期外的行為，請確保只保留一個設定檔。
 
-#### webstorm-stream (Stream 協議)
-| 項目 | 值 |
-|------|-----|
-| 類型 (type) | `remote` |
-| URL | `http://127.0.0.1:64342/stream` |
-| 啟用狀態 | ✅ enabled |
+### 協議類型與網址
 
----
+| 協議名稱 | 完整名稱 | URL | 狀態 |
+|----------|----------|-----|------|
+| `webstorm` | **SSE** (Server-Sent Events) | `http://127.0.0.1:64342/sse` | ⚠️ 已廢棄 |
+| `webstorm-stream` | **Streamable HTTP** | `http://127.0.0.1:64342/stream` | ✅ 推薦 |
 
-## 3. MCP 設定
+#### 狀態說明
 
-### 3.1 設定檔位置
+- **`webstorm` (SSE)**: 正常運作，但已廢棄
+- **`webstorm-stream` (Stream)**: 存在 session 問題，有時無法正常使用
 
-```
-C:\Users\User\.config\opencode\opencode.jsonc
-```
+#### SSE vs Streamable HTTP 比較
 
-### 3.2 完整 MCP 配置內容
+| 特性 | SSE (Server-Sent Events) | Streamable HTTP |
+|------|--------------------------|-----------------|
+| **完整名稱** | Server-Sent Events | Streamable HTTP |
+| **MCP 版本** | 2024-11-05 (已廢棄) | 2025-03-26 (現為標準) |
+| **客戶端 → 伺服器** | HTTP POST | HTTP POST |
+| **伺服器 → 客戶端** | SSE 單向串流 | SSE 雙向串流 / 單次回應 |
+| **會話管理** | 需額外處理 | 內建會話 ID |
+| **連線穩定性** | 連線中斷需重新開始 | 支援斷線恢復 (Resumable) |
+| **多路復用** | 不支援 | 支援多客戶端連線 |
+| **單一端點** | 需要分開的 POST 和 GET 端點 | 單一 MCP 端點 |
+
+> **注意**：MCP (Model Context Protocol) 是一個用於 AI 助手與 IDE 之間溝通的標準協議。根據 [MCP 官方規範](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports)，SSE 傳輸已於 2025-03-26 被 Streamable HTTP 取代。
+
+### 完整 MCP 配置內容
 
 ```jsonc
 {
@@ -50,33 +56,24 @@ C:\Users\User\.config\opencode\opencode.jsonc
     "webstorm": {
       "enabled": true,
       "type": "remote",
-      "url": "http://127.0.0.1:64342/sse",
-      "headers": {
-        "Accept": "application/json, text/event-stream"
-      }
+      "url": "http://127.0.0.1:64342/sse"
     },
     "webstorm-stream": {
+      "enabled": true,
       "type": "remote",
-      "url": "http://127.0.0.1:64342/stream",
-      "enabled": true
+      "url": "http://127.0.0.1:64342/stream"
     }
   }
 }
 ```
 
-### 3.3 環境變數
-| 變數名稱 | 說明 | 預設值 |
-|----------|------|--------|
-| `IDE_URL` | JetBrains IDE 的 URL | `http://localhost:6332` |
-| `IDE_TOKEN` | IDE 認證 Token | - |
-
 ---
 
-## 4. MCP 指令列表
+## MCP 指令列表
 
-### 4.1 檔案操作 (6 個)
+### 檔案操作 (6 個)
 
-#### 4.1.1 webstorm_open_file_in_editor
+#### webstorm_open_file_in_editor
 在編輯器中開啟檔案
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -84,7 +81,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `filePath` | string | 是 | 檔案路徑（相對於專案根目錄） |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.1.2 webstorm_create_new_file
+#### webstorm_create_new_file
 建立新檔案
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -94,7 +91,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `overwrite` | boolean | 否 | 是否覆寫已存在的檔案 |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.1.3 webstorm_read_file
+#### webstorm_read_file
 讀取檔案內容
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -114,7 +111,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `include_header` | boolean | 否 | 包含標頭註解 |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.1.4 webstorm_get_file_text_by_path
+#### webstorm_get_file_text_by_path
 取得檔案文字內容
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -124,7 +121,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `maxLinesCount` | number | 否 | 最大行數 |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.1.5 webstorm_replace_text_in_file
+#### webstorm_replace_text_in_file
 替換檔案中的文字
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -137,7 +134,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `regex` | boolean | 否 | 是否使用正規表達式（預設：false） |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.1.6 webstorm_reformat_file
+#### webstorm_reformat_file
 格式化檔案
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -147,9 +144,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-### 4.2 檔案搜尋 (7 個)
+### 檔案搜尋 (7 個)
 
-#### 4.2.1 webstorm_search_file
+#### webstorm_search_file
 使用 glob 模式搜尋檔案
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -230,9 +227,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-### 4.3 目錄與專案 (5 個)
+### 目錄與專案 (5 個)
 
-#### 4.3.1 webstorm_list_directory_tree
+#### webstorm_list_directory_tree
 列出目錄樹結構
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -242,28 +239,28 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `timeout` | number | 否 | 逾時時間（毫秒） |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.3.2 webstorm_get_all_open_file_paths
+#### webstorm_get_all_open_file_paths
 取得所有已開啟的檔案路徑
 
 | 參數 | 類型 | 必填 | 說明 |
 |------|------|------|------|
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.3.3 webstorm_get_project_dependencies
+#### webstorm_get_project_dependencies
 取得專案依賴
 
 | 參數 | 類型 | 必填 | 說明 |
 |------|------|------|------|
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.3.4 webstorm_get_project_modules
+#### webstorm_get_project_modules
 取得專案模組
 
 | 參數 | 類型 | 必填 | 說明 |
 |------|------|------|------|
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.3.5 webstorm_get_repositories
+#### webstorm_get_repositories
 取得 VCS 儲存庫清單
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -272,9 +269,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-### 4.4 程式碼分析 (3 個)
+### 程式碼分析 (3 個)
 
-#### 4.4.1 webstorm_get_file_problems
+#### webstorm_get_file_problems
 取得檔案問題（錯誤、警告）
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -284,7 +281,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `timeout` | number | 否 | 逾時時間（毫秒） |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.4.2 webstorm_get_symbol_info
+#### webstorm_get_symbol_info
 取得符號資訊
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -294,7 +291,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `column` | number | 是 | 欄位號（1-indexed） |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.4.3 webstorm_build_project
+#### webstorm_build_project
 建置專案
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -306,9 +303,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-### 4.5 程式碼重構 (1 個)
+### 程式碼重構 (1 個)
 
-#### 4.5.1 webstorm_rename_refactoring
+#### webstorm_rename_refactoring
 重新命名重構
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -320,9 +317,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-### 4.6 執行與終端 (3 個)
+### 執行與終端 (3 個)
 
-#### 4.6.1 webstorm_execute_run_configuration
+#### webstorm_execute_run_configuration
 執行執行配置
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -333,14 +330,14 @@ C:\Users\User\.config\opencode\opencode.jsonc
 | `truncateMode` | string | 否 | 截斷模式：`START` / `MIDDLE` / `END` / `NONE` |
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.6.2 webstorm_get_run_configurations
+#### webstorm_get_run_configurations
 取得執行配置清單
 
 | 參數 | 類型 | 必填 | 說明 |
 |------|------|------|------|
 | `projectPath` | string | 否 | 專案路徑 |
 
-#### 4.6.3 webstorm_execute_terminal_command
+#### webstorm_execute_terminal_command
 執行終端機命令
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -355,9 +352,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-### 4.7 其他 (1 個)
+### 其他 (1 個)
 
-#### 4.7.1 webstorm_permission_prompt
+#### webstorm_permission_prompt
 權限提示
 
 | 參數 | 類型 | 必填 | 說明 |
@@ -369,7 +366,7 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-## 5. 指令數量統計
+## 指令數量統計
 
 | 類別 | 數量 |
 |------|------|
@@ -384,34 +381,9 @@ C:\Users\User\.config\opencode\opencode.jsonc
 
 ---
 
-## 6. 協議別名說明
+## 重要觀察與使用須知
 
-WebStorm MCP 支援兩種協議前綴命名方式，但**功能並不完全相同**：
-
-| 協議名稱 | URL | 類型 |
-|----------|-----|------|
-| `webstorm` | `http://127.0.0.1:64342/sse` | SSE |
-| `webstorm-stream` | `http://127.0.0.1:64342/stream` | Stream |
-
-### 使用範例
-
-```bash
-# ✅ 正常運作
-webstorm_get_all_open_file_paths
-webstorm_list_directory_tree
-webstorm_open_file_in_editor
-```
-
-### 狀態說明
-
-- **`webstorm` (SSE)**: 正常運作，建議使用
-- **`webstorm-stream` (Stream)**: 存在 session 問題，有時無法正常使用
-
----
-
-## 7. 重要觀察與使用須知
-
-### 7.1 IDE 必須處於執行狀態
+### IDE 必須處於執行狀態
 
 | 狀態 | MCP 指令結果 |
 |------|-------------|
@@ -420,7 +392,7 @@ webstorm_open_file_in_editor
 
 **當 WebStorm IDE 關閉時，MCP 指令將無法執行。**
 
-### 7.2 必須開啟專案
+### 必須開啟專案
 
 WebStorm MCP 需要 IDE **載入專案**才能正常運作。
 
@@ -429,7 +401,7 @@ WebStorm MCP 需要 IDE **載入專案**才能正常運作。
 | IDE 開啟但無專案 | ❌ Streamable HTTP session not found |
 | IDE 開啟 + 開啟專案 | ✅ 正常運作 |
 
-### 7.3 正確的啟動方式
+### 正確的啟動方式
 
 **❌ 錯誤的啟動方式**：
 ```bash
@@ -446,7 +418,7 @@ webstorm
 "C:\Users\User\AppData\Local\JetBrains\Toolbox\scripts\webstorm" "D:\Users\WebstormProjects\nodejs-yarn\ws-ts-type\packages\ts-type\package.json"
 ```
 
-### 7.3.1 CLI 參數行為觀察
+#### CLI 參數行為觀察
 
 > 詳細 CLI 指令說明，請參閱 [webstorm-cli.md](./webstorm-cli.md)
 
@@ -455,7 +427,7 @@ webstorm
 - [合併工具](./webstorm-cli.md#13-合併工具-merge)
 - [選項](./webstorm-cli.md#2-選項-options)
 
-### 7.4 故障排除
+### 故障排除
 
 | 錯誤訊息 | 解決方式 |
 |----------|----------|
@@ -464,7 +436,7 @@ webstorm
 
 ---
 
-## 8. 相關資源
+## 相關資源
 
 - [JetBrains MCP 伺服器](https://github.com/modelcontextprotocol/server-jetbrains)
 - [MCP 官方文檔](https://modelcontextprotocol.io/)
