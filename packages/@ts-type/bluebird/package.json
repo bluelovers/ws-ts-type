@@ -1,6 +1,6 @@
 {
   "name": "@ts-type/bluebird",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Bluebird Promise 類型的增強類型定義 | Enhanced type definitions for Bluebird Promise",
   "keywords": [
     ".d.ts",
@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "@types/bluebird": "*",
-    "ts-type": "^3.0.11"
+    "ts-type": "^3.0.12"
   },
   "publishConfig": {
     "access": "public"
