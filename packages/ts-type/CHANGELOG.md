@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.11](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.10...ts-type@3.0.11) (2026-03-28)
+
+
+
+### 📚　Documentation
+
+* 刪除 WebStorm CLI、MCP 文檔及對比文檔 ([261b92d](https://github.com/bluelovers/ws-ts-type/commit/261b92d41c26766282ec13c2c189836ad5083b51))
+* **ts-type:** 為 ITSPickAndPartialOther 和 ITSPropertyKeyOrIndex 添加 JSDoc 註解與使用範例 ([91a189e](https://github.com/bluelovers/ws-ts-type/commit/91a189e391c029153ddfbc1656a9afa212a5ac35))
+
+
+### 🛠　Build System
+
+* **ts-type:** set `module` to `node16` in `tsconfig.check.json` ([c615a46](https://github.com/bluelovers/ws-ts-type/commit/c615a463a8552657993d698a69dbcb541b1ff4d3))
+
+
+
 ## [3.0.10](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.8...ts-type@3.0.10) (2026-03-15)
 
 

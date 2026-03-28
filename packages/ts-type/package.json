@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "description": "TypeScript 類型工具庫：提供豐富的類型操作工具和重新導出的內建類型 / TypeScript type utility library: provides rich type manipulation utilities and re-exported built-in types",
   "keywords": [
     ".d.ts",

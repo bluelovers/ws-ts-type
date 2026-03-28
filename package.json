@@ -104,8 +104,8 @@
   },
   "resolutions": {},
   "dependencies": {
-    "array-hyper-unique": "^2.1.6",
-    "axios": "^1.13.6",
+    "array-hyper-unique": "^2.1.8",
+    "axios": "^1.14.0",
     "bluebird": "^3.7.2",
     "dot-values2": "^2.0.7",
     "error-stack2": "^2.0.7",
@@ -119,7 +119,7 @@
   },
   "devDependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
-    "@bluelovers/tsconfig": "^1.0.35",
+    "@bluelovers/tsconfig": "^2.0.2",
     "@types/bluebird": "*",
     "@types/fs-extra": "*",
     "@types/jest": "^30.0.0",
