@@ -241,3 +241,4 @@ test/fixtures/.gitkeep
 !.claude
 !.agents
 !.aiassistant
+/nul

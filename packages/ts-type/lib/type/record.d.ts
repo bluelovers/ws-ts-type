@@ -160,6 +160,24 @@ export type ITSPickExtra<T, RK extends keyof T, PK extends Exclude<keyof T, RK> 
  */
 export type ITSPickExtra2<T, PK extends keyof T, RK extends Exclude<keyof T, PK> = Exclude<keyof T, PK>> = ITSRequiredPick<T, RK> & ITSPartialPick<T, PK>;
 /**
+ * 保留指定鍵不變（維持原本的必選/可選/唯讀屬性），其他鍵變為可選
+ * Keep specified keys unchanged (preserving required/optional/readonly modifiers), other keys become Partial
+ *
+ * 與 ITSPickExtra 的差異：ITSPickExtra 會將指定鍵強制設為必填，而此類型保留原始修飾符
+ * Difference from ITSPickExtra: ITSPickExtra forces specified keys to Required, while this type preserves original modifiers
+ *
+ * @see {@link ITSPickExtra} - 將指定鍵設為必填，其他鍵可選
+ * @see {@link ITSPartialWith} - 將指定鍵設為可選，其他鍵不變
+ *
+ * @example
+ * interface User { name: string; readonly id: string; age?: number; email: string; }
+ * type Result = ITSPickAndPartialOther<User, 'name' | 'id'>;
+ * // 輸出結果 / Output:
+ * // { name: string; readonly id: string; } & { age?: number; email?: string; }
+ * // 注意：name 維持必選，id 維持唯讀且必選，age 和 email 變為可選
+ */
+export type ITSPickAndPartialOther<T, RK extends keyof T, PK extends Exclude<keyof T, RK> = Exclude<keyof T, RK>> = Pick<T, RK> & ITSPartialPick<T, PK>;
+/**
  * 保留指定鍵為必填，其他鍵不變
  * Keep specified keys as Required, other keys unchanged
  *

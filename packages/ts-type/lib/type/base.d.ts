@@ -61,6 +61,20 @@ export type ITSValueOrArrayMaybeReadonly<T> = T | ITSArrayListMaybeReadonly<T>;
  */
 export type ITSPropertyKey = string | symbol;
 /**
+ * 屬性鍵或索引類型：字串、符號或數字
+ * Property key or index type: string, symbol, or number
+ *
+ * 適用於物件屬性存取與陣列索引的聯合類型
+ * Suitable for union type covering object property access and array index access
+ *
+ * @see {@link ITSPropertyKey} - 僅字串或符號（不含數字索引）
+ *
+ * @example
+ * type KeyOrIdx = ITSPropertyKeyOrIndex;
+ * // type KeyOrIdx = string | symbol | number
+ */
+export type ITSPropertyKeyOrIndex = ITSPropertyKey | number;
+/**
  * 任意函數類型
  * Any function type
  *
