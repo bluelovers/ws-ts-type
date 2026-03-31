@@ -69,7 +69,7 @@
     "build:toc": "tsc --skipLibCheck & echo build:toc",
     "preversion": "yarn run test && yarn run postpublish:git:commit",
     "prepublishOnly": "echo prepublishOnly",
-    "postpublish:git:commit": "git commit -m \"build(release): publish\" ./lib/index.d.ts & echo postpublish:git:commit",
+    "postpublish:git:commit": "git commit -m \"build(release): publish\" ./lib/index.d.ts ./lib & echo postpublish:git:commit",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort",
     "ts:check": "tsc -p tsconfig.check.json --emitDeclarationOnly --skipLibCheck",

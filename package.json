@@ -85,7 +85,7 @@
     "prepublishOnly": "echo prepublishOnly",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:lockfile": "ynpx --quiet sync-lockfile",
-    "prepublishOnly:root": "yarn run prepublishOnly:check-bin && yarn run prepare:fix-ws-links",
+    "prepublishOnly:root": "pnpm -C packages/ts-type run preversion && yarn run prepublishOnly:check-bin && yarn run prepare:fix-ws-links",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "prepack": "echo prepack",
     "pack": "echo pack",
