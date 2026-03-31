@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.9](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.8...@ts-type/package-dts@3.0.9) (2026-03-31)
+
+**Note:** Version bump only for package @ts-type/package-dts
+
+
+
+
+
 ## [3.0.8](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.7...@ts-type/package-dts@3.0.8) (2026-03-28)
 
 
