@@ -21,3 +21,9 @@ declare global
 	}
 
 }
+
+/**
+ * 全域擴展
+ * Global extension
+ */
+export {}
