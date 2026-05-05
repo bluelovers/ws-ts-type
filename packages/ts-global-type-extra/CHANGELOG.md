@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/bluelovers/ws-ts-type/compare/ts-global-type-extra@1.0.4...ts-global-type-extra@1.0.5) (2026-05-05)
+
+
+
+### ♻️　Chores
+
+* **ts-global-type-extra:** 添加空 export 標記為全域擴展模組 ([a996726](https://github.com/bluelovers/ws-ts-type/commit/a9967260fe043a3b4972aba38fa49c7c3064dc33))
+
+
+
 ## [1.0.4](https://github.com/bluelovers/ws-ts-type/compare/ts-global-type-extra@1.0.3...ts-global-type-extra@1.0.4) (2026-03-07)
 
 

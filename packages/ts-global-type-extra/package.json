@@ -1,6 +1,6 @@
 {
   "name": "ts-global-type-extra",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "全域擴展 TypeScript 內建類型，提供更好的 Object.entries 類型推論 | Global extension of TypeScript built-in types with better Object.entries type inference",
   "keywords": [
     ".d.ts",
