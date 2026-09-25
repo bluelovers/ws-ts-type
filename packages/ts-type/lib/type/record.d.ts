@@ -8,6 +8,7 @@
  * Created by user on 2019/6/11.
  */
 import type { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
+import { ITSLogicIsNever } from '../logic/never';
 export type { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
 /**
  * 取得兩個鍵集合的差異（已棄用）
@@ -116,25 +117,40 @@ export type ITSOverwrite<T, U> = Omit<T, keyof U> & U;
  */
 export type ITSMergeBoth<T, U> = ITSPickBothDiff<T, U> & Pick<T | U, ITSKeyofBothSame<T, U>>;
 /**
- * 選擇指定鍵並設為必填
- * Pick specified keys and mark as Required
+ * Makes the selected properties of a type required.
+ *
+ * This is the standard version and is intended for a single object type.
  *
  * @example
- * interface User { name?: string; age?: number; email?: string; }
- * type RequiredName = ITSRequiredPick<User, 'name'>;
- * // type RequiredName = { name: string; age?: number; email?: string; }
+ * type User = {
+ *   name?: string;
+ *   age?: number;
+ * };
+ *
+ * type Result = ITSRequiredPick<User, "name">;
+ * // {
+ * //   name: string;
+ * //   age?: number;
+ * // }
  */
 export type ITSRequiredPick<T, K extends keyof T = keyof T> = {
     [P in K]-?: T[P];
 };
 /**
- * 選擇指定鍵並設為可選
- * Pick specified keys and mark as Partial
+ * Makes the selected properties of a type optional.
+ *
+ * This is the standard version and is intended for a single object type.
  *
  * @example
- * interface User { name: string; age: number; email: string; }
- * type PartialName = ITSPartialPick<User, 'name'>;
- * // type PartialName = { name?: string; age: number; email: string; }
+ * type User = {
+ *   name: string;
+ *   age: number;
+ * };
+ *
+ * type Result = ITSPartialPick<User, "name">;
+ * // {
+ * //   name?: string;
+ * // }
  */
 export type ITSPartialPick<T, K extends keyof T = keyof T> = {
     [P in K]?: T[P];
@@ -178,25 +194,17 @@ export type ITSPickExtra2<T, PK extends keyof T, RK extends Exclude<keyof T, PK>
  */
 export type ITSPickAndPartialOther<T, RK extends keyof T, PK extends Exclude<keyof T, RK> = Exclude<keyof T, RK>> = Pick<T, RK> & ITSPartialPick<T, PK>;
 /**
- * 保留指定鍵為必填，其他鍵不變
- * Keep specified keys as Required, other keys unchanged
+ * Makes the specified properties required while preserving all other properties.
  *
- * @example
- * interface User { name: string; age: number; email: string; }
- * type Result = ITSRequiredWith<User, 'name'>;
- * // type Result = { name: string; age: number; email: string; }
+ * If `K` is `never`, `T` is returned unchanged.
  */
-export type ITSRequiredWith<T, K extends keyof T> = Omit<T, K> & ITSRequiredPick<T, K>;
+export type ITSRequiredWith<T, K extends keyof T> = ITSLogicIsNever<K> extends true ? T : Omit<T, K> & ITSRequiredPick<T, K>;
 /**
- * 保留指定鍵為可選，其他鍵不變
- * Keep specified keys as Partial, other keys unchanged
+ * Makes the specified properties optional while preserving all other properties.
  *
- * @example
- * interface User { name: string; age: number; email: string; }
- * type Result = ITSPartialWith<User, 'name'>;
- * // type Result = { name?: string; age: number; email: string; }
+ * If `K` is `never`, `T` is returned unchanged.
  */
-export type ITSPartialWith<T, K extends keyof T> = Omit<T, K> & ITSPartialPick<T, K>;
+export type ITSPartialWith<T, K extends keyof T> = ITSLogicIsNever<K> extends true ? T : Omit<T, K> & ITSPartialPick<T, K>;
 /**
  * 確保物件至少具有指定的鍵集合中的一個
  * Ensure the object has at least one of the specified key sets

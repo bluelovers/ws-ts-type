@@ -1,7 +1,7 @@
 /**
  * 索引簽名移除工具
  * Index Signature Removal Utilities
- * 
+ *
  * 提供移除物件索引簽名的工具類型
  * Provides utility types for removing object index signatures
  */
@@ -9,12 +9,12 @@
 /**
  * 移除索引簽名
  * Remove index signature
- * 
+ *
  * 從物件類型中移除索引簽名，保留明確宣告的鍵
  * Removes index signature from object type, keeping explicitly declared keys
- * 
+ *
  * @see https://stackoverflow.com/a/51956054/4563339
- * 
+ *
  * @example
  * interface WithIndex {
  *   name: string;
@@ -30,7 +30,7 @@ export type ITSOmitIndexSignatures<T extends Record<any, any>> = {
 /**
  * 取得已知的鍵（排除索引簽名）
  * Get known keys (excluding index signature)
- * 
+ *
  * @example
  * interface WithIndex {
  *   name: string;
@@ -44,7 +44,7 @@ export type ITSKnownKeys<T extends Record<any, any>> = keyof ITSOmitIndexSignatu
 /**
  * 取得已知的鍵（另一種實現）
  * Get known keys (alternative implementation)
- * 
+ *
  * @example
  * interface WithIndex {
  *   name: string;

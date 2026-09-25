@@ -3,7 +3,7 @@ import { ITSValueOfArray } from './key-value';
 /**
  * 將類型的所有屬性設為唯讀且可選
  * Make all properties of a type readonly and optional
- * 
+ *
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  * @example
  * interface User {
@@ -20,7 +20,7 @@ export type ITSReadonlyPartial<T> = {
 /**
  * 將類型的所有屬性設為可讀寫
  * Make all properties of a type writable
- * 
+ *
  * @example
  * interface User {
  *   readonly name: string;
@@ -34,7 +34,7 @@ export type ITSWriteable<T> = ITSWriteablePick<T, keyof T>;
 /**
  * 將指定屬性設為可讀寫
  * Make specified properties writable
- * 
+ *
  * @example
  * interface User {
  *   readonly name: string;
@@ -51,7 +51,7 @@ export type ITSWriteablePick<T, K extends keyof T = keyof T> = {
 /**
  * 將指定屬性設為唯讀
  * Make specified properties readonly
- * 
+ *
  * @example
  * interface User {
  *   name: string;
@@ -67,7 +67,7 @@ export type ITSReadonlyPick<T, K extends keyof T = keyof T> = {
 /**
  * 保留指定屬性可讀寫，其他屬性不變
  * Keep specified properties writable, other properties unchanged
- * 
+ *
  * @example
  * interface User {
  *   readonly name: string;
@@ -82,7 +82,7 @@ export type ITSWriteableWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSW
 /**
  * 保留指定屬性唯讀，其他屬性不變
  * Keep specified properties readonly, other properties unchanged
- * 
+ *
  * @example
  * interface User {
  *   name: string;
@@ -97,7 +97,7 @@ export type ITSReadonlyWith<T, K extends keyof T = keyof T> = Omit<T, K> & ITSRe
 /**
  * 將唯讀陣列轉換為可讀寫陣列
  * Convert readonly array to writable array
- * 
+ *
  * @example
  * type ReadonlyArray = readonly [1, 2, 3];
  * type WritableArray = ITSReadonlyToWriteableArray<ReadonlyArray>;
@@ -110,7 +110,7 @@ export type ITSReadonlyToWriteableArray<T extends readonly any[]> = Omit<T, keyo
 /**
  * 深層移除唯讀修飾符
  * Deeply remove readonly modifier
- * 
+ *
  * @example
  * interface Nested {
  *   readonly user: {
@@ -130,7 +130,7 @@ export type ITSWriteableDeep<T, K extends keyof T = keyof T> = T extends Record<
 /**
  * 深層添加唯讀修飾符
  * Deeply add readonly modifier
- * 
+ *
  * @example
  * interface Nested {
  *   user: {
@@ -146,4 +146,4 @@ export type ITSWriteableDeep<T, K extends keyof T = keyof T> = T extends Record<
 export type ITSReadonlyDeep<T, K extends keyof T = keyof T> =
 	T extends Record<any, any> ? {
 		readonly [P in K]: ITSReadonlyDeep<T[P]>;
-} : T;
+	} : T;

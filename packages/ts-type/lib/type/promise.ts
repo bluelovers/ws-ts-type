@@ -1,22 +1,22 @@
 /**
  * Promise 類型工具
  * Promise Type Utilities
- * 
+ *
  * 提供 Promise 相關的類型操作工具
  * Provides Promise-related type manipulation utilities
- * 
+ *
  * Created by user on 2019/6/11.
  */
 
 /**
  * 延遲物件類型：將物件的所有屬性包裝為 Promise
  * Deferred object type: wraps all properties of an object in Promise
- * 
+ *
  * 保持相同的屬性名稱，但將值類型包裝為 Promise
  * Keeps the same property names, but wraps value types in Promise
- * 
+ *
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html
- * 
+ *
  * @example
  * interface User {
  *   id: number;
@@ -32,10 +32,10 @@ export type ITSDeferred<T> = {
 /**
  * Promise 解決結果介面
  * Promise fulfilled result interface
- * 
+ *
  * 表示 Promise 已成功解決
  * Represents a promise that has been successfully resolved
- * 
+ *
  * @example
  * const fulfilled: ITSPromiseFulfilledResult<string> = {
  *   status: "fulfilled",
@@ -55,10 +55,10 @@ export interface ITSPromiseFulfilledResult<T>
 /**
  * Promise 拒絕結果介面
  * Promise rejected result interface
- * 
+ *
  * 表示 Promise 被拒絕
  * Represents a promise that has been rejected
- * 
+ *
  * @example
  * const rejected: ITSPromiseRejectedResult<Error> = {
  *   status: "rejected",
@@ -78,7 +78,7 @@ export interface ITSPromiseRejectedResult<E = any>
 /**
  * Promise settled 結果類型：解決或拒絕結果的聯合類型
  * Promise settled result type: union of fulfilled or rejected result
- * 
+ *
  * @example
  * const result: ITSPromiseSettledResult<string> = Math.random() > 0.5
  *   ? { status: "fulfilled", value: "success" }

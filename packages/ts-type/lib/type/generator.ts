@@ -1,4 +1,3 @@
-
 /**
  * TypeScript Generator 類型
  * TypeScript Generator type

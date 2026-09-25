@@ -30,15 +30,52 @@ export type ITSValueOf<T extends Record<any, any>> = T[keyof T];
 /** 取得介面所有值的聯集類型（別名）/ Get the union type of all values in an interface (alias) */
 export type { ITSValueOf as ITSValueOfRecord };
 /**
- * 取得類型的鍵類型
- * Get the key type of a type
+ * Extracts the keys of a type.
+ *
+ * For a union type, only keys shared by all union members are returned.
  *
  * @example
- * interface User { name: string; age: number; }
- * type UserKeys = ITSKeyOf<User>;
- * // type UserKeys = "name" | "age"
+ * type A = { name: string; age: number };
+ * type B = { name: string; email: string };
+ *
+ * type Keys = ITSKeyOf<A | B>;
+ * // "name"
  */
 export type ITSKeyOf<T> = keyof T;
+/**
+ * Extracts all keys from every member of a union type.
+ *
+ * Unlike `keyof T`, this distributes over union members and returns
+ * the union of their keys.
+ *
+ * @example
+ * type A = { name: string; age: number };
+ * type B = { name: string; email: string };
+ *
+ * type Keys = ITSKeyOfUnion<A | B>;
+ * // "name" | "age" | "email"
+ */
+export type ITSKeyOfUnion<T> = T extends any ? keyof T : never;
+/**
+ * Extracts the value type associated with a key from a union type.
+ *
+ * Only union members containing the specified key contribute their value type.
+ *
+ * @example
+ * type T =
+ *   | { type: "a"; value: number }
+ *   | { type: "b"; text: string };
+ *
+ * type Value = ITSValueOfUnion<T, "value">;
+ * // number
+ *
+ * type Text = ITSValueOfUnion<T, "text">;
+ * // string
+ *
+ * type Type = ITSValueOfUnion<T, "type">;
+ * // "a" | "b"
+ */
+export type ITSValueOfUnion<T, K extends ITSKeyOfUnion<T>> = T extends unknown ? K extends keyof T ? T[K] : never : never;
 /**
  * 取得指定鍵集合的值類型聯集
  * Get the union of value types for a specified set of keys

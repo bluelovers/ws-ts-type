@@ -1,12 +1,10 @@
 import { ITSArrayListMaybeReadonly } from './type/base';
 import { ITSAwaitedReturnType } from './helper/promise';
 
-
-
 /**
  * 複製當前函數的參數並返回新的值類型
  * Copy current function with Parameters and return to new value
- * 
+ *
  * 不支援函數重載
  * Not support overload
  *
@@ -34,7 +32,7 @@ export type ITSWrapFunctionPromise<T extends (...args: any[]) => any> =
 /**
  * 擴展類型檢查：從 T 中提取屬於 U 的部分
  * Extend type check: extract parts of T that belong to U
- * 
+ *
  * @deprecated 已棄用 / Deprecated
  */
 export type ITSExtendsOf<T, U> = Extract<T, U>;

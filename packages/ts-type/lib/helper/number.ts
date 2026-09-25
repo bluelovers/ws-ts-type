@@ -3,7 +3,7 @@ import { ITSToStringLiteral } from './string';
 /**
  * 將數字或 bigint 轉換為字串字面量類型
  * Convert number or bigint to string literal type
- * 
+ *
  * @example
  * type NumType = ITSNumberString<42>; // '42'
  */
@@ -12,7 +12,7 @@ export type ITSNumberString<N extends number | bigint = number> = ITSToStringLit
 /**
  * 從字串中解包出數字類型
  * Unpack number type from string
- * 
+ *
  * @example
  * type Test = ITSNumberString<123>;
  * type Result = ITSUnpackNumberString<Test>; // 123

@@ -1,7 +1,7 @@
 /**
  * 記錄成員工具
  * Record Member Utilities
- * 
+ *
  * 提供提取物件成員（方法）的工具類型
  * Provides utility types for extracting object members (methods)
  */
@@ -13,7 +13,7 @@ import { ITSExtractKeyof } from '../filter';
 /**
  * 過濾出所有成員是函數且鍵類型為字串或符號的屬性
  * Filter out all members that are functions and key types are string or symbol
- * 
+ *
  * @example
  * class User {
  *   name: string;
@@ -28,7 +28,7 @@ export type ITSMemberMethods<T> = ITSPickByType<T, Function, Extract<keyof T, IT
 /**
  * 取得物件方法的鍵
  * Get keys of object methods
- * 
+ *
  * @example
  * class User {
  *   name: string;
@@ -46,7 +46,7 @@ export type ITSKeyofMemberMethods<T> = ITSExtractKeyof<ITSMemberMethods<T>, ITSP
  *
  * ✅ 跨模組驗證：使用 infer 延遲類型解析，即使跨模組引用也能正確運作，
  *    避免 IMethods 變為 string 的問題
- * 
+ *
  * @example
  * ```
  * type IMethods2 = "assert" | "clear" | "count" | "countReset" | "debug"
@@ -161,7 +161,7 @@ export type ITSKeyofMemberMethods<T> = ITSExtractKeyof<ITSMemberMethods<T>, ITSP
  *     ? MemberMethodsV12<T, (...args: any[]) => any, `_${string}`>
  *     : MemberMethodsV12<T>;
  * ```
- * 
+ *
  * @see ITSExcludeFilterKeys
  * @see ITSExtractKeysV13
  */
@@ -180,11 +180,13 @@ export type ITSMemberMethodsV12<
 			? { [K in keyof U]: U[K] extends ValueCond ? K : never; }[keyof U]
 			// 3b. 需要排除 - 使用「as」重映射語法進行鍵過濾
 			// 邏輯：先檢查值類型是否符合 ValueCond，再檢查鍵是否在 ExcludeKeys 中
-			: { [K in keyof U as U[K] extends ValueCond
-				// 若值符合條件，進一步檢查鍵是否需要排除
-				? K extends ExcludeKeys ? never : K  // 在排除列表中則設為 never，否則保留 K
-				// 若值不符合條件，設為 never（過濾掉）
-				: never]: any } extends infer M ? keyof M : never
+			: {
+				[K in keyof U as U[K] extends ValueCond
+					// 若值符合條件，進一步檢查鍵是否需要排除
+					? K extends ExcludeKeys ? never : K  // 在排除列表中則設為 never，否則保留 K
+					// 若值不符合條件，設為 never（過濾掉）
+					: never]: any
+			} extends infer M ? keyof M : never
 		// U 不是 object，返回 never（無法提取方法）
 		: never
 	// T 無法解析為 infer U，返回 never

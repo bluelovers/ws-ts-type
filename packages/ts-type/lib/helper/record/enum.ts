@@ -1,7 +1,7 @@
 /**
  * 列舉類型工具
  * Enum Type Utilities
- * 
+ *
  * 提供列舉類型的操作工具
  * Provides enum type manipulation utilities
  */
@@ -14,7 +14,7 @@ import { ITSToStringLiteral } from '../string';
 /**
  * 從列舉類型中排除指定值
  * Exclude specified values from enum type
- * 
+ *
  * @example
  * enum Color { Red, Green, Blue }
  * type ExcludedRed = ITSExcludeEnumValue<Color, Color.Red>;
@@ -25,7 +25,7 @@ export type ITSExcludeEnumValue<Enum extends ITSEnumLike, U extends ITSValueOf<E
 /**
  * 從列舉類型中提取指定值
  * Extract specified values from enum type
- * 
+ *
  * @example
  * enum Color { Red, Green, Blue }
  * type ExtractedRed = ITSExtractEnumValue<Color, Color.Red>;
@@ -36,7 +36,7 @@ export type ITSExtractEnumValue<Enum extends ITSEnumLike, U extends ITSValueOf<E
 /**
  * 將數字列舉轉換為純數字類型
  * Convert number enum to pure number type
- * 
+ *
  * @example
  * enum Status { Active = 1, Inactive = 2 }
  * type NumStatus = ITSNumberEnumToNumber<Status>;
@@ -47,7 +47,7 @@ export type ITSNumberEnumToNumber<T extends number> = ITSStringInferToNumber<ITS
 /**
  * 數字列舉與數字的聯合類型
  * Union type of number enum and number
- * 
+ *
  * @example
  * enum Status { Active = 1, Inactive = 2 }
  * type StatusValue = ITSNumberEnumAndNumber<Status>;
