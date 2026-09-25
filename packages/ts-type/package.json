@@ -1,6 +1,6 @@
 {
   "name": "ts-type",
-  "version": "3.0.14",
+  "version": "3.0.15",
   "description": "TypeScript 類型工具庫：提供豐富的類型操作工具和重新導出的內建類型 / TypeScript type utility library: provides rich type manipulation utilities and re-exported built-in types",
   "keywords": [
     ".d.ts",
@@ -95,7 +95,7 @@
     "typedarray-dts": "^1.0.0"
   },
   "devDependencies": {
-    "@ts-type/object-freeze": "^1.0.14"
+    "@ts-type/object-freeze": "^1.0.15"
   },
   "peerDependencies": {
     "ts-toolbelt": "^9.6.0"

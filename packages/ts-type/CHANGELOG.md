@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.15](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.14...ts-type@3.0.15) (2026-09-25)
+
+
+
+### ✨　Features
+
+* **ts-type:** 新增聯集轉可選類型相關工具類型 ([28cdc58](https://github.com/bluelovers/ws-ts-type/commit/28cdc58f2553631d4f8367f5f1c981cdfec4c6ba))
+
+
+
 ## [3.0.14](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.13...ts-type@3.0.14) (2026-09-25)
 
 
