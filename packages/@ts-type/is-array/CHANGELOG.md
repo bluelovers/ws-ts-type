@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.15...@ts-type/is-array@1.0.16) (2026-09-25)
+
+
+
+### 🛠　Build System
+
+* **deps:** 更新開發工具鏈與優化各套件構建配置 ([01690ef](https://github.com/bluelovers/ws-ts-type/commit/01690ef2420ea6389c987eed3585aec3ea227f30))
+
+
+### ♻️　Chores
+
+* **build:** 將專案腳本從 yarn 遷移至 pnpm ([7e4ef6b](https://github.com/bluelovers/ws-ts-type/commit/7e4ef6b601bdc50a6202ecf0cad90dc91b0902d6))
+
+
+
 ## [1.0.15](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.14...@ts-type/is-array@1.0.15) (2026-03-31)
 
 **Note:** Version bump only for package @ts-type/is-array

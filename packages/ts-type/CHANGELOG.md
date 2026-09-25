@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.14](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.13...ts-type@3.0.14) (2026-09-25)
+
+
+
+### 🐛　Bug Fixes
+
+* **ts-type:** 修復聯集類型扁平化後的屬性映射邏輯 ([201f812](https://github.com/bluelovers/ws-ts-type/commit/201f8120c8ce21a1655b805fd809e2bdb5120ce3))
+
+
+### ✨　Features
+
+* **ts-type:** 新增針對聯集類型的 Record 操作工具 ([cfc6f73](https://github.com/bluelovers/ws-ts-type/commit/cfc6f7328b910281a245a66a8205a454d30cf521))
+
+
+### 📦　Code Refactoring
+
+* **ts-type:** 優化類型定義結構與清理註解格式 ([d83912f](https://github.com/bluelovers/ws-ts-type/commit/d83912fcc7bd313f7af39140e8d70a951bcb8051))
+
+
+### ♻️　Chores
+
+* **build:** 將專案腳本從 yarn 遷移至 pnpm ([7e4ef6b](https://github.com/bluelovers/ws-ts-type/commit/7e4ef6b601bdc50a6202ecf0cad90dc91b0902d6))
+
+
+
 ## [3.0.13](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.12...ts-type@3.0.13) (2026-03-31)
 
 

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/unpacked@1.0.11...@ts-type/unpacked@1.0.12) (2026-09-25)
+
+
+
+### ♻️　Chores
+
+* **build:** 將專案腳本從 yarn 遷移至 pnpm ([7e4ef6b](https://github.com/bluelovers/ws-ts-type/commit/7e4ef6b601bdc50a6202ecf0cad90dc91b0902d6))
+
+
+
 ## [1.0.11](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/unpacked@1.0.10...@ts-type/unpacked@1.0.11) (2026-03-31)
 
 **Note:** Version bump only for package @ts-type/unpacked

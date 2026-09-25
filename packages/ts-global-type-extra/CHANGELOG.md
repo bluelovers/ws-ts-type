@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-ts-type/compare/ts-global-type-extra@1.0.5...ts-global-type-extra@1.0.6) (2026-09-25)
+
+
+
+### 🛠　Build System
+
+* **deps:** 更新開發工具鏈與優化各套件構建配置 ([01690ef](https://github.com/bluelovers/ws-ts-type/commit/01690ef2420ea6389c987eed3585aec3ea227f30))
+
+
+### ♻️　Chores
+
+* **build:** 將專案腳本從 yarn 遷移至 pnpm ([7e4ef6b](https://github.com/bluelovers/ws-ts-type/commit/7e4ef6b601bdc50a6202ecf0cad90dc91b0902d6))
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-ts-type/compare/ts-global-type-extra@1.0.4...ts-global-type-extra@1.0.5) (2026-05-05)
 
 

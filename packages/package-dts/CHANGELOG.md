@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.9...@ts-type/package-dts@3.0.10) (2026-09-25)
+
+
+
+### 🛠　Build System
+
+* **deps:** 更新開發工具鏈與優化各套件構建配置 ([01690ef](https://github.com/bluelovers/ws-ts-type/commit/01690ef2420ea6389c987eed3585aec3ea227f30))
+* **schema:** update schema ([406dbb5](https://github.com/bluelovers/ws-ts-type/commit/406dbb560f3064d5a9f5b821f4ed8abded85c278))
+
+
+### ♻️　Chores
+
+* **build:** 將專案腳本從 yarn 遷移至 pnpm ([7e4ef6b](https://github.com/bluelovers/ws-ts-type/commit/7e4ef6b601bdc50a6202ecf0cad90dc91b0902d6))
+
+
+
 ## [3.0.9](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.8...@ts-type/package-dts@3.0.9) (2026-03-31)
 
 **Note:** Version bump only for package @ts-type/package-dts
