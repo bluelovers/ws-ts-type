@@ -133,3 +133,7 @@ export type ITSPartialWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = Omit<ITSUni
 export type ITSRequiredWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = Omit<ITSUnionFlat<T>, K> & {
     [P in K]-?: ITSValueOfUnion<T, P>;
 };
+export type ITSUnionToOptional<T> = [T] extends [infer U] ? {
+    [K in ITSKeyOfUnion<U>]?: U extends Record<K, any> ? U[K] : never;
+} : never;
+export type ITSAnyOfUnion<T> = ITSUnionToOptional<T> & T;

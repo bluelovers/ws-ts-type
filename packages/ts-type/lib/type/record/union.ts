@@ -168,38 +168,38 @@ export type ITSUnionFlat<T> = {
  * Checks whether K is required in every member of T.
  */
 export type ITSIsRequiredInUnion<
-  T,
-  K extends ITSKeyOfUnion<T>
+	T,
+	K extends ITSKeyOfUnion<T>
 > = false extends (
-  T extends unknown
-    ? K extends keyof T
-      ? {} extends Pick<T, K>
-        ? false
-        : true
-      : false
-    : never
-)
-  ? false
-  : true;
+		T extends unknown
+			? K extends keyof T
+				? {} extends Pick<T, K>
+					? false
+					: true
+				: false
+			: never
+		)
+	? false
+	: true;
 
 /**
  * Gets keys that are required in every member of T.
  */
 export type ITSKeyOfUnionRequired<T> = {
-  [K in ITSKeyOfUnion<T>]:
-    ITSIsRequiredInUnion<T, K> extends true
-      ? K
-      : never;
+	[K in ITSKeyOfUnion<T>]:
+	ITSIsRequiredInUnion<T, K> extends true
+		? K
+		: never;
 }[ITSKeyOfUnion<T>];
 
 /**
  * Gets keys that are not required in every member of T.
  */
 export type ITSKeyOfUnionOptional<T> =
-  Exclude<
-    ITSKeyOfUnion<T>,
-    ITSKeyOfUnionRequired<T>
-  >;
+	Exclude<
+		ITSKeyOfUnion<T>,
+		ITSKeyOfUnionRequired<T>
+	>;
 
 /**
  * Makes the specified properties required and flattens
@@ -209,12 +209,12 @@ export type ITSKeyOfUnionOptional<T> =
  * optional properties because they may not exist in every member.
  */
 export type ITSPartialWithUnionFlat<
-  T,
-  K extends ITSKeyOfUnion<T>
+	T,
+	K extends ITSKeyOfUnion<T>
 > = Omit<ITSUnionFlat<T>, K>
-  & {
-    [P in K]?: ITSValueOfUnion<T, P>;
-  };
+	& {
+	[P in K]?: ITSValueOfUnion<T, P>;
+};
 
 /**
  * Makes the specified properties optional and flattens
@@ -224,9 +224,17 @@ export type ITSPartialWithUnionFlat<
  * optional properties because they may not exist in every member.
  */
 export type ITSRequiredWithUnionFlat<
-  T,
-  K extends ITSKeyOfUnion<T>
+	T,
+	K extends ITSKeyOfUnion<T>
 > = Omit<ITSUnionFlat<T>, K>
-  & {
-    [P in K]-?: ITSValueOfUnion<T, P>;
-  };
+	& {
+	[P in K]-?: ITSValueOfUnion<T, P>;
+};
+
+// ----------------
+
+export type ITSUnionToOptional<T> = [T] extends [infer U]
+	? { [K in ITSKeyOfUnion<U>]?: U extends Record<K, any> ? U[K] : never }
+	: never;
+
+export type ITSAnyOfUnion<T> = ITSUnionToOptional<T> & T;
