@@ -41,4 +41,5 @@ export * from './type/record/empty';
 export * from './type/record/enum';
 export * from './type/record/partial';
 export * from './type/record/readonly';
+export * from './type/record/union';
 export * from './type/tuple/empty';

@@ -209,9 +209,12 @@ export type ITSKeyOfUnionOptional<T> =
  * optional properties because they may not exist in every member.
  */
 export type ITSPartialWithUnionFlat<
-	T,
-	K extends ITSKeyOfUnion<T>
-> = ITSPartialWith<ITSUnionFlat<T>, K>;
+  T,
+  K extends ITSKeyOfUnion<T>
+> = Omit<ITSUnionFlat<T>, K>
+  & {
+    [P in K]?: ITSValueOfUnion<T, P>;
+  };
 
 /**
  * Makes the specified properties optional and flattens
@@ -221,7 +224,9 @@ export type ITSPartialWithUnionFlat<
  * optional properties because they may not exist in every member.
  */
 export type ITSRequiredWithUnionFlat<
-	T,
-	K extends ITSKeyOfUnion<T>
-> = ITSRequiredWith<ITSUnionFlat<T>, K>;
-
+  T,
+  K extends ITSKeyOfUnion<T>
+> = Omit<ITSUnionFlat<T>, K>
+  & {
+    [P in K]-?: ITSValueOfUnion<T, P>;
+  };

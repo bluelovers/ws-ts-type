@@ -1,5 +1,5 @@
 import { ITSKeyOfUnion, ITSValueOfUnion } from "../../helper/key-value";
-import { ITSPartialPick, ITSPartialWith, ITSRequiredPick, ITSRequiredWith } from "../record";
+import { ITSPartialPick, ITSRequiredPick } from "../record";
 /**
  * Makes the selected properties optional while preserving
  * the structure of each union member.
@@ -120,7 +120,9 @@ export type ITSKeyOfUnionOptional<T> = Exclude<ITSKeyOfUnion<T>, ITSKeyOfUnionRe
  * Other properties from all union members are preserved as
  * optional properties because they may not exist in every member.
  */
-export type ITSPartialWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = ITSPartialWith<ITSUnionFlat<T>, K>;
+export type ITSPartialWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = Omit<ITSUnionFlat<T>, K> & {
+    [P in K]?: ITSValueOfUnion<T, P>;
+};
 /**
  * Makes the specified properties optional and flattens
  * all members of a union into a single object type.
@@ -128,4 +130,6 @@ export type ITSPartialWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = ITSPartialW
  * Other properties from all union members are preserved as
  * optional properties because they may not exist in every member.
  */
-export type ITSRequiredWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = ITSRequiredWith<ITSUnionFlat<T>, K>;
+export type ITSRequiredWithUnionFlat<T, K extends ITSKeyOfUnion<T>> = Omit<ITSUnionFlat<T>, K> & {
+    [P in K]-?: ITSValueOfUnion<T, P>;
+};

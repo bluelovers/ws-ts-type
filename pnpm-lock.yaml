@@ -143,6 +143,10 @@ importers:
       typedarray-dts:
         specifier: ^1.0.0
         version: 1.0.0
+    devDependencies:
+      '@ts-type/object-freeze':
+        specifier: ^1.0.13
+        version: link:../@ts-type/object-freeze
 
   packages/ts-type-object-entries: {}
 
