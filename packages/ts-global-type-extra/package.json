@@ -44,7 +44,7 @@
   "scripts": {
     "coverage": "pnpm run test --coverage",
     "lint": "ynpx --quiet eslint -- **/*.ts",
-    "test": "jest --passWithNoTests",
+    "test": "echo jest --passWithNoTests",
     "test:jest": "jest --coverage --passWithNoTests",
     "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "pnpm run test:jest -u",

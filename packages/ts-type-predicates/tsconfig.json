@@ -1,7 +1,13 @@
 {
   "extends": "@bluelovers/tsconfig/tsdx/index.json",
   "compilerOptions": {
+    "moduleResolution": "bundler",
     "noUnusedParameters": false,
-    "noImplicitAny": false
-  }
+    "noImplicitAny": false,
+    "rootDir": "src"
+  },
+  "exclude": [
+    "dist",
+    "test"
+  ]
 }

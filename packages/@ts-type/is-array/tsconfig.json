@@ -2,8 +2,11 @@
   "extends": "@bluelovers/tsconfig/tsdx/index.json",
   "compilerOptions": {
     "importHelpers": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "allowUnusedLabels": false
-  }
+    "moduleResolution": "bundler",
+    "rootDir": "src"
+  },
+  "exclude": [
+    "dist",
+    "test"
+  ]
 }

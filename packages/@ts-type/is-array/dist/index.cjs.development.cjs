@@ -4,6 +4,93 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var assert = require('assert');
 
+/// <reference types="node" />
+
+
+/**
+ * 擴展 ArrayConstructor.isArray 方法，支援更精確的類型斷言
+ * Extend ArrayConstructor.isArray method for more precise type predicate
+ *
+ * 允許在運行時檢查值是否為陣列，並在編譯時保留原始陣列類型
+ * This extension allows runtime array checking while preserving the original array type at compile time
+ *
+ * ⚠️ 核心問題 / Core Problem:
+ * 原版 TypeScript 的 Array.isArray 無法正確處理唯讀陣列
+ * Original TypeScript's Array.isArray cannot correctly handle readonly arrays
+ *
+ * ```typescript
+ * let arr: readonly number[] = [1, 2, 3];
+ * if (Array.isArray(arr)) {
+ *   // @ts-expect-error <== 失敗，此處的 arr 應該是 readonly 但是卻變成普通陣列
+ *   // arr.push(4); // 錯誤：應該不能修改
+ * }
+ * // arr.push(5); // 錯誤：唯讀陣列不能修改
+ * ```
+ *
+ * 使用此擴展可以正確保留唯讀陣列的類型
+ * Using this extension correctly preserves readonly array types
+ *
+ * @example
+ * ```typescript
+ * // 使用 type import 避免運行時引用
+ * // Use type import to avoid runtime import
+ * import type * as _ from '@ts-type/is-array';
+ *
+ * const value: string | readonly string[] = ["hello"];
+ * if (Array.isArray(value)) {
+ *   // value 類型正確縮小為 readonly string[]
+ *   // value type correctly narrowed to readonly string[]
+ *   // value.push("test"); // 正確：編譯器會阻止修改
+ * }
+ * ```
+ */
+
+/**
+ * 檢查值是否為陣列（類型斷言版本）
+ * Check if value is an array (type predicate version)
+ *
+ * 此函數是 Array.isArray 的類型安全包裝器，在運行時執行檢查並在編譯時提供類型縮小
+ * This function is a type-safe wrapper for Array.isArray that performs runtime check and provides type narrowing at compile time
+ *
+ * ⚠️ 核心問題 / Core Problem:
+ * 原版 TypeScript 的 Array.isArray 無法正確處理唯讀陣列，會將 readonly 陣列縮小為普通陣列
+ * Original TypeScript's Array.isArray cannot correctly handle readonly arrays, it narrows readonly arrays to regular arrays
+ *
+ * @param arg - 要檢查的值 / Value to check
+ * @returns 是否為輸入類型的類型斷言 / Type predicate of input type
+ *
+ * @example
+ * ```typescript
+ * import { isArray } from '@ts-type/is-array';
+ *
+ * // 處理唯讀陣列 - 正確保留唯讀類型
+ * // Handle readonly array - correctly preserves readonly type
+ * function processReadonly(value: string | readonly string[]) {
+ *   if (isArray(value)) {
+ *     // value 類型正確縮小為 readonly string[]
+ *     // value type correctly narrowed to readonly string[]
+ *     // value.push("test"); // 正確：編譯器會阻止修改
+ *   }
+ * }
+ *
+ * // 處理可變陣列
+ * // Handle writable array
+ * function processValue(value: string | string[]) {
+ *   if (isArray(value)) {
+ *     // value 類型縮小為 string[]
+ *     // value type narrowed to string[]
+ *     console.log(value.join(', '));
+ *   } else {
+ *     // value 類型為 string
+ *     // value type is string
+ *     console.log(value.toUpperCase());
+ *   }
+ * }
+ * ```
+ *
+ * @see https://github.com/microsoft/TypeScript/issues/17002#issuecomment-493400187
+ */
+
 function isArray(arg) {
   return Array.isArray(arg);
 }

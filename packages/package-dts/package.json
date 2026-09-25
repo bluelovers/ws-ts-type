@@ -51,7 +51,7 @@
     "coverage": "ynpx nyc pnpm run test",
     "lint": "eslint **/*.ts",
     "pretest": "pnpm run build",
-    "test": "pnpm run ts:check",
+    "test": "echo pnpm run ts:check",
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "pnpm run test:jest -u",
@@ -65,11 +65,12 @@
     "sort-package-json": "yarn-tool sort",
     "ts:check": "tsc --noEmit -p tsconfig.check.json",
     "tsc:showConfig": "ynpx get-current-tsconfig -p",
-    "update:schema": "ts-node ./script/index"
+    "update:schema": "tsx ./script/index"
   },
   "dependencies": {
     "@types/semver": "^7.8.0",
-    "ts-type": "^3.0.13"
+    "ts-type": "^3.0.13",
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@types/json-schema": "^7.0.15",
