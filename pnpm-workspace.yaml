@@ -5,19 +5,19 @@ packages:
   - '!**/test/**'
   - packages/@ts-type/*
 
-publicHoistPattern:
-  - "ts-type"
-  - "@bluelovers/tsconfig"
-  - "@bluelovers/jest-config"
-  - "@types/node"
-  - "@types/jest"
-  - "jest"
-  - "ts-jest"
-  - "ts-node"
-  - "tsx"
-  - "tslib"
-  - "@ts-type/package-dts"
-  - "@ts-type/object-freeze"
+# publicHoistPattern:
+#   - "ts-type"
+#   - "@bluelovers/tsconfig"
+#   - "@bluelovers/jest-config"
+#   - "@types/node"
+#   - "@types/jest"
+#   - "jest"
+#   - "ts-jest"
+#   - "ts-node"
+#   - "tsx"
+#   - "tslib"
+#   - "@ts-type/package-dts"
+#   - "@ts-type/object-freeze"
 
 linkWorkspacePackages: true
 saveWorkspaceProtocol: false

@@ -48,18 +48,18 @@
     "test": "test"
   },
   "scripts": {
-    "coverage": "npx nyc npm run test",
+    "coverage": "ynpx nyc pnpm run test",
     "lint": "eslint **/*.ts",
-    "pretest": "yarn run build",
-    "test": "yarn run ts:check",
+    "pretest": "pnpm run build",
+    "test": "pnpm run ts:check",
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "node --run test:jest -- --coverage",
-    "test:jest:snapshot": "yarn run test:jest -- -u",
-    "test:snapshot": "yarn run test",
+    "test:jest:snapshot": "pnpm run test:jest -u",
+    "test:snapshot": "pnpm run test",
     "test:tsd": "ynpx tsd",
     "posttest": "git commit -m \"build(schema): update schema\" ./types ./schema & echo posttest",
-    "build": "yarn run update:schema",
-    "preversion": "yarn run test",
+    "build": "pnpm run update:schema",
+    "preversion": "pnpm run test",
     "prepublishOnly": "echo prepublishOnly",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort",
@@ -68,7 +68,7 @@
     "update:schema": "ts-node ./script/index"
   },
   "dependencies": {
-    "@types/semver": "^7.7.1",
+    "@types/semver": "^7.8.0",
     "ts-type": "^3.0.13"
   },
   "devDependencies": {
