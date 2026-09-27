@@ -7,14 +7,14 @@ import { ITSTemplateLiteralAllowedType, ITSToStringLiteral } from "../string";
  * When Name is a union, the result expands to a union accordingly.
  *
  * @example
- * type A = ITSStringLiteralPrefixed<"Up", "STR">;
+ * type A = ITSStringLiteralPrefixed<"STR", "Up">;
  * // type A = "UpSTR"
  *
  * @example
- * type B = ITSStringLiteralPrefixed<"Up", "STR" | "INT">;
+ * type B = ITSStringLiteralPrefixed<"STR" | "INT", "Up">;
  * // type B = "UpSTR" | "UpINT"
  */
-export type ITSStringLiteralPrefixed<Prefix extends ITSTemplateLiteralAllowedType, Name extends ITSTemplateLiteralAllowedType> = `${Prefix}${Name}`;
+export type ITSStringLiteralPrefixed<Name extends ITSTemplateLiteralAllowedType, Prefix extends ITSTemplateLiteralAllowedType> = `${Prefix}${Name}`;
 /**
  * 將字串字面量加上後綴，組合成新的字串字面量
  * Combines a name with a suffix into a new string literal.
@@ -37,15 +37,15 @@ export type ITSStringLiteralSuffixed<Name extends ITSTemplateLiteralAllowedType,
  * whose values are the prefixed string literal of each key.
  *
  * @example
- * type T = ITSStringLiteralPrefixedRecord<"Up", "STR" | "INT" | "DEX">;
+ * type T = ITSStringLiteralPrefixedRecord<"STR" | "INT" | "DEX", "Up">;
  * // type T = {
  * //   STR: "UpSTR";
  * //   INT: "UpINT";
  * //   DEX: "UpDEX";
  * // }
  */
-export type ITSStringLiteralPrefixedRecord<Prefix extends ITSTemplateLiteralAllowedType, Name extends ITSTemplateLiteralAllowedType> = {
-    [K in ITSToStringLiteral<Name>]: ITSStringLiteralPrefixed<Prefix, K>;
+export type ITSStringLiteralPrefixedRecord<Name extends string, Prefix extends ITSTemplateLiteralAllowedType> = {
+    [K in Name]: ITSStringLiteralPrefixed<Prefix, K>;
 };
 /**
  * 以 Name 聯集的每個成員為鍵，建立其值為「鍵名 + 後綴」的對應記錄型別
@@ -59,8 +59,8 @@ export type ITSStringLiteralPrefixedRecord<Prefix extends ITSTemplateLiteralAllo
  * //   INT: "INTStatus";
  * // }
  */
-export type ITSStringLiteralSuffixedRecord<Name extends ITSTemplateLiteralAllowedType, Suffix extends ITSTemplateLiteralAllowedType> = {
-    [K in ITSToStringLiteral<Name>]: ITSStringLiteralSuffixed<K, Suffix>;
+export type ITSStringLiteralSuffixedRecord<Name extends string, Suffix extends ITSTemplateLiteralAllowedType> = {
+    [K in Name]: ITSStringLiteralSuffixed<K, Suffix>;
 };
 /**
  * 以 Name 聯集為基礎，透過 KeyMap 重新映射鍵名、並以 ValueMap 指定
