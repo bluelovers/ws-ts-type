@@ -30,16 +30,16 @@ import { ITSTemplateLiteralAllowedType, ITSToStringLiteral } from "../string";
  * When Name is a union, the result expands to a union accordingly.
  *
  * @example
- * type A = ITSStringLiteralPrefixed<"Up", "STR">;
+ * type A = ITSStringLiteralPrefixed<"STR", "Up">;
  * // type A = "UpSTR"
  *
  * @example
- * type B = ITSStringLiteralPrefixed<"Up", "STR" | "INT">;
+ * type B = ITSStringLiteralPrefixed<"STR" | "INT", "Up">;
  * // type B = "UpSTR" | "UpINT"
  */
 export type ITSStringLiteralPrefixed<
-	Prefix extends ITSTemplateLiteralAllowedType,
 	Name extends ITSTemplateLiteralAllowedType,
+	Prefix extends ITSTemplateLiteralAllowedType,
 > = `${Prefix}${Name}`;
 
 /**
@@ -68,7 +68,7 @@ export type ITSStringLiteralSuffixed<
  * whose values are the prefixed string literal of each key.
  *
  * @example
- * type T = ITSStringLiteralPrefixedRecord<"Up", "STR" | "INT" | "DEX">;
+ * type T = ITSStringLiteralPrefixedRecord<"STR" | "INT" | "DEX", "Up">;
  * // type T = {
  * //   STR: "UpSTR";
  * //   INT: "UpINT";
@@ -76,11 +76,10 @@ export type ITSStringLiteralSuffixed<
  * // }
  */
 export type ITSStringLiteralPrefixedRecord<
+	Name extends string,
 	Prefix extends ITSTemplateLiteralAllowedType,
-	Name extends ITSTemplateLiteralAllowedType,
 > = {
-	[K in ITSToStringLiteral<Name>]:
-		ITSStringLiteralPrefixed<Prefix, K>;
+	[K in Name]: ITSStringLiteralPrefixed<Prefix, K>;
 };
 
 /**
@@ -96,11 +95,10 @@ export type ITSStringLiteralPrefixedRecord<
  * // }
  */
 export type ITSStringLiteralSuffixedRecord<
-	Name extends ITSTemplateLiteralAllowedType,
+	Name extends string,
 	Suffix extends ITSTemplateLiteralAllowedType,
 > = {
-	[K in ITSToStringLiteral<Name>]:
-		ITSStringLiteralSuffixed<K, Suffix>;
+	[K in Name]: ITSStringLiteralSuffixed<K, Suffix>;
 };
 
 /**
