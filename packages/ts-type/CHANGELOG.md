@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.16](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.15...ts-type@3.0.16) (2026-09-27)
+
+
+
+### ✨　Features
+
+* **ts-type:** 新增字串字面量組合工具類型 ([f57467d](https://github.com/bluelovers/ws-ts-type/commit/f57467de62ed6b3404388e8a620d0e2c73a4aeb2))
+
+
+### 📚　Documentation
+
+* **ts-type:** 重構聯集轉可選/必填類型的實作方式 ([27cbfb6](https://github.com/bluelovers/ws-ts-type/commit/27cbfb6886a85fc7be426189212828a6fc8baeb3))
+
+
+### 🛠　Build System
+
+* **release:** publish ([988ac2f](https://github.com/bluelovers/ws-ts-type/commit/988ac2f81a6a0d2ad797c9874c2fd25e7987749b))
+
+
+### ♻️　Chores
+
+* **package:** 更新發布後的 Git 提交訊息內容 ([2f37128](https://github.com/bluelovers/ws-ts-type/commit/2f3712864caea40047a04f72391ba92948b86ac1))
+
+
+
 ## [3.0.15](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.14...ts-type@3.0.15) (2026-09-25)
 
 
