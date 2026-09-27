@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.18](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.17...ts-type@3.0.18) (2026-09-27)
+
+
+
+### 🐛　Bug Fixes
+
+* **string-composition:** 修正 ITSStringLiteralPrefixedRecord 泛型參數傳遞錯誤 ([4125b4e](https://github.com/bluelovers/ws-ts-type/commit/4125b4ede86a67fe334fb66479acd299fd503960))
+
+
+### 🛠　Build System
+
+* **release:** update generated files ([1cc9935](https://github.com/bluelovers/ws-ts-type/commit/1cc9935b91c928fae284cd26d3bd641793dd0119))
+
+
+
 ## [3.0.17](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.16...ts-type@3.0.17) (2026-09-27)
 
 
