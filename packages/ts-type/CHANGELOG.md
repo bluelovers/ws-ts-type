@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.17](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.16...ts-type@3.0.17) (2026-09-27)
+
+
+### BREAKING CHANGES
+
+* **ts-type:** 修正字串組合工具類型的參數順序與約束
+
+
+
+### 📦　Code Refactoring
+
+* **ts-type:** 修正字串組合工具類型的參數順序與約束 ([b383b1c](https://github.com/bluelovers/ws-ts-type/commit/b383b1cf7be8c016fef1d9462dd1454f1552b96c))
+
+
+### 🛠　Build System
+
+* **release:** update generated files ([20fd4b6](https://github.com/bluelovers/ws-ts-type/commit/20fd4b6e062713ff8dbe1580b56b9f9a03cbb6fe))
+
+
+
 ## [3.0.16](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.15...ts-type@3.0.16) (2026-09-27)
 
 
