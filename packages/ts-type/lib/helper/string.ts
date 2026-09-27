@@ -7,7 +7,13 @@
  */
 
 /** 允許轉換為字面量類型的基礎類型 / Base types allowed to convert to literal types */
-export type ITSToStringLiteralAllowedType = string | number | boolean | bigint;
+export type ITSTemplateLiteralAllowedType = string | number | boolean | bigint;
+
+/**
+ * @alias {@link ITSTemplateLiteralAllowedType}
+ * @deprecated Use {@link ITSTemplateLiteralAllowedType} instead
+ */
+export type ITSToStringLiteralAllowedType = ITSTemplateLiteralAllowedType;
 
 /**
  * 將類型轉換為字面量類型 `${T}`
