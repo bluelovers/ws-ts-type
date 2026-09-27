@@ -22,6 +22,7 @@ export * from './helper/string';
 export * from './helper/string/infer';
 export * from './helper/string/literal-string';
 export * from './helper/string/operations';
+export * from './helper/string/string-composition';
 export * from './helper/tuple';
 export * from './helper/typeof';
 export * from './internal/filter';
