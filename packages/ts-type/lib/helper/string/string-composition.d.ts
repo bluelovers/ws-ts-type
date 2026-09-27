@@ -45,7 +45,7 @@ export type ITSStringLiteralSuffixed<Name extends ITSTemplateLiteralAllowedType,
  * // }
  */
 export type ITSStringLiteralPrefixedRecord<Name extends string, Prefix extends ITSTemplateLiteralAllowedType> = {
-    [K in Name]: ITSStringLiteralPrefixed<Prefix, K>;
+    [K in Name]: ITSStringLiteralPrefixed<K, Prefix>;
 };
 /**
  * 以 Name 聯集的每個成員為鍵，建立其值為「鍵名 + 後綴」的對應記錄型別
