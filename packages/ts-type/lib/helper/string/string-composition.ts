@@ -79,7 +79,7 @@ export type ITSStringLiteralPrefixedRecord<
 	Name extends string,
 	Prefix extends ITSTemplateLiteralAllowedType,
 > = {
-	[K in Name]: ITSStringLiteralPrefixed<Prefix, K>;
+	[K in Name]: ITSStringLiteralPrefixed<K, Prefix>;
 };
 
 /**
