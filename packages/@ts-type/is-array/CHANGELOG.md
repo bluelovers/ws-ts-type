@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.21](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.20...@ts-type/is-array@1.0.21) (2026-11-06)
+
+
+
+### 📌　Dependencies
+
+* update deps ([65561a4](https://github.com/bluelovers/ws-ts-type/commit/65561a4fad44ab48c45105545cb8f277618e354a))
+
+
+
 ## [1.0.20](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/is-array@1.0.19...@ts-type/is-array@1.0.20) (2026-09-27)
 
 **Note:** Version bump only for package @ts-type/is-array

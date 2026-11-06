@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.19](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.18...ts-type@3.0.19) (2026-11-06)
+
+
+
+### ✨　Features
+
+* **ts-type:** 新增 nullable 輔助工具與字面值保留型別 ([893a7d8](https://github.com/bluelovers/ws-ts-type/commit/893a7d8ebcc06e1f19464976e93556465ec6800d))
+
+
+### 🔖　Miscellaneous
+
+* . ([340bb86](https://github.com/bluelovers/ws-ts-type/commit/340bb868216f4b9d546aad60b73c22af8dc35ade))
+* . ([817c963](https://github.com/bluelovers/ws-ts-type/commit/817c963131c35570061a7b1fbf9721c255dbf3d9))
+
+
+
 ## [3.0.18](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.17...ts-type@3.0.18) (2026-09-27)
 
 
