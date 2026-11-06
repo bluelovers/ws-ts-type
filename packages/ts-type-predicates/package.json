@@ -94,6 +94,6 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "devDependencies": {
-    "@types/node": "^26.6.2"
+    "@types/node": "^26.6.6"
   }
 }
