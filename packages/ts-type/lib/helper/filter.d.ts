@@ -41,15 +41,6 @@ export type ITSExtractArrayLike<A, K extends Extract<keyof A, number> = Extract<
  */
 export type ITSKeyofArrayLike<A> = keyof ITSExtractArrayLike<A>;
 /**
- * 取得可為 null 或 undefined 的類型
- * Get types that can be null or undefined
- *
- * @example
- * type Test = string | number | null;
- * type Result = ITSNullable<Test>; // string | number | null
- */
-export type ITSNullable<T> = T extends null | undefined ? T : never;
-/**
  * 找出 T 當中與 U 相同的鍵
  * Find keys that are the same between T and U
  *
