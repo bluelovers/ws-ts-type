@@ -4,34 +4,42 @@ import { ITSEmptyRecord } from '../../type/record/empty';
 /**
  * 檢查是否為空 Record
  *
+ * 語意：其中之一是（分佈式 (Distributive) 逐成員求值）
+ *
  * 對於 Union 類型，會可能同時返回 true 或 false
  *
  * @example
  * ```ts
- * type R5 = ITSLogic_AnyOfIsEmptyRecord<Record<string, never> | { a: 1 }>;
+ * type R5 = ITSLogic_IsEmptyRecord<Record<string, never> | { a: 1 }>;
  *
  * expectAssignable<R5>(true);
  * expectAssignable<R5>(false);
  * ```
  */
-export type ITSLogic_AnyOfIsEmptyRecord<T, Y = true, N = false> = T extends ITSEmptyRecord ? Y : N
+export type ITSLogic_IsEmptyRecord<T, Y = true, N = false> = T extends ITSEmptyRecord ? Y : N
 
 /**
  * 檢查是否為空 Record
+ *
+ * 語意：全部都是（整體判定，非逐成員）
  */
-export type ITSLogic_IsEmptyRecord<T, Y = true, N = false> = [T] extends [ITSEmptyRecord] ? Y : N
+export type ITSLogic_IsEmptyRecord_UnionAll2<T, Y = true, N = false> = [T] extends [ITSEmptyRecord] ? Y : N
 
 /**
  * 檢查 Union 中的所有成員是否為空 Record
+ *
+ * 語意：全部都是（never 例外回 false）
  */
-export type ITSLogic_IsEmptyRecordUnionAll<T, Y = true, N = false> = [T] extends [never]
+export type ITSLogic_IsEmptyRecord_UnionAll<T, Y = true, N = false> = [T] extends [never]
 	? N
-	: boolean extends ITSLogic_AnyOfIsEmptyRecord<T, Y, N>
+	: boolean extends ITSLogic_IsEmptyRecord<T, Y, N>
 		? N
-		: ITSLogic_AnyOfIsEmptyRecord<T, Y, N>;
+		: ITSLogic_IsEmptyRecord<T, Y, N>;
 
 /**
  * 檢查是否為空對象
+ *
+ * 語意：全部都是（整體判定，非逐成員）
  *
  * true
  * - {}
@@ -41,11 +49,11 @@ export type ITSLogic_IsEmptyRecordUnionAll<T, Y = true, N = false> = [T] extends
  * - null
  * - undefined
  * - { a: 1 }
- * - Record<string, never> 需使用 {@link ITSLogic_IsEmptyObjectAndRecord} 來檢查
+ * - Record<string, never> 需使用 {@link ITSLogic_IsEmptyObjectAndRecord_UnionAll} 來檢查
  *
  * 注意: 對於 `{ a: 1 } | {}` 會返回 true
  */
-export type ITSLogic_IsEmptyObject<T, Y = true, N = false, N2 = N> = [T] extends [null | undefined]
+export type ITSLogic_IsEmptyObject_UnionAll<T, Y = true, N = false, N2 = N> = [T] extends [null | undefined]
 	? N
 	: [T] extends [object]
 		? [keyof T] extends [never]
@@ -55,8 +63,10 @@ export type ITSLogic_IsEmptyObject<T, Y = true, N = false, N2 = N> = [T] extends
 
 /**
  * 對於 `{ a: 1 } | {}` 會同時返回 true 或 false => boolean
+ *
+ * 語意：其中之一是（逐成員求值）
  */
-type I_EachMemberEmptyObject<T, Y = true, N = false> = T extends null | undefined
+export type ITSLogic_IsEmptyObject<T, Y = true, N = false> = T extends null | undefined
 	? N
 	: T extends object
 		? [keyof T] extends [never]
@@ -67,18 +77,22 @@ type I_EachMemberEmptyObject<T, Y = true, N = false> = T extends null | undefine
 /**
  * 檢查 Union 所有成員是否為空對象
  *
+ * 語意：全部都是（never 例外回 false）
+ *
  * @example
  * ```ts
- * type A = ITSLogic_IsEmptyObjectUnionAll<{ a: 1 } | {}>; // false
+ * type A = ITSLogic_IsEmptyObject_UnionAll2<{ a: 1 } | {}>; // false
  * ```
  */
-export type ITSLogic_IsEmptyObjectUnionAll<T, Y = true, N = false> = [T] extends [never]
+export type ITSLogic_IsEmptyObject_UnionAll2<T, Y = true, N = false> = [T] extends [never]
 	? N
-	: boolean extends I_EachMemberEmptyObject<T, Y, N>
+	: boolean extends ITSLogic_IsEmptyObject<T, Y, N>
 		? N
-		: I_EachMemberEmptyObject<T, Y, N>;
+		: ITSLogic_IsEmptyObject<T, Y, N>;
 
 /**
- * 與 ITSLogic_IsEmptyObject 的差異在於，會額外檢查是否為 Record<string, never>
+ * 與 ITSLogic_IsEmptyObject_UnionAll 的差異在於，會額外檢查是否為 Record<string, never>
+ *
+ * 語意：全部都是（整體判定，非逐成員）
  */
-export type ITSLogic_IsEmptyObjectAndRecord<T, Y = true, N = false> = ITSLogic_IsEmptyObject<T, Y, N, ITSLogic_IsEmptyRecord<T, Y, N>>;
+export type ITSLogic_IsEmptyObjectAndRecord_UnionAll<T, Y = true, N = false> = ITSLogic_IsEmptyObject_UnionAll<T, Y, N, ITSLogic_IsEmptyRecord_UnionAll2<T, Y, N>>;
