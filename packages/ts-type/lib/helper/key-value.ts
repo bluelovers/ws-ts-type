@@ -9,6 +9,7 @@
 import { ITSMapLike } from '../generic';
 import { ITSIteratorLazy } from './typeof';
 import { ITSArrayListMaybeReadonly } from '../type/base';
+import { ITSKeyOfUnion } from './keyof/key';
 
 /**
  * 取得介面所有值的聯集類型
@@ -32,36 +33,6 @@ export type ITSValueOf<T extends Record<any, any>> = T[keyof T];
 
 /** 取得介面所有值的聯集類型（別名）/ Get the union type of all values in an interface (alias) */
 export type { ITSValueOf as ITSValueOfRecord };
-
-/**
- * Extracts the keys of a type.
- *
- * For a union type, only keys shared by all union members are returned.
- *
- * @example
- * type A = { name: string; age: number };
- * type B = { name: string; email: string };
- *
- * type Keys = ITSKeyOf<A | B>;
- * // "name"
- */
-export type ITSKeyOf<T> = keyof T;
-
-/**
- * Extracts all keys from every member of a union type.
- *
- * Unlike `keyof T`, this distributes over union members and returns
- * the union of their keys.
- *
- * @example
- * type A = { name: string; age: number };
- * type B = { name: string; email: string };
- *
- * type Keys = ITSKeyOfUnion<A | B>;
- * // "name" | "age" | "email"
- */
-export type ITSKeyOfUnion<T> =
-	T extends any ? keyof T : never;
 
 /**
  * Extracts the value type associated with a key from a union type.

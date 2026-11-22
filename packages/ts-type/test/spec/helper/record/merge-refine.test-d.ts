@@ -1,6 +1,6 @@
 import { printType, expectType, expectAssignable, expectNotAssignable, expectNever } from 'tsd';
 import { ITSRefineOverrideLooseTypeWithAllKey, ITSRefineOverrideLooseTypeWithSameKeyOnly } from '../../../../lib/helper/record/merge-refine';
-import { ITSKeyofBothSame } from '../../../../lib/helper/filter';
+import { ITSKeyofBothSame } from '../../../../lib/helper/keyof/key';
 
 enum EnumStatus {
     A = 'a',

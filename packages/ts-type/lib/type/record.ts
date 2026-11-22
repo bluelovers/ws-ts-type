@@ -8,7 +8,7 @@
  * Created by user on 2019/6/11.
  */
 
-import type { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/filter';
+import { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/keyof/key';
 import { ITSLogicIsNever } from '../logic/never';
 
 export type { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';

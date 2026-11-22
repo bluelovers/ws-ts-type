@@ -47,49 +47,6 @@ export type ITSExtractArrayLike<A, K extends Extract<keyof A, number> = Extract<
 export type ITSKeyofArrayLike<A> = keyof ITSExtractArrayLike<A>;
 
 /**
- * 找出 T 當中與 U 相同的鍵
- * Find keys that are the same between T and U
- *
- * @example
- * type A = { a: 1; b: 2; };
- * type B = { a: 3; c: 4; };
- * type Result = ITSKeyofSame<A, B>; // 'a'
- */
-export type ITSKeyofSame<T, U> = Extract<keyof T, keyof U>;
-/**
- * 找出 T 當中與 U 不同的鍵
- * Find keys that are different between T and U
- *
- * @example
- * type A = { a: 1; b: 2; };
- * type B = { a: 3; c: 4; };
- * type Result = ITSKeyofDiff<A, B>; // 'b'
- */
-export type ITSKeyofDiff<T, U> = Exclude<keyof T, ITSKeyofSame<T, U>>;
-
-/**
- * 找出 T 與 U 當中同時存在的鍵
- * Find keys that exist in both T and U
- *
- * @example
- * type A = { a: 1; b: 2; };
- * type B = { a: 3; c: 4; };
- * type Result = ITSKeyofBothSame<A, B>; // 'a'
- */
-export type ITSKeyofBothSame<T, U> = ITSKeyofSame<T, U>;
-
-/**
- * 去除 T 與 U 當中同時存在的鍵
- * Remove keys that exist in both T and U
- *
- * @example
- * type A = { a: 1; b: 2; };
- * type B = { a: 3; c: 4; };
- * type Result = ITSKeyofBothDiff<A, B>; // 'b' | 'c'
- */
-export type ITSKeyofBothDiff<T, U> = ITSKeyofDiff<T, U> | ITSKeyofDiff<U, T>;
-
-/**
  * ITSFilterKeysString - 基礎鍵過濾類型
  * 從聯合類型中排除指定的字符串鍵
  *

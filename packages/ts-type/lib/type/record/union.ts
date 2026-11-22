@@ -26,8 +26,9 @@
  * 	→ Flatten A | B，再只修改 K / flatten A | B, then modify only K
  */
 
-import { ITSKeyOfUnion, ITSValueOfUnion } from "../../helper/key-value";
+import { ITSValueOfUnion } from "../../helper/key-value";
 import { ITSPartialPick, ITSPartialWith, ITSRequiredPick, ITSRequiredWith } from "../record";
+import { ITSKeyOfUnion } from '../../helper/keyof/key';
 
 /**
  * 在保留每個聯集成員結構的前提下，將選取的屬性設為可選

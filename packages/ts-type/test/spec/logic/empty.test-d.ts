@@ -2,43 +2,43 @@
 import { expectAssignable, expectNotAssignable } from 'tsd';
 import {
 	ITSLogic_IsEmptyObject,
+	ITSLogic_IsEmptyObject_Whole,
 	ITSLogic_IsEmptyObject_UnionAll,
-	ITSLogic_IsEmptyObject_UnionAll2,
 	ITSLogic_IsEmptyObjectAndRecord_UnionAll,
 	ITSLogic_IsEmptyRecord,
+	ITSLogic_IsEmptyRecord_Whole,
 	ITSLogic_IsEmptyRecord_UnionAll,
-	ITSLogic_IsEmptyRecord_UnionAll2,
 } from '../../../lib/logic/record/empty';
 import { ITSLogicIsNever } from '../../../lib';
 
-type A1 = ITSLogic_IsEmptyObject_UnionAll<{}>;
-type B1 = ITSLogic_IsEmptyObject_UnionAll<{ a: 1 }>;
+type A1 = ITSLogic_IsEmptyObject_Whole<{}>;
+type B1 = ITSLogic_IsEmptyObject_Whole<{ a: 1 }>;
 
 expectAssignable<A1>(true);
 expectNotAssignable<B1>(true);
 
-type A2 = ITSLogic_IsEmptyObject_UnionAll<never>;
+type A2 = ITSLogic_IsEmptyObject_Whole<never>;
 
 expectNotAssignable<A2>(true);
 
-type A3 = ITSLogic_IsEmptyObject_UnionAll<undefined>;
+type A3 = ITSLogic_IsEmptyObject_Whole<undefined>;
 
 expectNotAssignable<A3>(true);
 
-type A4 = ITSLogic_IsEmptyObject_UnionAll<null>;
+type A4 = ITSLogic_IsEmptyObject_Whole<null>;
 
 expectNotAssignable<A4>(true);
 
-type B2 = ITSLogic_IsEmptyObject_UnionAll<{ a?: number }>;
+type B2 = ITSLogic_IsEmptyObject_Whole<{ a?: number }>;
 
 expectNotAssignable<B2>(true);
 
-type C1 = ITSLogic_IsEmptyObject_UnionAll<{ a: 1 } | {}>;
+type C1 = ITSLogic_IsEmptyObject_Whole<{ a: 1 } | {}>;
 
 expectAssignable<C1>(true);
 expectNotAssignable<C1>(false);
 
-type C2 = ITSLogic_IsEmptyObject_UnionAll<Pick<{ a: 1 }, never> | {}>;
+type C2 = ITSLogic_IsEmptyObject_Whole<Pick<{ a: 1 }, never> | {}>;
 
 expectAssignable<C2>(true);
 expectNotAssignable<C2>(false);
@@ -48,24 +48,24 @@ type C3 = ITSLogic_IsEmptyObject<{} | { a: 1 }>;
 expectAssignable<C3>(true);
 expectAssignable<C3>(false);
 
-type D1 = ITSLogic_IsEmptyObject_UnionAll2<{ a: 1 } | {}>;
+type D1 = ITSLogic_IsEmptyObject_UnionAll<{ a: 1 } | {}>;
 
 expectAssignable<D1>(false);
 expectNotAssignable<D1>(true);
 
-type A5 = ITSLogic_IsEmptyObject_UnionAll<Pick<{ a: 1 }, never>>;
+type A5 = ITSLogic_IsEmptyObject_Whole<Pick<{ a: 1 }, never>>;
 
 expectAssignable<A5>(true);
 
-type R1 = ITSLogic_IsEmptyRecord_UnionAll2<Record<string, never>>;
+type R1 = ITSLogic_IsEmptyRecord_Whole<Record<string, never>>;
 
 expectAssignable<R1>(true);
 
-type R2 = ITSLogic_IsEmptyObject_UnionAll<Record<string, never>, false, ITSLogic_IsEmptyRecord_UnionAll2<Record<string, never>>>;
+type R2 = ITSLogic_IsEmptyObject_Whole<Record<string, never>, false, ITSLogic_IsEmptyRecord_Whole<Record<string, never>>>;
 
 expectAssignable<R2>(true);
 
-type R3 = ITSLogic_IsEmptyObject_UnionAll<Record<string, never>>;
+type R3 = ITSLogic_IsEmptyObject_Whole<Record<string, never>>;
 
 expectAssignable<R3>(false);
 

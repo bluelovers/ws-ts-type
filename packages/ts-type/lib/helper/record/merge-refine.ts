@@ -1,7 +1,7 @@
 import { I_TypeNever } from '../../internal/token';
 import { ITSLogicIsNever } from '../../logic/never';
 import { ITSLogic_IsStringLiteral } from '../../logic/string/string-literal';
-import { ITSKeyofBothSame } from '../filter';
+import { ITSKeyofBothSame } from '../keyof/key';
 
 type _ITSRefineOverrideLooseTypeWithSameKeyOnly<T1 extends object, T2 extends object> = {
 	[K in keyof T1]: K extends keyof T2
