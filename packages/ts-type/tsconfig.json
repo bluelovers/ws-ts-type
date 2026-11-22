@@ -2,11 +2,13 @@
   "extends": "@bluelovers/tsconfig/esm/mapfile.json",
   "compilerOptions": {
     "module": "node16",
+    "moduleResolution": "node16",
     "skipLibCheck": true,
     "strictFunctionTypes": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+    "ignoreDeprecations": "6.0"
   },
   "include": [
     "lib",

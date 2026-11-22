@@ -1,2 +1,70 @@
 import { ITSEmptyRecord } from '../../type/record/empty';
-export type ITSLogicIsEmptyRecord<T, Y = true, N = false> = T extends ITSEmptyRecord ? Y : N;
+/**
+ * 檢查是否為空 Record
+ *
+ * 語意：其中之一是（分佈式 (Distributive) 逐成員求值）
+ *
+ * 對於 Union 類型，會可能同時返回 true 或 false
+ *
+ * @example
+ * ```ts
+ * type R5 = ITSLogic_IsEmptyRecord<Record<string, never> | { a: 1 }>;
+ *
+ * expectAssignable<R5>(true);
+ * expectAssignable<R5>(false);
+ * ```
+ */
+export type ITSLogic_IsEmptyRecord<T, Y = true, N = false> = T extends ITSEmptyRecord ? Y : N;
+/**
+ * 檢查是否為空 Record
+ *
+ * 語意：全部都是（整體判定，非逐成員）
+ */
+export type ITSLogic_IsEmptyRecord_Whole<T, Y = true, N = false> = [T] extends [ITSEmptyRecord] ? Y : N;
+/**
+ * 檢查 Union 中的所有成員是否為空 Record
+ *
+ * 語意：全部都是（never 例外回 false）
+ */
+export type ITSLogic_IsEmptyRecord_UnionAll<T, Y = true, N = false> = [T] extends [never] ? N : boolean extends ITSLogic_IsEmptyRecord<T, Y, N> ? N : ITSLogic_IsEmptyRecord<T, Y, N>;
+/**
+ * 檢查是否為空對象
+ *
+ * 語意：全部都是（整體判定，非逐成員）
+ *
+ * true
+ * - {}
+ * - Pick<{ a: 1 }, never>
+ *
+ * false
+ * - null
+ * - undefined
+ * - { a: 1 }
+ * - Record<string, never> 需使用 {@link ITSLogic_IsEmptyObjectAndRecord_UnionAll} 來檢查
+ *
+ * 注意: 對於 `{ a: 1 } | {}` 會返回 true
+ */
+export type ITSLogic_IsEmptyObject_Whole<T, Y = true, N = false, N2 = N> = [T] extends [null | undefined] ? N : [T] extends [object] ? [keyof T] extends [never] ? Y : N2 : N;
+/**
+ * 對於 `{ a: 1 } | {}` 會同時返回 true 或 false => boolean
+ *
+ * 語意：其中之一是（逐成員求值）
+ */
+export type ITSLogic_IsEmptyObject<T, Y = true, N = false> = T extends null | undefined ? N : T extends object ? [keyof T] extends [never] ? Y : N : N;
+/**
+ * 檢查 Union 所有成員是否為空對象
+ *
+ * 語意：全部都是（never 例外回 false）
+ *
+ * @example
+ * ```ts
+ * type A = ITSLogic_IsEmptyObject_UnionAll<{ a: 1 } | {}>; // false
+ * ```
+ */
+export type ITSLogic_IsEmptyObject_UnionAll<T, Y = true, N = false> = [T] extends [never] ? N : boolean extends ITSLogic_IsEmptyObject<T, Y, N> ? N : ITSLogic_IsEmptyObject<T, Y, N>;
+/**
+ * 與 ITSLogic_IsEmptyObject_Whole 的差異在於，會額外檢查是否為 Record<string, never>
+ *
+ * 語意：全部都是（整體判定，非逐成員）
+ */
+export type ITSLogic_IsEmptyObjectAndRecord_UnionAll<T, Y = true, N = false> = ITSLogic_IsEmptyObject_Whole<T, Y, N, ITSLogic_IsEmptyRecord_Whole<T, Y, N>>;

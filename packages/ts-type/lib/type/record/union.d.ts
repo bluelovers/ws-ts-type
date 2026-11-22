@@ -1,5 +1,6 @@
-import { ITSKeyOfUnion, ITSValueOfUnion } from "../../helper/key-value";
+import { ITSValueOfUnion } from "../../helper/key-value";
 import { ITSPartialPick, ITSRequiredPick } from "../record";
+import { ITSKeyOfUnion } from '../../helper/keyof/key';
 /**
  * 在保留每個聯集成員結構的前提下，將選取的屬性設為可選
  * Makes the selected properties optional while preserving
