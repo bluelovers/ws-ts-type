@@ -1,14 +1,9 @@
 /**
- * 內部字串字面量邏輯工具（內部使用）
- * Internal String Literal Logic Utilities (Internal Use)
- *
- * 提供內部使用的字串字面量邏輯判斷工具
- * Provides internal string literal logic detection utilities
+ * Internal String Literal Logic Utilities
  */
 
 /**
- * 檢測 T 是否為聯合類型（內部使用）
- * Detect if T is a union type (internal use)
+ * 檢測 T 是否為聯合類型
  *
  * @internal
  *
@@ -25,8 +20,7 @@ export type ITSLogic_IsUnion<T, Y = true, N = false, U = T> = U extends any
 	: never;
 
 /**
- * 檢測 T 是否為單一字串字面量（內部使用）
- * Detect if T is a single string literal (internal use)
+ * 檢測 T 是否為單一字串字面量
  *
  * @internal
  *
@@ -47,3 +41,10 @@ export type ITSLogic_IsSingleStringLiteral<
 	Y = true,
 	N = false
 > = string extends T ? N : [T] extends [never] ? N : ITSLogic_IsUnion<T, N, Y>;
+
+export type ITSLogic_IsStringLiteral<T> =
+	T extends string
+		? string extends T
+			? false
+			: true
+		: false;
