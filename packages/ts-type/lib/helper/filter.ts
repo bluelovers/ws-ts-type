@@ -76,7 +76,7 @@ export type ITSKeyofDiff<T, U> = Exclude<keyof T, ITSKeyofSame<T, U>>;
  * type B = { a: 3; c: 4; };
  * type Result = ITSKeyofBothSame<A, B>; // 'a'
  */
-export type ITSKeyofBothSame<T, U> = ITSKeyofSame<T, U> | ITSKeyofSame<U, T>;
+export type ITSKeyofBothSame<T, U> = ITSKeyofSame<T, U>;
 
 /**
  * 去除 T 與 U 當中同時存在的鍵
