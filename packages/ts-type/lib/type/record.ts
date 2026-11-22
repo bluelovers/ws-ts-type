@@ -8,8 +8,8 @@
  * Created by user on 2019/6/11.
  */
 
-import { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/keyof/key';
 import { ITSLogicIsNever } from '../logic/never';
+import { ITSKeyofBothDiff, ITSKeyofBothSame, ITSKeyofDiff, ITSKeyofSame } from '../helper/keyof/key';
 
 export type { ITSRequireRecord, ITSPartialRecord } from '../type/record/partial';
 
@@ -273,3 +273,8 @@ export type ITSRequireOnlyOne<T, Keys extends keyof T = keyof T> =
 	[K in Keys]-?: ITSRequiredPick<T, K>
 	& Partial<Record<Exclude<Keys, K>, never>>
 }[Keys];
+
+/** 以 T 的所有鍵組成、值型別統一為 V 的物件型別 (Object Type) */
+export type ITSRecordWithKeysFrom<T extends object, V = unknown> = {
+	[K in keyof T]: V;
+};

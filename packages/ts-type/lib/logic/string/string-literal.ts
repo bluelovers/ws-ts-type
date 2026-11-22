@@ -42,9 +42,9 @@ export type ITSLogic_IsSingleStringLiteral<
 	N = false
 > = string extends T ? N : [T] extends [never] ? N : ITSLogic_IsUnion<T, N, Y>;
 
-export type ITSLogic_IsStringLiteral<T> =
+export type ITSLogic_IsStringLiteral<T, Y = true, N = false> =
 	T extends string
 		? string extends T
-			? false
-			: true
-		: false;
+			? N
+			: Y
+		: N;
