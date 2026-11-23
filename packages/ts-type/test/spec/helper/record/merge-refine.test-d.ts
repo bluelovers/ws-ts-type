@@ -1,5 +1,5 @@
 import { printType, expectType, expectAssignable, expectNotAssignable, expectNever } from 'tsd';
-import { ITSRefineOverrideLooseTypeWithAllKey, ITSRefineOverrideLooseTypeWithSameKeyOnly } from '../../../../lib/helper/record/merge-refine';
+import { ITSRefineOverrideLooseTypeWithAllKey, ITSRefineOverrideLooseTypeWithSameKeyOnly, ITSRefineOverrideNarrowTypeWithAllKey, ITSRefineOverrideNarrowTypeWithSameKeyOnly } from '../../../../lib/helper/record/merge-refine';
 import { ITSKeyofBothSame } from '../../../../lib/helper/keyof/key';
 
 enum EnumStatus
@@ -108,4 +108,70 @@ type G1 = { name: string; extra: string };
 
 // @ts-expect-error
 type Result11 = ITSRefineOverrideLooseTypeWithAllKey<F1, G1>;
+
+type H1 = {
+    name: string;
+    count: number;
+    readonly id: number;
+    active?: boolean;
+};
+
+type H2 = {
+    name: 'Alice';
+    count: 1;
+    id: 2;
+    active: false;
+};
+
+type Narrow1 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<H1, H2>;
+
+expectAssignable<Narrow1['name']>('Alice');
+expectNotAssignable<Narrow1['name']>('Bob');
+
+// 不限 string：number 常量同樣收窄
+expectAssignable<Narrow1['count']>(1);
+expectNotAssignable<Narrow1['count']>(2);
+
+expectAssignable<Narrow1['id']>(2);
+expectNotAssignable<Narrow1['id']>(3);
+
+expectAssignable<Pick<Narrow1, 'active'>>(null as { active?: false });
+
+expectAssignable<H1>(null as Narrow1);
+expectNotAssignable<Narrow1>(null as H1);
+
+// T2 比 T1 寬鬆時維持 T1 原值
+type I1 = { mode: 'on' | 'off' };
+type I2 = { mode: string };
+
+type Narrow2 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<I1, I2>;
+
+expectAssignable<Narrow2['mode']>('on');
+expectNotAssignable<Narrow2['mode']>('other');
+
+// T2 型別不相干時維持 T1 原值
+type J1 = { value: string };
+type J2 = { value: number };
+
+type Narrow3 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<J1, J2>;
+
+expectAssignable<Narrow3['value']>('Alice');
+expectNotAssignable<Narrow3['value']>(1);
+
+type Narrow4 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<H1, H2, 'name'>;
+
+expectAssignable<Narrow4['name']>('Alice');
+expectAssignable<Narrow4['count']>(1);
+
+// @ts-expect-error
+type Narrow5 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<H1, C1>;
+
+type Narrow6 = ITSRefineOverrideNarrowTypeWithAllKey<H1, H2>;
+
+expectAssignable<Narrow6['count']>(1);
+expectNotAssignable<Narrow6['count']>(2);
+expectNotAssignable<keyof Narrow6>('extra');
+
+// @ts-expect-error
+type Narrow7 = ITSRefineOverrideNarrowTypeWithAllKey<H1, H2 & { extra: string }>;
 
