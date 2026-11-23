@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.20](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.19...ts-type@3.0.20) (2026-11-23)
+
+
+### BREAKING CHANGES
+
+* **ts-type:** 移動
+
+
+
+### ✨　Features
+
+* **helper:** 擴充物件精煉工具並清理過時定義 ([cf1c4aa](https://github.com/bluelovers/ws-ts-type/commit/cf1c4aa9965ca7206b2e16cfe0366c880a6b8e48))
+* **ts-type:** 新增多種類型判斷邏輯工具模組 ([ea060c6](https://github.com/bluelovers/ws-ts-type/commit/ea060c6e0f509d8600531bb93beb17d2488f24e8))
+* **type:** 為屬性覆寫工具型別新增排除鍵 (Exclude) 功能 ([fa31556](https://github.com/bluelovers/ws-ts-type/commit/fa31556bc94262b8b5f38ba23c74c5368bc5bd9b))
+* **type:** 新增屬性覆寫工具型別並完善映射重建邏輯 ([e457bb4](https://github.com/bluelovers/ws-ts-type/commit/e457bb4b43c89835e7af3620b2f8352bb6393399))
+* **type:** 新增屬性收窄工具型別並擴充合併邏輯 ([7b4ea42](https://github.com/bluelovers/ws-ts-type/commit/7b4ea42d0d8dc07d21465b2f16441a229a873d9c))
+* **type:** 新增屬性收窄工具並優化字串字面量判斷邏輯 ([8cbf8e5](https://github.com/bluelovers/ws-ts-type/commit/8cbf8e5370d078542f15406ecd2bbffe5e160ea8))
+
+
+### 📦　Code Refactoring
+
+* **logic:** 重構空物件與空 Record 判斷邏輯並優化語意 ([d60a86d](https://github.com/bluelovers/ws-ts-type/commit/d60a86d85f05f782322837580ba39ebf90c60444))
+* **ts-type:** 重構字串字面量邏輯與原始類型定義 ([01de4b3](https://github.com/bluelovers/ws-ts-type/commit/01de4b340d8de64ab304f6f9fde170ec84dd895b))
+* **ts-type:** 移動 ([e9cfa32](https://github.com/bluelovers/ws-ts-type/commit/e9cfa32db4fa8082849ed4dc0f7ea8b669aba505))
+* **type:** 重構基礎型別定義並優化字串/數字型別安全性 ([ac4cb76](https://github.com/bluelovers/ws-ts-type/commit/ac4cb7616f0f8bf4dde01be90e401b128d41b1ab))
+* **type:** 收緊 ITSRefineOverrideLooseTypeWithAllKey 的鍵約束條件 ([a6499fe](https://github.com/bluelovers/ws-ts-type/commit/a6499feeecda756edcef2434af20d8ff566a49c9))
+
+
+### 📚　Documentation
+
+* **docs:** 更新開發者文件並規範邏輯判斷型別命名規則 ([2aeb5cd](https://github.com/bluelovers/ws-ts-type/commit/2aeb5cd64195ffb6b48a5fa8efcdf369852c7cc6))
+
+
+### 🚨　Tests
+
+* **logic:** 新增空物件與空 Record 相關邏輯判斷工具 ([32e6492](https://github.com/bluelovers/ws-ts-type/commit/32e64920b57df4f23df36683a2d6f0255380f4b6))
+
+
+### 🛠　Build System
+
+* **release:** update generated files ([9072524](https://github.com/bluelovers/ws-ts-type/commit/9072524a8a9aad9298748428ee354aea410f60d2))
+
+
+### 🔖　Miscellaneous
+
+* . ([f201caf](https://github.com/bluelovers/ws-ts-type/commit/f201caffeba191cbad1293aa962ac4f3bbc94cf9))
+* . ([5f88198](https://github.com/bluelovers/ws-ts-type/commit/5f8819889d881381681182b889716cf731b43b35))
+* . ([4f114ef](https://github.com/bluelovers/ws-ts-type/commit/4f114efb150fc953078b81c7077052f7687243e8))
+
+
 ## [3.0.19](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.18...ts-type@3.0.19) (2026-11-06)
 
 

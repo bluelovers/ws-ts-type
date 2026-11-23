@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/bluelovers/ws-ts-type/compare/ts-type-object-entries@1.0.11...ts-type-object-entries@1.0.12) (2026-11-23)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([3857cd7](https://github.com/bluelovers/ws-ts-type/commit/3857cd71ad9a72ca1452df1a6300ab6d4305dbc5))
+
+
 ## [1.0.11](https://github.com/bluelovers/ws-ts-type/compare/ts-type-object-entries@1.0.10...ts-type-object-entries@1.0.11) (2026-09-25)
 
 
