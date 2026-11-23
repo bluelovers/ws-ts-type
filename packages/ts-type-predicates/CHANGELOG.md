@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.15...ts-type-predicates@1.0.16) (2026-11-23)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([ed73dc0](https://github.com/bluelovers/ws-ts-type/commit/ed73dc0d297f52ce4c7bf680e5e71ab07e46e9c6))
+
+
 ## [1.0.15](https://github.com/bluelovers/ws-ts-type/compare/ts-type-predicates@1.0.14...ts-type-predicates@1.0.15) (2026-11-06)
 
 
