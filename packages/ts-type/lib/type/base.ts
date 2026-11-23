@@ -9,24 +9,31 @@
 import { ITSTypeFunction } from '../generic';
 
 /**
- * 陣列類型：可讀寫陣列或唯讀陣列
- * Array type: writable array or readonly array
- *
- * @example
- * type StringList = ITSArrayListMaybeReadonly<string>;
- * // type StringList = string[] | readonly string[]
- */
-export type ITSArrayListMaybeReadonly<T> = T[] | readonly T[];
-
-/**
- * 鍵的類型：符號、字串或數字
  * Key types: symbol, string, or number
  *
- * @example
- * type Keys = ITSKeys;
- * // type Keys = symbol | string | number
+ * @see PropertyKey
  */
-export type ITSKeys = symbol | string | number;
+export type ITSKeys = (string & {}) | (number & {}) | (symbol & {});
+
+/**
+ * Property key type: string or symbol
+ */
+export type ITSPropertyKey = (string & {}) | (symbol & {});
+
+/**
+ * 屬性鍵或索引類型：字串、符號或數字
+ * Property key or index type: string, symbol, or number
+ *
+ * 適用於物件屬性存取與陣列索引的聯合類型
+ * Suitable for union type covering object property access and array index access
+ *
+ * @see {@link ITSPropertyKey} - 僅字串或符號（不含數字索引）
+ *
+ * @example
+ * type KeyOrIdx = ITSPropertyKeyOrIndex;
+ * // type KeyOrIdx = string | symbol | number
+ */
+export type ITSPropertyKeyOrIndex = ITSPropertyKey | (number & {});
 
 /**
  * 建構函數類型
@@ -37,6 +44,16 @@ export type ITSKeys = symbol | string | number;
  * // type MyConstructor = new (...args: any) => MyClass
  */
 export type ITSConstructorLike<T extends any = any> = new(...args: any) => T;
+
+/**
+ * 陣列類型：可讀寫陣列或唯讀陣列
+ * Array type: writable array or readonly array
+ *
+ * @example
+ * type StringList = ITSArrayListMaybeReadonly<string>;
+ * // type StringList = string[] | readonly string[]
+ */
+export type ITSArrayListMaybeReadonly<T> = T[] | readonly T[];
 
 /**
  * 值或陣列：單一值或其陣列
@@ -59,31 +76,6 @@ export type ITSValueOrArray<T> = T | T[];
 export type ITSValueOrArrayMaybeReadonly<T> = T | ITSArrayListMaybeReadonly<T>;
 
 /**
- * 屬性鍵類型：字串或符號
- * Property key type: string or symbol
- *
- * @example
- * type PropKey = ITSPropertyKey;
- * // type PropKey = string | symbol
- */
-export type ITSPropertyKey = string | symbol;
-
-/**
- * 屬性鍵或索引類型：字串、符號或數字
- * Property key or index type: string, symbol, or number
- *
- * 適用於物件屬性存取與陣列索引的聯合類型
- * Suitable for union type covering object property access and array index access
- *
- * @see {@link ITSPropertyKey} - 僅字串或符號（不含數字索引）
- *
- * @example
- * type KeyOrIdx = ITSPropertyKeyOrIndex;
- * // type KeyOrIdx = string | symbol | number
- */
-export type ITSPropertyKeyOrIndex = ITSPropertyKey | number;
-
-/**
  * 任意函數類型
  * Any function type
  *
@@ -101,7 +93,7 @@ export type ITSAnyFunction = ITSTypeFunction<any>;
  * type Primitive = ITSBasicPrimitive;
  * // type Primitive = number | string | boolean
  */
-export type ITSBasicPrimitive = number | string | boolean;
+export type ITSBasicPrimitive = (number & {}) | (string & {}) | (boolean & {});
 
 /**
  * 可為空的原始類型：null 或 undefined
