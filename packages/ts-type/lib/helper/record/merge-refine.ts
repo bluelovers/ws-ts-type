@@ -31,6 +31,6 @@ export type ITSRefineOverrideLooseTypeWithSameKeyOnly<T1 extends ITSLogicIsNever
 
 /**
  * 與 `ITSRefineOverrideLooseTypeWithSameKeyOnly` 同規則的全鍵 (All Key) 版本：以 T2 的全部鍵參與收窄，無 K 參數。
- * 約束要求 T1 與 T2 至少共有一鍵（弱型別 (Weak Type) 檢查），否則於宣告處報錯。
+ * 約束要求 T2 的所有鍵都必須存在於 T1，否則於宣告處報錯。
  */
-export type ITSRefineOverrideLooseTypeWithAllKey<T1 extends Partial<ITSRecordWithKeysFrom<T2, unknown>>, T2 extends object> = _ITSRefineOverrideLooseTypeWithSameKeyOnly<T1, T2>;
+export type ITSRefineOverrideLooseTypeWithAllKey<T1 extends (keyof T2 extends keyof T1 ? Partial<ITSRecordWithKeysFrom<T2, unknown>> : I_TypeNever<'missing keys of T2 in T1'>), T2 extends object> = _ITSRefineOverrideLooseTypeWithSameKeyOnly<T1, T2>;
