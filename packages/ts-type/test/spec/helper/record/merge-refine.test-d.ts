@@ -215,3 +215,26 @@ expectNotAssignable<Over6['count']>(2);
 // @ts-expect-error
 type Over7 = ITSRefineOverrideTypeWithAllKey<H1, H2 & { extra: string }>;
 
+// E 排除特定鍵：被排除的鍵不參與覆寫
+type Excl1 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<H1, H2, keyof H2, 'name'>;
+
+expectType<string>(null as Excl1['name']);
+expectType<1>(null as Excl1['count']);
+
+type Excl2 = ITSRefineOverrideLooseTypeWithSameKeyOnly<A1, B1, keyof B1, 'name'>;
+
+expectType<string>(null as Excl2['name']);
+expectType<'foo' | 'bar'>(null as Excl2['readonlyName']);
+
+type Excl3 = ITSRefineOverrideTypeWithSameKeyOnly<I1, I2, 'mode', 'mode'>;
+
+expectType<'on' | 'off'>(null as Excl3['mode']);
+
+// 被排除的鍵不要求存在於 T1
+type Excl4 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<{ count: number }, { name: string; count: 1 }, 'name' | 'count', 'name'>;
+
+expectType<1>(null as Excl4['count']);
+
+// @ts-expect-error
+type Excl5 = ITSRefineOverrideNarrowTypeWithSameKeyOnly<{ other: number }, { name: string; count: 1 }, 'name'>;
+

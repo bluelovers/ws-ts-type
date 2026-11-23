@@ -26,8 +26,9 @@ type _ITSRefineOverrideLooseTypeWithSameKeyOnly<T1 extends object, T2 extends ob
  * - K 預設取 `ITSKeyofBothSame<T1, T2>`；兩者無共有鍵時 K 為 `never`，
  *   約束隨之替換為 `no same key found` 錯誤型別，於宣告處即報錯。
  * - 指定 K 可將收窄範圍限制到特定鍵；結果始終只含 T1 的鍵。
+ * - E 排除特定鍵不參與覆寫，且被排除的鍵不要求存在於 T1。
  */
-export type ITSRefineOverrideLooseTypeWithSameKeyOnly<T1 extends ITSLogicIsNever<K, I_TypeNever<'no same key found'>, Partial<ITSRecordWithKeysFrom<Pick<T2, K>, unknown>>>, T2 extends object, K extends keyof T2 = ITSKeyofBothSame<T1, T2>> = _ITSRefineOverrideLooseTypeWithSameKeyOnly<T1, Pick<T2, K>>;
+export type ITSRefineOverrideLooseTypeWithSameKeyOnly<T1 extends ITSLogicIsNever<K, I_TypeNever<'no same key found'>, Partial<ITSRecordWithKeysFrom<Pick<T2, Exclude<K, E>>, unknown>>>, T2 extends object, K extends keyof T2 = ITSKeyofBothSame<T1, T2>, E extends keyof T2 = never> = _ITSRefineOverrideLooseTypeWithSameKeyOnly<T1, Pick<T2, Exclude<K, E>>>;
 
 /**
  * 與 `ITSRefineOverrideLooseTypeWithSameKeyOnly` 同規則的全鍵 (All Key) 版本：以 T2 的全部鍵參與收窄，無 K 參數。
@@ -55,8 +56,9 @@ type _ITSRefineOverrideNarrowTypeWithSameKeyOnly<T1 extends object, T2 extends o
  * - K 預設取 `ITSKeyofBothSame<T1, T2>`；兩者無共有鍵時 K 為 `never`，
  *   約束隨之替換為 `no same key found` 錯誤型別，於宣告處即報錯。
  * - 指定 K 可將替換範圍限制到特定鍵；結果始終只含 T1 的鍵。
+ * - E 排除特定鍵不參與覆寫，且被排除的鍵不要求存在於 T1。
  */
-export type ITSRefineOverrideNarrowTypeWithSameKeyOnly<T1 extends ITSLogicIsNever<K, I_TypeNever<'no same key found'>, Partial<ITSRecordWithKeysFrom<Pick<T2, K>, unknown>>>, T2 extends object, K extends keyof T2 = ITSKeyofBothSame<T1, T2>> = _ITSRefineOverrideNarrowTypeWithSameKeyOnly<T1, Pick<T2, K>>;
+export type ITSRefineOverrideNarrowTypeWithSameKeyOnly<T1 extends ITSLogicIsNever<K, I_TypeNever<'no same key found'>, Partial<ITSRecordWithKeysFrom<Pick<T2, Exclude<K, E>>, unknown>>>, T2 extends object, K extends keyof T2 = ITSKeyofBothSame<T1, T2>, E extends keyof T2 = never> = _ITSRefineOverrideNarrowTypeWithSameKeyOnly<T1, Pick<T2, Exclude<K, E>>>;
 
 /**
  * 與 `ITSRefineOverrideNarrowTypeWithSameKeyOnly` 同規則的全鍵 (All Key) 版本：以 T2 的全部鍵參與替換，無 K 參數。
@@ -87,8 +89,9 @@ type _ITSRefineOverrideTypeWithSameKeyOnly<T1 extends object, T2 extends object>
  *   約束隨之替換為 `no same key found` 錯誤型別，於宣告處即報錯。
  * - 指定 K 可將替換範圍限制到特定鍵；結果始終只含 T1 的鍵。
  * - 型別不相通（如 `string` ↔ `number`）的鍵維持 T1 原值。
+ * - E 排除特定鍵不參與覆寫，且被排除的鍵不要求存在於 T1。
  */
-export type ITSRefineOverrideTypeWithSameKeyOnly<T1 extends ITSLogicIsNever<K, I_TypeNever<'no same key found'>, Partial<ITSRecordWithKeysFrom<Pick<T2, K>, unknown>>>, T2 extends object, K extends keyof T2 = ITSKeyofBothSame<T1, T2>> = _ITSRefineOverrideTypeWithSameKeyOnly<T1, Pick<T2, K>>;
+export type ITSRefineOverrideTypeWithSameKeyOnly<T1 extends ITSLogicIsNever<K, I_TypeNever<'no same key found'>, Partial<ITSRecordWithKeysFrom<Pick<T2, Exclude<K, E>>, unknown>>>, T2 extends object, K extends keyof T2 = ITSKeyofBothSame<T1, T2>, E extends keyof T2 = never> = _ITSRefineOverrideTypeWithSameKeyOnly<T1, Pick<T2, Exclude<K, E>>>;
 
 /**
  * 與 `ITSRefineOverrideTypeWithSameKeyOnly` 同規則的全鍵 (All Key) 版本：以 T2 的全部鍵參與替換，無 K 參數。
