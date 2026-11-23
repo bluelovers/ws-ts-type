@@ -33,4 +33,4 @@ export type ITSLogic_IsUnion<T, Y = true, N = false, U = T> = U extends any ? ([
  * // type Test3 = false
  */
 export type ITSLogic_IsSingleStringLiteral<T extends string, Y = true, N = false> = string extends T ? N : [T] extends [never] ? N : ITSLogic_IsUnion<T, N, Y>;
-export type ITSLogic_IsStringLiteral<T> = T extends string ? string extends T ? false : true : false;
+export type ITSLogic_IsStringLiteral<T, Y = true, N = false> = T extends string ? string extends T ? N : Y : N;
