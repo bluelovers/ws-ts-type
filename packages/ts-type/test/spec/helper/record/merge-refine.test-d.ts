@@ -1,5 +1,5 @@
 import { printType, expectType, expectAssignable, expectNotAssignable, expectNever } from 'tsd';
-import { ITSRefineOverrideLooseTypeWithAllKey, ITSRefineOverrideLooseTypeWithSameKeyOnly, ITSRefineOverrideNarrowTypeWithAllKey, ITSRefineOverrideNarrowTypeWithSameKeyOnly } from '../../../../lib/helper/record/merge-refine';
+import { ITSRefineOverrideLooseTypeWithAllKey, ITSRefineOverrideLooseTypeWithSameKeyOnly, ITSRefineOverrideNarrowTypeWithAllKey, ITSRefineOverrideNarrowTypeWithSameKeyOnly, ITSRefineOverrideTypeWithAllKey, ITSRefineOverrideTypeWithSameKeyOnly } from '../../../../lib/helper/record/merge-refine';
 import { ITSKeyofBothSame } from '../../../../lib/helper/keyof/key';
 
 enum EnumStatus
@@ -174,4 +174,44 @@ expectNotAssignable<keyof Narrow6>('extra');
 
 // @ts-expect-error
 type Narrow7 = ITSRefineOverrideNarrowTypeWithAllKey<H1, H2 & { extra: string }>;
+
+type Over1 = ITSRefineOverrideTypeWithSameKeyOnly<H1, H2>;
+
+expectAssignable<Over1['name']>('Alice');
+expectNotAssignable<Over1['name']>('Bob');
+
+// 不限 string：number 常量同樣替換
+expectAssignable<Over1['count']>(1);
+expectNotAssignable<Over1['count']>(2);
+
+expectAssignable<Pick<Over1, 'active'>>(null as { active?: false });
+
+// T2 比 T1 寬鬆：無條件替換（與 Narrow 版差異點）
+type Over2 = ITSRefineOverrideTypeWithSameKeyOnly<I1, I2>;
+
+expectAssignable<Over2['mode']>('other');
+
+// T2 型別不相干（string ↔ number）：不通則維持 T1 原值
+type Over3 = ITSRefineOverrideTypeWithSameKeyOnly<J1, J2>;
+
+expectAssignable<Over3['value']>('Alice');
+expectNotAssignable<Over3['value']>(1);
+
+expectAssignable<J1>(null as Over3);
+
+type Over4 = ITSRefineOverrideTypeWithSameKeyOnly<H1, H2, 'name'>;
+
+expectAssignable<Over4['name']>('Alice');
+expectAssignable<Over4['count']>(1);
+
+// @ts-expect-error
+type Over5 = ITSRefineOverrideTypeWithSameKeyOnly<H1, C1>;
+
+type Over6 = ITSRefineOverrideTypeWithAllKey<H1, H2>;
+
+expectAssignable<Over6['count']>(1);
+expectNotAssignable<Over6['count']>(2);
+
+// @ts-expect-error
+type Over7 = ITSRefineOverrideTypeWithAllKey<H1, H2 & { extra: string }>;
 
