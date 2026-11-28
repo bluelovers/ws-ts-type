@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.22](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.21...ts-type@3.0.22) (2026-11-28)
+
+
+
+### ✨　Features
+
+* **ts-type:** 新增 unknown 型別判斷工具 ([b0289d0](https://github.com/bluelovers/ws-ts-type/commit/b0289d0a85118582381bfdc98331fc35256baa7b))
+
+
+### 📦　Code Refactoring
+
+* **ts-type:** 重構 unknown 型別判定邏輯並建立淘汰機制 ([0ad9df0](https://github.com/bluelovers/ws-ts-type/commit/0ad9df0f7308e7e8e649cd9c36610ff3adb5ef42))
+
+
+### 🛠　Build System
+
+* update build ([ccd1982](https://github.com/bluelovers/ws-ts-type/commit/ccd198247e1ed6f7ffc99a316fbea2cdbe6af08d))
+* **ts-type:** 優化建置流程並新增根目錄 index.d.ts 自動生成腳本 ([6c7c47a](https://github.com/bluelovers/ws-ts-type/commit/6c7c47a9a2980ad96d88f974350b5919732be5bb))
+
+
 ## [3.0.21](https://github.com/bluelovers/ws-ts-type/compare/ts-type@3.0.20...ts-type@3.0.21) (2026-11-23)
 
 

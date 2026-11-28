@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.18](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.17...@ts-type/package-dts@3.0.18) (2026-11-28)
+
+
+
+### 📦　Code Refactoring
+
+* **package-dts:** 使用 string &amp; {} 優化型別定義以提升 IDE 補全體驗 ([9a4cf99](https://github.com/bluelovers/ws-ts-type/commit/9a4cf9915cde01832e29d82ac02c0ae974c2d1d7))
+
+
 ## [3.0.17](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/package-dts@3.0.16...@ts-type/package-dts@3.0.17) (2026-11-23)
 
 
