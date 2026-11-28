@@ -1,10 +1,6 @@
 "use strict";
 /**
- * Any 類型判斷工具
- * Any Type Detection Utilities
- *
- * 提供檢測類型是否為 any 的工具
- * Provides utilities for detecting if a type is any
+ * any / unknown 型別判斷工具
  *
  * @see https://stackoverflow.com/questions/49927523/disallow-call-with-any/49928360#49928360
  */
