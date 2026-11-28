@@ -5,7 +5,7 @@ interface _IPackageExportsEntryObjectExtend extends ITSPartialRecord<_ICondition
 }
 declare module '../../types/package.json' {
     interface PackageExportsEntryObject extends _IPackageExportsEntryObjectExtend {
-        [k: string]: IPackageExportsValue;
+        [k: (string & {})]: IPackageExportsValue;
     }
 }
 export interface IPackageExportsEntryObject extends PackageExportsEntryObject, _IPackageExportsEntryObjectExtend {
@@ -18,7 +18,7 @@ export type IPackageExportsValue = IPackageExportsValueFallback | IPackageExport
  * This interface was referenced by `undefined`'s JSON-Schema definition
  * via the `patternProperty` "^\./.+".
  */
-export interface IPackageJsonExportsEntryObjectRoot extends ITSPartialRecord<'default' | './package.json' | `./${string}` | _IConditions, IPackageExportsValue> {
+export interface IPackageJsonExportsEntryObjectRoot extends ITSPartialRecord<'default' | './package.json' | `./${(string & {})}` | _IConditions, IPackageExportsValue> {
     /**
      * The module path that is resolved when the module specifier matches "name", shadows the "main" field.
      */

@@ -26,7 +26,7 @@ export interface IPackageJson<T = unknown> extends  ITSOverwrite<ITSOmitIndexSig
 	[k: string]: unknown;
  */
 	// @ts-ignore
-	[k: string]: T;
+	[k: (string & {})]: T;
 }
 
 export default IPackageJson

@@ -1,2 +1,3 @@
 
-export type INpmClient = string | 'npm' | 'yarn' | 'lerna';
+export type INpmClient = (string & {}) | 'npm' | 'yarn' | 'lerna' | 'pnpm';
+

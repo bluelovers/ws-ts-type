@@ -9,7 +9,7 @@ import { INpmClient } from './lib/lerna-json/types';
 import { IBranch } from './lib/types';
 export type { IReleaseType };
 type _Command = AJSONSchemaForLernaJsonFiles["command"];
-type _MergeCommand<T extends Record<string, Record<string, any>>> = {
+type _MergeCommand<T extends Record<(string & {}), Record<(string & {}), any>>> = {
     [P in keyof (T & _Command)]?: (P extends keyof _Command ? P extends keyof T ? ITSMergeBoth<_Command[P], T[P]> : _Command[P] : T[P]);
 };
 export interface ILernaJsonCommand extends _MergeCommand<{
@@ -28,7 +28,7 @@ export interface ILernaJsonCommand extends _MergeCommand<{
         "bump"?: IReleaseType;
         allowBranch?: IBranch[];
         "conventionalCommits"?: boolean;
-        "changelogPreset"?: string | "@bluelovers/conventional-changelog-bluelovers";
+        "changelogPreset"?: (string & {}) | "@bluelovers/conventional-changelog-bluelovers";
         exact?: boolean;
         createRelease?: "gitlab" | "github";
         noPrivate?: boolean;
@@ -37,27 +37,27 @@ export interface ILernaJsonCommand extends _MergeCommand<{
         concurrency?: number;
         "stream"?: boolean;
         npmClient?: INpmClient;
-        [k: string]: unknown;
+        [k: (string & {})]: unknown;
     };
     exec?: {
         concurrency?: number;
         "stream"?: boolean;
-        [k: string]: unknown;
+        [k: (string & {})]: unknown;
     };
 }> {
-    [k: string]: Record<string, unknown>;
+    [k: (string & {})]: Record<(string & {}), unknown>;
 }
 export interface ILernaJson extends ITSOverwrite<AJSONSchemaForLernaJsonFiles, {
     /**
      * The current version of the repository (or independent).
      */
-    version?: string | "independent";
+    version?: (string & {}) | "independent";
     /**
      * Specify which client to run commands with (change to "yarn" to run commands with yarn. Defaults to "npm".
      */
     npmClient?: INpmClient;
-    workspaces?: (string | "packages/*")[];
-    packages?: (string | "packages/*")[];
+    workspaces?: ((string & {}) | "packages/*")[];
+    packages?: ((string & {}) | "packages/*")[];
     command?: ILernaJsonCommand;
 }> {
 }

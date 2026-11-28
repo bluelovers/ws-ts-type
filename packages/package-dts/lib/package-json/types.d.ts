@@ -6,7 +6,7 @@
  */
 import type { ReleaseType as IReleaseType } from 'semver';
 import { EnumPublishConfigRegistry } from './publishConfig';
-import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
+import { ITSArrayListMaybeReadonly, ITSValueOrArrayMaybeReadonly } from 'ts-type/lib/type/base';
 import { ITSValueOf, ITSValueOfArray } from 'ts-type/lib/helper/key-value';
 import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 /**
@@ -15,7 +15,7 @@ import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
  *
  * @typeParam T - 依賴項名稱陣列或字串 / Dependency name array or string
  */
-export type IDependency<T extends ITSArrayListMaybeReadonly<string> | string = string[]> = Record<T extends string ? T : T extends ITSArrayListMaybeReadonly<string> ? ITSValueOfArray<T> : never, IVersionValue>;
+export type IDependency<T extends ITSValueOrArrayMaybeReadonly<string & {}> = (string & {})[]> = Record<T extends string ? T : T extends ITSArrayListMaybeReadonly<string> ? ITSValueOfArray<T> : never, IVersionValue>;
 export type { IDependency as IPackageMap };
 export type { IDependency as IDependencies };
 /**
@@ -67,10 +67,10 @@ export { packageJsonDependenciesFields };
  * but only “tag”, “registry” and “access” probably matter for the purposes of publishing.
  */
 export interface IPackageJsonPublishConfig {
-    registry?: string | EnumPublishConfigRegistry;
-    access?: string | "public" | "restricted";
+    registry?: (string & {}) | EnumPublishConfigRegistry;
+    access?: (string & {}) | "public" | "restricted";
     tag?: IPackageJsonTag;
-    [k: string]: any;
+    [k: (string & {})]: any;
 }
-export type IPackageJsonTag = string | ITSTypeAndStringLiteral<Exclude<ITSValueOf<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
+export type IPackageJsonTag = (string & {}) | ITSTypeAndStringLiteral<Exclude<ITSValueOf<typeof EnumVersionValue2>, EnumVersionValue2.any>>;
 export type { IReleaseType };

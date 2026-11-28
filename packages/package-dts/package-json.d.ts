@@ -16,6 +16,6 @@ export type ILibPackageJson = typeof import('./types/package.json');
  * @example IPackageJson<unknown>
  */
 export interface IPackageJson<T = unknown> extends ITSOverwrite<ITSOmitIndexSignatures<CoreProperties>, _IPackageJsonCore & ITSPartialRecord<IPackageJsonDependenciesField, IDependency> & IPackageJsonExtendYarn & IPackageJsonExports> {
-    [k: string]: T;
+    [k: (string & {})]: T;
 }
 export default IPackageJson;
