@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/bluebird@1.0.19...@ts-type/bluebird@1.0.20) (2026-11-28)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([13ec873](https://github.com/bluelovers/ws-ts-type/commit/13ec873124279a45fec669d3e2da47dd5981e396))
+
+
 ## [1.0.19](https://github.com/bluelovers/ws-ts-type/compare/@ts-type/bluebird@1.0.18...@ts-type/bluebird@1.0.19) (2026-11-28)
 
 **Note:** Version bump only for package @ts-type/bluebird
